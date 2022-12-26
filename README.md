@@ -1,3 +1,2 @@
-# Diving-Rules-Flutter
-this is a test
-and this is a new test
+# Diving-Rules-Hybrid
+this is a new test
