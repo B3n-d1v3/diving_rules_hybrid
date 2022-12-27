@@ -12,11 +12,11 @@ class AppColor {
   static const Color dr_deselected_light = Color(0xFF575757);
   static const Color dr_deselected_dark = Color(0xFF969696);
 
-  static const Color aw_mid_blue = Color(0xFF176CED);
-  static const Color aw_dark_blue = Color(0xFF0000BC);
-  static const Color aw_dark_grey = Color(0xFF5B6670);
-  static const Color aw_mid_grey = Color(0xFF8997A8);
-  static const Gradient aw_light_gradient = LinearGradient(
+  static const Color wa_mid_blue = Color(0xFF176CED);
+  static const Color wa_dark_blue = Color(0xFF0000BC);
+  static const Color wa_dark_grey = Color(0xFF5B6670);
+  static const Color wa_mid_grey = Color(0xFF8997A8);
+  static const Gradient wa_light_gradient = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
     colors: [
@@ -24,7 +24,7 @@ class AppColor {
       Color(0xff1756ED),
     ],
   );
-  static const Gradient aw_dark_gradient = LinearGradient(
+  static const Gradient wa_dark_gradient = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
     colors: [
@@ -32,7 +32,7 @@ class AppColor {
       Color(0xff000080),
     ],
   );
-  static const Gradient aw_silver_gradient = LinearGradient(
+  static const Gradient wa_silver_gradient = LinearGradient(
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
     colors: [
@@ -40,8 +40,8 @@ class AppColor {
       Color(0xff5B6671),
     ],
   );
-  static const Color aw_diving_solid = Color(0xFF363A8B);
-  static const Gradient aw_diving_gradient = LinearGradient(
+  static const Color wa_diving_solid = Color(0xFF363A8B);
+  static const Gradient wa_diving_gradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
     colors: [
