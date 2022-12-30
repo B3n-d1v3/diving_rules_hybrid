@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bendivingjudge.diving_rules.hybrid.diving_rules_hybrid">
+    package="com.bendivingjudge.diving_rules.hybrid">
    <application
-        android:label="diving_rules_hybrid"
+        android:label="Diving Rules 22"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/diving_rules_icon_22">
         <activity
             android:name=".MainActivity"
             android:exported="true"
