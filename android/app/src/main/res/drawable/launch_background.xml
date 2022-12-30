@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Modify this file to customize your launch splash screen -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@android:color/white" />
+    <!--<item android:drawable="@android:color/white" />-->
+    <background android:drawable="@color/wa_diving_solid"/>
+    <foreground android:drawable="@mipmap/diving_rules_icon_22_foreground"/>
+
+    <!--<item android:drawable="@color/wa_diving_solid" />-->
 
     <!-- You can insert your own image assets here -->
     <!-- <item>
