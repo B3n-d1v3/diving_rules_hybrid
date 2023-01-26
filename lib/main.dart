@@ -1,11 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 import 'tokens/colors.dart';
 import 'app_home.dart';
 import 'tokens/theme_data.dart';
+
+import 'l10n/l10n.dart';
+//import 'flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 
 void main() {
@@ -56,6 +61,15 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             theme: Styles.themeData(themeProvider.darkTheme),
             home: CupertinoDivingRulesApp(),
+
+            // Localization setup
+            supportedLocales: L10n.all,
+            localizationsDelegates: [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
           );
         }
       ),

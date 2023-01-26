@@ -3,6 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// import 'flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
 class CupertinoTabAbout extends StatefulWidget {
   const CupertinoTabAbout({Key? key}) : super(key: key);
 
@@ -18,7 +21,7 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
     final themeState = Provider.of<DarkThemeProvider>(context);
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text('About the app'),
+        middle: Text(AppLocalizations.of(context)!.aboutTitle),
 
         // trailing: SwitchListTile(
         //     value: false,
@@ -42,7 +45,7 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
         ),
       ),
       child: Center(
-        child: Text('Version of the App. Rules Reference and all'),
+        child: Text(AppLocalizations.of(context)!.aboutDescription),
       ),
     );
   }
