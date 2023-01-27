@@ -1,9 +1,8 @@
-import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 
-// import 'flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 class CupertinoTabAbout extends StatefulWidget {
@@ -30,7 +29,7 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
         //     }
         // ),
 
-
+        // Header trailing functions: Light/Dark switch + Language Selection
         trailing: CupertinoButton(
           child: Icon(
               themeState.darkTheme ? CupertinoIcons.moon_stars_fill : CupertinoIcons.brightness_solid

@@ -89,7 +89,7 @@
         "description": "Quizz Selection Page /  Quizz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "Afin de vous entraîner sur les règles Fina du plongeon, avec ce test, vous serez en mesure de réviser les règles avec des questions sur les différentes règles.\n\n Sélectionnez le nombre de questions que vous souhaitez dans votre quiz.",
+    "quizzIntroDescription": "Afin de vous entraîner sur les règles Fina du plongeon, avec ce test, vous serez en mesure de réviser les règles avec des questions sur les différentes règles.\n\nSélectionnez le nombre de questions que vous souhaitez dans votre quiz.",
     "@quizzIntroDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
@@ -104,12 +104,12 @@
         "description": "Quizz - Question Page Next Button",
         "type": "text"
     },
-    "cFBundleDisplayName": "diving rules",
+    "cFBundleDisplayName": "diving rules 22-25",
     "@cFBundleDisplayName": {
         "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /  /  App Name - Full App name",
         "type": "text"
     },
-    "cFBundleName": "diving rules",
+    "cFBundleName": "diving rules 22-25",
     "@cFBundleName": {
         "description": "App Name - Short App name 16 car",
         "type": "text"

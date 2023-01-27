@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
-
 // import 'tokens/colors.dart';
-
 import 'tab_about.dart';
 import 'tab_penalties.dart';
 import 'tab_quizz.dart';
 import 'tab_rules.dart';
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 class CupertinoDivingRulesApp extends StatelessWidget {
   const CupertinoDivingRulesApp({Key? key}) : super(key: key);
@@ -19,6 +18,7 @@ class CupertinoDivingRulesApp extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.book_fill),
             label: 'Rules',
+            // label: Text(AppLocalizations.of(context)!.navigationMenuRules),
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.list_bullet),

@@ -104,12 +104,12 @@
         "description": "Quizz - Question Page Next Button",
         "type": "text"
     },
-    "cFBundleDisplayName": "diving rules",
+    "cFBundleDisplayName": "diving rules 22-25",
     "@cFBundleDisplayName": {
         "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /  /  App Name - Full App name",
         "type": "text"
     },
-    "cFBundleName": "diving rules",
+    "cFBundleName": "diving rules 22-25",
     "@cFBundleName": {
         "description": "App Name - Short App name 16 car",
         "type": "text"
