@@ -76,3 +76,12 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+
+// TODO: Manage user language selection
+// from https://docs.flutter.dev/development/accessibility-and-localization/internationalization
+// To get the current localization
+// Locale myLocale = Localizations.localeOf(context);
+
+// To manually set the language
+// locale: const Locale('es'),

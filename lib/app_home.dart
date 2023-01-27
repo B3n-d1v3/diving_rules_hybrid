@@ -5,6 +5,8 @@ import 'tab_penalties.dart';
 import 'tab_quizz.dart';
 import 'tab_rules.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+// TODO: Make it look like iOS’ and Android’s native bottom navigation components.
+// look @ https://edsonbueno.com/2020/01/23/bottom-navigation-in-flutter-mastery-guide/
 
 class CupertinoDivingRulesApp extends StatelessWidget {
   const CupertinoDivingRulesApp({Key? key}) : super(key: key);
@@ -14,23 +16,26 @@ class CupertinoDivingRulesApp extends StatelessWidget {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
         currentIndex: 0,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            // Rules
             icon: Icon(CupertinoIcons.book_fill),
-            label: 'Rules',
-            // label: Text(AppLocalizations.of(context)!.navigationMenuRules),
+            label: AppLocalizations.of(context)!.navigationMenuRules,
           ),
           BottomNavigationBarItem(
+            // Penalties
             icon: Icon(CupertinoIcons.list_bullet),
-            label: 'Penalties',
+            label: AppLocalizations.of(context)!.navigationMenuPenalties,
           ),
           BottomNavigationBarItem(
+            // Quizz
             icon: Icon(CupertinoIcons.check_mark),
-            label: 'Quizz',
+            label: AppLocalizations.of(context)!.navigationMenuQuizz,
           ),
           BottomNavigationBarItem(
+            // About
             icon: Icon(CupertinoIcons.info_circle_fill),
-            label: 'About',
+            label: AppLocalizations.of(context)!.aboutTitle,
           ),
         ],
       ),
