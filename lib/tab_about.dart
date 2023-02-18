@@ -4,7 +4,7 @@ import 'tokens/colors.dart';
 import 'tokens/theme_data.dart';
 import 'package:provider/provider.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
-
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 class CupertinoTabAbout extends StatefulWidget {
@@ -15,7 +15,18 @@ class CupertinoTabAbout extends StatefulWidget {
 }
 
 class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
-  // bool themeModeSwitch = true;
+  // Package Version instantiation
+  PackageInfo _packageInfo = new PackageInfo(appName: 'Unknown', packageName: 'Unknown', version: 'Unknown', buildNumber: 'Unknown');
+  @override
+  void initState() {
+    super.initState();
+    _initPackageInfo();
+  }
+  Future<void> _initPackageInfo() async {
+    final PackageInfo info = await PackageInfo.fromPlatform();
+    setState((){ _packageInfo = info;});
+  }
+
   @override
   Widget build(BuildContext context) {
     final themeState = Provider.of<DarkThemeProvider>(context);
@@ -64,13 +75,24 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
 
                   Align(
                     alignment: Alignment.topLeft,
-                    child: Container(
-                      child: Text(
-                        AppLocalizations.of(context)!.aboutVersion,
-                        style: Theme.of(context).textTheme.labelMedium,
-                        textAlign: TextAlign.start,
-                      ),
-                      // TODO: Add the automated version number
+                    child: Row(
+                        children: [
+
+                          // TODO: Correct the text color in dark mode
+
+                          Text(
+                            AppLocalizations.of(context)!.aboutVersion,
+                            style: Theme
+                                .of(context)
+                                .textTheme
+                                .labelMedium,
+                            textAlign: TextAlign.start,
+                          ),
+                          new Text ("v${_packageInfo.version} (build ${_packageInfo.buildNumber})", style: Theme
+                              .of(context)
+                              .textTheme
+                              .labelMedium,),
+                        ]
                     ),
                   ),
                   Align(
@@ -78,7 +100,10 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                     child: Text(
                       AppLocalizations.of(context)!.aboutRulesReference,
                       textAlign: TextAlign.start,
-                      style: Theme.of(context).textTheme.labelMedium,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .labelMedium,
                     ),
                   ),
 
@@ -91,14 +116,20 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                     alignment: Alignment.topLeft,
                     child: Text(
                       AppLocalizations.of(context)!.aboutDescriptionTitle,
-                      style: Theme.of(context).textTheme.titleLarge,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .titleLarge,
 
                       //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2, color: primaryColor),
                     ),
                   ),
                   Text(
                     AppLocalizations.of(context)!.aboutDescription,
-                    style: Theme.of(context).textTheme.bodyMedium,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyMedium,
                   ),
 
                   const SizedBox(
@@ -109,13 +140,19 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                     alignment: Alignment.topLeft,
                     child: Text(
                       AppLocalizations.of(context)!.aboutLicenseTitle,
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .titleSmall,
                       //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                     ),
                   ),
                   Text(
                     AppLocalizations.of(context)!.aboutLicense,
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .bodySmall,
                   ),
 
 
@@ -127,13 +164,19 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                     alignment: Alignment.topLeft,
                     child: Text(
                       AppLocalizations.of(context)!.aboutThanksTitle,
-                      style: Theme.of(context).textTheme.titleSmall,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .titleSmall,
                       //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                     ),
                   ),
                   Text(
                     AppLocalizations.of(context)!.aboutThanks,
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .bodySmall,
                   ),
 
 
@@ -144,21 +187,24 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                   Column(children: [
                     Text(
                       AppLocalizations.of(context)!.aboutContactTitle,
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .titleMedium,
                       //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                       //padding: const EdgeInsets.all(50),
                     ),
                     Text(
                       AppLocalizations.of(context)!.aboutContactLink,
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .bodyMedium,
                       // TODO: Open a send mail
                       // to = "BenDivingJudge@gmail.com"
                       // let subject = "Diving Rules Feedback"
                       // let body =  "Please provide your feedback here."
 
-                      // TODO: Add a share header bar icon + share link
-                      // shareText = "I 😍 this app to learn the Diving Rules"
-                      // for apple: URL(string : "bit.ly/DivingRulesApp")
                     ),
                   ]),
 
@@ -168,14 +214,24 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
 
                   Text(
                     AppLocalizations.of(context)!.aboutShareTitle,
-                    style: Theme.of(context).textTheme.titleLarge,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .titleLarge,
                     //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                   ),
                   Text(
                     AppLocalizations.of(context)!.aboutShare,
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .bodyLarge,
                   ),
                   // TODO: Create New and add the QR code image
+
+                  // TODO: Add a share header bar icon + share link
+                  // shareText = "I 😍 this app to learn the Diving Rules"
+                  // for apple: URL(string : "bit.ly/DivingRulesApp")
                 ]),
               ),
             ),
