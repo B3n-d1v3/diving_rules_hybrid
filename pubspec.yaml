@@ -83,6 +83,7 @@ flutter:
 
   assets:
     - assets/rulebooks/2022-2025_FINA_EN_Diving-Technical-Rules.pdf
+    - assets/images/
 
     # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

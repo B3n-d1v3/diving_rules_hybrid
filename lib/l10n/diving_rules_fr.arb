@@ -439,7 +439,7 @@
         "description": "About - Contact Link",
         "type": "text"
     },
-    "aboutRulesReference": "Règlement de référence : ",
+    "aboutRulesReference": "Règlement de référence : 2022-2025",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
@@ -459,7 +459,7 @@
         "description": "About - Help",
         "type": "text"
     },
-    "aboutDescriptionTitle": "Déscription de l'application",
+    "aboutDescriptionTitle": "Description de l'application",
     "@aboutDescriptionTitle": {
         "description": "About - Description Title",
         "type": "text"

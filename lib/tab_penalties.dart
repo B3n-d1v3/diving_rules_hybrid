@@ -35,6 +35,7 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
       ),
       child: Center(
         child: Text('List of penalties'),
+        // debugPrint("Test terxt in console");
       ),
     );
   }
