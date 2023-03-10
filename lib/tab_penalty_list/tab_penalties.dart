@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'page_penalty_details.dart';
 
 class CupertinoTabPenalties extends StatefulWidget {
   const CupertinoTabPenalties({Key? key}) : super(key: key);
@@ -38,8 +39,16 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
       // child: Center(
       //   child: Text('List of penalties'),
       // debugPrint("Test text printed in the console");
-      child: SafeArea(child: PenaltyListView()),
-      //),
+      child: SafeArea(
+        // child: PenaltyListView(),
+
+          child: CupertinoButton(
+              onPressed: () {
+                Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => PagePenaltyDescription()));
+              },
+              child: Text('Test Next Page')
+          )
+      ),
     );
   }
 }

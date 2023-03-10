@@ -35,7 +35,10 @@ class _CupertinoTabRulesState extends State<CupertinoTabRules> {
         ),
       ),
       child: Center(
-        child: SfPdfViewer.asset('assets/rulebooks/2022-2025_FINA_EN_Diving-Technical-Rules.pdf')
+        // TODO: Select the Rule Book of the right localization
+        // Locale myLocale = Localizations.localeOf(context);
+         child: SfPdfViewer.asset('assets/rulebooks/2022-2025_FINA_EN_Diving-Technical-Rules.pdf')
+          //child: SfPdfViewer.asset('assets/rulebooks/2022-2025_Reglement-WA-Plongeon-FR_v1.pdf')
         )
       );
   }

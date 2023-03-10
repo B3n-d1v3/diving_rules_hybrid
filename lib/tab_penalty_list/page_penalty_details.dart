@@ -3,27 +3,23 @@ import 'package:provider/provider.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
-class CupertinoTabPenalties extends StatefulWidget {
-  const CupertinoTabPenalties({Key? key}) : super(key: key);
+class PagePenaltyDescription extends StatefulWidget {
+  const PagePenaltyDescription({Key? key}) : super(key: key);
 
   @override
-  _CupertinoTabPenaltiesState createState() =>
-      _CupertinoTabPenaltiesState();
+  _PagePenaltyDescriptionState createState() => _PagePenaltyDescriptionState();
 }
 
-class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
+class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
   @override
   Widget build(BuildContext context) {
     final themeState = Provider.of<DarkThemeProvider>(context);
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
+        middle: Text(AppLocalizations.of(context)!.penaltyDescription),
 
         // Header trailing functions: Light/Dark switch + Language Selection
         trailing: CupertinoButton(
-          child: Icon(
-              themeState.darkTheme ? CupertinoIcons.moon_stars_fill : CupertinoIcons.brightness_solid
-          ),
           onPressed: () {
             setState(() {
               themeState.darkTheme = !themeState.darkTheme;
@@ -31,14 +27,17 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
             });
           },
           padding: EdgeInsets.zero,
+          child: Icon(themeState.darkTheme
+              ? CupertinoIcons.moon_stars_fill
+              : CupertinoIcons.brightness_solid),
         ),
       ),
-      child: container(
-        // Retrieves the screen size
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+      // child: container(
+      //   // Retrieves the screen size
+      //   width: MediaQuery.of(context).size.width,
+      //   height: MediaQuery.of(context).size.height,
 
-        child: Column(
+        child: SafeArea(child: Column(
           children: [
             Text('An individual penalty description'),
             Row(
@@ -55,8 +54,9 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
             ),
           ],
         ),
-        // debugPrint("Test terxt in console");
-      ),
+        // debugPrint("Test text in console");
+      // ),
+    )
     );
   }
 }

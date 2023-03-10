@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'tokens/colors.dart';
-import 'tokens/theme_data.dart';
+import '../tokens/colors.dart';
+import '../tokens/theme_data.dart';
 import 'package:provider/provider.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:package_info_plus/package_info_plus.dart';
