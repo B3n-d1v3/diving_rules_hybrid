@@ -42,3 +42,5 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
   }
 }
 
+// Note for later: to manage the navigation back use the following code:
+// Navigator.pop(context);

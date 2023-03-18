@@ -17,6 +17,7 @@ class CupertinoDivingRulesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
+      // tODO: Take out the beta band with debugShowCheckedModeBanner: False,
       tabBar: CupertinoTabBar(
         currentIndex: 0,
         items: <BottomNavigationBarItem>[
