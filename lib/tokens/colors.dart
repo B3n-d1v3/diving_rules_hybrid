@@ -55,9 +55,9 @@ class AppColor {
 
 
   // Non Material
-  static const Color drColorPositivelight = Color(0xFF006600);
+  static const Color drColorPositiveLight = Color(0xFF006600);
   static const Color drColorNegativeLight = Color(0xffAC0000);
-  static const Color drColorDeselectedlight = Color(0xFF575757);
+  static const Color drColorDeselectedLight = Color(0xFF575757);
 
 
 
@@ -105,22 +105,22 @@ class AppColor {
 
 
   // Dark Mode
-  static const Color dr_primary_dark = Color(0xFF009AFF);
-  static const Color dr_secondary_dark = Color(0xFF005994);
+  static const Color drPrimaryDark = Color(0xFF009AFF);
+  static const Color drSecondaryDark = Color(0xFF005994);
 
-  static const Color drColorPositiveDark = Color(0xFF00C300);
-  static const Color drColorNegativeDark = Color(0xFFFF614D);
+  static const Color drColorPositiveDark = Color(0xFF00C300); // #81db6e
+  static const Color drColorNegativeDark = Color(0xFFFF614D);  // #ffb4a8
   static const Color drColorDeselectedDark = Color(0xFF969696);
 
 
   static const Color myBackgroundColorDark = Color(0xff000000);
   static const Color myOnBackgroundColorDark = Color(0xffffffff);
 
-  static const Color myPrimaryColorDark = Color(0xFF6B93EB);
+  static const Color myPrimaryColorDark = Color(0xFF6B93EB); // Material Theme builder proposition: #bfc1ff (from https://m3.material.io/theme-builder#/custom )
   static const Color myOnPrimaryColorDark = Color(0xFF000000);
-  static const Color mySecondaryColorDark = Color(0xFF009AFF);
+  static const Color mySecondaryColorDark = Color(0xFF009AFF); // #9ccaff
   static const Color myOnSecondaryColorDark = Color(0xFF000000);
-  static const Color myTertiaryColorDark = Color(0xFF005994);
+  static const Color myTertiaryColorDark = Color(0xFF005994); //
   static const Color myOnTertiaryColorDark = Color(0xFF000000);
 
   static const Color mySurfaceColorDark = Color(0xffffffff);

@@ -8,7 +8,7 @@ import 'tab_quizz/tab_quizz.dart';
 import 'tab_rulebook/tab_rules.dart';
 import '/tokens/colors.dart';
 
-
+// ---- is Not used yet ----
 // This was added in to test the Route generator page navigation
 // It is linked to an addition in the main app:
 // onGenerateRoute: RouteGenerator.generateRoute,

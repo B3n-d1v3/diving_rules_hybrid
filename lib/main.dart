@@ -7,10 +7,13 @@ import 'package:provider/provider.dart';
 import 'tokens/colors.dart';
 import 'app_home.dart';
 import 'tokens/theme_data.dart';
-
+// Localization
 import 'l10n/l10n.dart';
 //import 'flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+// for the json
+import 'dart:convert';
+import 'package:flutter/services.dart';
 
 
 void main() {
@@ -41,7 +44,10 @@ class _MyAppState extends State<MyApp> {
   void initState(){
     getCurrentAppTheme();
     super.initState();
-
+    // TODO: Call the initialization of the data models through the json
+    // Testing in the Penalties tab page
+    // readJson();
+    // initSanctionFromJson();
 
   }
 

@@ -7,8 +7,9 @@ import 'tab_rulebook/tab_rules.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 // TODO: Make it look like iOS’ and Android’s native bottom navigation components.
 // look @ https://edsonbueno.com/2020/01/23/bottom-navigation-in-flutter-mastery-guide/
+// or https://davidserrano.io/material-and-cupertino-widgets-how-to-adapt-the-style-of-your-flutter-app-according-to-the-platform
 
-// TODO: Allow the user to create an hot language switch
+// TODO: Allow the user to create a hot language switch
 // look at this: https://www.youtube.com/watch?v=L99kqPA1CBU
 
 class CupertinoDivingRulesApp extends StatelessWidget {

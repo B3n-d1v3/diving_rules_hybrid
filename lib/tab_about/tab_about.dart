@@ -16,7 +16,7 @@ class CupertinoTabAbout extends StatefulWidget {
 
 class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
   // Package Version instantiation
-  PackageInfo _packageInfo = new PackageInfo(appName: 'Unknown', packageName: 'Unknown', version: 'Unknown', buildNumber: 'Unknown');
+  PackageInfo _packageInfo = PackageInfo(appName: 'Unknown', packageName: 'Unknown', version: 'Unknown', buildNumber: 'Unknown');
   @override
   void initState() {
     super.initState();
@@ -31,7 +31,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
   Widget build(BuildContext context) {
     final themeState = Provider.of<DarkThemeProvider>(context);
 
-
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text(AppLocalizations.of(context)!.aboutTitle),
@@ -45,9 +44,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
 
         // Header trailing functions: Light/Dark switch + Language Selection
         trailing: CupertinoButton(
-          child: Icon(themeState.darkTheme
-              ? CupertinoIcons.moon_stars_fill
-              : CupertinoIcons.brightness_solid),
           onPressed: () {
             setState(() {
               themeState.darkTheme = !themeState.darkTheme;
@@ -55,6 +51,9 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
             });
           },
           padding: EdgeInsets.zero,
+          child: Icon(themeState.darkTheme
+              ? CupertinoIcons.moon_stars_fill
+              : CupertinoIcons.brightness_solid),
         ),
       ),
       child: SafeArea(
@@ -86,7 +85,7 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                           style: Theme.of(context).textTheme.labelMedium,
                           textAlign: TextAlign.start,
                         ),
-                        new Text ("v${_packageInfo.version} (build ${_packageInfo.buildNumber})", style: Theme
+                        Text ("v${_packageInfo.version} (build ${_packageInfo.buildNumber})", style: Theme
                             .of(context)
                             .textTheme
                             .labelMedium,),

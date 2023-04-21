@@ -1,0 +1,483 @@
+{
+  "penalties": [
+  {
+    "id" : 0,
+    "description" : "If the diver takes more than one minute, after a warning.",
+    "rules" : [
+      {"ruleId": "D6.12"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 1,
+    "description" : "If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
+    "rules" : [
+      {"ruleId": "D6.16"},
+      {"ruleId": "D8.3.4"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 2,
+    "description" : "If the final step is not from one foot.",
+    "rules" : [
+      {"ruleId": "D6.17"},
+      {"ruleId": "D8.3.3"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 3,
+    "description" : "If the take-off on the springboard is not from both feet simultaneously.",
+    "rules" : [
+      {"ruleId": "D6.18"},
+      {"ruleId": "D8.4.3"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 4,
+    "description" : "If a twist is greater or less than that announced by 90 degrees or more.",
+    "rules" : [
+      {"ruleId": "D6.20"},
+      {"ruleId": "D8.6.6"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 5,
+    "description" : "If a diver has performed a dive of a number other than that announced.",
+    "rules" : [
+      {"ruleId": "D6.21"},
+      {"ruleId": "D8.1.7"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 6,
+    "description" : "If the feet enter the water before the head or hands in a head first dive.",
+    "rules" : [
+      {"ruleId": "D6.22.1"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 7,
+    "description" : "If the head or hands enter the water before the feet in a feet first dive.",
+    "rules" : [
+      {"ruleId": "D6.22.2"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 8,
+    "description" : "If assistance has been given to the diver after the starting signal.",
+    "rules" : [
+      {"ruleId": "D6.24"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 9,
+    "description" : "When a second attempt\n(a re-start) is unsuccessful.",
+    "rules" : [
+      {"ruleId": "D6.27"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 10,
+    "description" : "If a diver refuses the execution of a dive.",
+    "rules" : [
+      {"ruleId": "D6.28"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 11,
+    "description" : "In synchronised diving if a diver, or both divers, perform a dive of a different number.",
+    "rules" : [
+      {"ruleId": "D9.2"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 12,
+    "description" : "In synchronised diving if all execution judges for one diver award zero (0) points.",
+    "rules" : [
+      {"ruleId": "D9.8"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 13,
+    "description" : "In synchronised diving if all synchronisation judges award zero (0) points.",
+    "rules" : [
+      {"ruleId": "D9.10"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 14,
+    "description" : "In synchronised diving if a diver, or both divers, perform a dive of a different position.",
+    "rules" : [
+      {"ruleId": "D9.2"},
+      {"ruleId": "D9.8"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 15,
+    "description" : "If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
+    "rules" : [
+      {"ruleId": "D6.25"}
+    ],
+    "sanctionValue" : 1,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 16,
+    "description" : "If there is a re-start in a standing, running, or armstand dive.",
+    "rules" : [
+      {"ruleId": "D6.26"}
+    ],
+    "sanctionValue" : 1,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 17,
+    "description" : "In synchronised diving if there is a re-start by one or both divers.",
+    "rules" : [
+      {"ruleId": "D9.6"}
+    ],
+    "sanctionValue" : 1,
+    "referee" : true,
+    "judge" : false
+  },
+  {
+    "id" : 18,
+    "description" : "If a diver performs a dive in a position other than that announced.",
+    "rules" : [
+      {"ruleId": "D6.19"},
+      {"ruleId": "D8.1.4"}
+    ],
+    "sanctionValue" : 2,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 19,
+    "description" : "If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
+    "rules" : [
+      {"ruleId": "D8.5.4"}
+    ],
+    "sanctionValue" : 2,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 20,
+    "description" : "If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
+    "rules" : [
+      {"ruleId": "D6.22"},
+      {"ruleId": "D8.6.3"},
+      {"ruleId": "D8.6.4"}
+    ],
+    "sanctionValue" : 3,
+    "referee" : true,
+    "judge" : true
+  },
+  {
+    "id" : 21,
+    "description" : "If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
+    "rules" : [
+      {"ruleId": "D8.5.7"}
+    ],
+    "sanctionValue" : 3,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 22,
+    "description" : "If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
+    "rules" : [
+      {"ruleId": "D8.5.7"}
+    ],
+    "sanctionValue" : 3,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 23,
+    "description" : "If a dive is not performed in a position as described.",
+    "rules" : [
+      {"ruleId": "D8.1.6"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 24,
+    "description" : "If the starting position is not straight, head erect, with the arms straight in any position.",
+    "rules" : [
+      {"ruleId": "D8.2.3"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 25,
+    "description" : "If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
+    "rules" : [
+      {"ruleId": "D8.2.4.3"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 26,
+    "description" : "If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
+    "rules" : [
+      {"ruleId": "D8.2.6.2"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 27,
+    "description" : "If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
+    "rules" : [
+      {"ruleId": "D8.3.2"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 28,
+    "description" : "If the take-off is not bold, high, and confident.",
+    "rules" : [
+      {"ruleId": "D8.4.5"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 29,
+    "description" : "If in a twist dive, the twisting is manifestly done from the springboard or platform.",
+    "rules" : [
+      {"ruleId": "D8.4.6"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 30,
+    "description" : "If the straight position is not shown as described.",
+    "rules" : [
+      {"ruleId": "D8.5.6"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 31,
+    "description" : "If the pike position is not shown as described.",
+    "rules" : [
+      {"ruleId": "D8.5.9"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 32,
+    "description" : "If in a pike dive with twist, the pike position is not clearly shown.",
+    "rules" : [
+      {"ruleId": "D8.5.10"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 33,
+    "description" : "If the tuck position is not shown as described.",
+    "rules" : [
+      {"ruleId": "D8.5.12"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 34,
+    "description" : "If in a tuck dive with twist, the tuck position is not clearly shown.",
+    "rules" : [
+      {"ruleId": "D8.5.13"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 35,
+    "description" : "If the free position is not shown as described.",
+    "rules" : [
+      {"ruleId": "D8.5.15"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 36,
+    "description" : "If the arms are not in the correct position in either the head first or feet first entry.",
+    "rules" : [
+      {"ruleId": "D8.6.5"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 37,
+    "description" : "In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
+    "rules" : [
+      {"ruleId": "D9.11"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 38,
+    "description" : "In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+    "rules" : [
+      {"ruleId": "D9.11"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 39,
+    "description" : "In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+    "rules" : [
+      {"ruleId": "D9.11"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 40,
+    "description" : "In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+    "rules" : [
+      {"ruleId": "D9.11"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 41,
+    "description" : "In synchronised diving if coordinated timing of the entries is not shown.",
+    "rules" : [
+      {"ruleId": "D9.11"}
+    ],
+    "sanctionValue" : 4,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 42,
+    "description" : "If a dive is performed partially in a position other than that announced.",
+    "rules" : [
+      {"ruleId": "D8.1.5"}
+    ],
+    "sanctionValue" : 5,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 43,
+    "description" : "If in a dive, the diver dives to the side of the direct line of flight.",
+    "rules" : [
+      {"ruleId": "D8.5.2"}
+    ],
+    "sanctionValue" : 5,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 44,
+    "description" : "If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+    "rules" : [
+      {"ruleId": "D8.5.3"}
+    ],
+    "sanctionValue" : 5,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 45,
+    "description" : "If the entry into the water is not vertical, or nearly so, or twisted with the body not straight, the feet not together, and the toes not pointed.",
+    "rules" : [
+      {"ruleId": "D8.6.2"}
+    ],
+    "sanctionValue" : 5,
+    "referee" : false,
+    "judge" : true
+  },
+  {
+    "id" : 46,
+    "description" : "In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
+    "rules" : [
+      {"ruleId": "D9.5"}
+    ],
+    "sanctionValue" : 0,
+    "referee" : true,
+    "judge" : false
+  }
+]
+}

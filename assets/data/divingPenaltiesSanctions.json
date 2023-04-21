@@ -1,0 +1,40 @@
+{
+ "sanctions": [
+  {
+    "id" : 0,
+    "description" : "0 points",
+    "icon" : "nosign",
+    "button_text" : "button0pts"
+  },
+  {
+    "id" : 1,
+    "description" : "2 points deduction",
+    "icon" : "gobackward_minus",
+    "button_text" : "buttonMinus2pts"
+  },
+  {
+    "id" : 2,
+    "description" : "2 points maximum",
+    "icon" : "lessthan_circle_fill",
+    "button_text" : "buttonMax2pts"
+  },
+  {
+    "id" : 3,
+    "description" : "4 ½ points maximum",
+    "icon" : "lessthan_circle",
+    "button_text" : "buttonMax4Halfpts"
+  },
+  {
+    "id" : 4,
+    "description" : "From ½ to 2 points deduction",
+    "icon" : "arrow_left_right_circle",
+    "button_text" : "buttonMinusHalfTo2pts"
+  },
+  {
+    "id" : 5,
+    "description" : "Deduct according to judge's opinion",
+    "icon" : "plusminus_circle",
+    "button_text" : "buttonJudgeOpinion"
+  }
+]
+}
