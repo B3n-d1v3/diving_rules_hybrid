@@ -1,16 +1,16 @@
+import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:provider/provider.dart';
+
 import '../tokens/colors.dart';
 
 class CupertinoTabQuizz extends StatefulWidget {
   const CupertinoTabQuizz({Key? key}) : super(key: key);
 
   @override
-  _CupertinoTabQuizzState createState() =>
-      _CupertinoTabQuizzState();
+  _CupertinoTabQuizzState createState() => _CupertinoTabQuizzState();
 }
 
 class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
@@ -30,9 +30,9 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
             });
           },
           padding: EdgeInsets.zero,
-          child: Icon(
-              themeState.darkTheme ? CupertinoIcons.moon_stars_fill : CupertinoIcons.brightness_solid
-          ),
+          child: Icon(themeState.darkTheme
+              ? CupertinoIcons.moon_stars_fill
+              : CupertinoIcons.brightness_solid),
         ),
       ),
       child: SafeArea(
@@ -43,39 +43,41 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
               padding: EdgeInsets.all(15),
               child: Column(children: [
                 Center(
-                  child: Text(AppLocalizations.of(context)!.quizzIntroDescription),
+                  child:
+                      Text(AppLocalizations.of(context)!.quizzIntroDescription),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(0,25,0,10),
+                  padding: const EdgeInsets.fromLTRB(0, 25, 0, 10),
                   child: Divider(
                     height: 10,
                     thickness: 2,
                     indent: 0,
                     endIndent: 0,
-                    color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+                    color: themeState.darkTheme
+                        ? AppColor.myPrimaryColorDark
+                        : AppColor.myPrimaryColorLight,
                   ),
                 ),
                 Text("XXXXX Another text for testing XXXX"),
                 Image.asset(
-                  'assets/images/diving-rules-logo-white.png',
+                  'assets/images/diving-rules-logo-3.png',
                   height: 200,
                 ),
                 // Testing insertion
                 Align(
                   alignment: Alignment.topLeft,
-                  child: Row(
-                      children: [
-                        Text(
-                          AppLocalizations.of(context)!.aboutVersion,
-                          // TODO: This is the parameter that makes the text not visible in dark mode
-                          //style: Theme.of(context).textTheme.labelMedium,
-                          textAlign: TextAlign.start,
-                        ),
-                        Text ("v (build )",
-                          //style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                      ]
-                  ),
+                  child: Row(children: [
+                    Text(
+                      AppLocalizations.of(context)!.aboutVersion,
+                      // TODO: This is the parameter that makes the text not visible in dark mode
+                      //style: Theme.of(context).textTheme.labelMedium,
+                      textAlign: TextAlign.start,
+                    ),
+                    Text(
+                      "v (build )",
+                      //style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                  ]),
                 ),
 
                 // Test font styles in dark mode
@@ -85,7 +87,9 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   thickness: 2,
                   indent: 0,
                   endIndent: 0,
-                  color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+                  color: themeState.darkTheme
+                      ? AppColor.myPrimaryColorDark
+                      : AppColor.myPrimaryColorLight,
                 ),
                 Text(
                   'displayLarge',
@@ -104,7 +108,9 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   thickness: 2,
                   indent: 0,
                   endIndent: 0,
-                  color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+                  color: themeState.darkTheme
+                      ? AppColor.myPrimaryColorDark
+                      : AppColor.myPrimaryColorLight,
                 ),
                 Text(
                   'headlineLarge',
@@ -123,8 +129,11 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   thickness: 2,
                   indent: 0,
                   endIndent: 0,
-                  color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
-                ),Text(
+                  color: themeState.darkTheme
+                      ? AppColor.myPrimaryColorDark
+                      : AppColor.myPrimaryColorLight,
+                ),
+                Text(
                   'titleLarge',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
@@ -141,7 +150,9 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   thickness: 2,
                   indent: 0,
                   endIndent: 0,
-                  color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+                  color: themeState.darkTheme
+                      ? AppColor.myPrimaryColorDark
+                      : AppColor.myPrimaryColorLight,
                 ),
                 Text(
                   'bodyLarge',
@@ -152,15 +163,17 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 Text(
-                        'bodySmall',
-                        style: Theme.of(context).textTheme.bodySmall,
-                      ),
+                  'bodySmall',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
                 Divider(
                   height: 10,
                   thickness: 2,
                   indent: 0,
                   endIndent: 0,
-                  color: themeState.darkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+                  color: themeState.darkTheme
+                      ? AppColor.myPrimaryColorDark
+                      : AppColor.myPrimaryColorLight,
                 ),
                 Text(
                   'labelLarge',
@@ -175,14 +188,14 @@ class _CupertinoTabQuizzState extends State<CupertinoTabQuizz> {
                   style: Theme.of(context).textTheme.labelSmall,
                 ),
 
-
-
-
-                  // end of test font style in dark mode
-
+                // end of test font style in dark mode
 
                 // Testing insetion end
-  ]), ), ), ), ),
+              ]),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
