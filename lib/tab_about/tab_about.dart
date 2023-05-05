@@ -1,11 +1,9 @@
+import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../tokens/colors.dart';
-import '../tokens/theme_data.dart';
-import 'package:provider/provider.dart';
-import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:provider/provider.dart';
 
 class CupertinoTabAbout extends StatefulWidget {
   const CupertinoTabAbout({Key? key}) : super(key: key);
@@ -16,15 +14,22 @@ class CupertinoTabAbout extends StatefulWidget {
 
 class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
   // Package Version instantiation
-  PackageInfo _packageInfo = PackageInfo(appName: 'Unknown', packageName: 'Unknown', version: 'Unknown', buildNumber: 'Unknown');
+  PackageInfo _packageInfo = PackageInfo(
+      appName: 'Unknown',
+      packageName: 'Unknown',
+      version: 'Unknown',
+      buildNumber: 'Unknown');
   @override
   void initState() {
     super.initState();
     _initPackageInfo();
   }
+
   Future<void> _initPackageInfo() async {
     final PackageInfo info = await PackageInfo.fromPlatform();
-    setState((){ _packageInfo = info;});
+    setState(() {
+      _packageInfo = info;
+    });
   }
 
   @override
@@ -65,7 +70,7 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
               // margin: const EdgeInsets.all(10),
               child: Column(children: [
                 Image.asset(
-                  'assets/images/diving-rules-logo-white.png',
+                  'assets/images/diving-rules-logo-3.png',
                   height: 200,
                 ),
 
@@ -75,22 +80,19 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
 
                 Align(
                   alignment: Alignment.topLeft,
-                  child: Row(
-                      children: [
+                  child: Row(children: [
+                    // TODO: Correct the text color in dark mode
 
-                        // TODO: Correct the text color in dark mode
-
-                        Text(
-                          AppLocalizations.of(context)!.aboutVersion,
-                          style: Theme.of(context).textTheme.labelMedium,
-                          textAlign: TextAlign.start,
-                        ),
-                        Text ("v${_packageInfo.version} (build ${_packageInfo.buildNumber})", style: Theme
-                            .of(context)
-                            .textTheme
-                            .labelMedium,),
-                      ]
-                  ),
+                    Text(
+                      AppLocalizations.of(context)!.aboutVersion,
+                      style: Theme.of(context).textTheme.labelMedium,
+                      textAlign: TextAlign.start,
+                    ),
+                    Text(
+                      "v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                  ]),
                 ),
                 Align(
                   alignment: Alignment.topLeft,
@@ -104,7 +106,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                 const SizedBox(
                   height: 20,
                 ),
-
 
                 Align(
                   alignment: Alignment.topLeft,
@@ -137,7 +138,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
 
-
                 const SizedBox(
                   height: 20,
                 ),
@@ -154,7 +154,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                   AppLocalizations.of(context)!.aboutThanks,
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
-
 
                 const SizedBox(
                   height: 30,
@@ -174,7 +173,6 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
                     // to = "BenDivingJudge@gmail.com"
                     // let subject = "Diving Rules Feedback"
                     // let body =  "Please provide your feedback here."
-
                   ),
                 ]),
 
