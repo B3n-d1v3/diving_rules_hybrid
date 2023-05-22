@@ -48,8 +48,8 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               Text(AppLocalizations.of(context)!.penaltyDescription),
               // TODO: Update with the localized version of the description
               Text(widget.penalty.description),
-              // TODO: Add the penalty rule references
 
+              DisplayRulesReferences(rulesReferences: widget.penalty.rules),
               Text(AppLocalizations.of(context)!.penaltyPenalty),
               Row(
                 // set all row elements evenly in the available width
@@ -89,5 +89,20 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
           // debugPrint("Test text in console");
           // ),
         ));
+  }
+}
+
+class DisplayRulesReferences extends StatelessWidget {
+  final List<Rule> rulesReferences;
+  DisplayRulesReferences({required this.rulesReferences});
+
+  @override
+  Widget build(BuildContext context) {
+    String rulesToDisplay = "";
+    for (var i = 0; i < rulesReferences.length; i++) {
+      rulesToDisplay = rulesToDisplay + " - ${rulesReferences[i].ruleId}";
+      // Text(" - ${rulesReferences[0].ruleId}")
+    }
+    return (Text(rulesToDisplay));
   }
 }
