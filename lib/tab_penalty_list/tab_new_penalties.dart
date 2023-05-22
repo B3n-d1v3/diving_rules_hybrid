@@ -124,7 +124,10 @@ class PenaltyListView extends StatelessWidget {
             //leading:  Icon(iconsMap[penalties[index].icon]),
             leading: Icon(CupertinoIcons.lessthan_circle_fill),
             // TODO: Get the icon from the penalty type
-            title: Text(penaltySummary.penalties[index].description),
+            title: Text(
+              penaltySummary.penalties[index].description,
+              maxLines: 4,
+            ),
             trailing: const CupertinoListTileChevron(),
             // TODO: Add action to open penalty description page
           ),
