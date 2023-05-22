@@ -84,3 +84,13 @@ class Rule {
 //    3 > MaxFourHalfPts
 //    4 > MinusHalfToTwoPts
 //    5 > JudgeOpinion
+//
+// Icons:
+// - penalty-sanction-0pts:  nosign
+// - penalty-sanction-max2pts: lessthan_circle_fill
+// - penalty-sanction-max4.5pts: lessthan_circle
+// - penalty-sanction--2pts: gobackward_minus
+// - penalty-sanction--.5-2pts: arrow_left_right_circle
+// - penalty-sanction-judge-opinion: plusminus_circle
+// - penalty-owner-referee:    ??? person_fill
+// - penalty-owner-judges: group_solid  ( or person_3_fill )

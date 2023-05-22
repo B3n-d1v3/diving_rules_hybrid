@@ -1,3 +1,4 @@
+import 'package:diving_rules_hybrid/buttons/button_penalties.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,6 +13,7 @@ class PagePenaltyDescription extends StatefulWidget {
   int index;
   PagePenaltyDescription({Key? key, required this.index}) : super(key: key);
   // String penaltyDescription = "penalty"+ penalty.id.toString();
+
 
   @override
   _PagePenaltyDescriptionState createState() => _PagePenaltyDescriptionState();
@@ -118,6 +120,17 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 Text(AppLocalizations.of(context)!.buttonJudge),
               ],
             ),
+
+            // Test the penalty button mechanism
+            PenaltyButton(
+                buttonType: 0,
+                isSelected: if penaltySummary.penalties[widget.index].
+            ),
+            PenaltyButton(buttonType: 1, isSelected: false),
+            PenaltyButton(buttonType: 2, isSelected: true),
+            PenaltyButton(buttonType: 3, isSelected: false),
+            PenaltyButton(buttonType: 4, isSelected: true),
+            PenaltyButton(buttonType: 5, isSelected: false),
           ],
           // TODO: Add left / right navigation in the penalty list to avoid going back to the main list
           // use example: https://www.youtube.com/watch?v=Kc-2MtZnfFo
