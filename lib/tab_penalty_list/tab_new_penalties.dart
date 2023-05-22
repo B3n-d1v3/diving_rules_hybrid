@@ -133,8 +133,7 @@ class PenaltyListView extends StatelessWidget {
             // TODO: Add action to open penalty description page
             onTap: () {
               Navigator.of(context).push(CupertinoPageRoute(
-                  builder: (context) => PagePenaltyDescription(
-                      penalty: penaltySummary.penalties[index])));
+                  builder: (context) => PagePenaltyDescription(index: index)));
             },
           ),
         );
