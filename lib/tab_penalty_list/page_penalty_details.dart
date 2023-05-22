@@ -19,7 +19,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
     final themeState = Provider.of<DarkThemeProvider>(context);
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          middle: Text(AppLocalizations.of(context)!.penaltyDescription),
+          middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
 
           // Header trailing functions: Light/Dark switch + Language Selection
           trailing: CupertinoButton(
@@ -43,17 +43,45 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
         child: SafeArea(
           child: Column(
             children: [
+              // TODO Update all styles and display positioning
+              Text(AppLocalizations.of(context)!.penaltyRule),
+              Text(AppLocalizations.of(context)!.penaltyDescription),
+              // TODO: Update with the localized version of the description
               Text(widget.penalty.description),
+              // TODO: Add the penalty rule references
+
+              Text(AppLocalizations.of(context)!.penaltyPenalty),
               Row(
                 // set all row elements evenly in the available width
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // TODO: Add the penalties (0pts, max 2 pts...) or the owner of the penalty(judge/referee)
-                  Text('0 pts'),
-                  Text('max 2 pts'),
-                  Text('Max 4.5 pts'),
+                  // TODO: Add the penalties buttons (0pts, max 2 pts...)
+                  Text(AppLocalizations.of(context)!.button0pts),
+                  Text(AppLocalizations.of(context)!.buttonMax2pts),
+                  Text(AppLocalizations.of(context)!.buttonMax4Halfpts),
+                ],
+              ),
+              Row(
+                // set all row elements evenly in the available width
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // TODO: Add the penalties buttons (0pts, max 2 pts...)
+                  Text(AppLocalizations.of(context)!.buttonMinus2pts),
+                  Text(AppLocalizations.of(context)!.buttonMinusHalfTo2pts),
+                  Text(AppLocalizations.of(context)!.buttonJudgeOpinion),
+                ],
+              ),
+              Text(AppLocalizations.of(context)!.penaltyOwnership),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // TODO: Add the Ownership buttons of the penalty(judge/referee)
+                  Text(AppLocalizations.of(context)!.buttonReferee),
+                  Text(AppLocalizations.of(context)!.buttonJudge),
                 ],
               ),
             ],
