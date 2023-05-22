@@ -6,6 +6,7 @@ import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 // the sanction data model and json deserialization
 import 'package:diving_rules_hybrid/models/sanction_model.dart';
+import 'package:diving_rules_hybrid/tab_penalty_list/page_penalty_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -48,13 +49,13 @@ class _TabPenaltiesState extends State<TabPenalties> {
     setState(() {
       penaltySummary = PenaltySummary.fromJson(json.decode(summaryFile));
       // Debug checks
-      debugPrint(">>> getPenalties > json file in string sanctionsFile:");
+      // debugPrint(">>> getPenalties > json file in string sanctionsFile:");
       // debugPrint(summaryFile);
-      debugPrint(">>> getPenalties > sanctionItems Object:");
-      debugPrint(
-          "sanctionItems.sanctions.length: ${penaltySummary.penalties.length}");
-      debugPrint(
-          "sanctionItems.sanctions[3].description: ${penaltySummary.penalties[3].description}");
+      // debugPrint(">>> getPenalties > sanctionItems Object:");
+      // debugPrint(
+      //     "sanctionItems.sanctions.length: ${penaltySummary.penalties.length}");
+      // debugPrint(
+      //     "sanctionItems.sanctions[3].description: ${penaltySummary.penalties[3].description}");
     });
   }
 
@@ -130,6 +131,11 @@ class PenaltyListView extends StatelessWidget {
             ),
             trailing: const CupertinoListTileChevron(),
             // TODO: Add action to open penalty description page
+            onTap: () {
+              Navigator.of(context).push(CupertinoPageRoute(
+                  builder: (context) => PagePenaltyDescription(
+                      penalty: penaltySummary.penalties[index])));
+            },
           ),
         );
       },
