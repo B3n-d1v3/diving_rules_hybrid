@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
 // import 'tokens/colors.dart';
 import 'tab_about/tab_about.dart';
-import 'tab_penalty_list/tab_penalties.dart';
+// import 'tab_penalty_list/tab_penalties.dart';
+import 'tab_penalty_list/tab_new_penalties.dart';
 import 'tab_quizz/tab_quizz.dart';
 import 'tab_rulebook/tab_rules.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 // TODO: Make it look like iOS’ and Android’s native bottom navigation components.
 // look @ https://edsonbueno.com/2020/01/23/bottom-navigation-in-flutter-mastery-guide/
 // or https://davidserrano.io/material-and-cupertino-widgets-how-to-adapt-the-style-of-your-flutter-app-according-to-the-platform
@@ -57,7 +59,8 @@ class CupertinoDivingRulesApp extends StatelessWidget {
           case 1:
             returnValue = CupertinoTabView(
               builder: (context) {
-                return CupertinoTabPenalties();
+                // return CupertinoTabPenalties();
+                return TabPenalties();
               },
             );
             break;

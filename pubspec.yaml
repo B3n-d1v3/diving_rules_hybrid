@@ -35,17 +35,28 @@ dependencies:
   # Localization setup
   flutter_localizations:
     sdk: flutter
-  intl: ^0.17.0
+  # intl: ^0.18.0
+  intl: ^0.18.0
 
   # Package version number retrieval
+  # package_info_plus: ^3.0.3
   package_info_plus: ^3.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  shared_preferences: ^2.0.15
+  # cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
+  # shared_preferences: ^2.0.15
+  shared_preferences: ^2.1.1
+  # provider: ^6.0.5
   provider: ^6.0.5
-  syncfusion_flutter_pdfviewer: ^20.4.38
+  # syncfusion_flutter_pdfviewer: ^20.4.38
+  syncfusion_flutter_pdfviewer: ^21.2.5
+
+
+
+
+
 
 dev_dependencies:
   flutter_test:

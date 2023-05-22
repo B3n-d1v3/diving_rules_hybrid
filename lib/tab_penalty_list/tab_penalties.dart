@@ -1,18 +1,17 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-// for the dark mode
-import 'package:provider/provider.dart';
-import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
-// for the translation
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'page_penalty_details.dart';
 // for the json
 import 'dart:convert';
-import 'package:flutter/services.dart';
 
-List _sanctions = [];
+import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+// for the translation
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+// for the dark mode
+import 'package:provider/provider.dart';
+
+// init the list of sanctions
+List sanctions = [];
 
 class CupertinoTabPenalties extends StatefulWidget {
   const CupertinoTabPenalties({Key? key}) : super(key: key);
@@ -21,20 +20,17 @@ class CupertinoTabPenalties extends StatefulWidget {
   _CupertinoTabPenaltiesState createState() => _CupertinoTabPenaltiesState();
 }
 
-
 class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
-
   // Fetch content from the json file
   Future<void> initSanctionFromJson() async {
-    final String response = await rootBundle.loadString('assets/data/divingPenaltiesSanctions.json');
+    final String response = await rootBundle
+        .loadString('assets/data/divingPenaltiesSanctions.json');
     final data = await json.decode(response);
     setState(() {
-    _sanctions = data["sanctions"];
-    debugPrint("initSanctionFromJson: nb items loaded: ${_sanctions.length}");
-     });
+      sanctions = data["sanctions"];
+      debugPrint("initSanctionFromJson: nb items loaded: ${sanctions.length}");
+    });
   }
-
-
 
   @override
   void initState() {
@@ -75,7 +71,7 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
         // Temp test of json decoding with penalty sanctions
         child: PenaltySanctionsView(),
 
-          // link to test page for penalty description
+        // link to test page for penalty description
         // child: CupertinoButton(
         //       onPressed: () {
         //         Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => PagePenaltyDescription()));
@@ -86,8 +82,6 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
     );
   }
 }
-
-
 
 // icon correspondance mapping
 // Map<String, IconData> iconsMap = {
@@ -102,12 +96,10 @@ class _CupertinoTabPenaltiesState extends State<CupertinoTabPenalties> {
 //   'chevron_right_circle_fill':CupertinoIcons.chevron_right_circle_fill,
 // };
 
-
 // TODO: Externalize the data model and finalize the corresponding structure
 // class Rule {
 //   final String ruleId;
 // }
-
 
 // TODO: Externalize the data model in another file
 // Penalty Data Model
@@ -119,16 +111,13 @@ class Penalty {
   // final Bool referee;
   // final Bool judge;
 
-  Penalty ({
-    required this.icon,
-    required this.description});
+  Penalty({required this.icon, required this.description});
 
   @override
-  String toString(){
+  String toString() {
     return "$description (rule: xxx)";
   }
 }
-
 
 // a test list to try the list - To be deleted
 List<Penalty> penalties = [
@@ -175,7 +164,7 @@ class PenaltyListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: penalties.length,
-      itemBuilder: (context, index){
+      itemBuilder: (context, index) {
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
           // TODO: Change from ListTile to custom view to see full penalty description in each items
@@ -195,30 +184,27 @@ class PenaltyListView extends StatelessWidget {
 
 // Temp test of json decoding with penalty sanctions
 class PenaltySanctionsView extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     debugPrint("Show Data");
-    debugPrint("initSanctionFromJson: nb items loaded: ${_sanctions.length}");
+    debugPrint("initSanctionFromJson: nb items loaded: ${sanctions.length}");
     return ListView.builder(
-        itemCount: _sanctions.length,
-        itemBuilder: (context, index)
-    {
-      return Card(
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-        child: CupertinoListTile(
-          //leading:  Icon(iconsMap[penalties[index].icon]),
-          // TODO: LAST ITEM: use the object variable icon name to set icon
-          leading: Icon(CupertinoIcons.lessthan_circle_fill),
-          //leading: Icon(_sanctions[index]["icon"]),
-          // TODO: Get the icon from the penalty type
-          title: Text(_sanctions[index]["description"]),
-          subtitle: Text(_sanctions[index]["icon"]),
-          trailing: const CupertinoListTileChevron(),
-          // TODO: Add action to open penalty description page
-        ),
-      );
-    }
-    );
+        itemCount: sanctions.length,
+        itemBuilder: (context, index) {
+          return Card(
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+            child: CupertinoListTile(
+              //leading:  Icon(iconsMap[penalties[index].icon]),
+              // TODO: LAST ITEM: use the object variable icon name to set icon
+              leading: Icon(CupertinoIcons.lessthan_circle_fill),
+              //leading: Icon(_sanctions[index]["icon"]),
+              // TODO: Get the icon from the penalty type
+              title: Text(sanctions[index]["description"]),
+              subtitle: Text(sanctions[index]["icon"]),
+              trailing: const CupertinoListTileChevron(),
+              // TODO: Add action to open penalty description page
+            ),
+          );
+        });
   }
 }
