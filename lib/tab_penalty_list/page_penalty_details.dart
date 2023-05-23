@@ -7,19 +7,30 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
 import '../models/globals.dart';
+import '../models/sanction_model.dart';
+import '../tokens/colors.dart';
 
 class PagePenaltyDescription extends StatefulWidget {
-  //final List<Penalty> penalties;
   int index;
+  // var thisPenaltySanction =
+  //     PenaltySanction(false, false, false, false, false, false);
+  // late PenaltySanction penaltySanction;
   PagePenaltyDescription({Key? key, required this.index}) : super(key: key);
-  // String penaltyDescription = "penalty"+ penalty.id.toString();
-
 
   @override
   _PagePenaltyDescriptionState createState() => _PagePenaltyDescriptionState();
 }
 
 class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
+  late PenaltySanction penaltySanction;
+  @override
+  void initState() {
+    //Set the PenaltySanction values
+    penaltySanction = setPenaltySanction(
+        penaltyNb: penaltySummary.penalties[widget.index].sanctionValue);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final themeState = Provider.of<DarkThemeProvider>(context);
@@ -49,25 +60,36 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
       child: SafeArea(
         child: Column(
           children: [
-            // TODO: Update the next and previous  buttons
+            // TODO: Update the next and previous buttons and use icons
+            // left / right navigation in the penalty list to avoid going back to the main list
+            // use example: https://www.youtube.com/watch?v=Kc-2MtZnfFo
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
-                  onPressed: () {
-                    setState(() {
-                      if (widget.index > 0) {
-                        widget.index--;
-                      }
-                    });
-                  },
-                  child: Text("<"),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: TextButton(
+                    onPressed: () {
+                      setState(() {
+                        if (widget.index > 0) {
+                          widget.index--;
+                          penaltySanction = setPenaltySanction(
+                              penaltyNb: penaltySummary
+                                  .penalties[widget.index].sanctionValue);
+                        }
+                      });
+                    },
+                    child: Text("<"),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {
                     setState(() {
                       if (widget.index < penaltySummary.penalties.length - 1) {
                         widget.index++;
+                        penaltySanction = setPenaltySanction(
+                            penaltyNb: penaltySummary
+                                .penalties[widget.index].sanctionValue);
                       }
                     });
                   },
@@ -79,37 +101,56 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
             Text(AppLocalizations.of(context)!.penaltyRule),
             Text(AppLocalizations.of(context)!.penaltyDescription),
 
+            // Description Content
             // TODO: Update with the localized version of the description
             Text(penaltySummary.penalties[widget.index].description),
 
-            // Text(AppLocalizations.of(context)!.),
-
+            // Rules References
             DisplayRulesReferences(
                 rulesReferences: penaltySummary.penalties[widget.index].rules),
+            const Divider(
+              height: 20,
+              thickness: .5,
+              indent: 10,
+              endIndent: 10,
+              color: AppColor.drColorDeselectedLight,
+            ),
             Text(AppLocalizations.of(context)!.penaltyPenalty),
-            Row(
-              // set all row elements evenly in the available width
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // TODO: Add the penalties buttons (0pts, max 2 pts...)
-                Text(AppLocalizations.of(context)!.button0pts),
-                Text(AppLocalizations.of(context)!.buttonMax2pts),
-                Text(AppLocalizations.of(context)!.buttonMax4Halfpts),
+            SizedBox(height: 10),
+
+            // GridView to display the Penalty Sanctions
+            GridView.count(
+              crossAxisCount: 3,
+              primary: false,
+              padding: const EdgeInsets.all(1),
+              childAspectRatio: (1 / .6),
+              crossAxisSpacing: 0,
+              mainAxisSpacing: 0,
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
+              children: <Widget>[
+                PenaltyButton(
+                    buttonType: 0, isSelected: penaltySanction.zeroPts),
+                PenaltyButton(
+                    buttonType: 1, isSelected: penaltySanction.maxTwoPts),
+                PenaltyButton(
+                    buttonType: 2, isSelected: penaltySanction.maxFourHalfPts),
+                PenaltyButton(
+                    buttonType: 3, isSelected: penaltySanction.minusTwoPts),
+                PenaltyButton(
+                    buttonType: 4,
+                    isSelected: penaltySanction.minusHalfToTwoPts),
+                PenaltyButton(
+                    buttonType: 5, isSelected: penaltySanction.judgeOpinion),
               ],
             ),
-            Row(
-              // set all row elements evenly in the available width
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // TODO: Add the penalties buttons (0pts, max 2 pts...)
-                Text(AppLocalizations.of(context)!.buttonMinus2pts),
-                Text(AppLocalizations.of(context)!.buttonMinusHalfTo2pts),
-                Text(AppLocalizations.of(context)!.buttonJudgeOpinion),
-              ],
+
+            const Divider(
+              height: 10,
+              thickness: .5,
+              indent: 10,
+              endIndent: 10,
+              color: AppColor.drColorDeselectedLight,
             ),
             Text(AppLocalizations.of(context)!.penaltyOwnership),
             Row(
@@ -122,18 +163,17 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
             ),
 
             // Test the penalty button mechanism
-            PenaltyButton(
-                buttonType: 0,
-                isSelected: if penaltySummary.penalties[widget.index].
-            ),
-            PenaltyButton(buttonType: 1, isSelected: false),
-            PenaltyButton(buttonType: 2, isSelected: true),
-            PenaltyButton(buttonType: 3, isSelected: false),
-            PenaltyButton(buttonType: 4, isSelected: true),
-            PenaltyButton(buttonType: 5, isSelected: false),
+            // PenaltyButton(buttonType: 0, isSelected: penaltySanction.zeroPts),
+            // PenaltyButton(buttonType: 1, isSelected: penaltySanction.maxTwoPts),
+            // PenaltyButton(
+            //     buttonType: 2, isSelected: penaltySanction.maxFourHalfPts),
+            // PenaltyButton(
+            //     buttonType: 3, isSelected: penaltySanction.minusTwoPts),
+            // PenaltyButton(
+            //     buttonType: 4, isSelected: penaltySanction.minusHalfToTwoPts),
+            // PenaltyButton(
+            //     buttonType: 5, isSelected: penaltySanction.judgeOpinion),
           ],
-          // TODO: Add left / right navigation in the penalty list to avoid going back to the main list
-          // use example: https://www.youtube.com/watch?v=Kc-2MtZnfFo
         ),
         // debugPrint("Test text in console");
         // ),
@@ -153,6 +193,6 @@ class DisplayRulesReferences extends StatelessWidget {
       rulesToDisplay = rulesToDisplay + " - ${rulesReferences[i].ruleId}";
       // Text(" - ${rulesReferences[0].ruleId}")
     }
-    return (Text(rulesToDisplay));
+    return (Text(rulesToDisplay, textAlign: TextAlign.end));
   }
 }

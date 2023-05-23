@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 
 // JSON decoding automatically generated with https://app.quicktype.io/
 // To parse this JSON data, do
@@ -69,13 +68,40 @@ Future<void> initSanctionFromJson() async {
 
 // the penalty sanction status of all available options
 class PenaltySanction {
-  Bool zeroPts;
-  Bool maxTwoPts;
-  Bool maxFourHalfPts;
-  Bool minusTwoPts;
-  Bool minusHalfToTwoPts;
-  Bool judgeOpinion;
+  bool zeroPts;
+  bool maxTwoPts;
+  bool maxFourHalfPts;
+  bool minusTwoPts;
+  bool minusHalfToTwoPts;
+  bool judgeOpinion;
 
   PenaltySanction(this.zeroPts, this.maxTwoPts, this.maxFourHalfPts,
       this.minusTwoPts, this.minusHalfToTwoPts, this.judgeOpinion);
+}
+
+// function to setup the PenaltySanction from the SanctionModel of the penalty
+PenaltySanction setPenaltySanction({required int penaltyNb}) {
+  final tempPenaltySanction =
+      PenaltySanction(false, false, false, false, false, false);
+  switch (penaltyNb) {
+    case 0:
+      tempPenaltySanction.zeroPts = true;
+      break;
+    case 1:
+      tempPenaltySanction.maxTwoPts = true;
+      break;
+    case 2:
+      tempPenaltySanction.maxFourHalfPts = true;
+      break;
+    case 3:
+      tempPenaltySanction.minusTwoPts = true;
+      break;
+    case 4:
+      tempPenaltySanction.minusHalfToTwoPts = true;
+      break;
+    case 5:
+      tempPenaltySanction.judgeOpinion = true;
+      break;
+  }
+  return tempPenaltySanction;
 }

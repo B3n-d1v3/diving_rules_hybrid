@@ -24,6 +24,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.button0pts,
               style: TextStyle(
@@ -42,6 +43,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.buttonMax2pts,
               style: TextStyle(
@@ -60,6 +62,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.buttonMax4Halfpts,
               style: TextStyle(
@@ -78,6 +81,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.buttonMinus2pts,
               style: TextStyle(
@@ -96,6 +100,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.buttonMinusHalfTo2pts,
               style: TextStyle(
@@ -114,6 +119,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                 color: widget.isSelected
                     ? Theme.of(context).colorScheme.primary
                     : AppColor.drColorDeselectedLight),
+            SizedBox(height: 5),
             Text(
               AppLocalizations.of(context)!.buttonJudgeOpinion,
               style: TextStyle(
