@@ -14,6 +14,7 @@ class CupertinoTabRules extends StatefulWidget {
 class _CupertinoTabRulesState extends State<CupertinoTabRules> {
   @override
   Widget build(BuildContext context) {
+    Locale myLocale = Localizations.localeOf(context);
     final themeState = Provider.of<DarkThemeProvider>(context);
     return CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
@@ -34,11 +35,10 @@ class _CupertinoTabRulesState extends State<CupertinoTabRules> {
           ),
         ),
         child: Center(
-            // TODO: Select the Rule Book of the right localization
-            // Locale myLocale = Localizations.localeOf(context);
-            child: SfPdfViewer.asset(
-                'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')
-            //child: SfPdfViewer.asset('assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf')
-            ));
+            child: myLocale.languageCode == 'fr'
+                ? SfPdfViewer.asset(
+                    'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf')
+                : SfPdfViewer.asset(
+                    'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')));
   }
 }
