@@ -34,30 +34,36 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
   @override
   Widget build(BuildContext context) {
     final themeState = Provider.of<DarkThemeProvider>(context);
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
-
-        // Header trailing functions: Light/Dark switch + Language Selection
-        trailing: CupertinoButton(
-          onPressed: () {
-            setState(() {
-              themeState.darkTheme = !themeState.darkTheme;
-              // themeModeSwitch = !themeModeSwitch;
-            });
-          },
-          padding: EdgeInsets.zero,
-          child: Icon(themeState.darkTheme
-              ? CupertinoIcons.moon_stars_fill
-              : CupertinoIcons.brightness_solid),
-        ),
+    // return CupertinoPageScaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
       ),
+      // navigationBar: CupertinoNavigationBar(
+      //   middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
+      //
+      //   // Header trailing functions: Light/Dark switch + Language Selection
+      //   trailing: CupertinoButton(
+      //     onPressed: () {
+      //       setState(() {
+      //         themeState.darkTheme = !themeState.darkTheme;
+      //         // themeModeSwitch = !themeModeSwitch;
+      //       });
+      //     },
+      //     padding: EdgeInsets.zero,
+      //     child: Icon(themeState.darkTheme
+      //         ? CupertinoIcons.moon_stars_fill
+      //         : CupertinoIcons.brightness_solid),
+      //   ),
+      // ),
+
       // child: container(
       //   // Retrieves the screen size
       //   width: MediaQuery.of(context).size.width,
       //   height: MediaQuery.of(context).size.height,
 
-      child: SafeArea(
+      body: SafeArea(
+        // child: SafeArea(
         child: Column(
           children: [
             // TODO: Update the next and previous buttons and use icons
@@ -68,19 +74,37 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               children: [
                 Align(
                   alignment: Alignment.bottomLeft,
-                  child: TextButton(
-                    onPressed: () {
-                      setState(() {
-                        if (widget.index > 0) {
-                          widget.index--;
-                          penaltySanction = setPenaltySanction(
-                              penaltyNb: penaltySummary
-                                  .penalties[widget.index].sanctionValue);
-                        }
-                      });
-                    },
-                    child: Text("<"),
-                  ),
+                  // IconButton is only linked to material design TODO: Need to update to Material Design
+                  child: IconButton(
+                      icon:
+                          const Icon(CupertinoIcons.arrowtriangle_left_square),
+                      // To be localized
+                      tooltip: 'Next',
+                      onPressed: () {
+                        setState(
+                          () {
+                            if (widget.index > 0) {
+                              widget.index--;
+                              penaltySanction = setPenaltySanction(
+                                  penaltyNb: penaltySummary
+                                      .penalties[widget.index].sanctionValue);
+                            }
+                          },
+                        );
+                      }),
+                  // TextButton(
+                  //   onPressed: () {
+                  //     setState(() {
+                  //       if (widget.index > 0) {
+                  //         widget.index--;
+                  //         penaltySanction = setPenaltySanction(
+                  //             penaltyNb: penaltySummary
+                  //                 .penalties[widget.index].sanctionValue);
+                  //       }
+                  //     });
+                  //   },
+                  //   child: Text("<"),
+                  // ),
                 ),
                 TextButton(
                   onPressed: () {
