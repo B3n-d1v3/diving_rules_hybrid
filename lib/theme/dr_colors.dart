@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+
 class AppColor {
   AppColor._();
 
@@ -53,13 +54,10 @@ class AppColor {
   // static const Color dr_deselected_light = Color(0xFF575757);
   // static const Color dr_deselected_dark = Color(0xFF969696);
 
-
   // Non Material
   static const Color drColorPositiveLight = Color(0xFF006600);
   static const Color drColorNegativeLight = Color(0xffAC0000);
   static const Color drColorDeselectedLight = Color(0xFF575757);
-
-
 
   // New App
   // Light Mode
@@ -70,15 +68,19 @@ class AppColor {
   static const Color myOnPrimaryColorLight = Color(0xFFFFFFFF);
   static const Color mySecondaryColorLight = Color(0xFF005A94);
   static const Color myOnSecondaryColorLight = Color(0xFFFFFFFF);
-  static const Color myTertiaryColorLight = Color(0xFF009AFF);
+
+  // static const Color myTertiaryColorLight = Color(0xFF009AFF);
+  static const Color myTertiaryColorLight = drColorDeselectedLight;
   static const Color myOnTertiaryColorLight = Color(0xFFFFFFFF);
 
-  static const Color mySurfaceColorLight = Color(0xff000000);
-  static const Color myOnSurfaceColorLight = Color(0xffffffff);
+  static const Color mySurfaceColorLight = Color(0xffffffff);
+  static const Color myOnSurfaceColorLight = Color(0xff000000);
   static const Color myErrorColorLight = drColorNegativeLight;
   static const Color myOnErrorColorLight = Color(0xffFFFFFF);
 
-  static const Color myPrimaryContainerColorLight = Color(0xFFe1e0ff);
+  static const Color myPrimaryContainerColorLight =
+      // Colors.red;
+      Color(0xFFe1e0ff);
   static const Color myOnPrimaryContainerColorLight = Color(0xFF070764);
   static const Color mySecondaryContainerColorLight = Color(0xFFD1E4FF);
   static const Color myOnSecondaryContainerColorLight = Color(0xFF001D36);
@@ -103,28 +105,29 @@ class AppColor {
   // outlineVariant: Color(0xFFC2C7CF),
   // scrim: Color(0xFF000000),
 
-
   // Dark Mode
   static const Color drPrimaryDark = Color(0xFF009AFF);
   static const Color drSecondaryDark = Color(0xFF005994);
 
   static const Color drColorPositiveDark = Color(0xFF00C300); // #81db6e
-  static const Color drColorNegativeDark = Color(0xFFFF614D);  // #ffb4a8
+  static const Color drColorNegativeDark = Color(0xFFFF614D); // #ffb4a8
   static const Color drColorDeselectedDark = Color(0xFF969696);
-
 
   static const Color myBackgroundColorDark = Color(0xff000000);
   static const Color myOnBackgroundColorDark = Color(0xffffffff);
 
-  static const Color myPrimaryColorDark = Color(0xFF6B93EB); // Material Theme builder proposition: #bfc1ff (from https://m3.material.io/theme-builder#/custom )
+  static const Color myPrimaryColorDark = Color(
+      0xFF6B93EB); // Material Theme builder proposition: #bfc1ff (from https://m3.material.io/theme-builder#/custom )
   static const Color myOnPrimaryColorDark = Color(0xFF000000);
   static const Color mySecondaryColorDark = Color(0xFF009AFF); // #9ccaff
   static const Color myOnSecondaryColorDark = Color(0xFF000000);
-  static const Color myTertiaryColorDark = Color(0xFF005994); //
+
+  // static const Color myTertiaryColorDark = Color(0xFF005994); //
+  static const Color myTertiaryColorDark = drColorDeselectedDark;
   static const Color myOnTertiaryColorDark = Color(0xFF000000);
 
-  static const Color mySurfaceColorDark = Color(0xffffffff);
-  static const Color myOnSurfaceColorDark = Color(0xff000000);
+  static const Color mySurfaceColorDark = Color(0xff000000);
+  static const Color myOnSurfaceColorDark = Color(0xffffffff);
   static const Color myErrorColorDark = drColorNegativeDark;
   static const Color myOnErrorColorDark = Color(0xff000000);
 

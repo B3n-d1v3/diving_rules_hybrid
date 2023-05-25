@@ -52,6 +52,7 @@ dependencies:
   provider: ^6.0.5
   # syncfusion_flutter_pdfviewer: ^20.4.38
   syncfusion_flutter_pdfviewer: ^21.2.5
+  get: ^4.6.5
 
 
 

@@ -3,27 +3,24 @@ import 'dart:convert';
 
 // init the Sanction Items & Penalty Summary
 import 'package:diving_rules_hybrid/models/globals.dart';
-import 'package:diving_rules_hybrid/models/penalty_model.dart';
-// the sanction data model and json deserialization
+import 'package:diving_rules_hybrid/models/penalty_model.dart'; // the sanction data model and json deserialization
 import 'package:diving_rules_hybrid/models/sanction_model.dart';
-import 'package:diving_rules_hybrid/tab_penalty_list/page_penalty_details.dart';
+import 'package:diving_rules_hybrid/tab_penalty_list/screen_penalty_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// for the translation
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
-import '../provider/dark_theme_provider.dart';
+import '../buttons/penalty_sanction_icon.dart';
 
-class TabPenalties extends StatefulWidget {
-  const TabPenalties({Key? key}) : super(key: key);
+class ScreenPenaltyList extends StatefulWidget {
+  const ScreenPenaltyList({Key? key}) : super(key: key);
 
   @override
-  _TabPenaltiesState createState() => _TabPenaltiesState();
+  State<ScreenPenaltyList> createState() => _ScreenPenaltyListState();
 }
 
-class _TabPenaltiesState extends State<TabPenalties> {
+class _ScreenPenaltyListState extends State<ScreenPenaltyList> {
   // Method to fetch content from the json file
   Future<void> getSanctions(BuildContext context) async {
     final sanctionsFile = await rootBundle
@@ -70,72 +67,45 @@ class _TabPenaltiesState extends State<TabPenalties> {
 
   @override
   Widget build(BuildContext context) {
-    final themeState = Provider.of<DarkThemeProvider>(context);
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
-
-        // Header trailing functions: Light/Dark switch + Language Selection
-        trailing: CupertinoButton(
-          onPressed: () {
-            setState(() {
-              themeState.darkTheme = !themeState.darkTheme;
-              // themeModeSwitch = !themeModeSwitch;
-            });
-          },
-          padding: EdgeInsets.zero,
-          child: Icon(themeState.darkTheme
-              ? CupertinoIcons.moon_stars_fill
-              : CupertinoIcons.brightness_solid),
-        ),
-      ),
-      // child: Center(
-      //   child: Text('List of penalties'),
-      // debugPrint("Test text printed in the console");
-      child: SafeArea(
-        // View the list of items
+    return Scaffold(
+      // appBar: AppBar(
+      //   title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
+      // ),
+      body: SafeArea(
         child: PenaltyListView(),
-
-        // Temp test of json decoding with penalty sanctions
-        // child: PenaltySanctionsView(),
-
-        // link to test page for penalty description
-        // child: CupertinoButton(
-        //       onPressed: () {
-        //         Navigator.push(context, CupertinoPageRoute(builder: (BuildContext context) => PagePenaltyDescription()));
-        //       },
-        //       child: Text('Test Next Page')
-        //   )
       ),
     );
   }
 }
 
 class PenaltyListView extends StatelessWidget {
-  // const PenaltyListView({Key? key});
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: penaltySummary.penalties.length,
       itemBuilder: (context, index) {
-        return Card(
-          margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-          // TODO: Change from ListTile to custom view to see full penalty description in each items
-          child: CupertinoListTile(
-            //leading:  Icon(iconsMap[penalties[index].icon]),
-            leading: Icon(CupertinoIcons.lessthan_circle_fill),
-            // TODO: Get the icon from the penalty type
-            title: Text(
-              penaltySummary.penalties[index].description,
-              maxLines: 4,
+        return Column(
+          children: [
+            ListTile(
+              leading: PenaltyIcon(
+                buttonType: penaltySummary.penalties[index].sanctionValue,
+                size: 30,
+              ),
+              // TODO: Update the penalty description to use the translation value
+              title: Text(
+                penaltySummary.penalties[index].description,
+                maxLines: 4,
+              ),
+              trailing: const CupertinoListTileChevron(),
+              onTap: () {
+                Get.to(
+                  PagePenaltyDescription(index: index),
+                  transition: Transition.rightToLeftWithFade,
+                );
+              },
             ),
-            trailing: const CupertinoListTileChevron(),
-            // TODO: Add action to open penalty description page
-            onTap: () {
-              Navigator.of(context).push(CupertinoPageRoute(
-                  builder: (context) => PagePenaltyDescription(index: index)));
-            },
-          ),
+            Divider(),
+          ],
         );
       },
     );

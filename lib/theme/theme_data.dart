@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+
 //import 'package:flutter/material.dart';
 
-import 'colors.dart';
+import 'dr_colors.dart';
+// Not used in the new material 3 setup (issue/Branch #26)
 
 // TODO: Later / Investigate Material you support
 // https://fivedottwelve.com/blog/themes-in-flutter-and-how-to-use-material-you-dynamic-colors/
@@ -81,30 +83,29 @@ class Styles {
   static CupertinoThemeData themeData(bool isDarkTheme) {
     return CupertinoThemeData(
       brightness: isDarkTheme ? Brightness.dark : Brightness.light,
-      primaryColor: isDarkTheme ? AppColor.myPrimaryColorDark : AppColor.myPrimaryColorLight,
+      primaryColor: isDarkTheme
+          ? AppColor.myPrimaryColorDark
+          : AppColor.myPrimaryColorLight,
       // textTheme: isDarkTheme ? AppColor.myOnBackgroundColorDark : AppColor.myOnBackgroundColorLight,
 
-          //textTheme: const TextTheme(
-            //displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-            //displayMedium:,
-            //displaySmall:,
-            //headlineLarge:,
-            //headlineMedium:,
-            //headlineSmall:,
-            //titleLarge: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, height: 2),
-            //titleMedium:,
-            //titleSmall:,
-            //bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind')
-            //bodyLarge:,
-            //bodyMedium:,
-            //bodySmall:,
-            //labelLarge:,
-            //labelMedium:,
-            //labelSmall:,
-          //),
+      //textTheme: const TextTheme(
+      //displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+      //displayMedium:,
+      //displaySmall:,
+      //headlineLarge:,
+      //headlineMedium:,
+      //headlineSmall:,
+      //titleLarge: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic, height: 2),
+      //titleMedium:,
+      //titleSmall:,
+      //bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind')
+      //bodyLarge:,
+      //bodyMedium:,
+      //bodySmall:,
+      //labelLarge:,
+      //labelMedium:,
+      //labelSmall:,
+      //),
     );
-
   }
 }
-
-

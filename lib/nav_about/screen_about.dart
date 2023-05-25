@@ -1,18 +1,18 @@
-import 'package:diving_rules_hybrid/provider/dark_theme_provider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:provider/provider.dart';
 
-class CupertinoTabAbout extends StatefulWidget {
-  const CupertinoTabAbout({Key? key}) : super(key: key);
+import '../theme/typography_styles_test.dart';
+
+class ScreenAbout extends StatefulWidget {
+  const ScreenAbout({Key? key}) : super(key: key);
 
   @override
-  _CupertinoTabAboutState createState() => _CupertinoTabAboutState();
+  State<ScreenAbout> createState() => _ScreenAboutState();
 }
 
-class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
+class _ScreenAboutState extends State<ScreenAbout> {
   // Package Version instantiation
   PackageInfo _packageInfo = PackageInfo(
       appName: 'Unknown',
@@ -34,35 +34,9 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
 
   @override
   Widget build(BuildContext context) {
-    final themeState = Provider.of<DarkThemeProvider>(context);
-
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text(AppLocalizations.of(context)!.aboutTitle),
-
-        // trailing: SwitchListTile(
-        //     value: false,
-        //     onChanged: (bool value) {
-        //       themeState.darkTheme = value;
-        //     }
-        // ),
-
-        // Header trailing functions: Light/Dark switch + Language Selection
-        trailing: CupertinoButton(
-          onPressed: () {
-            setState(() {
-              themeState.darkTheme = !themeState.darkTheme;
-              // themeModeSwitch = !themeModeSwitch;
-            });
-          },
-          padding: EdgeInsets.zero,
-          child: Icon(themeState.darkTheme
-              ? CupertinoIcons.moon_stars_fill
-              : CupertinoIcons.brightness_solid),
-        ),
-      ),
-      child: SafeArea(
-        child: CupertinoScrollbar(
+    return Scaffold(
+      body: SafeArea(
+        child: Scrollbar(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
@@ -199,6 +173,16 @@ class _CupertinoTabAboutState extends State<CupertinoTabAbout> {
           ),
         ),
       ),
+
+      // Typography tests
+      // TextButton(
+      //     onPressed: () {
+      //       Get.to(
+      //         TestTextStyles(),
+      //         transition: Transition.rightToLeftWithFade,
+      //       );
+      //     },
+      //     child: Center(child: Text('Test Typography'))),
     );
   }
 }
