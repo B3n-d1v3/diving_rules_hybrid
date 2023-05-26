@@ -5,13 +5,14 @@ import 'dart:convert';
 import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart'; // the sanction data model and json deserialization
 import 'package:diving_rules_hybrid/models/sanction_model.dart';
-import 'package:diving_rules_hybrid/tab_penalty_list/screen_penalty_details.dart';
+import 'package:diving_rules_hybrid/nav_penalty_list/screen_penalty_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../buttons/penalty_sanction_icon.dart';
+import '../l10n/penalty_description_l10n.dart';
 
 class ScreenPenaltyList extends StatefulWidget {
   const ScreenPenaltyList({Key? key}) : super(key: key);
@@ -92,10 +93,8 @@ class PenaltyListView extends StatelessWidget {
                 size: 30,
               ),
               // TODO: Update the penalty description to use the translation value
-              title: Text(
-                penaltySummary.penalties[index].description,
-                maxLines: 4,
-              ),
+              title: PenaltyDescription(penaltyId: index),
+              //Text(penaltySummary.penalties[index].description, maxLines: 4,),
               trailing: const CupertinoListTileChevron(),
               onTap: () {
                 Get.to(

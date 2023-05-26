@@ -1,3 +1,4 @@
+import 'package:diving_rules_hybrid/sub_views/diving_rules_logo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
@@ -42,7 +43,11 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
         builder: (context, ModelTheme themeNotifier, child) {
       return Scaffold(
           appBar: AppBar(
-            title: Text(selectedItem.label),
+            title: (_selectedIndex == 0)
+                ? DivingRulesLogo(
+                    small: true,
+                  )
+                : Text(selectedItem.label),
             actions: [ThemeSelector()],
           ),
           bottomNavigationBar:
@@ -113,6 +118,8 @@ class _NavigationItems {
           activeIcon: Icon(CupertinoIcons.book_fill),
           icon: Icon(CupertinoIcons.book),
           label: AppLocalizations.of(context)!.navigationMenuRules,
+          // TODO: Change the rules header to the app name while keeping the rules bottom navigation correct
+          // label: AppLocalizations.of(context)!.cFBundleName,
           screen: ScreenRulebook()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.square_list_fill),

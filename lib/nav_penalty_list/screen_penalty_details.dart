@@ -4,7 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
-import '../buttons/button_onership.dart';
+import '../buttons/button_ownership.dart';
+import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/sanction_model.dart';
 import '../theme/dr_colors.dart';
@@ -31,37 +32,18 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 
   @override
   Widget build(BuildContext context) {
-    // final themeState = Provider.of<DarkThemeProvider>(context);
-    // return CupertinoPageScaffold(
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
       ),
-      // navigationBar: CupertinoNavigationBar(
-      //   middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
-      //
-      //   // Header trailing functions: Light/Dark switch + Language Selection
-      //   trailing: CupertinoButton(
-      //     onPressed: () {
-      //       setState(() {
-      //         themeState.darkTheme = !themeState.darkTheme;
-      //         // themeModeSwitch = !themeModeSwitch;
-      //       });
-      //     },
-      //     padding: EdgeInsets.zero,
-      //     child: Icon(themeState.darkTheme
-      //         ? CupertinoIcons.moon_stars_fill
-      //         : CupertinoIcons.brightness_solid),
-      //   ),
-      // ),
-
-      // child: container(
       //   // Retrieves the screen size
       //   width: MediaQuery.of(context).size.width,
       //   height: MediaQuery.of(context).size.height,
 
       body: SafeArea(
-        // child: SafeArea(
+          child: Scrollbar(
+              child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -162,10 +144,11 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 
               // Description Content
               // TODO: Update with the localized version of the description
+
               Align(
                 alignment: Alignment.centerLeft,
-                child: Text(penaltySummary.penalties[widget.index].description,
-                    style: Theme.of(context).textTheme.bodyLarge),
+                child: PenaltyDescription(penaltyId: widget.index),
+                // Text(penaltySummary.penalties[widget.index].description, style: Theme.of(context).textTheme.bodyLarge),
               ),
               SizedBox(height: 10),
 
@@ -284,7 +267,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
         ),
         // debugPrint("Test text in console");
         // ),
-      ),
+      ))),
     );
   }
 }
@@ -299,25 +282,17 @@ class DisplayRulesReferences extends StatelessWidget {
     String rulesToDisplay = "";
     for (var i = 0; i < rulesReferences.length; i++) {
       rulesToDisplay = rulesToDisplay + " - ${rulesReferences[i].ruleId}";
-      // Text(" - ${rulesReferences[0].ruleId}")
     }
     return (RichText(
-            text: TextSpan(
+        text: TextSpan(
       style: Theme.of(context).textTheme.labelMedium,
       children: [
         TextSpan(
             text: rulesToDisplay,
             style: TextStyle(
               color: Theme.of(context).colorScheme.tertiary,
-            )
-            // style: Theme.of(context).textTheme.titleLarge,
-            ),
+            )),
       ],
-    ))
-
-        // Text(rulesToDisplay,
-        // textAlign: TextAlign.end,
-        // style: Theme.of(context).textTheme.labelMedium)
-        );
+    )));
   }
 }

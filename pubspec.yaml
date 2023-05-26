@@ -53,6 +53,9 @@ dependencies:
   # syncfusion_flutter_pdfviewer: ^20.4.38
   syncfusion_flutter_pdfviewer: ^21.2.5
   get: ^4.6.5
+  flutter_svg: ^2.0.5
+  url_launcher: ^6.1.5
+  #share_plus: ^7.0.1
 
 
 

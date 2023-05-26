@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+// import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-import '../theme/typography_styles_test.dart';
+import '../sub_views/diving_rules_logo.dart';
 
 class ScreenAbout extends StatefulWidget {
   const ScreenAbout({Key? key}) : super(key: key);
@@ -19,6 +21,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
       packageName: 'Unknown',
       version: 'Unknown',
       buildNumber: 'Unknown');
+
   @override
   void initState() {
     super.initState();
@@ -39,136 +42,189 @@ class _ScreenAboutState extends State<ScreenAbout> {
         child: Scrollbar(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: Padding(
-              padding: EdgeInsets.all(15),
-              // margin: const EdgeInsets.all(10),
-              child: Column(children: [
-                Image.asset(
-                  'assets/images/diving-rules-logo-3.png',
-                  height: 200,
-                ),
+            child: Column(
+              children: [
+                // Diving Board Photo
+                SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('assets/images/diving_board.png',
+                        fit: BoxFit.fitWidth)),
 
-                const SizedBox(
-                  height: 20,
-                ),
+                Padding(
+                  padding: EdgeInsets.all(15),
+                  // margin: const EdgeInsets.all(10),
+                  child: Column(children: [
+                    DivingRulesLogo(small: false),
+                    // Image.asset('assets/images/diving_rules_22_logo_full.png', height: 180,),
 
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Row(children: [
-                    // TODO: Correct the text color in dark mode
+                    const SizedBox(height: 8),
 
-                    Text(
-                      AppLocalizations.of(context)!.aboutVersion,
-                      style: Theme.of(context).textTheme.labelMedium,
-                      textAlign: TextAlign.start,
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Row(children: [
+                        Text(
+                          AppLocalizations.of(context)!.aboutVersion,
+                          style: Theme.of(context).textTheme.labelMedium,
+                          textAlign: TextAlign.start,
+                        ),
+                        Text(
+                          "v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
+                          style: Theme.of(context).textTheme.labelMedium,
+                        ),
+                      ]),
+                    ),
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutRulesReference,
+                        textAlign: TextAlign.start,
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
+                    ),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    // Description
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutDescriptionTitle,
+                        style: Theme.of(context).textTheme.titleMedium,
+
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2, color: primaryColor),
+                      ),
                     ),
                     Text(
-                      "v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
-                      style: Theme.of(context).textTheme.labelMedium,
+                      AppLocalizations.of(context)!.aboutDescription,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutLicenseTitle,
+                        style: Theme.of(context).textTheme.titleMedium,
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
+                      ),
+                    ),
+                    Text(
+                      AppLocalizations.of(context)!.aboutLicense,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutThanksTitle,
+                        style: Theme.of(context).textTheme.titleMedium,
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
+                      ),
+                    ),
+                    Text(
+                      AppLocalizations.of(context)!.aboutThanks,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+
+                    const SizedBox(
+                      height: 30,
+                    ),
+
+                    // Share Links
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutShareTitle,
+                        style: Theme.of(context).textTheme.titleLarge,
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
+                      ),
+                    ),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    // TODO: Create New and add the QR code image
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        // TODO: CURRENT Create Native OS Share option => testing with share_plus
+                        //Share.share('I 😍 this app to learn the Diving Rules: http://bit.ly/DivingRulesApp', subject: 'diving rules');
+                      },
+                      icon: const Icon(
+                        CupertinoIcons.share,
+                        size: 24.0,
+                      ),
+                      label: Text(AppLocalizations.of(context)!.aboutShare),
+                    ),
+
+                    const SizedBox(
+                      height: 30,
+                    ),
+
+                    // Contact Links
+                    Column(children: [
+                      Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          AppLocalizations.of(context)!.aboutContactTitle,
+                          style: Theme.of(context).textTheme.titleLarge,
+                          //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
+                          //padding: const EdgeInsets.all(50),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton.icon(
+                        onPressed: () async {
+                          String email =
+                              Uri.encodeComponent("BenDivingJudge@gmail.com");
+                          String subject =
+                              Uri.encodeComponent("Diving Rules 22 - Feedback");
+                          String body = Uri.encodeComponent(
+                              "Please provide your feedback here.");
+                          print(subject); //output: Hello%20Flutter
+                          Uri mail = Uri.parse(
+                              "mailto:$email?subject=$subject&body=$body");
+                          if (await launchUrl(mail)) {
+                            //email app opened
+                          } else {
+                            //email app is not opened
+                          }
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.mail_solid, // envelope_circle
+                          size: 24.0,
+                        ),
+                        label: Text(AppLocalizations.of(context)!
+                            .aboutContactLink), // <-- Text
+                      ),
+                    ]),
+
+                    const SizedBox(
+                      height: 30,
+                    ),
+
+                    // TODO: Add a share header bar icon + share link
+                    // shareText = "I 😍 this app to learn the Diving Rules"
+                    // for apple: URL(string : "bit.ly/DivingRulesApp")
                   ]),
                 ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    AppLocalizations.of(context)!.aboutRulesReference,
-                    textAlign: TextAlign.start,
-                    style: Theme.of(context).textTheme.labelMedium,
-                  ),
-                ),
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    AppLocalizations.of(context)!.aboutDescriptionTitle,
-                    style: Theme.of(context).textTheme.titleLarge,
-
-                    //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2, color: primaryColor),
-                  ),
-                ),
-                Text(
-                  AppLocalizations.of(context)!.aboutDescription,
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    AppLocalizations.of(context)!.aboutLicenseTitle,
-                    style: Theme.of(context).textTheme.titleSmall,
-                    //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                  ),
-                ),
-                Text(
-                  AppLocalizations.of(context)!.aboutLicense,
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-
-                const SizedBox(
-                  height: 20,
-                ),
-
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    AppLocalizations.of(context)!.aboutThanksTitle,
-                    style: Theme.of(context).textTheme.titleSmall,
-                    //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                  ),
-                ),
-                Text(
-                  AppLocalizations.of(context)!.aboutThanks,
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-
-                const SizedBox(
-                  height: 30,
-                ),
-
-                Column(children: [
-                  Text(
-                    AppLocalizations.of(context)!.aboutContactTitle,
-                    style: Theme.of(context).textTheme.titleMedium,
-                    //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                    //padding: const EdgeInsets.all(50),
-                  ),
-                  Text(
-                    AppLocalizations.of(context)!.aboutContactLink,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                    // TODO: Open a send mail
-                    // to = "BenDivingJudge@gmail.com"
-                    // let subject = "Diving Rules Feedback"
-                    // let body =  "Please provide your feedback here."
-                  ),
-                ]),
-
-                const SizedBox(
-                  height: 30,
-                ),
-
-                Text(
-                  AppLocalizations.of(context)!.aboutShareTitle,
-                  style: Theme.of(context).textTheme.titleLarge,
-                  //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                ),
-                Text(
-                  AppLocalizations.of(context)!.aboutShare,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                // TODO: Create New and add the QR code image
-
-                // TODO: Add a share header bar icon + share link
-                // shareText = "I 😍 this app to learn the Diving Rules"
-                // for apple: URL(string : "bit.ly/DivingRulesApp")
-              ]),
+              ],
             ),
           ),
         ),
