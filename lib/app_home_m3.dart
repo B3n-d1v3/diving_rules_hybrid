@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
-import 'nav_quizz/screen_quizz.dart';
+import 'nav_quiz/screen_quiz.dart';
 import 'nav_rulebook/screen_rulebook.dart';
 // theme
 import 'theme/model_theme.dart';
@@ -130,7 +130,7 @@ class _NavigationItems {
           activeIcon: Icon(CupertinoIcons.checkmark_square_fill),
           icon: Icon(CupertinoIcons.checkmark_square),
           label: AppLocalizations.of(context)!.navigationMenuQuizz,
-          screen: ScreenQuizz()),
+          screen: ScreenQuiz()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.info_circle_fill),
           icon: Icon(CupertinoIcons.info_circle),
