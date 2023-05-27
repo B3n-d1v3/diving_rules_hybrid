@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart'; // the sanction data model and json deserialization
 import 'package:diving_rules_hybrid/models/sanction_model.dart';
-import 'package:diving_rules_hybrid/tab_penalty_list/screen_penalty_details.dart';
+import 'package:diving_rules_hybrid/nav_penalty_list/screen_penalty_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-
-import '../theme/typography_styles_test.dart';
 
 class ScreenAbout extends StatefulWidget {
   const ScreenAbout({Key? key}) : super(key: key);
@@ -19,6 +16,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
       packageName: 'Unknown',
       version: 'Unknown',
       buildNumber: 'Unknown');
+
   @override
   void initState() {
     super.initState();
@@ -55,8 +53,6 @@ class _ScreenAboutState extends State<ScreenAbout> {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Row(children: [
-                    // TODO: Correct the text color in dark mode
-
                     Text(
                       AppLocalizations.of(context)!.aboutVersion,
                       style: Theme.of(context).textTheme.labelMedium,

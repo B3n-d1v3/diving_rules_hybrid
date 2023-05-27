@@ -5,3 +5,4 @@ import 'package:diving_rules_hybrid/models/sanction_model.dart';
 
 SanctionItems sanctionItems = SanctionItems(sanctions: []);
 PenaltySummary penaltySummary = PenaltySummary(penalties: []);
+var questionNumber = 20;

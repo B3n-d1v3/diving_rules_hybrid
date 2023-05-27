@@ -31,29 +31,10 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 
   @override
   Widget build(BuildContext context) {
-    // final themeState = Provider.of<DarkThemeProvider>(context);
-    // return CupertinoPageScaffold(
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
       ),
-      // navigationBar: CupertinoNavigationBar(
-      //   middle: Text(AppLocalizations.of(context)!.penaltiesListTitle),
-      //
-      //   // Header trailing functions: Light/Dark switch + Language Selection
-      //   trailing: CupertinoButton(
-      //     onPressed: () {
-      //       setState(() {
-      //         themeState.darkTheme = !themeState.darkTheme;
-      //         // themeModeSwitch = !themeModeSwitch;
-      //       });
-      //     },
-      //     padding: EdgeInsets.zero,
-      //     child: Icon(themeState.darkTheme
-      //         ? CupertinoIcons.moon_stars_fill
-      //         : CupertinoIcons.brightness_solid),
-      //   ),
-      // ),
 
       // child: container(
       //   // Retrieves the screen size
