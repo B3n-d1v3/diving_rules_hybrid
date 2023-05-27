@@ -56,6 +56,10 @@ class _ScreenQuizState extends State<ScreenQuiz> {
 
             Divider(),
 
+            const SizedBox(
+              height: 10,
+            ),
+
             // Number of questions selection
             Align(
               alignment: Alignment.centerLeft,
@@ -127,10 +131,25 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 ],
               ),
             ),
-
+            const SizedBox(
+              height: 10,
+            ),
             Divider(),
 
+            const SizedBox(
+              height: 20,
+            ),
+
             // Start button
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(
+                CupertinoIcons.play_circle_fill, // envelope_circle
+                size: 24.0,
+              ),
+              label: Text(AppLocalizations.of(context)!
+                  .quizzIntroStartButton), // <-- Text
+            ),
           ],
         ),
       ),
