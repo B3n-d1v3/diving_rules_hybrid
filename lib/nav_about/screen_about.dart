@@ -105,6 +105,13 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 20,
                     ),
 
+                    Divider(),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    // License
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -122,6 +129,13 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 20,
                     ),
 
+                    Divider(),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
+
+                    // Thanks
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -139,6 +153,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 30,
                     ),
 
+                    Divider(),
+
+                    const SizedBox(
+                      height: 20,
+                    ),
                     // Share Links
                     Align(
                       alignment: Alignment.topLeft,
@@ -173,6 +192,12 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                     const SizedBox(
                       height: 30,
+                    ),
+
+                    Divider(),
+
+                    const SizedBox(
+                      height: 20,
                     ),
 
                     // Contact Links
