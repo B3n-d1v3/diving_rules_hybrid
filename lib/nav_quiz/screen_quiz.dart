@@ -1,6 +1,8 @@
+import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 
 import '../models/globals.dart';
 
@@ -141,8 +143,15 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             ),
 
             // Start button
+            // TODO: dark mode version color is not working
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                // TODO CURRENT: Add the link to the new quiz questionnaire page
+                Get.to(
+                  ScreenQuizQuestion(),
+                  transition: Transition.rightToLeftWithFade,
+                );
+              },
               icon: const Icon(
                 CupertinoIcons.play_circle_fill, // envelope_circle
                 size: 24.0,

@@ -54,6 +54,8 @@ class AppColor {
   // static const Color dr_deselected_light = Color(0xFF575757);
   // static const Color dr_deselected_dark = Color(0xFF969696);
 
+  // for tests: Colors.red; //
+
   // Non Material
   static const Color drColorPositiveLight = Color(0xFF006600);
   static const Color drColorNegativeLight = Color(0xffAC0000);
@@ -78,9 +80,7 @@ class AppColor {
   static const Color myErrorColorLight = drColorNegativeLight;
   static const Color myOnErrorColorLight = Color(0xffFFFFFF);
 
-  static const Color myPrimaryContainerColorLight =
-      // Colors.red;
-      Color(0xFFe1e0ff);
+  static const Color myPrimaryContainerColorLight = Color(0xFFe1e0ff);
   static const Color myOnPrimaryContainerColorLight = Color(0xFF070764);
   static const Color mySecondaryContainerColorLight = Color(0xFFD1E4FF);
   static const Color myOnSecondaryContainerColorLight = Color(0xFF001D36);
