@@ -19,7 +19,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.quizzResultTitle),
+        title: Text(AppLocalizations.of(context)!.quizzQuestionHeader),
       ),
       body: SafeArea(
         child: Scrollbar(

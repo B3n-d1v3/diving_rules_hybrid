@@ -114,6 +114,16 @@
         "description": "App Name - Short App name 16 car",
         "type": "text"
     },
+    "quizzQuestionHeader": "Questions",
+        "@quizzQuestionHeader": {
+            "description": "Quizz Question Page /  Quizz - Questions - Top App Bar title",
+            "type": "text"
+    },
+    "quizzResultHeader": "Résultat",
+    "@quizzResultHeader": {
+            "description": "Quizz Result Page /  Quizz - Result - Top App Bar title",
+            "type": "text"
+    },
     "quizzTitle": "Questionnaire",
     "@quizzTitle": {
         "description": "Quizz Selection Page /  Quizz - Title",

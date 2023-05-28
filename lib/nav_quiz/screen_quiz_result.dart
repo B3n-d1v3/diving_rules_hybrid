@@ -16,7 +16,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.quizz),
+        title: Text(AppLocalizations.of(context)!.quizzResultHeader),
       ),
       body: SafeArea(
         child: Scrollbar(
