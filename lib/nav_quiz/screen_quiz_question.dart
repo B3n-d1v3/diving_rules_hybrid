@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
-//import '../models/globals.dart';
+import '../models/globals.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
   const ScreenQuizQuestion({Key? key}) : super(key: key);
@@ -42,6 +42,11 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                                 color: Theme.of(context).colorScheme.primary)
                             // style: Theme.of(context).textTheme.headlineMedium,
                             ),
+                        TextSpan(
+                            text:
+                                ' $currentQuizQuestionIndex/$quizzTotalQuestionNumber',
+                            style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),
@@ -62,18 +67,26 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                   // TODO: dark mode version color is not working
                   ElevatedButton.icon(
                     onPressed: () {
-                      // TODO CURRENT: Add the link to the new quiz questionnaire page
-                      Get.to(
-                        ScreenQuizResult(),
-                        transition: Transition.rightToLeftWithFade,
-                      );
+                      if (currentQuizQuestionIndex < quizzTotalQuestionNumber) {
+                        // Reset to next Question
+                        setState(() {
+                          currentQuizQuestionIndex += 1;
+                          debugPrint(
+                              '>>>>> Screen Quiz Question > currentQuizQuestionIndex: $currentQuizQuestionIndex');
+                        });
+                      } else {
+                        Get.to(
+                          ScreenQuizResult(),
+                          transition: Transition.rightToLeftWithFade,
+                        );
+                      }
                     },
                     icon: const Icon(
                       CupertinoIcons.greaterthan_circle_fill, // envelope_circle
                       size: 24.0,
                     ),
-                    label: Text(AppLocalizations.of(context)!
-                        .quizzIntroStartButton), // <-- Text
+                    label: Text(
+                        AppLocalizations.of(context)!.quizzNext), // <-- Text
                   ),
                 ],
               ),

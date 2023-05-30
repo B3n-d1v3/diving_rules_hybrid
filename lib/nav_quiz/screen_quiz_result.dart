@@ -1,8 +1,11 @@
 //import 'package:flutter/cupertino.dart';
+import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 
-//import '../models/globals.dart';
+import '../models/globals.dart';
 
 class ScreenQuizResult extends StatefulWidget {
   const ScreenQuizResult({Key? key}) : super(key: key);
@@ -45,6 +48,25 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                   ),
 
                   // The rest
+
+                  // Quiz Restart
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      currentQuizQuestionIndex = 1;
+                      Get.to(
+                        // Restart New Quiz
+                        // Re-init Quiz
+                        ScreenQuizQuestion(),
+                        transition: Transition.rightToLeftWithFade,
+                      );
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.play_circle_fill, // envelope_circle
+                      size: 24.0,
+                    ),
+                    label: Text(AppLocalizations.of(context)!
+                        .quizzResultStartButton), // <-- Text
+                  ),
                 ],
               ),
             ),

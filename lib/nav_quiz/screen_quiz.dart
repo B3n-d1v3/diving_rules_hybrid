@@ -74,22 +74,20 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   ),
                   IconButton(
                     iconSize: 34,
-                    icon: (questionNumber > 5)
+                    icon: (quizzTotalQuestionNumber > 5)
                         ? Icon(CupertinoIcons.minus_circle_fill)
                         : Icon(CupertinoIcons.minus_circle),
                     tooltip: 'Less',
-                    color: (questionNumber > 5)
+                    color: (quizzTotalQuestionNumber > 5)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,
                     onPressed: () {
                       setState(
                         () {
-                          if (questionNumber > 5) {
-                            questionNumber -= 5;
-                            debugPrint(
-                                ">>> Screen Quiz > Less Questions - questionNumber :$questionNumber");
+                          if (quizzTotalQuestionNumber > 5) {
+                            quizzTotalQuestionNumber -= 5;
+                            // debugPrint(">>> Screen Quiz > Less Questions - questionNumber :$questionNumber");
                           }
-                          // questionNumber = +5;
                         },
                       );
                     },
@@ -100,7 +98,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   Container(
                       width: 20,
                       child: Text(
-                        questionNumber.toString(),
+                        quizzTotalQuestionNumber.toString(),
                         style: Theme.of(context).textTheme.bodyMedium,
                         textAlign: TextAlign.center,
                       )),
@@ -109,23 +107,21 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   ),
                   IconButton(
                     iconSize: 34,
-                    icon: (questionNumber < 40)
+                    icon: (quizzTotalQuestionNumber < 40)
                         ? Icon(CupertinoIcons.plus_circle_fill)
                         : Icon(CupertinoIcons.plus_circle),
                     tooltip: 'Less',
-                    color: (questionNumber < 40)
+                    color: (quizzTotalQuestionNumber < 40)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,
                     //icon: const Icon(CupertinoIcons.plus_circle),
                     onPressed: () {
                       setState(
                         () {
-                          if (questionNumber < 40) {
-                            questionNumber += 5;
-                            debugPrint(
-                                ">>> Screen Quiz > Add Questions - questionNumber :$questionNumber");
+                          if (quizzTotalQuestionNumber < 40) {
+                            quizzTotalQuestionNumber += 5;
+                            // debugPrint(">>> Screen Quiz > Add Questions - questionNumber :$questionNumber");
                           }
-                          // questionNumber = +5;
                         },
                       );
                     },
@@ -146,7 +142,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             // TODO: dark mode version color is not working
             ElevatedButton.icon(
               onPressed: () {
-                // TODO CURRENT: Add the link to the new quiz questionnaire page
+                currentQuizQuestionIndex = 1;
                 Get.to(
                   ScreenQuizQuestion(),
                   transition: Transition.rightToLeftWithFade,

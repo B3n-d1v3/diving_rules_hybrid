@@ -7,4 +7,6 @@ SanctionItems sanctionItems = SanctionItems(sanctions: []);
 PenaltySummary penaltySummary = PenaltySummary(penalties: []);
 
 // Quiz
-var questionNumber = 20;
+var quizzTotalQuestionNumber = 20;
+var currentQuizScore = 0;
+var currentQuizQuestionIndex = 0;
