@@ -1,12 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:diving_rules_hybrid/buttons/penalties_content.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
+import '../models/quiz_button_status.dart';
 
 class PenaltyButton extends StatefulWidget {
   int buttonType;
   bool isSelected;
 
-  PenaltyButton({required this.buttonType, required this.isSelected});
+  PenaltyButton({Key? key, required this.buttonType, required this.isSelected})
+      : super(key: key);
 
   @override
   _PenaltyButtonState createState() => _PenaltyButtonState();
@@ -15,190 +17,30 @@ class PenaltyButton extends StatefulWidget {
 class _PenaltyButtonState extends State<PenaltyButton> {
   @override
   Widget build(BuildContext context) {
-    switch (widget.buttonType) {
-      case 0:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.clear_circled,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.button0pts,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 1:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.lessthan_circle_fill,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonMax2pts,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 2:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.lessthan_circle,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonMax4Halfpts,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 3:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.gobackward_minus,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonMinus2pts,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 4:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.arrow_left_right_circle,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonMinusHalfTo2pts,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 5:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.plusminus_circle,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonJudgeOpinion,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 15,
-                endIndent: 15,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      default:
-        return Text(' ');
-    }
+    return InkWell(
+      onTap: () {
+        // Reset the current button to opposite status
+        setState(() {
+          buttonPenaltyStatusChange(sanctionID: widget.buttonType);
+          debugPrint(
+              '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
+          buttonPenaltyDebug();
+        });
+      },
+      child: Container(
+        // TODO: add the circling of the penalty on the right answer
+        // decoration: BoxDecoration(
+        //   border: Border.all(color: widget.isSelected
+        //       ? Theme.of(context).colorScheme.primary:Theme.of(context).colorScheme.background),
+        //   borderRadius: const BorderRadius.all(Radius.circular(20)),
+        // )
+
+        child: PenaltyContent(
+          buttonType: widget.buttonType,
+          isSelected: widget.isSelected,
+        ),
+      ),
+    );
   }
 }
 

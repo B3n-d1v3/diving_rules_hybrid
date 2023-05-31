@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
+import '../buttons/button_ownership.dart';
+import '../buttons/button_penalties.dart';
+import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
+import '../nav_penalty_list/screen_penalty_details.dart';
+import '../theme/dr_colors.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
   const ScreenQuizQuestion({Key? key}) : super(key: key);
@@ -44,16 +49,165 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             ),
                         TextSpan(
                             text:
-                                ' $currentQuizQuestionIndex/$quizzTotalQuestionNumber',
+                                ' $currentQuizQuestionIndex/$quizTotalQuestionNumber',
                             style: TextStyle(
                                 color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),
 
-                  // The rest
+                  // The Penalty Question Body
 
-                  // Test to go to result page
+                  SizedBox(height: 10),
+
+                  // Description Title
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.titleLarge,
+                      children: [
+                        TextSpan(
+                            text: AppLocalizations.of(context)!
+                                .penaltyDescription,
+                            style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary)
+                            // style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                      ],
+                    )),
+                  ),
+
+                  // Description Content
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: PenaltyDescription(
+                        penaltyId: currentQuiz
+                            .questions[currentQuizQuestionIndex - 1]),
+                    // Text(penaltySummary.penalties[widget.index].description, style: Theme.of(context).textTheme.bodyLarge),
+                  ),
+
+                  SizedBox(height: 10),
+
+                  // // Rules References
+                  // Align(
+                  //   alignment: Alignment.centerRight,
+                  //   child: DisplayRulesReferences(
+                  //       rulesReferences:
+                  //       penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex-1]].rules),
+                  // ),
+
+                  const Divider(
+                    height: 20,
+                    thickness: .5,
+                    indent: 10,
+                    endIndent: 10,
+                    color: AppColor.drColorDeselectedLight,
+                  ),
+
+                  // Penalty Sanction
+                  // Penalty Title
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.titleLarge,
+                      children: [
+                        TextSpan(
+                            text: AppLocalizations.of(context)!.penaltyPenalty,
+                            style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary)
+                            // style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                      ],
+                    )),
+                  ),
+                  SizedBox(height: 10),
+
+                  // GridView to display the Penalty Sanctions
+                  GridView.count(
+                    crossAxisCount: 3,
+                    primary: false,
+                    padding: const EdgeInsets.all(1),
+                    childAspectRatio: (1 / .7),
+                    crossAxisSpacing: 0,
+                    mainAxisSpacing: 0,
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      PenaltyButton(
+                          buttonType: 0,
+                          isSelected: penaltyButtonStatus.penaltyZeroPts),
+                      PenaltyButton(
+                          buttonType: 1,
+                          isSelected: penaltyButtonStatus.penaltyMaxTwoPts),
+                      PenaltyButton(
+                          buttonType: 2,
+                          isSelected:
+                              penaltyButtonStatus.penaltyMaxFourHalfPts),
+                      PenaltyButton(
+                          buttonType: 3,
+                          isSelected: penaltyButtonStatus.penaltyMinusTwoPts),
+                      PenaltyButton(
+                          buttonType: 4,
+                          isSelected:
+                              penaltyButtonStatus.penaltyMinusHalfToTwoPts),
+                      PenaltyButton(
+                          buttonType: 5,
+                          isSelected: penaltyButtonStatus.penaltyJudgeOpinion),
+                    ],
+                  ),
+
+                  const Divider(
+                    height: 10,
+                    thickness: .5,
+                    indent: 10,
+                    endIndent: 10,
+                    color: AppColor.drColorDeselectedLight,
+                  ),
+
+                  // Penalty ownership
+                  // Penalty Title
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.titleLarge,
+                      children: [
+                        TextSpan(
+                            text:
+                                AppLocalizations.of(context)!.penaltyOwnership,
+                            style: TextStyle(
+                                color: Theme.of(context).colorScheme.primary)
+                            // style: Theme.of(context).textTheme.titleLarge,
+                            ),
+                      ],
+                    )),
+                  ),
+
+                  SizedBox(height: 10),
+
+                  // GridView to display the Penalty Owners
+                  GridView.count(
+                    crossAxisCount: 2,
+                    primary: false,
+                    padding: const EdgeInsets.all(1),
+                    childAspectRatio: (1 / .7),
+                    crossAxisSpacing: 0,
+                    mainAxisSpacing: 0,
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    children: <Widget>[
+                      OwnershipButton(
+                          buttonType: 0,
+                          isSelected: penaltyButtonStatus.ownershipReferee),
+                      OwnershipButton(
+                          buttonType: 1,
+                          isSelected: penaltyButtonStatus.ownershipJudge),
+                    ],
+                  ),
+
+                  // The Footer
                   const SizedBox(
                     height: 10,
                   ),
@@ -63,19 +217,22 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     height: 20,
                   ),
 
-                  // Start button
+                  // Next button
                   // TODO: dark mode version color is not working
                   ElevatedButton.icon(
                     onPressed: () {
-                      if (currentQuizQuestionIndex < quizzTotalQuestionNumber) {
+                      if (currentQuizQuestionIndex < quizTotalQuestionNumber) {
                         // Reset to next Question
                         setState(() {
                           currentQuizQuestionIndex += 1;
                           debugPrint(
                               '>>>>> Screen Quiz Question > currentQuizQuestionIndex: $currentQuizQuestionIndex');
+                          debugPrint(
+                              '>>>>> Screen Quiz Question > quizTotalQuestionNumber: $quizTotalQuestionNumber');
                         });
                       } else {
-                        Get.to(
+                        // Get.to(
+                        Get.off(
                           ScreenQuizResult(),
                           transition: Transition.rightToLeftWithFade,
                         );

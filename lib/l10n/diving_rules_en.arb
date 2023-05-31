@@ -9,9 +9,9 @@
         "description": "Navigation - Penalties Menu Item",
         "type": "text"
     },
-    "navigationMenuQuizz": "Quizz",
+    "navigationMenuQuizz": "Quiz",
     "@navigationMenuQuizz": {
-        "description": "Navigation - Quizz Menu Item",
+        "description": "Navigation - Quiz Menu Item",
         "type": "text"
     },
     "navigationMenuSearch": "Search",
@@ -84,24 +84,24 @@
         "description": "Penalty - Ownership Section Button Referee",
         "type": "text"
     },
-    "quizzIntroTitle": "Take A Quizz",
+    "quizzIntroTitle": "Take A Quiz",
     "@quizzIntroTitle": {
-        "description": "Quizz Selection Page /  Quizz - Intro Title",
+        "description": "Quiz Selection Page /  Quiz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "In order to train yourself on the Fina Diving Rules, with this test you will be able to review the Rule Book through questions on the various rules. \n\nSelect the number of questions you would like in your quizz.",
+    "quizzIntroDescription": "In order to train yourself on the Fina Diving Rules, with this test you will be able to review the Rule Book through questions on the various rules. \n\nSelect the number of questions you would like in your quiz.",
     "@quizzIntroDescription": {
-        "description": "Quizz - Intro Description",
+        "description": "Quiz - Intro Description",
         "type": "text"
     },
     "quizzIntroStartButton": "Start",
     "@quizzIntroStartButton": {
-        "description": "Quizz - Intro Start Button",
+        "description": "Quiz - Intro Start Button",
         "type": "text"
     },
     "quizzNext": "Next",
     "@quizzNext": {
-        "description": "Quizz - Question Page Next Button",
+        "description": "Quiz - Question Page Next Button",
         "type": "text"
     },
     "cFBundleDisplayName": "diving rules 22-25",
@@ -116,42 +116,52 @@
     },
     "quizzQuestionHeader": "Questions",
     "@quizzQuestionHeader": {
-        "description": "Quizz Question Page /  Quizz - Questions - Top App Bar title",
+        "description": "Quiz Question Page /  Quiz - Questions - Top App Bar title",
         "type": "text"
     },
     "quizzResultHeader": "Result",
     "@quizzResultHeader": {
-        "description": "Quizz Result Page /  Quizz - Result - Top App Bar title",
+        "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
         "type": "text"
     },
-    "quizzTitle": "Quizz",
+    "quizzTitle": "Quiz",
     "@quizzTitle": {
-        "description": "Quizz Selection Page /  Quizz - Title",
+        "description": "Quiz Selection Page /  Quiz - Title",
         "type": "text"
     },
-    "quizzResultTitle": "Quizz Result",
+    "quizzResultTitle": "Quiz Result",
     "@quizzResultTitle": {
-        "description": "Quizz - Result Title",
+        "description": "Quiz - Result Title",
         "type": "text"
     },
-    "quizzResultDescription": "Here is the result of your answer to this Quizz: ",
+    "quizzResultDescription": "Here is the result of your answer to this Quiz: ",
     "@quizzResultDescription": {
-        "description": "Quizz - Intro Description",
+        "description": "Quiz - Intro Description",
         "type": "text"
     },
-    "quizzResultStartButton": "New Quizz",
+    "quizzResultStartButton": "New Quiz",
     "@quizzResultStartButton": {
-        "description": "Quizz - Result Start Button",
+        "description": "Quiz - Result Start Button",
+        "type": "text"
+    },
+    "quizzCorrectionListHeader": "Questions Review",
+    "@quizzCorrectionListHeader": {
+        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionDetailHeader": "Question Correction",
+    "@quizzCorrectionDetailHeader": {
+        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
         "type": "text"
     },
     "passed": "Passed",
     "@passed": {
-        "description": "Quizz - Good Sticker",
+        "description": "Quiz - Good Sticker",
         "type": "text"
     },
     "failed": "Failed",
     "@failed": {
-        "description": "Quizz - Good Sticker",
+        "description": "Quiz - Good Sticker",
         "type": "text"
     },
     "searchTitle": "Search The Rules",
@@ -166,32 +176,32 @@
     },
     "quizzQuestion": "Question",
     "@quizzQuestion": {
-        "description": "Quizz - Question",
+        "description": "Quiz - Question",
         "type": "text"
     },
     "quizzResultReviewButton": "Errors",
     "@quizzResultReviewButton": {
-        "description": "Quizz - Result Error Review Button",
+        "description": "Quiz - Result Error Review Button",
         "type": "text"
     },
     "quizzResultLegendUnused": "Unused",
     "@quizzResultLegendUnused": {
-        "description": "Quizz - Result Result Review Legend - unused",
+        "description": "Quiz - Result Result Review Legend - unused",
         "type": "text"
     },
     "quizzResultLegendUserAnswer": "My answer",
     "@quizzResultLegendUserAnswer": {
-        "description": "Quizz - Result Result Review Legend - unused",
+        "description": "Quiz - Result Result Review Legend - unused",
         "type": "text"
     },
     "quizzResultLegendRealAnswer": "Good answer",
     "@quizzResultLegendRealAnswer": {
-        "description": "Quizz - Result Result Review Legend - unused",
+        "description": "Quiz - Result Result Review Legend - unused",
         "type": "text"
     },
     "penalty0": "If the diver takes more than one minute, after a warning.",
     "@penalty0": {
-        "description": "Penalty Descripion List /  Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
+        "description": "Penalty Description List /  Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
         "type": "text"
     },
     "penalty1": "If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
@@ -426,7 +436,7 @@
     },
     "quizzIntroQuestionNumber": "Number of Questions: ",
     "@quizzIntroQuestionNumber": {
-        "description": "Quizz - Intro Question Number",
+        "description": "Quiz - Intro Question Number",
         "type": "text"
     },
     "aboutTitle": "About",
@@ -439,7 +449,7 @@
         "description": "About - Version",
         "type": "text"
     },
-    "aboutDescription": "This application was created to allow users to learn and train on the diving rules from the FINA diving rules. This application is not a FINA official application, but uses the FINA official rules or it’s official translations as a work tool.\n\n With this App you can:\n✔︎ Read through the rules.\n✔︎ Learn the penalty summary.\n✔︎ Train with a quizz on the penalties.",
+    "aboutDescription": "This application was created to allow users to learn and train on the diving rules from the FINA diving rules. This application is not a FINA official application, but uses the FINA official rules or it’s official translations as a work tool.\n\n With this App you can:\n✔︎ Read through the rules.\n✔︎ Learn the penalty summary.\n✔︎ Train with a quiz on the penalties.",
     "@aboutDescription": {
         "description": "About - Description",
         "type": "text"
@@ -469,7 +479,7 @@
         "description": "About - Help",
         "type": "text"
     },
-    "aboutDescriptionTitle": "App Desctiption",
+    "aboutDescriptionTitle": "App Description",
     "@aboutDescriptionTitle": {
         "description": "About - Description Title",
         "type": "text"

@@ -1,4 +1,5 @@
 //import 'package:flutter/cupertino.dart';
+import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_correction_list.dart';
 import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,22 +51,44 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                   // The rest
 
                   // Quiz Restart
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      currentQuizQuestionIndex = 1;
-                      Get.to(
-                        // Restart New Quiz
-                        // Re-init Quiz
-                        ScreenQuizQuestion(),
-                        transition: Transition.rightToLeftWithFade,
-                      );
-                    },
-                    icon: const Icon(
-                      CupertinoIcons.play_circle_fill, // envelope_circle
-                      size: 24.0,
-                    ),
-                    label: Text(AppLocalizations.of(context)!
-                        .quizzResultStartButton), // <-- Text
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Show correction
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          Get.to(
+                            ScreenCorrectionList(),
+                            transition: Transition.rightToLeftWithFade,
+                          );
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.eye, // envelope_circle
+                          size: 24.0,
+                        ),
+                        label: Text(AppLocalizations.of(context)!
+                            .quizzResultReviewButton), // <-- Text
+                      ),
+
+                      // Restart New Quiz
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          // TODO: Re-init Quiz
+                          currentQuizQuestionIndex = 1;
+                          Get.off(
+                            //Get.to(
+                            ScreenQuizQuestion(),
+                            transition: Transition.rightToLeftWithFade,
+                          );
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.play_circle_fill, // envelope_circle
+                          size: 24.0,
+                        ),
+                        label: Text(AppLocalizations.of(context)!
+                            .quizzResultStartButton), // <-- Text
+                      ),
+                    ],
                   ),
                 ],
               ),

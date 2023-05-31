@@ -144,6 +144,16 @@
         "description": "Quizz - Result Start Button",
         "type": "text"
     },
+    "quizzCorrectionListHeader": "Corrections des Questions",
+    "@quizzCorrectionListHeader": {
+        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionDetailHeader": "Correction",
+    "@quizzCorrectionDetailHeader": {
+        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
+        "type": "text"
+    },
     "passed": "Réussi",
     "@passed": {
         "description": "Quizz - Good Sticker",

@@ -1,4 +1,4 @@
-import 'package:diving_rules_hybrid/buttons/button_penalties.dart';
+import 'package:diving_rules_hybrid/buttons/penalties_content.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -143,8 +143,6 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               ),
 
               // Description Content
-              // TODO: Update with the localized version of the description
-
               Align(
                 alignment: Alignment.centerLeft,
                 child: PenaltyDescription(penaltyId: widget.index),
@@ -197,19 +195,19 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: <Widget>[
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 0, isSelected: penaltySanction.zeroPts),
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 1, isSelected: penaltySanction.maxTwoPts),
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 2,
                       isSelected: penaltySanction.maxFourHalfPts),
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 3, isSelected: penaltySanction.minusTwoPts),
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 4,
                       isSelected: penaltySanction.minusHalfToTwoPts),
-                  PenaltyButton(
+                  PenaltyContent(
                       buttonType: 5, isSelected: penaltySanction.judgeOpinion),
                 ],
               ),
@@ -241,6 +239,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               ),
 
               SizedBox(height: 10),
+
               // GridView to display the Penalty Owners
               GridView.count(
                 crossAxisCount: 2,
@@ -252,7 +251,6 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: <Widget>[
-                  // TODO: Add the Ownership buttons of the penalty(judge/referee)
                   OwnershipButton(
                       buttonType: 0,
                       isSelected:

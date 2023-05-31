@@ -5,6 +5,8 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
 import '../models/globals.dart';
+import '../models/quiz_button_status.dart';
+import '../models/quiz_model.dart';
 
 class ScreenQuiz extends StatefulWidget {
   ScreenQuiz({Key? key}) : super(key: key);
@@ -74,18 +76,18 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   ),
                   IconButton(
                     iconSize: 34,
-                    icon: (quizzTotalQuestionNumber > 5)
+                    icon: (quizTotalQuestionNumber > 5)
                         ? Icon(CupertinoIcons.minus_circle_fill)
                         : Icon(CupertinoIcons.minus_circle),
                     tooltip: 'Less',
-                    color: (quizzTotalQuestionNumber > 5)
+                    color: (quizTotalQuestionNumber > 5)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,
                     onPressed: () {
                       setState(
                         () {
-                          if (quizzTotalQuestionNumber > 5) {
-                            quizzTotalQuestionNumber -= 5;
+                          if (quizTotalQuestionNumber > 5) {
+                            quizTotalQuestionNumber -= 5;
                             // debugPrint(">>> Screen Quiz > Less Questions - questionNumber :$questionNumber");
                           }
                         },
@@ -98,7 +100,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   Container(
                       width: 20,
                       child: Text(
-                        quizzTotalQuestionNumber.toString(),
+                        quizTotalQuestionNumber.toString(),
                         style: Theme.of(context).textTheme.bodyMedium,
                         textAlign: TextAlign.center,
                       )),
@@ -107,19 +109,19 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   ),
                   IconButton(
                     iconSize: 34,
-                    icon: (quizzTotalQuestionNumber < 40)
+                    icon: (quizTotalQuestionNumber < 40)
                         ? Icon(CupertinoIcons.plus_circle_fill)
                         : Icon(CupertinoIcons.plus_circle),
                     tooltip: 'Less',
-                    color: (quizzTotalQuestionNumber < 40)
+                    color: (quizTotalQuestionNumber < 40)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,
                     //icon: const Icon(CupertinoIcons.plus_circle),
                     onPressed: () {
                       setState(
                         () {
-                          if (quizzTotalQuestionNumber < 40) {
-                            quizzTotalQuestionNumber += 5;
+                          if (quizTotalQuestionNumber < 40) {
+                            quizTotalQuestionNumber += 5;
                             // debugPrint(">>> Screen Quiz > Add Questions - questionNumber :$questionNumber");
                           }
                         },
@@ -143,9 +145,16 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             ElevatedButton.icon(
               onPressed: () {
                 currentQuizQuestionIndex = 1;
+                newQuiz();
+                penaltyButtonStatus = buttonStatusReset();
+                //debugPrint('>>>>> Screen Quiz > currentQuiz.questions: ${currentQuiz.questions}');
+                // Temp list init to test function
+                // var testList = newListOfQuestions(nbQuestions: quizTotalQuestionNumber);
                 Get.to(
                   ScreenQuizQuestion(),
                   transition: Transition.rightToLeftWithFade,
+                  //duration: const Duration(seconds: 1),
+                  curve: Curves.ease,
                 );
               },
               icon: const Icon(
