@@ -1,4 +1,6 @@
 // for the json
+import 'package:diving_rules_hybrid/nav_about/screen_about.dart';
+import 'package:diving_rules_hybrid/nav_quiz/screen_quiz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // Localization
@@ -10,6 +12,8 @@ import 'package:provider/provider.dart';
 import 'app_home_m3.dart';
 // Localization
 import 'l10n/l10n.dart';
+import 'nav_penalty_list/screen_penalty_list.dart';
+import 'nav_rulebook/screen_rulebook.dart';
 import 'theme/dr_theme.dart';
 import 'theme/model_theme.dart';
 
@@ -32,6 +36,14 @@ class DivingRulesApp extends StatelessWidget {
           darkTheme: DrTheme.darkTheme,
           themeMode: themeNotifier.themeMode,
           debugShowCheckedModeBanner: false,
+          initialRoute: '/',
+          getPages: [
+            GetPage(name: '/', page: () => DivingRulesMainScreen()),
+            GetPage(name: '/rulebook', page: () => const ScreenRulebook()),
+            GetPage(name: '/penalties', page: () => const ScreenPenaltyList()),
+            GetPage(name: '/quiz', page: () => ScreenQuiz()),
+            GetPage(name: '/about', page: () => const ScreenAbout()),
+          ],
           home: DivingRulesMainScreen(),
           // Localization setup
           supportedLocales: L10n.all,

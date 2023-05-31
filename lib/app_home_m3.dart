@@ -1,6 +1,14 @@
+// for json
+import 'dart:convert';
+
+import 'package:diving_rules_hybrid/models/globals.dart';
+// the sanction data model and json deserialization
+import 'package:diving_rules_hybrid/models/penalty_model.dart';
+import 'package:diving_rules_hybrid/models/sanction_model.dart';
 import 'package:diving_rules_hybrid/sub_views/diving_rules_logo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +29,51 @@ class DivingRulesMainScreen extends StatefulWidget {
 }
 
 class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
+  // index of the navigation choice from the user
   var _selectedIndex = 0;
+
+  // Method to fetch content from the json file
+  Future<void> getSanctions(BuildContext context) async {
+    final sanctionsFile = await rootBundle
+        .loadString('assets/data/divingPenaltiesSanctions.json');
+    // final sanctionItems = sanctionItemsFromJson(sanctionsFile);
+    setState(() {
+      sanctionItems = SanctionItems.fromJson(json.decode(sanctionsFile));
+      // Debug checks
+      // debugPrint(">>> getPenalties > json file in string sanctionsFile:");
+      // debugPrint(sanctionsFile);
+      // debugPrint(">>> getPenalties > sanctionItems Object:");
+      // debugPrint(
+      //     "sanctionItems.sanctions.length: ${sanctionItems.sanctions.length}");
+      // debugPrint(
+      //     "sanctionItems.sanctions[0].description: ${sanctionItems.sanctions[3].description}");
+    });
+  }
+
+  Future<void> getPenalties(BuildContext context) async {
+    final summaryFile =
+        await rootBundle.loadString('assets/data/divingPenaltiesSummary.json');
+    // final sanctionItems = sanctionItemsFromJson(sanctionsFile);
+    setState(() {
+      penaltySummary = PenaltySummary.fromJson(json.decode(summaryFile));
+      // Debug checks
+      // debugPrint(">>> getPenalties > json file in string sanctionsFile:");
+      // debugPrint(summaryFile);
+      // debugPrint(">>> getPenalties > sanctionItems Object:");
+      // debugPrint(
+      //     "sanctionItems.sanctions.length: ${penaltySummary.penalties.length}");
+      // debugPrint(
+      //     "sanctionItems.sanctions[3].description: ${penaltySummary.penalties[3].description}");
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    // Load the sanctions list json
+    getSanctions(context);
+    getPenalties(context);
+  }
 
   @override
   Widget build(BuildContext context) {
