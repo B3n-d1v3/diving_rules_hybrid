@@ -30,6 +30,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
         // TODO CURRENT: 2 Bugs:
         //  - The status only changes for the 0pts, 1/2 to 2 pts and judge opinion; but not the others!!!
         //  - The tap on a penalty button does not deactivate the others
+        // test to redraw the current full widget on user click
         return Column(
           children: [
             SizedBox(height: 4),

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:get/get.dart';
 
+// TODO: When ok delete this class and rename the observable alternative
 class PenaltyContent extends StatefulWidget {
   int buttonType;
   bool isSelected;

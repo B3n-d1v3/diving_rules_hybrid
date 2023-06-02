@@ -59,6 +59,7 @@ class AppColor {
   // Non Material
   static const Color drColorPositiveLight = Color(0xFF006600);
   static const Color drColorNegativeLight = Color(0xffAC0000);
+  static const Color drColorWarningLight = Color(0xffff6200);
   static const Color drColorDeselectedLight = Color(0xFF575757);
 
   // New App
@@ -111,6 +112,7 @@ class AppColor {
 
   static const Color drColorPositiveDark = Color(0xFF00C300); // #81db6e
   static const Color drColorNegativeDark = Color(0xFFFF614D); // #ffb4a8
+  static const Color drColorWarningDark = Color(0xffff8C00);
   static const Color drColorDeselectedDark = Color(0xFF969696);
 
   static const Color myBackgroundColorDark = Color(0xff000000);
