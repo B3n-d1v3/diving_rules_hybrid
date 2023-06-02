@@ -26,7 +26,6 @@ class _OwnershipButtonState extends State<OwnershipButton> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Reset the current button to opposite status and cancel others
         setState(() {
           // TODO: CURRENT  ---->>>>> testing new ownership buttons to be updated in the penalty details page and in the quiz details page
           if (widget.viewInQuiz) {

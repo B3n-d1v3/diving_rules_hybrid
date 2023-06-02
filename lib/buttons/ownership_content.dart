@@ -2,9 +2,6 @@ import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:get/get.dart';
-
-import '../theme/dr_colors.dart';
 
 class OwnershipContent extends StatefulWidget {
   int buttonType;
@@ -53,7 +50,6 @@ class _OwnershipContentState extends State<OwnershipContent> {
                     currentPenaltyStatus.ownershipReferee.value) ||
                 (!widget.viewInQuiz &&
                     penaltySummary.penalties[widget.penaltyIndex].referee)) ...{
-              // widget.isSelected) ...{
               Divider(
                 height: 3,
                 thickness: 3,
@@ -78,7 +74,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                     : penaltySummary.penalties[widget.penaltyIndex].judge
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary),
-            //SizedBox(height: 4),
+            SizedBox(height: 4),
             Text(
               AppLocalizations.of(context)!.buttonJudge,
               style: TextStyle(

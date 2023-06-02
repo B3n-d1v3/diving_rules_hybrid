@@ -5,10 +5,19 @@ import '../models/quiz_button_status.dart';
 
 class PenaltyButton extends StatefulWidget {
   int buttonType;
-  bool isSelected;
 
-  PenaltyButton({Key? key, required this.buttonType, required this.isSelected})
-      : super(key: key);
+  //bool isSelected;
+  int penaltyIndex;
+  bool viewInQuiz;
+  bool viewCorrection;
+
+  // PenaltyButton({Key? key, required this.buttonType, required this.isSelected}) : super(key: key);
+
+  PenaltyButton(
+      {required this.buttonType,
+      this.penaltyIndex = -1,
+      this.viewInQuiz = false,
+      this.viewCorrection = false});
 
   @override
   _PenaltyButtonState createState() => _PenaltyButtonState();
@@ -22,6 +31,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
         // Reset the current button to opposite status and cancel others
         setState(() {
           buttonPenaltyStatusChange(sanctionID: widget.buttonType);
+          // Debug
           debugPrint(
               '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
           buttonPenaltyDebug();
@@ -39,9 +49,9 @@ class _PenaltyButtonState extends State<PenaltyButton> {
             // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
             // Obx(() =>
             PenaltyContentObsv(
-          buttonType: widget.buttonType,
-          isSelected: widget.isSelected,
-        )
+                buttonType: widget.buttonType,
+                penaltyIndex: widget.penaltyIndex,
+                viewInQuiz: widget.viewInQuiz)
         // )
         ,
       ),

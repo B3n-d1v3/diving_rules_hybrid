@@ -1,3 +1,4 @@
+import 'package:diving_rules_hybrid/buttons/button_penalties.dart';
 import 'package:diving_rules_hybrid/buttons/penalties_content.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:flutter/cupertino.dart';
@@ -195,20 +196,30 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: <Widget>[
-                  PenaltyContent(
-                      buttonType: 0, isSelected: penaltySanction.zeroPts),
-                  PenaltyContent(
-                      buttonType: 1, isSelected: penaltySanction.maxTwoPts),
-                  PenaltyContent(
+                  PenaltyButton(
+                      buttonType: 0,
+                      penaltyIndex:
+                          widget.index), //isSelected: penaltySanction.zeroPts),
+                  PenaltyButton(
+                      buttonType: 1,
+                      penaltyIndex: widget
+                          .index), //isSelected: penaltySanction.maxTwoPts),
+                  PenaltyButton(
                       buttonType: 2,
-                      isSelected: penaltySanction.maxFourHalfPts),
-                  PenaltyContent(
-                      buttonType: 3, isSelected: penaltySanction.minusTwoPts),
-                  PenaltyContent(
+                      penaltyIndex: widget
+                          .index), //isSelected: penaltySanction.maxFourHalfPts),
+                  PenaltyButton(
+                      buttonType: 3,
+                      penaltyIndex: widget
+                          .index), // isSelected: penaltySanction.minusTwoPts),
+                  PenaltyButton(
                       buttonType: 4,
-                      isSelected: penaltySanction.minusHalfToTwoPts),
-                  PenaltyContent(
-                      buttonType: 5, isSelected: penaltySanction.judgeOpinion),
+                      penaltyIndex: widget
+                          .index), //isSelected: penaltySanction.minusHalfToTwoPts),
+                  PenaltyButton(
+                      buttonType: 5,
+                      penaltyIndex: widget
+                          .index), // isSelected: penaltySanction.judgeOpinion),
                 ],
               ),
 
