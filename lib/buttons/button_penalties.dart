@@ -1,4 +1,4 @@
-import 'package:diving_rules_hybrid/buttons/penalties_content.dart';
+import 'package:diving_rules_hybrid/buttons/penalties_content_observable.dart';
 import 'package:flutter/material.dart';
 
 import '../models/quiz_button_status.dart';
@@ -19,7 +19,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Reset the current button to opposite status
+        // Reset the current button to opposite status and cancel others
         setState(() {
           buttonPenaltyStatusChange(sanctionID: widget.buttonType);
           debugPrint(
@@ -35,16 +35,21 @@ class _PenaltyButtonState extends State<PenaltyButton> {
         //   borderRadius: const BorderRadius.all(Radius.circular(20)),
         // )
 
-        child: PenaltyContent(
+        child:
+            // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
+            // Obx(() =>
+            PenaltyContentObsv(
           buttonType: widget.buttonType,
           isSelected: widget.isSelected,
-        ),
+        )
+        // )
+        ,
       ),
     );
   }
 }
 
-//  Button ID Correspondance > icons
+//  Button ID Correspondence > icons
 //    0 > ZeroPts > penalty-sanction-0pts:  clear_circled (or nosign)
 //    1 > MinusTwoPts > penalty-sanction-max2pts: lessthan_circle_fill
 //    2 > MaxTwoPts > penalty-sanction-max4.5pts: lessthan_circle

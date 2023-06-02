@@ -7,6 +7,7 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
 import '../models/globals.dart';
+import '../models/quiz_button_status.dart';
 
 class ScreenQuizResult extends StatefulWidget {
   const ScreenQuizResult({Key? key}) : super(key: key);
@@ -75,6 +76,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                         onPressed: () {
                           // TODO: Re-init Quiz
                           currentQuizQuestionIndex = 1;
+                          buttonStatusReset();
                           Get.off(
                             //Get.to(
                             ScreenQuizQuestion(),

@@ -1,7 +1,7 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
 
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
+import 'package:flutter/material.dart';
 
 import '../models/globals.dart';
 
@@ -25,8 +25,6 @@ class Quiz {
 
 // Generate new Quiz question list in currentQuiz Object
 newQuiz() {
-  // log previous quiz content to keep quiz history
-  logUserAnswer();
   // Init new quiz information
   currentQuiz.questions = newListOfQuestions();
 }
@@ -50,4 +48,29 @@ newListOfQuestions() {
 // Log the answer provided by the user in currentQuiz Object
 logUserAnswer() {
   // TODO: log previous quiz content to keep quiz history
+  var loggedPenalty = Penalty(
+      id: currentQuiz.questions[currentQuizQuestionIndex - 1],
+      description: '',
+      rules: [],
+      sanctionValue: currentPenaltyStatus.userSanctionSelection.value,
+      referee: currentPenaltyStatus.ownershipReferee.value,
+      judge: currentPenaltyStatus.ownershipJudge.value);
+  // currentQuiz.answers[currentQuizQuestionIndex - 1] = loggedPenalty;
+  currentQuiz.answers.add(loggedPenalty);
+}
+
+userAnswerDebug({required int index}) {
+  debugPrint('>>>>> Quiz Model > User Answer Debug ---:');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyZeroPts: ${currentPenaltyStatus.penaltyZeroPts.value}');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyMaxTwoPts: ${currentPenaltyStatus.penaltyMaxTwoPts.value}');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyMaxFourHalfPts: ${currentPenaltyStatus.penaltyMaxFourHalfPts.value}');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyMinusTwoPts: ${currentPenaltyStatus.penaltyMinusTwoPts.value}');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyMinusHalfToTwoPts: ${currentPenaltyStatus.penaltyMinusHalfToTwoPts.value}');
+  debugPrint(
+      '>>>>> Quiz Model > currentPenaltyStatus.penaltyJudgeOpinion: ${currentPenaltyStatus.penaltyJudgeOpinion.value}');
 }

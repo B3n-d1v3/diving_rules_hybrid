@@ -1,14 +1,21 @@
-import 'package:flutter/cupertino.dart';
+import 'package:diving_rules_hybrid/buttons/ownership_content.dart';
+import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 
-import '../theme/dr_colors.dart';
+import '../models/quiz_button_status.dart';
 
 class OwnershipButton extends StatefulWidget {
   int buttonType;
-  bool isSelected;
+  int penaltyIndex;
+  bool viewInQuiz;
+  bool viewCorrection;
 
-  OwnershipButton({required this.buttonType, required this.isSelected});
+  OwnershipButton(
+      {required this.buttonType,
+      this.penaltyIndex = -1,
+      this.viewInQuiz = false,
+      this.viewCorrection = false});
 
   @override
   _OwnershipButtonState createState() => _OwnershipButtonState();
@@ -17,70 +24,44 @@ class OwnershipButton extends StatefulWidget {
 class _OwnershipButtonState extends State<OwnershipButton> {
   @override
   Widget build(BuildContext context) {
-    switch (widget.buttonType) {
-      case 0:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.person_crop_circle_badge_exclam,
-                size: 40,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 9),
-            Text(
-              AppLocalizations.of(context)!.buttonReferee,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.tertiary),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 45,
-                endIndent: 45,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      case 1:
-        return Column(
-          children: [
-            Icon(CupertinoIcons.person_3_fill,
-                size: 50,
-                color: widget.isSelected
-                    ? Theme.of(context).colorScheme.primary
-                    : AppColor.drColorDeselectedLight),
-            //SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonJudge,
-              style: TextStyle(
-                  color: widget.isSelected
-                      ? Theme.of(context).colorScheme.primary
-                      : AppColor.drColorDeselectedLight),
-            ),
-            SizedBox(height: 4),
-            if (widget.isSelected) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 45,
-                endIndent: 45,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
-          ],
-        );
-        break;
-      default:
-        return Text(' ');
-    }
+    return InkWell(
+      onTap: () {
+        // Reset the current button to opposite status and cancel others
+        setState(() {
+          // TODO: CURRENT  ---->>>>> testing new ownership buttons to be updated in the penalty details page and in the quiz details page
+          if (widget.viewInQuiz) {
+            if (widget.buttonType == 0) {
+              currentPenaltyStatus.ownershipReferee =
+                  RxBool(!currentPenaltyStatus.ownershipReferee.value);
+            } else {
+              currentPenaltyStatus.ownershipJudge =
+                  RxBool(!currentPenaltyStatus.ownershipJudge.value);
+            }
+          }
+          debugPrint(
+              '>>>>> Ownership Button > ownership ID: ${widget.buttonType}');
+          buttonOwnershipDebug();
+        });
+      },
+      child: Container(
+        // TODO: add the circling of the penalty on the right answer (if viewCorrection && is correct answer)
+        // decoration: BoxDecoration(
+        //   border: Border.all(color: widget.isSelected
+        //       ? Theme.of(context).colorScheme.primary:Theme.of(context).colorScheme.background),
+        //   borderRadius: const BorderRadius.all(Radius.circular(20)),
+        // )
+
+        child:
+            // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
+            // Obx(() =>
+            OwnershipContent(
+                buttonType: widget.buttonType,
+                penaltyIndex: widget.penaltyIndex,
+                viewInQuiz: widget.viewInQuiz)
+        // )
+        ,
+      ),
+    );
   }
 }
 

@@ -251,13 +251,8 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 children: <Widget>[
-                  OwnershipButton(
-                      buttonType: 0,
-                      isSelected:
-                          penaltySummary.penalties[widget.index].referee),
-                  OwnershipButton(
-                      buttonType: 1,
-                      isSelected: penaltySummary.penalties[widget.index].judge),
+                  OwnershipButton(buttonType: 0, penaltyIndex: widget.index),
+                  OwnershipButton(buttonType: 1, penaltyIndex: widget.index),
                 ],
               ),
             ],

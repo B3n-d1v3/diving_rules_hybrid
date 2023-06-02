@@ -1,47 +1,67 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'globals.dart';
 
 // Question page - buttons model for view
-class ButtonsStatus {
+// class ButtonsStatus {
+//   // penalty buttons status
+//   bool penaltyZeroPts = false;
+//   bool penaltyMaxTwoPts = false;
+//   bool penaltyMaxFourHalfPts = false;
+//   bool penaltyMinusTwoPts = false;
+//   bool penaltyMinusHalfToTwoPts = false;
+//   bool penaltyJudgeOpinion = false;
+//
+//   // ownership buttons status
+//   bool ownershipReferee = false;
+//   bool ownershipJudge = false;
+//
+//   // Other data needed
+//   // Sanction set by the user
+//   int userSanctionSelection = 500;
+//
+//   // has the user answered enough elements to go to the next question (one sanction and at least one owner)
+//   bool nextQuestion = false;
+// }
+
+// Test with Getx observable object
+class ButtonsStatus extends GetxController {
   // penalty buttons status
-  bool penaltyZeroPts = false;
-  bool penaltyMaxTwoPts = false;
-  bool penaltyMaxFourHalfPts = false;
-  bool penaltyMinusTwoPts = false;
-  bool penaltyMinusHalfToTwoPts = false;
-  bool penaltyJudgeOpinion = false;
+  late RxBool penaltyZeroPts = false.obs;
+  late RxBool penaltyMaxTwoPts = false.obs;
+  late RxBool penaltyMaxFourHalfPts = false.obs;
+  late RxBool penaltyMinusTwoPts = false.obs;
+  late RxBool penaltyMinusHalfToTwoPts = false.obs;
+  late RxBool penaltyJudgeOpinion = false.obs;
 
   // ownership buttons status
-  bool ownershipReferee = false;
-  bool ownershipJudge = false;
+  late RxBool ownershipReferee = false.obs;
+  late RxBool ownershipJudge = false.obs;
 
   // Other data needed
   // Sanction set by the user
-  int userSanctionSelection = 500;
+  late RxInt userSanctionSelection = 500.obs;
 
   // has the user answered enough elements to go to the next question (one sanction and at least one owner)
-  bool nextQuestion = false;
+  late RxBool nextQuestion = false.obs;
 }
 
 // Reset the current question status display model
-ButtonsStatus buttonStatusReset() {
-  ButtonsStatus buttonsTemp = ButtonsStatus();
+buttonStatusReset() {
   // Reset the current question status display model
-  // buttonsTemp.penaltyZeroPts = false;
-  // buttonsTemp.penaltyMaxTwoPts = false;
-  // buttonsTemp.penaltyMaxFourHalfPts = false;
-  // buttonsTemp.penaltyMinusTwoPts = false;
-  // buttonsTemp.penaltyMinusHalfToTwoPts = false;
-  // buttonsTemp.penaltyJudgeOpinion = false;
-  //
-  // buttonsTemp.ownershipReferee = false;
-  // buttonsTemp.ownershipJudge = false;
-  //
-  // buttonsTemp.nextQuestion = false;
-  // buttonsTemp.userSanctionSelection = 400;
+  currentPenaltyStatus.penaltyZeroPts = false.obs;
+  currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+  currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+  currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+  currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+  currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
 
-  return buttonsTemp;
+  currentPenaltyStatus.ownershipReferee = false.obs;
+  currentPenaltyStatus.ownershipJudge = false.obs;
+
+  currentPenaltyStatus.nextQuestion = false.obs;
+  currentPenaltyStatus.userSanctionSelection = 400.obs;
 }
 
 // Set the ButtonsStatus Object to the penalty's status display model
@@ -50,118 +70,131 @@ buttonAllStatusSet({required int penaltyNb}) {
   buttonPenaltyStatusSet(
       sanctionID: penaltySummary.penalties[penaltyNb].sanctionValue);
 
-  penaltyButtonStatus.ownershipJudge =
-      penaltySummary.penalties[penaltyNb].judge;
-  penaltyButtonStatus.ownershipReferee =
-      penaltySummary.penalties[penaltyNb].referee;
+  currentPenaltyStatus.ownershipJudge =
+      penaltySummary.penalties[penaltyNb].judge.obs;
+  currentPenaltyStatus.ownershipReferee =
+      penaltySummary.penalties[penaltyNb].referee.obs;
 }
 
 buttonPenaltyStatusSet({required int sanctionID}) {
   //int sanctionID = penaltySummary.penalties[penaltyNb].sanctionValue;
   if (sanctionID == 0) {
-    penaltyButtonStatus.penaltyZeroPts = true;
+    currentPenaltyStatus.penaltyZeroPts = true.obs;
   } else {
-    penaltyButtonStatus.penaltyZeroPts = false;
+    currentPenaltyStatus.penaltyZeroPts = false.obs;
   }
   if (sanctionID == 1) {
-    penaltyButtonStatus.penaltyMaxTwoPts = true;
+    currentPenaltyStatus.penaltyMaxTwoPts = true.obs;
   } else {
-    penaltyButtonStatus.penaltyMaxTwoPts = false;
+    currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
   }
   if (sanctionID == 2) {
-    penaltyButtonStatus.penaltyMaxFourHalfPts = true;
+    currentPenaltyStatus.penaltyMaxFourHalfPts = true.obs;
   } else {
-    penaltyButtonStatus.penaltyMaxFourHalfPts = false;
+    currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
   }
   if (sanctionID == 3) {
-    penaltyButtonStatus.penaltyMinusTwoPts = true;
+    currentPenaltyStatus.penaltyMinusTwoPts = true.obs;
   } else {
-    penaltyButtonStatus.penaltyMinusTwoPts = false;
+    currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
   }
   if (sanctionID == 4) {
-    penaltyButtonStatus.penaltyMinusHalfToTwoPts = true;
+    currentPenaltyStatus.penaltyMinusHalfToTwoPts = true.obs;
   } else {
-    penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
+    currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
   }
   if (sanctionID == 5) {
-    penaltyButtonStatus.penaltyJudgeOpinion = true;
+    currentPenaltyStatus.penaltyJudgeOpinion = true.obs;
   } else {
-    penaltyButtonStatus.penaltyJudgeOpinion = false;
+    currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
   }
 }
 
 buttonPenaltyStatusChange({required int sanctionID}) {
   switch (sanctionID) {
     case 0:
-      penaltyButtonStatus.penaltyZeroPts = !penaltyButtonStatus.penaltyZeroPts;
-      penaltyButtonStatus.penaltyMaxTwoPts = false;
-      penaltyButtonStatus.penaltyMaxFourHalfPts = false;
-      penaltyButtonStatus.penaltyMinusTwoPts = false;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
-      penaltyButtonStatus.penaltyJudgeOpinion = false;
+      currentPenaltyStatus.penaltyZeroPts =
+          RxBool(!currentPenaltyStatus.penaltyZeroPts.value);
+      currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+      currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+      currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
       break;
     case 1:
-      penaltyButtonStatus.penaltyZeroPts = false;
-      penaltyButtonStatus.penaltyMaxTwoPts =
-          !penaltyButtonStatus.penaltyMaxTwoPts;
-      penaltyButtonStatus.penaltyMaxFourHalfPts = false;
-      penaltyButtonStatus.penaltyMinusTwoPts = false;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
-      penaltyButtonStatus.penaltyJudgeOpinion = false;
+      currentPenaltyStatus.penaltyZeroPts = false.obs;
+      currentPenaltyStatus.penaltyMaxTwoPts =
+          RxBool(!currentPenaltyStatus.penaltyMaxTwoPts.value);
+      currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+      currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+      currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
       break;
     case 2:
-      penaltyButtonStatus.penaltyZeroPts = false;
-      penaltyButtonStatus.penaltyMaxTwoPts = false;
-      penaltyButtonStatus.penaltyMaxFourHalfPts =
-          !penaltyButtonStatus.penaltyMaxFourHalfPts;
-      penaltyButtonStatus.penaltyMinusTwoPts = false;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
-      penaltyButtonStatus.penaltyJudgeOpinion = false;
+      currentPenaltyStatus.penaltyZeroPts = false.obs;
+      currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMaxFourHalfPts =
+          RxBool(!currentPenaltyStatus.penaltyMaxFourHalfPts.value);
+      currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+      currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
       break;
     case 3:
-      penaltyButtonStatus.penaltyZeroPts = false;
-      penaltyButtonStatus.penaltyMaxTwoPts = false;
-      penaltyButtonStatus.penaltyMaxFourHalfPts = false;
-      penaltyButtonStatus.penaltyMinusTwoPts =
-          !penaltyButtonStatus.penaltyMinusTwoPts;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
-      penaltyButtonStatus.penaltyJudgeOpinion = false;
+      currentPenaltyStatus.penaltyZeroPts = false.obs;
+      currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+      currentPenaltyStatus.penaltyMinusTwoPts =
+          RxBool(!currentPenaltyStatus.penaltyMinusTwoPts.value);
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+      currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
       break;
     case 4:
-      penaltyButtonStatus.penaltyZeroPts = false;
-      penaltyButtonStatus.penaltyMaxTwoPts = false;
-      penaltyButtonStatus.penaltyMaxFourHalfPts = false;
-      penaltyButtonStatus.penaltyMinusTwoPts = false;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts =
-          !penaltyButtonStatus.penaltyMinusHalfToTwoPts;
-      penaltyButtonStatus.penaltyJudgeOpinion = false;
+      currentPenaltyStatus.penaltyZeroPts = false.obs;
+      currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+      currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts =
+          RxBool(!currentPenaltyStatus.penaltyMinusHalfToTwoPts.value);
+      currentPenaltyStatus.penaltyJudgeOpinion = false.obs;
       break;
     case 5:
-      penaltyButtonStatus.penaltyZeroPts = false;
-      penaltyButtonStatus.penaltyMaxTwoPts = false;
-      penaltyButtonStatus.penaltyMaxFourHalfPts = false;
-      penaltyButtonStatus.penaltyMinusTwoPts = false;
-      penaltyButtonStatus.penaltyMinusHalfToTwoPts = false;
-      penaltyButtonStatus.penaltyJudgeOpinion =
-          !penaltyButtonStatus.penaltyJudgeOpinion;
+      currentPenaltyStatus.penaltyZeroPts = false.obs;
+      currentPenaltyStatus.penaltyMaxTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMaxFourHalfPts = false.obs;
+      currentPenaltyStatus.penaltyMinusTwoPts = false.obs;
+      currentPenaltyStatus.penaltyMinusHalfToTwoPts = false.obs;
+      currentPenaltyStatus.penaltyJudgeOpinion =
+          RxBool(!currentPenaltyStatus.penaltyJudgeOpinion.value);
       break;
     default:
   }
-  return penaltyButtonStatus;
+  if (currentPenaltyStatus.userSanctionSelection.value != sanctionID) {
+    currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
+  }
+  // buttonPenaltyDebug();
+  return currentPenaltyStatus;
 }
 
 buttonPenaltyDebug() {
-  debugPrint('>>>>> Quiz Button Status > penaltyButtonStatus ---:');
+  debugPrint('>>>>> Button Status Object > penaltyButtonStatus ---:');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyZeroPts: ${penaltyButtonStatus.penaltyZeroPts}');
+      '>>>>> currentPenaltyStatus.penaltyZeroPts: ${currentPenaltyStatus.penaltyZeroPts.value}');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyMaxTwoPts: ${penaltyButtonStatus.penaltyMaxTwoPts}');
+      '>>>>> currentPenaltyStatus.penaltyMaxTwoPts: ${currentPenaltyStatus.penaltyMaxTwoPts.value}');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyMaxFourHalfPts: ${penaltyButtonStatus.penaltyMaxFourHalfPts}');
+      '>>>>> currentPenaltyStatus.penaltyMaxFourHalfPts: ${currentPenaltyStatus.penaltyMaxFourHalfPts.value}');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyMinusTwoPts: ${penaltyButtonStatus.penaltyMinusTwoPts}');
+      '>>>>> currentPenaltyStatus.penaltyMinusTwoPts: ${currentPenaltyStatus.penaltyMinusTwoPts.value}');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyMinusHalfToTwoPts: ${penaltyButtonStatus.penaltyMinusHalfToTwoPts}');
+      '>>>>> currentPenaltyStatus.penaltyMinusHalfToTwoPts: ${currentPenaltyStatus.penaltyMinusHalfToTwoPts.value}');
   debugPrint(
-      '>>>>> Quiz Button Status > penaltyButtonStatus.penaltyJudgeOpinion: ${penaltyButtonStatus.penaltyJudgeOpinion}');
+      '>>>>> currentPenaltyStatus.penaltyJudgeOpinion: ${currentPenaltyStatus.penaltyJudgeOpinion.value}');
+}
+
+buttonOwnershipDebug() {
+  debugPrint('>>>>> Button Status Object > OwnershipButtonStatus ---:');
+  debugPrint(
+      '>>>>> currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee.value}');
+  debugPrint(
+      '>>>>> currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge.value}');
 }
