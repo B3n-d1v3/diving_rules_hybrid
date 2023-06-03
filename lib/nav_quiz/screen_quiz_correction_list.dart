@@ -35,19 +35,21 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
             return Column(
               children: [
                 ListTile(
-                  // TODO: CURRENT -> debug result page not coherent with the questions answered
+                  // TODO: CURRENT -> debug result page to check the icon
                   leading: QuizCorrectionIcon(
                       penaltyQuestion: penaltySummary
                           .penalties[currentQuiz.questions[index]],
                       penaltyAnswer: currentQuiz.answers[index],
                       size: 30),
-                  title: PenaltyDescription(penaltyId: index),
+                  title: PenaltyDescription(
+                      penaltyId: currentQuiz.questions[index]),
                   //Text(penaltySummary.penalties[index].description, maxLines: 4,),
                   trailing: const CupertinoListTileChevron(),
                   onTap: () {
                     Get.to(
                       // TODO: Use a dedicated correction view link instead of the penalty detailed view
-                      PagePenaltyDescription(index: index),
+                      PagePenaltyDescription(
+                          index: currentQuiz.questions[index]),
                       transition: Transition.rightToLeftWithFade,
                     );
                   },
@@ -57,42 +59,5 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
             );
           },
         )));
-    //   Scaffold(
-    //   appBar: AppBar(
-    //     title: Text(AppLocalizations.of(context)!.quizzCorrectionListHeader),
-    //   ),
-    //   body: SafeArea(
-    //     child: Scrollbar(
-    //       child: SingleChildScrollView(
-    //         scrollDirection: Axis.vertical,
-    //         child: Padding(
-    //           padding: EdgeInsets.all(16),
-    //           child: Column(
-    //             children: [
-    //               // Quiz Question Title
-    //               Align(
-    //                 alignment: Alignment.center,
-    //                 child: RichText(
-    //                     text: TextSpan(
-    //                   style: Theme.of(context).textTheme.headlineMedium,
-    //                   children: [
-    //                     TextSpan(
-    //                         // text: AppLocalizations.of(context)!.quizz,
-    //                         style: TextStyle(
-    //                             color: Theme.of(context).colorScheme.primary)
-    //                         // style: Theme.of(context).textTheme.headlineMedium,
-    //                         ),
-    //                   ],
-    //                 )),
-    //               ),
-    //
-    //               // The list of the questions
-    //             ],
-    //           ),
-    //         ),
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }

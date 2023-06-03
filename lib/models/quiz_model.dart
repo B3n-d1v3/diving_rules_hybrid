@@ -41,7 +41,7 @@ newListOfQuestions() {
       i--;
     }
   }
-  // debugPrint('>>>>> Quiz Model > newListOfQuestions: $questionList');
+  debugPrint('>>>>> Quiz Model > newListOfQuestions: $questionList');
   return questionList;
 }
 

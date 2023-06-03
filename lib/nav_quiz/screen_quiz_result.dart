@@ -49,15 +49,18 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  // The rest
+                  // TODO: Add the Result badge
+                  // The Result of the Quiz
 
-                  // Quiz Restart
+                  // Quiz Result footer
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       // Show correction
                       ElevatedButton.icon(
                         onPressed: () {
+                          debugPrint(
+                              '>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
                           Get.to(
                             ScreenCorrectionList(),
                             transition: Transition.rightToLeftWithFade,

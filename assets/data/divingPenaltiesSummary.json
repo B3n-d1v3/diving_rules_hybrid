@@ -125,7 +125,7 @@
     },
     {
       "id": 9,
-      "description": "When a second attempt\n(a re-start) is unsuccessful.",
+      "description": "When a second attempt (a re-start) is unsuccessful.",
       "rules": [
         {
           "ruleId": "IV.6.5.3"
