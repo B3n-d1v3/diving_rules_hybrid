@@ -11,6 +11,7 @@ import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
+import '../models/quiz_score.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
@@ -184,7 +185,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     crossAxisCount: 2,
                     primary: false,
                     padding: const EdgeInsets.all(1),
-                    childAspectRatio: (1 / .7),
+                    childAspectRatio: (1 / .5),
                     crossAxisSpacing: 0,
                     mainAxisSpacing: 0,
                     scrollDirection: Axis.vertical,
@@ -205,41 +206,77 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     height: 20,
                   ),
 
-                  // Next button
-                  // TODO: dark mode version color is not working
-                  ElevatedButton.icon(
-                    onPressed: () {
-                      // Log the user answer
-                      debugPrint(
-                          '>>>>> Screen Quiz Question > currentQuizQuestionIndex: $currentQuizQuestionIndex');
-                      logUserAnswer();
-                      // Reset for next Question
-                      buttonStatusReset();
-                      // userAnswerDebug(index: currentQuizQuestionIndex - 1);
-                      // The user will get access to the next question
-                      if (currentQuizQuestionIndex < quizTotalQuestionNumber) {
-                        setState(() {
-                          currentQuizQuestionIndex += 1;
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // User Score
+                      RichText(
+                          text: TextSpan(
+                        style: Theme.of(context).textTheme.labelSmall,
+                        children: [
+                          TextSpan(
+                              text: '${currentQuizScore} pts',
+                              style: TextStyle(
+                                  color: Theme.of(context).colorScheme.primary)
+                              // style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                        ],
+                      )),
+
+                      const Expanded(child: Text('')),
+                      // Next button
+                      // TODO: render button inaction when Next question is not active
+                      // TODO: dark mode version color is not working
+                      ElevatedButton.icon(
+                        onPressed: () {
+                          // Log the user answer
+                          logUserAnswer();
                           debugPrint(
-                              '>>>>> Screen Quiz Question > currentQuizQuestionIndex (in next question): $currentQuizQuestionIndex');
+                              '>>>>> Screen Quiz Question > currentQuizQuestionIndex: $currentQuizQuestionIndex');
                           debugPrint(
-                              '>>>>> Screen Quiz Question > quizTotalQuestionNumber: $quizTotalQuestionNumber');
-                        });
-                        // Last Question and the user will get access to the quiz result page
-                      } else {
-                        // Get.to(
-                        Get.off(
-                          ScreenQuizResult(),
-                          transition: Transition.rightToLeftWithFade,
-                        );
-                      }
-                    },
-                    icon: const Icon(
-                      CupertinoIcons.greaterthan_circle_fill, // envelope_circle
-                      size: 24.0,
-                    ),
-                    label: Text(
-                        AppLocalizations.of(context)!.quizzNext), // <-- Text
+                              '>>>>> Screen Quiz Question > penaltyQuestion: penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex - 1]].id: ${penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex - 1]].id}');
+                          debugPrint(
+                              '>>>>> Screen Quiz Question > penaltyAnswer: currentQuiz.answers[currentQuizQuestionIndex - 1].id: ${currentQuiz.answers[currentQuizQuestionIndex - 1].id}');
+
+                          // Score Incrementation
+                          currentQuizScore += userAnswerAnalysis(
+                              penaltyQuestion: penaltySummary.penalties[
+                                  currentQuiz
+                                      .questions[currentQuizQuestionIndex - 1]],
+                              penaltyAnswer: currentQuiz
+                                  .answers[currentQuizQuestionIndex - 1],
+                              score: true);
+
+                          // Reset for next Question
+                          buttonStatusReset();
+                          // userAnswerDebug(index: currentQuizQuestionIndex - 1);
+
+                          // The user will get access to the next question
+                          if (currentQuizQuestionIndex <
+                              quizTotalQuestionNumber) {
+                            setState(() {
+                              currentQuizQuestionIndex += 1;
+                              debugPrint(
+                                  '>>>>> Screen Quiz Question > currentQuizQuestionIndex (in next question): $currentQuizQuestionIndex < quizTotalQuestionNumber: $quizTotalQuestionNumber');
+                            });
+                            // Last Question and the user will get access to the quiz result page
+                          } else {
+                            // Get.to(
+                            Get.off(
+                              ScreenQuizResult(),
+                              transition: Transition.rightToLeftWithFade,
+                            );
+                          }
+                        },
+                        icon: const Icon(
+                          CupertinoIcons.greaterthan_circle_fill,
+                          // envelope_circle
+                          size: 24.0,
+                        ),
+                        label: Text(AppLocalizations.of(context)!
+                            .quizzNext), // <-- Text
+                      ),
+                    ],
                   ),
                 ],
               ),

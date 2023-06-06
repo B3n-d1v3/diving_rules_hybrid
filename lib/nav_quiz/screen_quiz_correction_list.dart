@@ -35,7 +35,6 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
             return Column(
               children: [
                 ListTile(
-                  // TODO: CURRENT -> debug result page to check the icon
                   leading: QuizCorrectionIcon(
                       penaltyQuestion: penaltySummary
                           .penalties[currentQuiz.questions[index]],

@@ -27,6 +27,8 @@ class Quiz {
 newQuiz() {
   // Init new quiz information
   currentQuiz.questions = newListOfQuestions();
+  currentQuiz.answers = [];
+  currentQuiz.score = 0;
 }
 
 // create a new Quiz list
@@ -41,13 +43,16 @@ newListOfQuestions() {
       i--;
     }
   }
+  // Debug with standard list
+  questionList = [0, 1, 2, 3, 6];
   debugPrint('>>>>> Quiz Model > newListOfQuestions: $questionList');
+
   return questionList;
 }
 
 // Log the answer provided by the user in currentQuiz Object
 logUserAnswer() {
-  // TODO: log previous quiz content to keep quiz history
+  // TODO: log previous quiz content to keep quiz history in a new object to create 'allQuizzes'
   var loggedPenalty = Penalty(
       id: currentQuiz.questions[currentQuizQuestionIndex - 1],
       description: '',

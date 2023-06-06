@@ -146,6 +146,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
               onPressed: () {
                 currentQuizQuestionIndex = 1;
                 newQuiz();
+                currentQuizScore = 0;
                 buttonStatusReset();
                 //debugPrint('>>>>> Screen Quiz > currentQuiz.questions: ${currentQuiz.questions}');
                 // Temp list init to test function

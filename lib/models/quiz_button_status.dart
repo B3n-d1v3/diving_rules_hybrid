@@ -1,3 +1,4 @@
+import 'package:diving_rules_hybrid/models/quiz_next.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -41,7 +42,7 @@ class ButtonsStatus extends GetxController {
 
   // Other data needed
   // Sanction set by the user
-  late RxInt userSanctionSelection = 500.obs;
+  late RxInt userSanctionSelection = RxInt(-1);
 
   // has the user answered enough elements to go to the next question (one sanction and at least one owner)
   late RxBool nextQuestion = false.obs;
@@ -61,7 +62,7 @@ buttonStatusReset() {
   currentPenaltyStatus.ownershipJudge = false.obs;
 
   currentPenaltyStatus.nextQuestion = false.obs;
-  currentPenaltyStatus.userSanctionSelection = 400.obs;
+  currentPenaltyStatus.userSanctionSelection = RxInt(-1);
 }
 
 // Set the ButtonsStatus Object to the penalty's status display model
@@ -111,6 +112,7 @@ buttonPenaltyStatusSet({required int sanctionID}) {
 }
 
 buttonPenaltyStatusChange({required int sanctionID}) {
+  currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
   switch (sanctionID) {
     case 0:
       currentPenaltyStatus.penaltyZeroPts =
@@ -171,6 +173,7 @@ buttonPenaltyStatusChange({required int sanctionID}) {
   if (currentPenaltyStatus.userSanctionSelection.value != sanctionID) {
     currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
   }
+  canUserGoNext();
   // buttonPenaltyDebug();
   return currentPenaltyStatus;
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../models/quiz_button_status.dart';
+import '../models/quiz_next.dart';
 
 class OwnershipButton extends StatefulWidget {
   int buttonType;
@@ -37,6 +38,7 @@ class _OwnershipButtonState extends State<OwnershipButton> {
                   RxBool(!currentPenaltyStatus.ownershipJudge.value);
             }
           }
+          canUserGoNext();
           debugPrint(
               '>>>>> Ownership Button > ownership ID: ${widget.buttonType}');
           buttonOwnershipDebug();

@@ -1,8 +1,9 @@
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:diving_rules_hybrid/theme/dr_colors.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../models/quiz_score.dart';
 
 class QuizCorrectionIcon extends StatefulWidget {
   Penalty penaltyQuestion;
@@ -21,14 +22,16 @@ class QuizCorrectionIcon extends StatefulWidget {
 class _QuizCorrectionIconState extends State<QuizCorrectionIcon> {
   @override
   Widget build(BuildContext context) {
-    // if the answer is correct
-    if (widget.penaltyQuestion.sanctionValue ==
-        widget.penaltyAnswer.sanctionValue) {
-      // correct penalty sanction
-      if ((widget.penaltyQuestion.referee == widget.penaltyAnswer.referee) &&
-          (widget.penaltyQuestion.judge == widget.penaltyAnswer.judge)) {
-        //correct penalty ownership
-        // icon OK
+    // Debug this function
+    // debugPrint('>>>>> QuizCorrectionIcon > penaltyQuestion.id: ${widget.penaltyQuestion.id}');
+    // debugPrint('>>>>> QuizCorrectionIcon > penaltyQuestion.sanctionValue: ${widget.penaltyQuestion.sanctionValue} // penaltyAnswer.sanctionValue: ${widget.penaltyAnswer.sanctionValue}');
+    // debugPrint('>>>>> QuizCorrectionIcon > penaltyQuestion.referee: ${widget.penaltyQuestion.referee} // penaltyAnswer.referee: ${widget.penaltyAnswer.referee}');
+    // debugPrint('>>>>> QuizCorrectionIcon > penaltyQuestion.judge: ${widget.penaltyQuestion.judge} // penaltyAnswer.judge: ${widget.penaltyAnswer.judge}');
+
+    switch (userAnswerAnalysis(
+        penaltyQuestion: widget.penaltyQuestion,
+        penaltyAnswer: widget.penaltyAnswer)) {
+      case 0: // good
         return Icon(
           CupertinoIcons.checkmark_circle_fill,
           size: widget.size,
@@ -36,21 +39,8 @@ class _QuizCorrectionIconState extends State<QuizCorrectionIcon> {
               ? AppColor.drColorPositiveDark
               : AppColor.drColorPositiveLight,
         );
-      } else if ((widget.penaltyQuestion.referee ==
-              widget.penaltyAnswer.referee) ||
-          (widget.penaltyQuestion.judge == widget.penaltyAnswer.judge)) {
-        // case only one of two ownership
-        // icon partial
-        return Icon(
-          CupertinoIcons.exclamationmark_circle_fill,
-          size: widget.size,
-          color: Get.isDarkMode
-              ? AppColor.drColorWarningDark
-              : AppColor.drColorWarningLight,
-        );
-      } else {
-        // wrong ownership
-        // icon wrong
+        break;
+      case 1: // wrong
         return Icon(
           CupertinoIcons.xmark_circle_fill,
           size: widget.size,
@@ -58,21 +48,23 @@ class _QuizCorrectionIconState extends State<QuizCorrectionIcon> {
               ? AppColor.drColorNegativeDark
               : AppColor.drColorNegativeLight,
         );
-      }
-    } else {
-      // icon wrong
-      return Icon(
-        CupertinoIcons.xmark_circle_fill,
-        size: widget.size,
-        color: Get.isDarkMode
-            ? AppColor.drColorNegativeDark
-            : AppColor.drColorNegativeLight,
-      );
+        break;
+      case 2: // partial
+        return Icon(
+          CupertinoIcons.exclamationmark_circle_fill,
+          size: widget.size,
+          color: Get.isDarkMode
+              ? AppColor.drColorWarningDark
+              : AppColor.drColorWarningLight,
+        );
+        break;
+      default:
+        return Text(' ');
     }
   }
 }
 
 // Icons:
-// - ok: checkmark_circle_fill
-// - wrong: xmark_circle_fill
-// - partial: exclamationmark_circle_fill
+// - 0 > ok: checkmark_circle_fill
+// - 1 > wrong: xmark_circle_fill
+// - 2 > partial: exclamationmark_circle_fill

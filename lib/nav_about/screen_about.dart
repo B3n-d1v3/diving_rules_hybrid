@@ -180,7 +180,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                     ElevatedButton.icon(
                       onPressed: () {
-                        // TODO: CURRENT Create Native OS Share option => testing with share_plus
+                        // TODO: Create Native OS Share option => testing with share_plus
                         //Share.share('I 😍 this app to learn the Diving Rules: http://bit.ly/DivingRulesApp', subject: 'diving rules');
                       },
                       icon: const Icon(

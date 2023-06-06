@@ -8,6 +8,8 @@ import 'package:get/get.dart';
 
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
+import '../models/quiz_model.dart';
+import '../theme/dr_colors.dart';
 
 class ScreenQuizResult extends StatefulWidget {
   const ScreenQuizResult({Key? key}) : super(key: key);
@@ -42,15 +44,110 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                             text:
                                 AppLocalizations.of(context)!.quizzResultTitle,
                             style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary)
-                            // style: Theme.of(context).textTheme.headlineMedium,
-                            ),
+                                color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),
 
-                  // TODO: Add the Result badge
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.bodyMedium,
+                      children: [
+                        TextSpan(
+                          text: AppLocalizations.of(context)!
+                              .quizzResultDescription,
+                        ),
+                      ],
+                    )),
+                  ),
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+                  // TODO: CURRENT  >>  Add the Result badge
                   // The Result of the Quiz
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      children: [
+                        TextSpan(
+                          text:
+                              '${(currentQuizScore * 10 / quizTotalQuestionNumber).toInt()}%',
+                        ),
+                      ],
+                    )),
+                  ),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.bodySmall,
+                      children: [
+                        TextSpan(
+                          text:
+                              '($currentQuizScore pts / max  $quizTotalQuestionNumber pts)',
+                        ),
+                      ],
+                    )),
+                  ),
+
+                  const SizedBox(
+                    height: 20,
+                  ),
+
+                  // Result Badge
+
+                  (currentQuizScore >= quizTotalQuestionNumber * 8)
+                      ? Icon(
+                          CupertinoIcons.checkmark_shield_fill,
+                          size: 100.0,
+                          color: Get.isDarkMode
+                              ? AppColor.drColorPositiveDark
+                              : AppColor.drColorPositiveLight,
+                        )
+                      : Icon(
+                          CupertinoIcons.xmark_shield_fill,
+                          size: 100.0,
+                          color: Get.isDarkMode
+                              ? AppColor.drColorNegativeDark
+                              : AppColor.drColorNegativeLight,
+                        ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      children: [
+                        TextSpan(
+                          text:
+                              (currentQuizScore >= quizTotalQuestionNumber * 8)
+                                  ? AppLocalizations.of(context)!.passed
+                                  : AppLocalizations.of(context)!.failed,
+                          //style: TextStyle(color: Theme.of(context).colorScheme.primary)
+                        ),
+                      ],
+                    )),
+                  ),
+
+                  const SizedBox(
+                    height: 40,
+                  ),
 
                   // Quiz Result footer
                   Row(
@@ -79,6 +176,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                         onPressed: () {
                           // TODO: Re-init Quiz
                           currentQuizQuestionIndex = 1;
+                          newQuiz();
+                          currentQuizScore = 0;
                           buttonStatusReset();
                           Get.off(
                             //Get.to(
