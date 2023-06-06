@@ -74,34 +74,6 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                   // TODO: CURRENT  >>  Add the Result badge
                   // The Result of the Quiz
 
-                  Align(
-                    alignment: Alignment.center,
-                    child: RichText(
-                        text: TextSpan(
-                      style: Theme.of(context).textTheme.headlineSmall,
-                      children: [
-                        TextSpan(
-                          text:
-                              '${(currentQuizScore * 10 / quizTotalQuestionNumber).toInt()}%',
-                        ),
-                      ],
-                    )),
-                  ),
-
-                  Align(
-                    alignment: Alignment.center,
-                    child: RichText(
-                        text: TextSpan(
-                      style: Theme.of(context).textTheme.bodySmall,
-                      children: [
-                        TextSpan(
-                          text:
-                              '($currentQuizScore pts / max  $quizTotalQuestionNumber pts)',
-                        ),
-                      ],
-                    )),
-                  ),
-
                   const SizedBox(
                     height: 20,
                   ),
@@ -136,11 +108,46 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       children: [
                         TextSpan(
                           text:
+                              '${(currentQuizScore * 10 / quizTotalQuestionNumber).toInt()}%',
+                        ),
+                      ],
+                    )),
+                  ),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      children: [
+                        TextSpan(
+                          text:
                               (currentQuizScore >= quizTotalQuestionNumber * 8)
                                   ? AppLocalizations.of(context)!.passed
                                   : AppLocalizations.of(context)!.failed,
                           //style: TextStyle(color: Theme.of(context).colorScheme.primary)
                         ),
+                      ],
+                    )),
+                  ),
+
+                  const SizedBox(
+                    height: 8,
+                  ),
+
+                  Align(
+                    alignment: Alignment.center,
+                    child: RichText(
+                        text: TextSpan(
+                      style: Theme.of(context).textTheme.bodySmall,
+                      children: [
+                        TextSpan(
+                            text:
+                                '($currentQuizScore pts / max  ${quizTotalQuestionNumber * 10} pts)',
+                            style: TextStyle(
+                                color: Get.isDarkMode
+                                    ? AppColor.drColorDeselectedDark
+                                    : AppColor.drColorDeselectedLight)),
                       ],
                     )),
                   ),
