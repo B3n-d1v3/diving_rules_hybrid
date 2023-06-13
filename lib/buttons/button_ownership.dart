@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../models/quiz_button_status.dart';
-import '../models/quiz_next.dart';
+import '../theme/dr_colors.dart';
 
 class OwnershipButton extends StatefulWidget {
   int buttonType;
@@ -28,7 +28,7 @@ class _OwnershipButtonState extends State<OwnershipButton> {
     return InkWell(
       onTap: () {
         setState(() {
-          // TODO: CURRENT  ---->>>>> testing new ownership buttons to be updated in the penalty details page and in the quiz details page
+          // if the ownership is in a quiz
           if (widget.viewInQuiz) {
             if (widget.buttonType == 0) {
               currentPenaltyStatus.ownershipReferee =
@@ -38,20 +38,63 @@ class _OwnershipButtonState extends State<OwnershipButton> {
                   RxBool(!currentPenaltyStatus.ownershipJudge.value);
             }
           }
-          canUserGoNext();
-          debugPrint(
-              '>>>>> Ownership Button > ownership ID: ${widget.buttonType}');
+
+          //canUserGoNext();
+          // test function in the set sate
+          // if the ownership is in a question
+          // can the User Go to the Next page
+          if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
+              (currentPenaltyStatus.ownershipReferee.value == true ||
+                  currentPenaltyStatus.ownershipJudge.value == true)) {
+            // currentQuizNextQuestion = true;
+            currentPenaltyStatus.nextQuestion = true.obs;
+          } else {
+            // currentQuizNextQuestion = false;
+            currentPenaltyStatus.nextQuestion = false.obs;
+          }
+
+          // Debug status
+          // debugPrint('>>>>> Ownership Button');
+          // debugPrint('>>>>> Ownership Button > in > ownership ID / buttonType: ${widget.buttonType}');
+          // debugPrint('>>>>> Ownership Button > in > penaltyIndex: ${widget.penaltyIndex}');
+          // debugPrint('>>>>> Ownership Button > in > viewInQuiz: ${widget.viewInQuiz}');
+          // debugPrint('>>>>> Ownership Button > in > viewCorrection: ${widget.viewCorrection}');
+          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee}');
+          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge}');
+          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
+          // debugPrint('>>>>> Ownership Button > out > penaltySummary.penalties[widget.penaltyIndex].sanctionValue: ${penaltySummary.penalties[widget.penaltyIndex].sanctionValue}');
+
           buttonOwnershipDebug();
         });
       },
       child: Container(
-        // TODO: add the circling of the penalty on the right answer (if viewCorrection && is correct answer)
-        // decoration: BoxDecoration(
-        //   border: Border.all(color: widget.isSelected
-        //       ? Theme.of(context).colorScheme.primary:Theme.of(context).colorScheme.background),
-        //   borderRadius: const BorderRadius.all(Radius.circular(20)),
-        // )
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            border: Border.all(
+                width: 3,
+                color: widget.viewCorrection
+                    // if the page is in correction mode check the penalty ownership
+                    ? ((widget.buttonType == 0 &&
+                                penaltySummary.penalties[widget.penaltyIndex]
+                                        .referee ==
+                                    true) ||
+                            (widget.buttonType == 1 &&
+                                penaltySummary
+                                        .penalties[widget.penaltyIndex].judge ==
+                                    true))
 
+                        // this item is the right answer
+                        // show border in positive color based on light/dark mode
+                        ? Get.isDarkMode
+                            ? AppColor.drColorPositiveDark
+                            : AppColor.drColorPositiveLight
+                        // this item is not the right answer
+                        // else hide the border
+                        : Theme.of(context).colorScheme.background
+                    // if the page is in question mode
+                    // else hide the border
+                    : Theme.of(context).colorScheme.background)),
         child:
             // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
             // Obx(() =>

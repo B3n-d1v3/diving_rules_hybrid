@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
-import 'package:get/get.dart';
 
 import '../models/globals.dart';
 
@@ -66,7 +65,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                     (penaltySummary
                             .penalties[widget.penaltyIndex].sanctionValue ==
                         0))) ...{
-              //if (currentPenaltyStatus.penaltyZeroPts.value) ...{
               Divider(
                 height: 3,
                 thickness: 3,

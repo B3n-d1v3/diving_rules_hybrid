@@ -1,4 +1,3 @@
-import 'package:diving_rules_hybrid/models/quiz_next.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -63,6 +62,8 @@ buttonStatusReset() {
 
   currentPenaltyStatus.nextQuestion = false.obs;
   currentPenaltyStatus.userSanctionSelection = RxInt(-1);
+
+  currentQuizNextQuestion = false;
 }
 
 // Set the ButtonsStatus Object to the penalty's status display model
@@ -112,7 +113,8 @@ buttonPenaltyStatusSet({required int sanctionID}) {
 }
 
 buttonPenaltyStatusChange({required int sanctionID}) {
-  currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
+  //currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
+
   switch (sanctionID) {
     case 0:
       currentPenaltyStatus.penaltyZeroPts =
@@ -172,10 +174,22 @@ buttonPenaltyStatusChange({required int sanctionID}) {
   }
   if (currentPenaltyStatus.userSanctionSelection.value != sanctionID) {
     currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
+  } else {
+    currentPenaltyStatus.userSanctionSelection = RxInt(-1);
   }
-  canUserGoNext();
+  //canUserGoNext();
   // buttonPenaltyDebug();
   return currentPenaltyStatus;
+}
+
+// Set the penalties and the ownership the the user's response
+buttonAllStatusSetToUserAnswer({required int quizIndex}) {
+  buttonPenaltyStatusSet(
+      sanctionID: currentQuiz.answers[quizIndex].sanctionValue);
+  currentPenaltyStatus.ownershipJudge =
+      currentQuiz.answers[quizIndex].judge.obs;
+  currentPenaltyStatus.ownershipReferee =
+      currentQuiz.answers[quizIndex].referee.obs;
 }
 
 buttonPenaltyDebug() {

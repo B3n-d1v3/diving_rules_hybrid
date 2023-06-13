@@ -1,13 +1,28 @@
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 import '../models/globals.dart';
 
 canUserGoNext() {
-  if (currentPenaltyStatus.userSanctionSelection < 0 &&
-      (currentPenaltyStatus.ownershipReferee == true.obs ||
-          currentPenaltyStatus.ownershipJudge == true.obs)) {
-    currentPenaltyStatus.nextQuestion = true.obs;
+  // debugPrint('>>>>> Quiz Next > currentPenaltyStatus.nextQuestion (before): ${currentPenaltyStatus.nextQuestion}');
+  debugPrint(
+      '>>>>> Quiz Next > currentQuizNextQuestion (before): ${currentQuizNextQuestion}');
+  debugPrint(
+      '>>>>> Quiz Next > currentPenaltyStatus.userSanctionSelection: ${currentPenaltyStatus.userSanctionSelection}');
+  debugPrint(
+      '>>>>> Quiz Next > currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee.value}');
+  debugPrint(
+      '>>>>> Quiz Next > currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge.value}');
+
+  if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
+      (currentPenaltyStatus.ownershipReferee.value == true ||
+          currentPenaltyStatus.ownershipJudge.value == true)) {
+    currentQuizNextQuestion = true;
+    // currentPenaltyStatus.nextQuestion = true.obs;
   } else {
-    currentPenaltyStatus.nextQuestion = false.obs;
+    currentQuizNextQuestion = false;
+    // currentPenaltyStatus.nextQuestion = false.obs;
   }
+  debugPrint(
+      '>>>>> Quiz Next > currentQuizNextQuestion (before): ${currentQuizNextQuestion}');
+  // debugPrint('>>>>> Quiz Next > currentPenaltyStatus.nextQuestion (after): ${currentPenaltyStatus.nextQuestion}');
 }

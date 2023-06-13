@@ -1,4 +1,5 @@
 import 'package:diving_rules_hybrid/models/globals.dart';
+import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/cupertino.dart';
@@ -7,7 +8,7 @@ import 'package:get/get.dart';
 
 import '../buttons/quiz_correction_icon.dart';
 import '../l10n/penalty_description_l10n.dart';
-import '../nav_penalty_list/screen_penalty_details.dart';
+import '../models/quiz_button_status.dart';
 
 //import 'package:get/get.dart';
 //import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_correction_details.dart';
@@ -45,10 +46,16 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
                   //Text(penaltySummary.penalties[index].description, maxLines: 4,),
                   trailing: const CupertinoListTileChevron(),
                   onTap: () {
+                    // TODO: add function to reset the current content to the user answer's setup
+                    currentQuizQuestionIndex = index + 1;
+                    buttonAllStatusSetToUserAnswer(quizIndex: index);
+                    debugPrint(
+                        '>>>>> Screen Quiz Correction List > currentQuizQuestionIndex: $currentQuizQuestionIndex');
+                    buttonPenaltyDebug();
+                    buttonOwnershipDebug();
                     Get.to(
-                      // TODO: Use a dedicated correction view link instead of the penalty detailed view
-                      PagePenaltyDescription(
-                          index: currentQuiz.questions[index]),
+                      // TODO: CURRENT >>> debug when there are 2 ownerships in the right answer (only one shows)
+                      ScreenQuizQuestion(index: currentQuiz.questions[index]),
                       transition: Transition.rightToLeftWithFade,
                     );
                   },

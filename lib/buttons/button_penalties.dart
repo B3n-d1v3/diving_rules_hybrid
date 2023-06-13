@@ -1,17 +1,16 @@
 import 'package:diving_rules_hybrid/buttons/penalties_content_observable.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
+import '../theme/dr_colors.dart';
 
 class PenaltyButton extends StatefulWidget {
   int buttonType;
-
-  //bool isSelected;
   int penaltyIndex;
   bool viewInQuiz;
   bool viewCorrection;
-
-  // PenaltyButton({Key? key, required this.buttonType, required this.isSelected}) : super(key: key);
 
   PenaltyButton(
       {required this.buttonType,
@@ -30,20 +29,54 @@ class _PenaltyButtonState extends State<PenaltyButton> {
       onTap: () {
         // Reset the current button to opposite status and cancel others
         setState(() {
+          // TODO: CURRENT >>> Render inactive when showing correction
           buttonPenaltyStatusChange(sanctionID: widget.buttonType);
           // Debug
           debugPrint(
               '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
+
+          // canUserGoNext();
+          // test function in the set sate
+          // can the User Go to the Next page
+          if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
+              (currentPenaltyStatus.ownershipReferee.value == true ||
+                  currentPenaltyStatus.ownershipJudge.value == true)) {
+            // currentQuizNextQuestion = true;
+            currentPenaltyStatus.nextQuestion = true.obs;
+          } else {
+            // currentQuizNextQuestion = false;
+            currentPenaltyStatus.nextQuestion = false.obs;
+          }
+          debugPrint(
+              '>>>>> Penalties Button > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
+
           buttonPenaltyDebug();
         });
       },
       child: Container(
-        // TODO: add the circling of the penalty on the right answer
-        // decoration: BoxDecoration(
-        //   border: Border.all(color: widget.isSelected
-        //       ? Theme.of(context).colorScheme.primary:Theme.of(context).colorScheme.background),
-        //   borderRadius: const BorderRadius.all(Radius.circular(20)),
-        // )
+        // TODO: CURRENT >>> add user answer on top of the circling of the penalty on the right answer
+
+        padding: const EdgeInsets.all(5),
+        decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+            border: Border.all(
+                width: 3,
+                color: widget.viewCorrection
+                    // if the page is in correction mode
+                    ? (widget.buttonType ==
+                            penaltySummary
+                                .penalties[widget.penaltyIndex].sanctionValue)
+                        // this item is the right answer
+                        // show border in positive color based on light/dark mode
+                        ? Get.isDarkMode
+                            ? AppColor.drColorPositiveDark
+                            : AppColor.drColorPositiveLight
+                        // this item is not the right answer
+                        // else hide the border
+                        : Theme.of(context).colorScheme.background
+                    // if the page is in question mode
+                    // else hide the border
+                    : Theme.of(context).colorScheme.background)),
 
         child:
             // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
@@ -59,7 +92,8 @@ class _PenaltyButtonState extends State<PenaltyButton> {
   }
 }
 
-//  Button ID Correspondence > icons
+//  Button type
+//  ID > type correspondence: icons_name
 //    0 > ZeroPts > penalty-sanction-0pts:  clear_circled (or nosign)
 //    1 > MinusTwoPts > penalty-sanction-max2pts: lessthan_circle_fill
 //    2 > MaxTwoPts > penalty-sanction-max4.5pts: lessthan_circle

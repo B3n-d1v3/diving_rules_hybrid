@@ -74,7 +74,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                     : penaltySummary.penalties[widget.penaltyIndex].judge
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 4),
+            //SizedBox(height: 4),
             Text(
               AppLocalizations.of(context)!.buttonJudge,
               style: TextStyle(
