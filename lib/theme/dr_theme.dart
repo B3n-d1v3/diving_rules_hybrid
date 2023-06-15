@@ -52,6 +52,11 @@ class DrTheme {
               .resolve(states)
               .withOpacity(_switchTrackOpacity);
         })),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColor.myElevatedButtonBackgroundColorDark,
+      ),
+    ),
   );
 }
 

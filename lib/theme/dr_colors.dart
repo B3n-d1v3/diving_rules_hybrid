@@ -141,4 +141,7 @@ class AppColor {
   static const Color myOnTertiaryContainerColorDark = Color(0xFFd0e4ff);
   static const Color myErrorContainerColorDark = Color(0xFF93000a);
   static const Color myOnErrorContainerColorDark = Color(0xFFffdad6);
+
+  // component specifics
+  static const Color myElevatedButtonBackgroundColorDark = Color(0xFF303031);
 }
