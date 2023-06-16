@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 // import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -172,7 +173,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 20,
                     ),
 
-                    // TODO: Create New and add the QR code image
+                    // TODO: Create and add the new QR code image
 
                     const SizedBox(
                       height: 20,
@@ -247,6 +248,16 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     // TODO: Add a share header bar icon + share link
                     // shareText = "I 😍 this app to learn the Diving Rules"
                     // for apple: URL(string : "bit.ly/DivingRulesApp")
+
+                    // QR Code
+                    SvgPicture.asset(
+                      "assets/images/diving_rules_22_qr_code.svg",
+                      colorFilter: ColorFilter.mode(
+                          Theme.of(context).colorScheme.primary,
+                          BlendMode.srcIn),
+                      width: 25,
+                    ),
+                    const SizedBox(width: 4),
                   ]),
                 ),
               ],
