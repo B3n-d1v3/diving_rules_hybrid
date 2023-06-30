@@ -9,14 +9,10 @@ import '../theme/dr_colors.dart';
 class OwnershipButton extends StatefulWidget {
   int buttonType;
   int penaltyIndex;
-  bool viewInQuiz;
-  bool viewCorrection;
+  int viewMode;
 
   OwnershipButton(
-      {required this.buttonType,
-      this.penaltyIndex = -1,
-      this.viewInQuiz = false,
-      this.viewCorrection = false});
+      {required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
 
   @override
   _OwnershipButtonState createState() => _OwnershipButtonState();
@@ -28,8 +24,8 @@ class _OwnershipButtonState extends State<OwnershipButton> {
     return InkWell(
       onTap: () {
         setState(() {
-          // if the ownership is in a quiz
-          if (widget.viewInQuiz) {
+          // if in a quiz mode
+          if (widget.viewMode == 1) {
             if (widget.buttonType == 0) {
               currentPenaltyStatus.ownershipReferee =
                   RxBool(!currentPenaltyStatus.ownershipReferee.value);
@@ -37,20 +33,20 @@ class _OwnershipButtonState extends State<OwnershipButton> {
               currentPenaltyStatus.ownershipJudge =
                   RxBool(!currentPenaltyStatus.ownershipJudge.value);
             }
-          }
 
-          //canUserGoNext();
-          // test function in the set sate
-          // if the ownership is in a question
-          // can the User Go to the Next page
-          if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
-              (currentPenaltyStatus.ownershipReferee.value == true ||
-                  currentPenaltyStatus.ownershipJudge.value == true)) {
-            // currentQuizNextQuestion = true;
-            currentPenaltyStatus.nextQuestion = true.obs;
-          } else {
-            // currentQuizNextQuestion = false;
-            currentPenaltyStatus.nextQuestion = false.obs;
+            //canUserGoNext();
+            // test function in the set sate
+            // if the ownership is in a question
+            // can the User Go to the Next page
+            if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
+                (currentPenaltyStatus.ownershipReferee.value == true ||
+                    currentPenaltyStatus.ownershipJudge.value == true)) {
+              // currentQuizNextQuestion = true;
+              currentPenaltyStatus.nextQuestion = true.obs;
+            } else {
+              // currentQuizNextQuestion = false;
+              currentPenaltyStatus.nextQuestion = false.obs;
+            }
           }
 
           // Debug status
@@ -73,7 +69,7 @@ class _OwnershipButtonState extends State<OwnershipButton> {
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(
                 width: 3,
-                color: widget.viewCorrection
+                color: widget.viewMode == 2
                     // if the page is in correction mode check the penalty ownership
                     ? ((widget.buttonType == 0 &&
                                 penaltySummary.penalties[widget.penaltyIndex]
@@ -101,7 +97,7 @@ class _OwnershipButtonState extends State<OwnershipButton> {
             OwnershipContent(
                 buttonType: widget.buttonType,
                 penaltyIndex: widget.penaltyIndex,
-                viewInQuiz: widget.viewInQuiz)
+                viewMode: widget.viewMode)
         // )
         ,
       ),

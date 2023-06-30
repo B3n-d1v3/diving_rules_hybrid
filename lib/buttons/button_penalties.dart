@@ -1,4 +1,5 @@
 import 'package:diving_rules_hybrid/buttons/penalties_content_observable.dart';
+import 'package:diving_rules_hybrid/buttons/penalty_content_static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,14 +10,14 @@ import '../theme/dr_colors.dart';
 class PenaltyButton extends StatefulWidget {
   int buttonType;
   int penaltyIndex;
-  bool viewInQuiz;
-  bool viewCorrection;
+  int viewMode;
+
+  // vieMode 0 = Penalty View
+  // vieMode 1 = Quiz Question View
+  // vieMode 2 = Quiz Answer Correction View
 
   PenaltyButton(
-      {required this.buttonType,
-      this.penaltyIndex = -1,
-      this.viewInQuiz = false,
-      this.viewCorrection = false});
+      {required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
 
   @override
   _PenaltyButtonState createState() => _PenaltyButtonState();
@@ -29,39 +30,38 @@ class _PenaltyButtonState extends State<PenaltyButton> {
       onTap: () {
         // Reset the current button to opposite status and cancel others
         setState(() {
-          // TODO: CURRENT >>> Render inactive when showing correction
-          buttonPenaltyStatusChange(sanctionID: widget.buttonType);
-          // Debug
-          debugPrint(
-              '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
+          if (widget.viewMode == 1) {
+            buttonPenaltyStatusChange(sanctionID: widget.buttonType);
+            // Debug
+            debugPrint(
+                '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
 
-          // canUserGoNext();
-          // test function in the set sate
-          // can the User Go to the Next page
-          if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
-              (currentPenaltyStatus.ownershipReferee.value == true ||
-                  currentPenaltyStatus.ownershipJudge.value == true)) {
-            // currentQuizNextQuestion = true;
-            currentPenaltyStatus.nextQuestion = true.obs;
-          } else {
-            // currentQuizNextQuestion = false;
-            currentPenaltyStatus.nextQuestion = false.obs;
+            // canUserGoNext();
+            // test function in the set sate
+            // can the User Go to the Next page
+            if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
+                (currentPenaltyStatus.ownershipReferee.value == true ||
+                    currentPenaltyStatus.ownershipJudge.value == true)) {
+              // currentQuizNextQuestion = true;
+              currentPenaltyStatus.nextQuestion(true);
+            } else {
+              // currentQuizNextQuestion = false;
+              currentPenaltyStatus.nextQuestion(false);
+            }
+            debugPrint(
+                '>>>>> Penalties Button > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
           }
-          debugPrint(
-              '>>>>> Penalties Button > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
 
           buttonPenaltyDebug();
         });
       },
       child: Container(
-        // TODO: CURRENT >>> add user answer on top of the circling of the penalty on the right answer
-
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(
                 width: 3,
-                color: widget.viewCorrection
+                color: widget.viewMode == 2
                     // if the page is in correction mode
                     ? (widget.buttonType ==
                             penaltySummary
@@ -77,14 +77,17 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                     // if the page is in question mode
                     // else hide the border
                     : Theme.of(context).colorScheme.background)),
-
-        child:
-            // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
-            // Obx(() =>
-            PenaltyContentObsv(
+        child: (widget.viewMode == 0)
+            ? PenaltyContentStatic(
                 buttonType: widget.buttonType,
                 penaltyIndex: widget.penaltyIndex,
-                viewInQuiz: widget.viewInQuiz)
+                viewMode: widget.viewMode,
+              )
+            : PenaltyContentObsv(
+                buttonType: widget.buttonType,
+                penaltyIndex: widget.penaltyIndex,
+                viewMode: widget.viewMode,
+              )
         // )
         ,
       ),

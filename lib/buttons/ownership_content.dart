@@ -6,12 +6,16 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 class OwnershipContent extends StatefulWidget {
   int buttonType;
   int penaltyIndex;
-  bool viewInQuiz;
+  int viewMode;
+
+  // vieMode 0 = Penalty View
+  // vieMode 1 = Quiz Question View
+  // vieMode 2 = Quiz Answer Correction View
 
   OwnershipContent(
       {required this.buttonType,
       required this.penaltyIndex,
-      required this.viewInQuiz});
+      required this.viewMode});
 
   @override
   _OwnershipContentState createState() => _OwnershipContentState();
@@ -26,7 +30,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
           children: [
             Icon(CupertinoIcons.person_crop_circle_badge_exclam,
                 size: 40,
-                color: widget.viewInQuiz //widget.isSelected
+                color: widget.viewMode != 0
                     ? currentPenaltyStatus.ownershipReferee.value
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary
@@ -37,7 +41,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
             Text(
               AppLocalizations.of(context)!.buttonReferee,
               style: TextStyle(
-                  color: widget.viewInQuiz //widget.isSelected
+                  color: widget.viewMode != 0
                       ? currentPenaltyStatus.ownershipReferee.value
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary
@@ -46,9 +50,9 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           : Theme.of(context).colorScheme.tertiary),
             ),
             SizedBox(height: 4),
-            if ((widget.viewInQuiz &&
+            if ((widget.viewMode != 0 &&
                     currentPenaltyStatus.ownershipReferee.value) ||
-                (!widget.viewInQuiz &&
+                (widget.viewMode == 0 &&
                     penaltySummary.penalties[widget.penaltyIndex].referee)) ...{
               Divider(
                 height: 3,
@@ -67,7 +71,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
           children: [
             Icon(CupertinoIcons.person_3_fill,
                 size: 50,
-                color: widget.viewInQuiz //widget.isSelected
+                color: widget.viewMode != 0 //widget.isSelected
                     ? currentPenaltyStatus.ownershipJudge.value
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary
@@ -78,7 +82,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
             Text(
               AppLocalizations.of(context)!.buttonJudge,
               style: TextStyle(
-                  color: widget.viewInQuiz //widget.isSelected
+                  color: widget.viewMode != 0 //widget.isSelected
                       ? currentPenaltyStatus.ownershipJudge.value
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary
@@ -87,9 +91,9 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           : Theme.of(context).colorScheme.tertiary),
             ),
             SizedBox(height: 4),
-            if ((widget.viewInQuiz &&
+            if ((widget.viewMode != 0 &&
                     currentPenaltyStatus.ownershipJudge.value) ||
-                (!widget.viewInQuiz &&
+                (widget.viewMode == 0 &&
                     penaltySummary.penalties[widget.penaltyIndex].judge)) ...{
               Divider(
                 height: 3,
