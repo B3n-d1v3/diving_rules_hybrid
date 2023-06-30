@@ -46,7 +46,7 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
                   //Text(penaltySummary.penalties[index].description, maxLines: 4,),
                   trailing: const CupertinoListTileChevron(),
                   onTap: () {
-                    // TODO: add function to reset the current content to the user answer's setup
+                    // Reset the current content to the user answer's setup
                     currentQuizQuestionIndex = index + 1;
                     buttonAllStatusSetToUserAnswer(quizIndex: index);
                     debugPrint(
@@ -54,7 +54,6 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
                     buttonPenaltyDebug();
                     buttonOwnershipDebug();
                     Get.to(
-                      // TODO: CURRENT >>> debug when there are 2 ownerships in the right answer (only one shows)
                       ScreenQuizQuestion(index: currentQuiz.questions[index]),
                       transition: Transition.rightToLeftWithFade,
                     );

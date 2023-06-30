@@ -141,7 +141,6 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             ),
 
             // Start button
-            // TODO: dark mode version color is not working
             ElevatedButton.icon(
               onPressed: () {
                 currentQuizQuestionIndex = 1;

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+// import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
 import '../models/globals.dart';
 
 class PenaltyContentObsv extends StatefulWidget {
@@ -25,7 +27,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
   @override
   Widget build(BuildContext context) {
     switch (widget.buttonType) {
-      case 0: //    0 > ZeroPts
+      case 0: //    0 -> 0 pts
         // TODO CURRENT: 2 Bugs:
         //  - The status only changes for the 0pts, 1/2 to 2 pts and judge opinion; but not the others!!!
         //  - The tap on a penalty button does not deactivate the others
@@ -46,7 +48,9 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                         : Theme.of(context).colorScheme.tertiary),
             SizedBox(height: 4),
             Text(
+              // TODO: CURRENT >>> Testing the penalty booleans in the view - To be reverted to the field name
               AppLocalizations.of(context)!.button0pts,
+              // '${currentPenaltyStatus.penaltyZeroPts.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyZeroPts.value
@@ -77,11 +81,11 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
           ],
         );
         break;
-      case 1: //    1 > MinusTwoPts
+      case 1: //    1 -> - 2 pts
         return Column(
           children: [
             SizedBox(height: 4),
-            Icon(CupertinoIcons.lessthan_circle_fill,
+            Icon(CupertinoIcons.gobackward_minus,
                 size: 40,
                 color: widget.viewInQuiz
                     ? currentPenaltyStatus.penaltyMinusTwoPts.value
@@ -94,7 +98,8 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                         : Theme.of(context).colorScheme.tertiary),
             SizedBox(height: 4),
             Text(
-              AppLocalizations.of(context)!.buttonMax2pts,
+              AppLocalizations.of(context)!.buttonMinus2pts,
+              // '${currentPenaltyStatus.penaltyMinusTwoPts.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyMinusTwoPts.value
@@ -125,11 +130,11 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
           ],
         );
         break;
-      case 2: //    2 > MaxTwoPts
+      case 2: //    2 -> Max 2 pts
         return Column(
           children: [
             SizedBox(height: 4),
-            Icon(CupertinoIcons.lessthan_circle,
+            Icon(CupertinoIcons.lessthan_circle_fill,
                 size: 40,
                 color: widget.viewInQuiz
                     ? currentPenaltyStatus.penaltyMaxTwoPts.value
@@ -142,7 +147,8 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                         : Theme.of(context).colorScheme.tertiary),
             SizedBox(height: 4),
             Text(
-              AppLocalizations.of(context)!.buttonMax4Halfpts,
+              AppLocalizations.of(context)!.buttonMax2pts,
+              // '${currentPenaltyStatus.penaltyMaxTwoPts.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyMaxTwoPts.value
@@ -173,11 +179,11 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
           ],
         );
         break;
-      case 3: //    3 > MaxFourHalfPts
+      case 3: //    3 -> Max 4.5 pts
         return Column(
           children: [
             SizedBox(height: 4),
-            Icon(CupertinoIcons.gobackward_minus,
+            Icon(CupertinoIcons.lessthan_circle,
                 size: 40,
                 color: widget.viewInQuiz
                     ? currentPenaltyStatus.penaltyMaxFourHalfPts.value
@@ -190,7 +196,8 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                         : Theme.of(context).colorScheme.tertiary),
             SizedBox(height: 4),
             Text(
-              AppLocalizations.of(context)!.buttonMinus2pts,
+              AppLocalizations.of(context)!.buttonMax4Halfpts,
+              // '${currentPenaltyStatus.penaltyMaxFourHalfPts.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyMaxFourHalfPts.value
@@ -221,7 +228,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
           ],
         );
         break;
-      case 4: //    4 > MinusHalfToTwoPts
+      case 4: //    4 > - 0.5 to 2 pts
         return Column(
           children: [
             SizedBox(height: 4),
@@ -239,6 +246,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
             SizedBox(height: 4),
             Text(
               AppLocalizations.of(context)!.buttonMinusHalfTo2pts,
+              // '${currentPenaltyStatus.penaltyMinusHalfToTwoPts.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyMinusHalfToTwoPts.value
@@ -269,7 +277,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
           ],
         );
         break;
-      case 5: //    5 > JudgeOpinion
+      case 5: //    5 -> Judge Opinion
         return Column(
           children: [
             SizedBox(height: 4),
@@ -287,6 +295,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
             SizedBox(height: 4),
             Text(
               AppLocalizations.of(context)!.buttonJudgeOpinion,
+              // '${currentPenaltyStatus.penaltyJudgeOpinion.value}',
               style: TextStyle(
                   color: widget.viewInQuiz
                       ? currentPenaltyStatus.penaltyJudgeOpinion.value
@@ -333,8 +342,8 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
 
 // Text
 // - 0 > Text(AppLocalizations.of(context)!.button0pts),
-// - 1 > Text(AppLocalizations.of(context)!.buttonMax2pts),
-// - 2 > Text(AppLocalizations.of(context)!.buttonMax4Halfpts),
-// - 3 > Text(AppLocalizations.of(context)!.buttonMinus2pts),
+// - 1 > Text(AppLocalizations.of(context)!.buttonMinus2pts),
+// - 2 > Text(AppLocalizations.of(context)!.buttonMax2pts),
+// - 3 > Text(AppLocalizations.of(context)!.buttonMax4Halfpts),
 // - 4 > Text(AppLocalizations.of(context)!.buttonMinusHalfTo2pts),
 // - 5 > Text(AppLocalizations.of(context)!.buttonJudgeOpinion),

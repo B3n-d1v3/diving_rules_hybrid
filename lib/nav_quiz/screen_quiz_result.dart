@@ -71,7 +71,6 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: 20,
                   ),
 
-                  // TODO: CURRENT  >>  Add the Result badge
                   // The Result of the Quiz
 
                   const SizedBox(

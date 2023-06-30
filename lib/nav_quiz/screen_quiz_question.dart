@@ -156,17 +156,17 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                           penaltyIndex: widget.index,
                           viewCorrection: widget.index != -1),
                       PenaltyButton(
-                          buttonType: 1,
-                          viewInQuiz: true,
-                          penaltyIndex: widget.index,
-                          viewCorrection: widget.index != -1),
-                      PenaltyButton(
                           buttonType: 2,
                           viewInQuiz: true,
                           penaltyIndex: widget.index,
                           viewCorrection: widget.index != -1),
                       PenaltyButton(
                           buttonType: 3,
+                          viewInQuiz: true,
+                          penaltyIndex: widget.index,
+                          viewCorrection: widget.index != -1),
+                      PenaltyButton(
+                          buttonType: 1,
                           viewInQuiz: true,
                           penaltyIndex: widget.index,
                           viewCorrection: widget.index != -1),
@@ -268,8 +268,6 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             const Expanded(child: Text('')),
                             // Next button
                             // TODO: CURRENT >>> render button inactive when Next question is not active
-
-                            // TODO: button color in dark mode is not working
                             ElevatedButton.icon(
                               onPressed:
                                   // TODO: CURRENT >>> debug the button to turn back on
