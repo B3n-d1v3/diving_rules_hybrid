@@ -179,6 +179,17 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 20,
                     ),
 
+                    // QR Code
+                    SvgPicture.asset(
+                      "assets/images/diving_rules_22_qr_code.svg",
+                      colorFilter: ColorFilter.mode(
+                          Theme.of(context).colorScheme.primary,
+                          BlendMode.srcIn),
+                      width: 150,
+                    ),
+
+                    const SizedBox(width: 20),
+
                     ElevatedButton.icon(
                       onPressed: () {
                         // TODO: Create Native OS Share option => testing with share_plus
@@ -244,20 +255,21 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     const SizedBox(
                       height: 30,
                     ),
-
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutContactTitle,
+                        style: Theme.of(context).textTheme.titleLarge,
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
+                        //padding: const EdgeInsets.all(50),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     // TODO: Add a share header bar icon + share link
                     // shareText = "I 😍 this app to learn the Diving Rules"
                     // for apple: URL(string : "bit.ly/DivingRulesApp")
-
-                    // QR Code
-                    SvgPicture.asset(
-                      "assets/images/diving_rules_22_qr_code.svg",
-                      colorFilter: ColorFilter.mode(
-                          Theme.of(context).colorScheme.primary,
-                          BlendMode.srcIn),
-                      width: 25,
-                    ),
-                    const SizedBox(width: 4),
                   ]),
                 ),
               ],
