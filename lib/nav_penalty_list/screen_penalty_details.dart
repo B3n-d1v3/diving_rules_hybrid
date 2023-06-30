@@ -90,9 +90,8 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                           TextSpan(
                               text: AppLocalizations.of(context)!.penaltyRule,
                               style: TextStyle(
-                                  color: Theme.of(context).colorScheme.primary)
-                              // style: Theme.of(context).textTheme.headlineMedium,
-                              ),
+                                  color:
+                                      Theme.of(context).colorScheme.primary)),
                         ],
                       )),
                     ),
@@ -135,9 +134,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     TextSpan(
                         text: AppLocalizations.of(context)!.penaltyDescription,
                         style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary)
-                        // style: Theme.of(context).textTheme.titleLarge,
-                        ),
+                            color: Theme.of(context).colorScheme.primary)),
                   ],
                 )),
               ),
@@ -146,7 +143,6 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: PenaltyDescription(penaltyId: widget.index),
-                // Text(penaltySummary.penalties[widget.index].description, style: Theme.of(context).textTheme.bodyLarge),
               ),
               SizedBox(height: 10),
 
@@ -176,9 +172,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     TextSpan(
                         text: AppLocalizations.of(context)!.penaltyPenalty,
                         style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary)
-                        // style: Theme.of(context).textTheme.titleLarge,
-                        ),
+                            color: Theme.of(context).colorScheme.primary)),
                   ],
                 )),
               ),
@@ -196,17 +190,11 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 shrinkWrap: true,
                 children: <Widget>[
                   PenaltyButton(buttonType: 0, penaltyIndex: widget.index),
-                  //isSelected: penaltySanction.zeroPts),
                   PenaltyButton(buttonType: 1, penaltyIndex: widget.index),
-                  //isSelected: penaltySanction.maxTwoPts),
                   PenaltyButton(buttonType: 2, penaltyIndex: widget.index),
-                  //isSelected: penaltySanction.maxFourHalfPts),
                   PenaltyButton(buttonType: 3, penaltyIndex: widget.index),
-                  // isSelected: penaltySanction.minusTwoPts),
                   PenaltyButton(buttonType: 4, penaltyIndex: widget.index),
-                  //isSelected: penaltySanction.minusHalfToTwoPts),
                   PenaltyButton(buttonType: 5, penaltyIndex: widget.index),
-                  // isSelected: penaltySanction.judgeOpinion),
                 ],
               ),
 
@@ -229,9 +217,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     TextSpan(
                         text: AppLocalizations.of(context)!.penaltyOwnership,
                         style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary)
-                        // style: Theme.of(context).textTheme.titleLarge,
-                        ),
+                            color: Theme.of(context).colorScheme.primary)),
                   ],
                 )),
               ),
@@ -256,8 +242,6 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
             ],
           ),
         ),
-        // debugPrint("Test text in console");
-        // ),
       ))),
     );
   }

@@ -49,9 +49,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                             : Theme.of(context).colorScheme.tertiary),
                 SizedBox(height: 4),
                 Text(
-                  // TODO: CURRENT >>> Testing the penalty booleans in the view - To be reverted to the field name
                   AppLocalizations.of(context)!.button0pts,
-                  // '${currentPenaltyStatus.penaltyZeroPts.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyZeroPts.value
@@ -103,7 +101,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                 SizedBox(height: 4),
                 Text(
                   AppLocalizations.of(context)!.buttonMinus2pts,
-                  // '${currentPenaltyStatus.penaltyMinusTwoPts.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMinusTwoPts.value
@@ -152,7 +149,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                 SizedBox(height: 4),
                 Text(
                   AppLocalizations.of(context)!.buttonMax2pts,
-                  // '${currentPenaltyStatus.penaltyMaxTwoPts.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMaxTwoPts.value
@@ -201,7 +197,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                 SizedBox(height: 4),
                 Text(
                   AppLocalizations.of(context)!.buttonMax4Halfpts,
-                  // '${currentPenaltyStatus.penaltyMaxFourHalfPts.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMaxFourHalfPts.value
@@ -250,7 +245,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                 SizedBox(height: 4),
                 Text(
                   AppLocalizations.of(context)!.buttonMinusHalfTo2pts,
-                  // '${currentPenaltyStatus.penaltyMinusHalfToTwoPts.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMinusHalfToTwoPts.value
@@ -299,7 +293,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                 SizedBox(height: 4),
                 Text(
                   AppLocalizations.of(context)!.buttonJudgeOpinion,
-                  // '${currentPenaltyStatus.penaltyJudgeOpinion.value}',
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyJudgeOpinion.value

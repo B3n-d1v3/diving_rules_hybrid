@@ -15,17 +15,12 @@ import '../models/quiz_score.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
-//testing Getx controller  < did not work this way
   int index;
 
   ScreenQuizQuestion({Key? key, this.index = -1}) : super(key: key);
-
   // index argument usage
   // if (widget.index != -1) then the widget will display a quiz correction
   // if ( widget.index == -1) then the widget will display a quiz question
-
-  // Testing Getx controller
-  // final currentPenaltyStatus = Get.put(ButtonsStatus());
 
   @override
   State<ScreenQuizQuestion> createState() => _ScreenQuizQuestionState();
@@ -56,9 +51,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                         TextSpan(
                             text: AppLocalizations.of(context)!.quizzQuestion,
                             style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary)
-                            // style: Theme.of(context).textTheme.headlineMedium,
-                            ),
+                                color: Theme.of(context).colorScheme.primary)),
                         (widget.index == -1)
                             ? TextSpan(
                                 text:
@@ -86,9 +79,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             text: AppLocalizations.of(context)!
                                 .penaltyDescription,
                             style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary)
-                            // style: Theme.of(context).textTheme.titleLarge,
-                            ),
+                                color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),
@@ -103,14 +94,6 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                   ),
 
                   SizedBox(height: 10),
-
-                  // // Rules References
-                  // Align(
-                  //   alignment: Alignment.centerRight,
-                  //   child: DisplayRulesReferences(
-                  //       rulesReferences:
-                  //       penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex-1]].rules),
-                  // ),
 
                   const Divider(
                     height: 20,
@@ -131,9 +114,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                         TextSpan(
                             text: AppLocalizations.of(context)!.penaltyPenalty,
                             style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary)
-                            // style: Theme.of(context).textTheme.titleLarge,
-                            ),
+                                color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),
@@ -203,9 +184,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             text:
                                 AppLocalizations.of(context)!.penaltyOwnership,
                             style: TextStyle(
-                                color: Theme.of(context).colorScheme.primary)
-                            // style: Theme.of(context).textTheme.titleLarge,
-                            ),
+                                color: Theme.of(context).colorScheme.primary)),
                       ],
                     )),
                   ),

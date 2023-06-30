@@ -173,12 +173,6 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: 20,
                     ),
 
-                    // TODO: Create and add the new QR code image
-
-                    const SizedBox(
-                      height: 20,
-                    ),
-
                     // QR Code
                     SvgPicture.asset(
                       "assets/images/diving_rules_22_qr_code.svg",
