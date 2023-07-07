@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-// import 'package:share_plus/share_plus.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../sub_views/diving_rules_logo.dart';
@@ -186,8 +186,9 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                     ElevatedButton.icon(
                       onPressed: () {
-                        // TODO: Create Native OS Share option => testing with share_plus
-                        //Share.share('I 😍 this app to learn the Diving Rules: http://bit.ly/DivingRulesApp', subject: 'diving rules');
+                        Share.share(
+                            'I 😍 this app to learn the Diving Rules: http://bit.ly/GetDivingRules',
+                            subject: 'diving rules app');
                       },
                       icon: const Icon(
                         CupertinoIcons.share,
