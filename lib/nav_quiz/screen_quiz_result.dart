@@ -162,11 +162,12 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       // Show correction
                       ElevatedButton.icon(
                         onPressed: () {
-                          debugPrint(
-                              '>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
+                          // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
+
                           Get.to(
-                            ScreenCorrectionList(),
+                            () => ScreenCorrectionList(),
                             transition: Transition.rightToLeftWithFade,
+                            curve: Curves.ease,
                           );
                         },
                         icon: const Icon(
@@ -180,15 +181,16 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       // Restart New Quiz
                       ElevatedButton.icon(
                         onPressed: () {
-                          // TODO: Re-init Quiz
+                          // TODO: Save previous Quiz
                           currentQuizQuestionIndex = 1;
                           newQuiz();
                           currentQuizScore = 0;
                           buttonStatusReset();
+
                           Get.off(
-                            //Get.to(
-                            ScreenQuizQuestion(),
+                            () => ScreenQuizQuestion(),
                             transition: Transition.rightToLeftWithFade,
+                            curve: Curves.ease,
                           );
                         },
                         icon: const Icon(

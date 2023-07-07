@@ -49,13 +49,16 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
                     // Reset the current content to the user answer's setup
                     currentQuizQuestionIndex = index + 1;
                     buttonAllStatusSetToUserAnswer(quizIndex: index);
-                    debugPrint(
-                        '>>>>> Screen Quiz Correction List > currentQuizQuestionIndex: $currentQuizQuestionIndex');
-                    buttonPenaltyDebug();
-                    buttonOwnershipDebug();
+                    // TODO: delete or comment all debugPrints
+                    // debugPrint('>>>>> Screen Quiz Correction List > currentQuizQuestionIndex: $currentQuizQuestionIndex');
+                    // buttonPenaltyDebug();
+                    // buttonOwnershipDebug();
+
                     Get.to(
-                      ScreenQuizQuestion(index: currentQuiz.questions[index]),
+                      () => ScreenQuizQuestion(
+                          index: currentQuiz.questions[index]),
                       transition: Transition.rightToLeftWithFade,
+                      curve: Curves.ease,
                     );
                   },
                 ),

@@ -280,9 +280,10 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                                   } else {
                                     // Last Question and the user will get access to the quiz result page
                                     Get.off(
-                                      ScreenQuizResult(),
+                                      () => ScreenQuizResult(),
                                       transition:
                                           Transition.rightToLeftWithFade,
+                                      curve: Curves.ease,
                                     );
                                   }
                                 } else {

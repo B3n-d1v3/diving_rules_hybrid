@@ -148,12 +148,11 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 currentQuizScore = 0;
                 buttonStatusReset();
                 //debugPrint('>>>>> Screen Quiz > currentQuiz.questions: ${currentQuiz.questions}');
-                // Temp list init to test function
-                // var testList = newListOfQuestions(nbQuestions: quizTotalQuestionNumber);
+
+                // Get.to(ScreenQuizQuestion(), transition: Transition.rightToLeftWithFade, curve: Curves.ease,);
                 Get.to(
-                  ScreenQuizQuestion(),
+                  () => ScreenQuizQuestion(),
                   transition: Transition.rightToLeftWithFade,
-                  //duration: const Duration(seconds: 1),
                   curve: Curves.ease,
                 );
               },
