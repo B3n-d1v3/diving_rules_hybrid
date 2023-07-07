@@ -44,8 +44,8 @@ newListOfQuestions() {
     }
   }
   // Debug with standard 5 item list to perform known testings
-  questionList = [0, 1, 2, 3, 6];
-  debugPrint('>>>>> Quiz Model > newListOfQuestions: $questionList');
+  // questionList = [0, 1, 2, 3, 6];
+  // debugPrint('>>>>> Quiz Model > newListOfQuestions: $questionList');
 
   return questionList;
 }
