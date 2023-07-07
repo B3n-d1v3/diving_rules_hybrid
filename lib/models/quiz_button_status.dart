@@ -75,8 +75,6 @@ buttonStatusReset() {
   //
   // currentPenaltyStatus.nextQuestion = false.obs;
   // currentPenaltyStatus.userSanctionSelection = RxInt(-1);
-
-  currentQuizNextQuestion = false;
 }
 
 // Set the ButtonsStatus Object to the penalty's status display model
@@ -192,7 +190,7 @@ buttonPenaltyStatusChange({required int sanctionID}) {
   } else {
     currentPenaltyStatus.userSanctionSelection(-1);
   }
-  //canUserGoNext();
+  //canUserGoNext(); // is it still needed?
   // buttonPenaltyDebug();
   return currentPenaltyStatus;
 }

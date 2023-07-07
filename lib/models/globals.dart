@@ -13,7 +13,6 @@ PenaltySummary penaltySummary = PenaltySummary(penalties: []);
 var quizTotalQuestionNumber = 20;
 var currentQuizScore = 0;
 var currentQuizQuestionIndex = 0;
-var currentQuizNextQuestion = false;
 
 // The object with the current Quiz Data Logged in
 var currentQuiz = Quiz();

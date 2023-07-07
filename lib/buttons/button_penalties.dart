@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
+import '../models/quiz_next.dart';
 import '../theme/dr_colors.dart';
 
 class PenaltyButton extends StatefulWidget {
@@ -33,26 +34,17 @@ class _PenaltyButtonState extends State<PenaltyButton> {
           if (widget.viewMode == 1) {
             buttonPenaltyStatusChange(sanctionID: widget.buttonType);
             // Debug
-            debugPrint(
-                '>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
+            // debugPrint('>>>>> Penalty Button > sanction ID: ${widget.buttonType}');
 
-            // canUserGoNext();
-            // test function in the set sate
-            // can the User Go to the Next page
-            if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
-                (currentPenaltyStatus.ownershipReferee.value == true ||
-                    currentPenaltyStatus.ownershipJudge.value == true)) {
-              // currentQuizNextQuestion = true;
-              currentPenaltyStatus.nextQuestion(true);
-            } else {
-              // currentQuizNextQuestion = false;
-              currentPenaltyStatus.nextQuestion(false);
-            }
-            debugPrint(
-                '>>>>> Penalties Button > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
+            canUserGoNext();
+
+            // debugPrint('>>>>> Penalties Button > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
           }
 
-          buttonPenaltyDebug();
+          // Debug status
+          // debugPrint('>>>>> Penalty Button');
+          // buttonPenaltyDebug();
+          // debugPrint('>>>>> Penalty Button > out > currentPenaltyStatus.nextQuestion.value (in elevatedButton): ${currentPenaltyStatus.nextQuestion.value}');
         });
       },
       child: Container(

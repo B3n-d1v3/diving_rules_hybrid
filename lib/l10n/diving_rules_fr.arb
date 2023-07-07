@@ -179,6 +179,11 @@
         "description": "Quizz - Question",
         "type": "text"
     },
+    "quizzQuestionWarningNext": "Sélectionnez la pénalité et qui l'applique anvant de passer à la question suivante.",
+        "@quizzQuestionWarningNext": {
+            "description": "Quiz - Question - warning snackbar message",
+            "type": "text"
+    },
     "quizzResultReviewButton": "Erreurs",
     "@quizzResultReviewButton": {
         "description": "Quizz - Result Error Review Button",

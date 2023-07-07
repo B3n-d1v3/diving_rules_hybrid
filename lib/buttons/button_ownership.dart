@@ -3,7 +3,7 @@ import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../models/quiz_button_status.dart';
+import '../models/quiz_next.dart';
 import '../theme/dr_colors.dart';
 
 class OwnershipButton extends StatefulWidget {
@@ -33,20 +33,7 @@ class _OwnershipButtonState extends State<OwnershipButton> {
               currentPenaltyStatus.ownershipJudge =
                   RxBool(!currentPenaltyStatus.ownershipJudge.value);
             }
-
-            //canUserGoNext();
-            // test function in the set sate
-            // if the ownership is in a question
-            // can the User Go to the Next page
-            if (currentPenaltyStatus.userSanctionSelection.value >= 0 &&
-                (currentPenaltyStatus.ownershipReferee.value == true ||
-                    currentPenaltyStatus.ownershipJudge.value == true)) {
-              // currentQuizNextQuestion = true;
-              currentPenaltyStatus.nextQuestion = true.obs;
-            } else {
-              // currentQuizNextQuestion = false;
-              currentPenaltyStatus.nextQuestion = false.obs;
-            }
+            canUserGoNext();
           }
 
           // Debug status
@@ -59,8 +46,9 @@ class _OwnershipButtonState extends State<OwnershipButton> {
           // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge}');
           // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
           // debugPrint('>>>>> Ownership Button > out > penaltySummary.penalties[widget.penaltyIndex].sanctionValue: ${penaltySummary.penalties[widget.penaltyIndex].sanctionValue}');
+          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion.value (in elevatedButton): ${currentPenaltyStatus.nextQuestion.value}');
 
-          buttonOwnershipDebug();
+          // buttonOwnershipDebug();
         });
       },
       child: Container(

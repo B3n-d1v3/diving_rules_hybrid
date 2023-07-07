@@ -147,7 +147,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 newQuiz();
                 currentQuizScore = 0;
                 // test with new global variable s
-                currentQuizNextQuestion = false;
+                // currentQuizNextQuestion = false;
                 buttonStatusReset();
                 //debugPrint('>>>>> Screen Quiz > currentQuiz.questions: ${currentQuiz.questions}');
                 // Temp list init to test function

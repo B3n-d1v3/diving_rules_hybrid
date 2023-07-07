@@ -18,6 +18,7 @@ class ScreenQuizQuestion extends StatefulWidget {
   int index;
 
   ScreenQuizQuestion({Key? key, this.index = -1}) : super(key: key);
+
   // index argument usage
   // if (widget.index != -1) then the widget will display a quiz correction
   // if ( widget.index == -1) then the widget will display a quiz question
@@ -90,7 +91,6 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     child: PenaltyDescription(
                         penaltyId: currentQuiz
                             .questions[currentQuizQuestionIndex - 1]),
-                    // Text(penaltySummary.penalties[widget.index].description, style: Theme.of(context).textTheme.bodyLarge),
                   ),
 
                   SizedBox(height: 10),
@@ -245,67 +245,66 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             )),
 
                             const Expanded(child: Text('')),
+
                             // Next button
-                            // TODO: CURRENT >>> render button inactive when Next question is not active
                             ElevatedButton.icon(
                               onPressed:
-                                  // TODO: CURRENT >>> debug the button to turn back on
-                                  // currentQuizNextQuestion
-
+                                  // beginning on pressed
                                   // Show next question only if (user selected one penalty) & (user selected at least one ownership)
-                                  //     currentPenaltyStatus.nextQuestion.value == true
-                                  //         ?
                                   () {
-                                // Log the user answer
-                                logUserAnswer();
-                                debugPrint(
-                                    '>>>>> Screen Quiz Question > currentQuizQuestionIndex: $currentQuizQuestionIndex');
-                                debugPrint(
-                                    '>>>>> Screen Quiz Question > penaltyQuestion: penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex - 1]].id: ${penaltySummary.penalties[currentQuiz.questions[currentQuizQuestionIndex - 1]].id}');
-                                debugPrint(
-                                    '>>>>> Screen Quiz Question > penaltyAnswer: currentQuiz.answers[currentQuizQuestionIndex - 1].id: ${currentQuiz.answers[currentQuizQuestionIndex - 1].id}');
+                                if (currentPenaltyStatus.nextQuestion.value ==
+                                    true) {
+                                  // Log the user answer
+                                  logUserAnswer();
 
-                                // Score Incrementation
-                                currentQuizScore += userAnswerAnalysis(
-                                    penaltyQuestion: penaltySummary.penalties[
-                                        currentQuiz.questions[
-                                            currentQuizQuestionIndex - 1]],
-                                    penaltyAnswer: currentQuiz
-                                        .answers[currentQuizQuestionIndex - 1],
-                                    score: true);
+                                  // Score Incrementation
+                                  currentQuizScore += userAnswerAnalysis(
+                                      penaltyQuestion: penaltySummary.penalties[
+                                          currentQuiz.questions[
+                                              currentQuizQuestionIndex - 1]],
+                                      penaltyAnswer: currentQuiz.answers[
+                                          currentQuizQuestionIndex - 1],
+                                      score: true);
 
-                                // Reset for next Question
-                                buttonStatusReset();
-                                // userAnswerDebug(index: currentQuizQuestionIndex - 1);
+                                  // Reset for next Question
+                                  buttonStatusReset();
+                                  // userAnswerDebug(index: currentQuizQuestionIndex - 1);
 
-                                // The user will get access to the next question
-                                if (currentQuizQuestionIndex <
-                                    quizTotalQuestionNumber) {
-                                  setState(() {
-                                    currentQuizQuestionIndex += 1;
-                                    debugPrint(
-                                        '>>>>> Screen Quiz Question > currentQuizQuestionIndex (in next question): $currentQuizQuestionIndex < quizTotalQuestionNumber: $quizTotalQuestionNumber');
-                                  });
-                                  // Last Question and the user will get access to the quiz result page
+                                  // The user will get access to the next question
+                                  if (currentQuizQuestionIndex <
+                                      quizTotalQuestionNumber) {
+                                    setState(() {
+                                      currentQuizQuestionIndex += 1;
+                                      // debugPrint('>>>>> Screen Quiz Question > currentQuizQuestionIndex (in next question): $currentQuizQuestionIndex < quizTotalQuestionNumber: $quizTotalQuestionNumber');
+                                    });
+                                  } else {
+                                    // Last Question and the user will get access to the quiz result page
+                                    Get.off(
+                                      ScreenQuizResult(),
+                                      transition:
+                                          Transition.rightToLeftWithFade,
+                                    );
+                                  }
                                 } else {
-                                  // Get.to(
-                                  Get.off(
-                                    ScreenQuizResult(),
-                                    transition: Transition.rightToLeftWithFade,
-                                  );
+                                  // otherwise (if !((user selected one penalty) & (user selected at least one ownership))) warn the user with scnackbar
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(
+                                    content: Text(AppLocalizations.of(context)!
+                                        .quizzQuestionWarningNext),
+                                  ));
                                 }
-                              }
-                              // Show next question only if - otherwise disable it
-                              //         : null,
-                              ,
+                              }, // onPressed
+
                               icon: const Icon(
                                 CupertinoIcons.greaterthan_circle_fill,
                                 // envelope_circle
                                 size: 24.0,
                               ),
-                              label: Text(AppLocalizations.of(context)!
-                                  .quizzNext), // <-- Text
+
+                              label:
+                                  Text(AppLocalizations.of(context)!.quizzNext),
                             ),
+                            // ),   // <- Obx
                           ],
                         )
                       // Case when the page shows the correction

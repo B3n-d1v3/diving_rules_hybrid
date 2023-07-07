@@ -10,7 +10,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:provider/provider.dart';
 
 import 'app_home_m3.dart';
-// Localization
+// Localization (inline command to generate files with new values: flutter gen-l10n)
 import 'l10n/l10n.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_rulebook/screen_rulebook.dart';

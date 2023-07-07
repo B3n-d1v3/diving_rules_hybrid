@@ -46,6 +46,7 @@ class PenaltyListView extends StatelessWidget {
               //Text(penaltySummary.penalties[index].description, maxLines: 4,),
               trailing: const CupertinoListTileChevron(),
               onTap: () {
+                // TODO: Update all Get.to in the app --> "Get.to(() => Page())" instead of "Get.to(Page())"
                 Get.to(
                   PagePenaltyDescription(index: index),
                   transition: Transition.rightToLeftWithFade,
