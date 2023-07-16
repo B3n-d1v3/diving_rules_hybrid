@@ -1,5 +1,6 @@
 import 'package:diving_rules_hybrid/buttons/penalties_content_observable.dart';
 import 'package:diving_rules_hybrid/buttons/penalty_content_static.dart';
+import 'package:diving_rules_hybrid/models/token_spacing.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -48,7 +49,7 @@ class _PenaltyButtonState extends State<PenaltyButton> {
         });
       },
       child: Container(
-        padding: const EdgeInsets.all(5),
+        padding: EdgeInsets.all(DRSpacing.xs),
         decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(10)),
             border: Border.all(

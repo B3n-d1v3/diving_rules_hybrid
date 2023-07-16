@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../models/quiz_next.dart';
+import '../models/token_spacing.dart';
 import '../theme/dr_colors.dart';
 
 class OwnershipButton extends StatefulWidget {
@@ -21,70 +22,73 @@ class OwnershipButton extends StatefulWidget {
 class _OwnershipButtonState extends State<OwnershipButton> {
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        setState(() {
-          // if in a quiz mode
-          if (widget.viewMode == 1) {
-            if (widget.buttonType == 0) {
-              currentPenaltyStatus.ownershipReferee =
-                  RxBool(!currentPenaltyStatus.ownershipReferee.value);
-            } else {
-              currentPenaltyStatus.ownershipJudge =
-                  RxBool(!currentPenaltyStatus.ownershipJudge.value);
+    return Container(
+      padding: EdgeInsets.all(DRSpacing.xs),
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            // if in a quiz mode
+            if (widget.viewMode == 1) {
+              if (widget.buttonType == 0) {
+                currentPenaltyStatus.ownershipReferee =
+                    RxBool(!currentPenaltyStatus.ownershipReferee.value);
+              } else {
+                currentPenaltyStatus.ownershipJudge =
+                    RxBool(!currentPenaltyStatus.ownershipJudge.value);
+              }
+              canUserGoNext();
             }
-            canUserGoNext();
-          }
 
-          // Debug status
-          // debugPrint('>>>>> Ownership Button');
-          // debugPrint('>>>>> Ownership Button > in > ownership ID / buttonType: ${widget.buttonType}');
-          // debugPrint('>>>>> Ownership Button > in > penaltyIndex: ${widget.penaltyIndex}');
-          // debugPrint('>>>>> Ownership Button > in > viewInQuiz: ${widget.viewInQuiz}');
-          // debugPrint('>>>>> Ownership Button > in > viewCorrection: ${widget.viewCorrection}');
-          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee}');
-          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge}');
-          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
-          // debugPrint('>>>>> Ownership Button > out > penaltySummary.penalties[widget.penaltyIndex].sanctionValue: ${penaltySummary.penalties[widget.penaltyIndex].sanctionValue}');
-          // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion.value (in elevatedButton): ${currentPenaltyStatus.nextQuestion.value}');
+            // Debug status
+            // debugPrint('>>>>> Ownership Button');
+            // debugPrint('>>>>> Ownership Button > in > ownership ID / buttonType: ${widget.buttonType}');
+            // debugPrint('>>>>> Ownership Button > in > penaltyIndex: ${widget.penaltyIndex}');
+            // debugPrint('>>>>> Ownership Button > in > viewInQuiz: ${widget.viewInQuiz}');
+            // debugPrint('>>>>> Ownership Button > in > viewCorrection: ${widget.viewCorrection}');
+            // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee}');
+            // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.ownershipJudge: ${currentPenaltyStatus.ownershipJudge}');
+            // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion: ${currentPenaltyStatus.nextQuestion}');
+            // debugPrint('>>>>> Ownership Button > out > penaltySummary.penalties[widget.penaltyIndex].sanctionValue: ${penaltySummary.penalties[widget.penaltyIndex].sanctionValue}');
+            // debugPrint('>>>>> Ownership Button > out > currentPenaltyStatus.nextQuestion.value (in elevatedButton): ${currentPenaltyStatus.nextQuestion.value}');
 
-          // buttonOwnershipDebug();
-        });
-      },
-      child: Container(
-        padding: const EdgeInsets.all(5),
-        decoration: BoxDecoration(
-            borderRadius: const BorderRadius.all(Radius.circular(10)),
-            border: Border.all(
-                width: 3,
-                color: widget.viewMode == 2
-                    // if the page is in correction mode check the penalty ownership
-                    ? ((widget.buttonType == 0 &&
-                                penaltySummary.penalties[widget.penaltyIndex]
-                                        .referee ==
-                                    true) ||
-                            (widget.buttonType == 1 &&
-                                penaltySummary
-                                        .penalties[widget.penaltyIndex].judge ==
-                                    true))
+            // buttonOwnershipDebug();
+          });
+        },
+        child: Container(
+          padding: EdgeInsets.all(DRSpacing.xs),
+          decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              border: Border.all(
+                  width: 3,
+                  color: widget.viewMode == 2
+                      // if the page is in correction mode check the penalty ownership
+                      ? ((widget.buttonType == 0 &&
+                                  penaltySummary.penalties[widget.penaltyIndex]
+                                          .referee ==
+                                      true) ||
+                              (widget.buttonType == 1 &&
+                                  penaltySummary.penalties[widget.penaltyIndex]
+                                          .judge ==
+                                      true))
 
-                        // this item is the right answer
-                        // show border in positive color based on light/dark mode
-                        ? Get.isDarkMode
-                            ? AppColor.drColorPositiveDark
-                            : AppColor.drColorPositiveLight
-                        // this item is not the right answer
-                        // else hide the border
-                        : Theme.of(context).colorScheme.background
-                    // if the page is in question mode
-                    // else hide the border
-                    : Theme.of(context).colorScheme.background)),
-        child: OwnershipContent(
-            buttonType: widget.buttonType,
-            penaltyIndex: widget.penaltyIndex,
-            viewMode: widget.viewMode)
-        // )
-        ,
+                          // this item is the right answer
+                          // show border in positive color based on light/dark mode
+                          ? Get.isDarkMode
+                              ? AppColor.drColorPositiveDark
+                              : AppColor.drColorPositiveLight
+                          // this item is not the right answer
+                          // else hide the border
+                          : Theme.of(context).colorScheme.background
+                      // if the page is in question mode
+                      // else hide the border
+                      : Theme.of(context).colorScheme.background)),
+          child: OwnershipContent(
+              buttonType: widget.buttonType,
+              penaltyIndex: widget.penaltyIndex,
+              viewMode: widget.viewMode)
+          // )
+          ,
+        ),
       ),
     );
   }

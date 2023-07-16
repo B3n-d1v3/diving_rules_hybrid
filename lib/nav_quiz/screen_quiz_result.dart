@@ -148,55 +148,60 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                   ),
 
                   SizedBox(
-                    height: DRSpacing.x6l,
+                    height: DRSpacing.xl,
                   ),
 
                   // Quiz Result footer
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // Show correction
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
 
-                          Get.to(
-                            () => ScreenCorrectionList(),
-                            transition: Transition.rightToLeftWithFade,
-                            curve: Curves.ease,
-                          );
-                        },
-                        icon: const Icon(
-                          CupertinoIcons.eye, // envelope_circle
-                          size: 24.0,
-                        ),
-                        label: Text(AppLocalizations.of(context)!
-                            .quizzResultReviewButton), // <-- Text
-                      ),
+                  // Show correction
+                  // ElevatedButton.icon(
+                  OutlinedButton.icon(
+                    onPressed: () {
+                      // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
 
-                      // Restart New Quiz
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          // TODO: Later / Save previous Quiz
-                          currentQuizQuestionIndex = 1;
-                          newQuiz();
-                          currentQuizScore = 0;
-                          buttonStatusReset();
+                      Get.to(
+                        () => ScreenCorrectionList(),
+                        transition: Transition.rightToLeftWithFade,
+                        curve: Curves.ease,
+                      );
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.eye, // envelope_circle
+                      size: 24.0,
+                    ),
+                    label: Text(AppLocalizations.of(context)!
+                        .quizzResultReviewButton), // <-- Text
+                  ),
 
-                          Get.off(
-                            () => ScreenQuizQuestion(),
-                            transition: Transition.rightToLeftWithFade,
-                            curve: Curves.ease,
-                          );
-                        },
-                        icon: const Icon(
-                          CupertinoIcons.play_circle_fill, // envelope_circle
-                          size: 24.0,
-                        ),
-                        label: Text(AppLocalizations.of(context)!
-                            .quizzResultStartButton), // <-- Text
-                      ),
-                    ],
+                  SizedBox(
+                    height: DRSpacing.xl,
+                  ),
+
+                  // Restart New Quiz
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                        foregroundColor:
+                            Theme.of(context).colorScheme.onPrimary,
+                        backgroundColor: Theme.of(context).colorScheme.primary),
+                    onPressed: () {
+                      // TODO: Later / Save previous Quiz
+                      currentQuizQuestionIndex = 1;
+                      newQuiz();
+                      currentQuizScore = 0;
+                      buttonStatusReset();
+
+                      Get.off(
+                        () => ScreenQuizQuestion(),
+                        transition: Transition.rightToLeftWithFade,
+                        curve: Curves.ease,
+                      );
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.play_circle_fill, // envelope_circle
+                      size: 24.0,
+                    ),
+                    label: Text(AppLocalizations.of(context)!
+                        .quizzResultStartButton), // <-- Text
                   ),
                 ],
               ),

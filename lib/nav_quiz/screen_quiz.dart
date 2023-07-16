@@ -33,17 +33,19 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             Align(
               alignment: Alignment.center,
               child: RichText(
-                  text: TextSpan(
-                style: Theme.of(context).textTheme.headlineMedium,
-                children: [
-                  TextSpan(
-                      text: AppLocalizations.of(context)!.quizzIntroTitle,
-                      style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary)
-                      // style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                ],
-              )),
+                text: TextSpan(
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  children: [
+                    TextSpan(
+                        text: AppLocalizations.of(context)!.quizzIntroTitle,
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary)
+                        // style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                  ],
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
 
             SizedBox(height: DRSpacing.s),
@@ -68,13 +70,18 @@ class _ScreenQuizState extends State<ScreenQuiz> {
             // Number of questions selection
             Align(
               alignment: Alignment.centerLeft,
+              child: Text(
+                AppLocalizations.of(context)!.quizzIntroQuestionNumber,
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.left,
+              ),
+            ),
+
+            Align(
+              alignment: Alignment.bottomCenter,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(AppLocalizations.of(context)!.quizzIntroQuestionNumber,
-                      style: Theme.of(context).textTheme.bodyMedium),
-                  SizedBox(
-                    width: DRSpacing.l,
-                  ),
                   IconButton(
                     iconSize: 34,
                     icon: (quizTotalQuestionNumber > 5)
@@ -95,9 +102,6 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                       );
                     },
                   ),
-                  SizedBox(
-                    width: DRSpacing.s,
-                  ),
                   Container(
                       //width: 20,
                       child: Text(
@@ -105,9 +109,6 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                     style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   )),
-                  SizedBox(
-                    width: DRSpacing.s,
-                  ),
                   IconButton(
                     iconSize: 34,
                     icon: (quizTotalQuestionNumber < 40)
@@ -143,6 +144,10 @@ class _ScreenQuizState extends State<ScreenQuiz> {
 
             // Start button
             ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  backgroundColor: Theme.of(context).colorScheme.primary),
+
               onPressed: () {
                 currentQuizQuestionIndex = 1;
                 newQuiz();

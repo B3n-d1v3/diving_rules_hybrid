@@ -247,6 +247,12 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             // TODO Later: Identify where to update the obx observer to show/hide button
                             // was temporarily resolved with a snackbar message
                             ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                  foregroundColor:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  backgroundColor:
+                                      Theme.of(context).colorScheme.primary),
+
                               onPressed:
                                   // beginning on pressed
                                   // Show next question only if (user selected one penalty) & (user selected at least one ownership)

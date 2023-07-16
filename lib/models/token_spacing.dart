@@ -20,4 +20,6 @@ class DRSpacing {
   static double get x5l => 36;
 
   static double get x6l => 40;
+
+  static double get x7l => 44;
 }

@@ -26,6 +26,9 @@ class DivingRulesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: Block to vertical viewport on mobile only
+    // TODO Later check why the titles do not follow the text size growth
+
     return ChangeNotifierProvider(
       create: (_) => ModelTheme(),
       child: Consumer<ModelTheme>(

@@ -181,10 +181,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               ),
               SizedBox(height: DRSpacing.xs),
 
-              // TODO CURRENT: test the right way to display grid on all devices
-              // TODO CURRENT: 1- see if the scroll in the grid can be turned off
-              // TODO CURRENT: 2- center text in the buttons (still wrong in "max 4.5")
-              // X 3- apply in all other screens concerned
+              // TODO CURRENT: center text in the buttons (still wrong in "max 4.5")
 
               Table(
                 defaultVerticalAlignment: TableCellVerticalAlignment.top,

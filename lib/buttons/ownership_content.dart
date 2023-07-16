@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+import '../models/token_spacing.dart';
+
 class OwnershipContent extends StatefulWidget {
   int buttonType;
   int penaltyIndex;
@@ -37,9 +39,11 @@ class _OwnershipContentState extends State<OwnershipContent> {
                     : penaltySummary.penalties[widget.penaltyIndex].referee
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary),
-            SizedBox(height: 9),
+            // To adjust non symetric sized icons for both ownership
+            SizedBox(height: 10),
             Text(
               AppLocalizations.of(context)!.buttonReferee,
+              textAlign: TextAlign.center,
               style: TextStyle(
                   color: widget.viewMode != 0
                       ? currentPenaltyStatus.ownershipReferee.value
@@ -49,20 +53,21 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary),
             ),
-            SizedBox(height: 4),
-            if ((widget.viewMode != 0 &&
-                    currentPenaltyStatus.ownershipReferee.value) ||
-                (widget.viewMode == 0 &&
-                    penaltySummary.penalties[widget.penaltyIndex].referee)) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 45,
-                endIndent: 45,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
+            SizedBox(height: DRSpacing.xs),
+            Divider(
+              height: DRSpacing.xs,
+              thickness: 3,
+              indent: DRSpacing.x5l,
+              endIndent: DRSpacing.x5l,
+              color: ((widget.viewMode != 0 &&
+                          currentPenaltyStatus.ownershipReferee.value) ||
+                      (widget.viewMode == 0 &&
+                          penaltySummary
+                              .penalties[widget.penaltyIndex].referee))
+                  ? Theme.of(context).colorScheme.primary
+                  : Theme.of(context).colorScheme.background,
+            ),
+            SizedBox(height: DRSpacing.xs),
           ],
         );
         break;
@@ -92,20 +97,22 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           : Theme.of(context).colorScheme.tertiary),
             ),
 
-            SizedBox(height: 4),
-            if ((widget.viewMode != 0 &&
-                    currentPenaltyStatus.ownershipJudge.value) ||
-                (widget.viewMode == 0 &&
-                    penaltySummary.penalties[widget.penaltyIndex].judge)) ...{
-              Divider(
-                height: 3,
-                thickness: 3,
-                indent: 45,
-                endIndent: 45,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            },
-            SizedBox(height: 4),
+            SizedBox(height: DRSpacing.xs),
+
+            Divider(
+              height: DRSpacing.xs,
+              thickness: 3,
+              indent: DRSpacing.x5l,
+              endIndent: DRSpacing.x5l,
+              color: ((widget.viewMode != 0 &&
+                          currentPenaltyStatus.ownershipJudge.value) ||
+                      (widget.viewMode == 0 &&
+                          penaltySummary.penalties[widget.penaltyIndex].judge))
+                  ? Theme.of(context).colorScheme.primary
+                  : Theme.of(context).colorScheme.background,
+            ),
+
+            SizedBox(height: DRSpacing.xs),
           ],
         );
         break;

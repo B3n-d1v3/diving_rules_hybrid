@@ -63,17 +63,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Row(children: [
-                        Text(
-                          AppLocalizations.of(context)!.aboutVersion,
-                          style: Theme.of(context).textTheme.labelMedium,
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          "v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                      ]),
+                      child: Text(
+                        "${AppLocalizations.of(context)!.aboutVersion}v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
+                        style: Theme.of(context).textTheme.labelMedium,
+                        textAlign: TextAlign.start,
+                      ),
                     ),
                     Align(
                       alignment: Alignment.topLeft,
@@ -187,7 +181,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     SizedBox(width: DRSpacing.xl),
 
                     // Share Button
-                    ElevatedButton.icon(
+                    OutlinedButton.icon(
                       onPressed: () {
                         Share.share(
                             'I 😍 this app to learn the Diving Rules: http://bit.ly/GetDivingRules',
@@ -225,6 +219,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         height: DRSpacing.s,
                       ),
                       ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                            foregroundColor:
+                                Theme.of(context).colorScheme.onPrimary,
+                            backgroundColor:
+                                Theme.of(context).colorScheme.primary),
                         onPressed: () async {
                           String email =
                               Uri.encodeComponent("BenDivingJudge@gmail.com");
