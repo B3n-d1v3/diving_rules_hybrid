@@ -26,8 +26,14 @@ class DivingRulesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: Correct the dark/light mode changer
+    // TODO: Add Spanish language
+    // TODO: Add Italian language and rulebook
+    // TODO: Add Mx language and rulebook
     // TODO: Block to vertical viewport on mobile only
-    // TODO Later check why the titles do not follow the text size growth
+
+    // TODO: Later / check why the titles do not follow the text size growth
+    // TODO: Later / change the about icon to the app logo
 
     return ChangeNotifierProvider(
       create: (_) => ModelTheme(),

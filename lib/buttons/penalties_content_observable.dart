@@ -65,7 +65,6 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               : Theme.of(context).colorScheme.tertiary),
                 ),
 
-                // TODO CURRENT: Make the line blue on selection and background the rest of the time to take out the resizing of the page
                 SizedBox(height: DRSpacing.xs),
                 // Show the divider
                 // if in quiz view and the user selected this penalty

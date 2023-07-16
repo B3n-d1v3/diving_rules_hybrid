@@ -181,8 +181,6 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               ),
               SizedBox(height: DRSpacing.xs),
 
-              // TODO CURRENT: center text in the buttons (still wrong in "max 4.5")
-
               Table(
                 defaultVerticalAlignment: TableCellVerticalAlignment.top,
                 defaultColumnWidth: const FlexColumnWidth(1.0),
