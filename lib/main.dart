@@ -26,9 +26,9 @@ class DivingRulesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // TODO: CURRENT >>> find the missing 5 translations
     // TODO: Correct the dark/light mode changer
-    // TODO: Add Spanish language
-    // TODO: Add Italian language and rulebook
+    // TODO: Add Italian rulebook
     // TODO: Add Mx language and rulebook
     // TODO: Block to vertical viewport on mobile only
 
