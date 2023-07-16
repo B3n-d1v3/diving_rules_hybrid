@@ -79,13 +79,10 @@ class _OwnershipButtonState extends State<OwnershipButton> {
                     // if the page is in question mode
                     // else hide the border
                     : Theme.of(context).colorScheme.background)),
-        child:
-            // TODO: CURRENT  -> Identify where to update the obx observer to show the selection change
-            // Obx(() =>
-            OwnershipContent(
-                buttonType: widget.buttonType,
-                penaltyIndex: widget.penaltyIndex,
-                viewMode: widget.viewMode)
+        child: OwnershipContent(
+            buttonType: widget.buttonType,
+            penaltyIndex: widget.penaltyIndex,
+            viewMode: widget.viewMode)
         // )
         ,
       ),

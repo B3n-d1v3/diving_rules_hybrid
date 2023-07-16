@@ -290,18 +290,22 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary),
             SizedBox(height: 4),
-            Text(
-              AppLocalizations.of(context)!.buttonJudgeOpinion,
-              style: TextStyle(
-                  color: widget.viewMode != 0
-                      ? currentPenaltyStatus.penaltyJudgeOpinion.value
-                          ? Theme.of(context).colorScheme.primary
-                          : Theme.of(context).colorScheme.tertiary
-                      : penaltySummary.penalties[widget.penaltyIndex]
-                                  .sanctionValue ==
-                              5
-                          ? Theme.of(context).colorScheme.primary
-                          : Theme.of(context).colorScheme.tertiary),
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                AppLocalizations.of(context)!.buttonJudgeOpinion,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: widget.viewMode != 0
+                        ? currentPenaltyStatus.penaltyJudgeOpinion.value
+                            ? Theme.of(context).colorScheme.primary
+                            : Theme.of(context).colorScheme.tertiary
+                        : penaltySummary.penalties[widget.penaltyIndex]
+                                    .sanctionValue ==
+                                5
+                            ? Theme.of(context).colorScheme.primary
+                            : Theme.of(context).colorScheme.tertiary),
+              ),
             ),
             SizedBox(height: 4),
             if ((widget.viewMode != 0 &&

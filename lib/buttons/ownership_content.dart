@@ -81,6 +81,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
             //SizedBox(height: 4),
             Text(
               AppLocalizations.of(context)!.buttonJudge,
+              textAlign: TextAlign.center,
               style: TextStyle(
                   color: widget.viewMode != 0 //widget.isSelected
                       ? currentPenaltyStatus.ownershipJudge.value
@@ -90,6 +91,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary),
             ),
+
             SizedBox(height: 4),
             if ((widget.viewMode != 0 &&
                     currentPenaltyStatus.ownershipJudge.value) ||

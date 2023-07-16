@@ -48,8 +48,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
                 SizedBox(height: 4),
+
                 Text(
                   AppLocalizations.of(context)!.button0pts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyZeroPts.value
@@ -61,6 +63,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
+
                 SizedBox(height: 4),
                 // Show the divider
                 // if in quiz view and the user selected this penalty

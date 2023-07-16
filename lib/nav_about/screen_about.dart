@@ -6,6 +6,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../models/token_spacing.dart';
 import '../sub_views/diving_rules_logo.dart';
 
 class ScreenAbout extends StatefulWidget {
@@ -52,13 +53,13 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         fit: BoxFit.fitWidth)),
 
                 Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(DRSpacing.l),
                   // margin: const EdgeInsets.all(10),
                   child: Column(children: [
                     DivingRulesLogo(small: false),
                     // Image.asset('assets/images/diving_rules_22_logo_full.png', height: 180,),
 
-                    const SizedBox(height: 8),
+                    SizedBox(height: DRSpacing.s),
 
                     Align(
                       alignment: Alignment.topLeft,
@@ -83,8 +84,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     // Description
@@ -102,14 +103,14 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     // License
@@ -126,14 +127,14 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     // Thanks
@@ -150,14 +151,14 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
 
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: DRSpacing.x3l,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
                     // Share Links
                     Align(
@@ -169,8 +170,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.m,
                     ),
 
                     // QR Code
@@ -180,10 +181,12 @@ class _ScreenAboutState extends State<ScreenAbout> {
                           Theme.of(context).colorScheme.primary,
                           BlendMode.srcIn),
                       width: 150,
+                      height: 150,
                     ),
 
-                    const SizedBox(width: 20),
+                    SizedBox(width: DRSpacing.xl),
 
+                    // Share Button
                     ElevatedButton.icon(
                       onPressed: () {
                         Share.share(
@@ -197,14 +200,14 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       label: Text(AppLocalizations.of(context)!.aboutShare),
                     ),
 
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: DRSpacing.x3l,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     // Contact Links
@@ -218,8 +221,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                           //padding: const EdgeInsets.all(50),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: DRSpacing.s,
                       ),
                       ElevatedButton.icon(
                         onPressed: () async {
@@ -247,21 +250,6 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ]),
 
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        AppLocalizations.of(context)!.aboutContactTitle,
-                        style: Theme.of(context).textTheme.titleLarge,
-                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                        //padding: const EdgeInsets.all(50),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
                     // TODO: Add a share header bar icon + share link
                     // shareText = "I 😍 this app to learn the Diving Rules"
                     // for apple: URL(string : "bit.ly/DivingRulesApp")

@@ -11,7 +11,6 @@ import '../l10n/penalty_description_l10n.dart';
 import '../models/quiz_button_status.dart';
 
 //import 'package:get/get.dart';
-//import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_correction_details.dart';
 
 //import '../models/globals.dart';
 

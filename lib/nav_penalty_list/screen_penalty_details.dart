@@ -1,13 +1,14 @@
-import 'package:diving_rules_hybrid/buttons/button_penalties.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../buttons/button_ownership.dart';
+import '../buttons/button_penalties.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/sanction_model.dart';
+import '../models/token_spacing.dart';
 import '../theme/dr_colors.dart';
 
 class PagePenaltyDescription extends StatefulWidget {
@@ -45,7 +46,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(DRSpacing.l),
           child: Column(
             children: [
               // left / right navigation in the penalty list to avoid going back to the main list
@@ -122,7 +123,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.s),
 
               // Description Title
               Align(
@@ -144,7 +145,8 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 alignment: Alignment.centerLeft,
                 child: PenaltyDescription(penaltyId: widget.index),
               ),
-              SizedBox(height: 10),
+
+              SizedBox(height: DRSpacing.xs),
 
               // Rules References
               Align(
@@ -153,11 +155,12 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     rulesReferences:
                         penaltySummary.penalties[widget.index].rules),
               ),
-              const Divider(
-                height: 20,
+
+              Divider(
+                height: DRSpacing.l,
                 thickness: .5,
-                indent: 10,
-                endIndent: 10,
+                indent: DRSpacing.s,
+                endIndent: DRSpacing.s,
                 color: AppColor.drColorDeselectedLight,
               ),
 
@@ -176,38 +179,40 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                   ],
                 )),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.xs),
 
-              // GridView to display the Penalty Sanctions
-              GridView.count(
-                crossAxisCount: 3,
-                primary: false,
-                padding: const EdgeInsets.all(1),
-                childAspectRatio: (1 / .8),
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 0,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                children: <Widget>[
-                  PenaltyButton(buttonType: 0, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 1, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 2, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 3, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 4, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 5, penaltyIndex: widget.index),
+              // TODO CURRENT: test the right way to display grid on all devices
+              // TODO CURRENT: 1- see if the scroll in the grid can be turned off
+              // TODO CURRENT: 2- center text in the buttons (still wrong in "max 4.5")
+              // X 3- apply in all other screens concerned
+
+              Table(
+                defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                defaultColumnWidth: const FlexColumnWidth(1.0),
+                children: [
+                  TableRow(children: [
+                    PenaltyButton(buttonType: 0, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 2, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 3, penaltyIndex: widget.index),
+                  ]),
+                  TableRow(children: [
+                    PenaltyButton(buttonType: 1, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 4, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 5, penaltyIndex: widget.index),
+                  ])
                 ],
               ),
 
-              const Divider(
-                height: 10,
+              Divider(
+                height: DRSpacing.s,
                 thickness: .5,
-                indent: 10,
-                endIndent: 10,
+                indent: DRSpacing.s,
+                endIndent: DRSpacing.s,
                 color: AppColor.drColorDeselectedLight,
               ),
 
               // Penalty ownership
-              // Penalty Title
+              // Ownership Title
               Align(
                 alignment: Alignment.centerLeft,
                 child: RichText(
@@ -222,21 +227,16 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 )),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.xs),
 
-              // GridView to display the Penalty Owners
-              GridView.count(
-                crossAxisCount: 2,
-                primary: false,
-                padding: const EdgeInsets.all(1),
-                childAspectRatio: (1 / .7),
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 0,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                children: <Widget>[
-                  OwnershipButton(buttonType: 0, penaltyIndex: widget.index),
-                  OwnershipButton(buttonType: 1, penaltyIndex: widget.index),
+              Table(
+                defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                defaultColumnWidth: const FlexColumnWidth(1.0),
+                children: [
+                  TableRow(children: [
+                    OwnershipButton(buttonType: 0, penaltyIndex: widget.index),
+                    OwnershipButton(buttonType: 1, penaltyIndex: widget.index),
+                  ]),
                 ],
               ),
             ],

@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
+import '../models/token_spacing.dart';
 
 class ScreenQuiz extends StatefulWidget {
   ScreenQuiz({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 child: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(DRSpacing.l),
         child: Column(
           children: [
             // Quiz Title
@@ -45,7 +46,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
               )),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: DRSpacing.s),
 
             // Quiz description
             Align(
@@ -54,14 +55,14 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                   style: Theme.of(context).textTheme.bodyMedium),
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: DRSpacing.xl,
             ),
 
             Divider(),
 
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: DRSpacing.s,
             ),
 
             // Number of questions selection
@@ -71,8 +72,8 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 children: [
                   Text(AppLocalizations.of(context)!.quizzIntroQuestionNumber,
                       style: Theme.of(context).textTheme.bodyMedium),
-                  const SizedBox(
-                    width: 16,
+                  SizedBox(
+                    width: DRSpacing.l,
                   ),
                   IconButton(
                     iconSize: 34,
@@ -94,18 +95,18 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                       );
                     },
                   ),
-                  const SizedBox(
-                    width: 8,
+                  SizedBox(
+                    width: DRSpacing.s,
                   ),
                   Container(
-                      width: 20,
+                      //width: 20,
                       child: Text(
-                        quizTotalQuestionNumber.toString(),
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        textAlign: TextAlign.center,
-                      )),
-                  const SizedBox(
-                    width: 8,
+                    quizTotalQuestionNumber.toString(),
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
+                  )),
+                  SizedBox(
+                    width: DRSpacing.s,
                   ),
                   IconButton(
                     iconSize: 34,
@@ -131,13 +132,13 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: DRSpacing.s,
             ),
             Divider(),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: DRSpacing.xl,
             ),
 
             // Start button

@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
+import '../models/token_spacing.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizResult extends StatefulWidget {
@@ -30,7 +31,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(DRSpacing.l),
               child: Column(
                 children: [
                   // Quiz Question Title
@@ -49,8 +50,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: DRSpacing.xl,
                   ),
 
                   Align(
@@ -67,16 +68,11 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: DRSpacing.x6l,
                   ),
 
                   // The Result of the Quiz
-
-                  const SizedBox(
-                    height: 20,
-                  ),
-
                   // Result Badge
 
                   (currentQuizScore >= quizTotalQuestionNumber * 8)
@@ -95,8 +91,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                               : AppColor.drColorNegativeLight,
                         ),
 
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: DRSpacing.s,
                   ),
 
                   Align(
@@ -130,8 +126,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 8,
+                  SizedBox(
+                    height: DRSpacing.s,
                   ),
 
                   Align(
@@ -151,8 +147,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 40,
+                  SizedBox(
+                    height: DRSpacing.x6l,
                   ),
 
                   // Quiz Result footer
@@ -181,7 +177,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       // Restart New Quiz
                       ElevatedButton.icon(
                         onPressed: () {
-                          // TODO: Save previous Quiz
+                          // TODO: Later / Save previous Quiz
                           currentQuizQuestionIndex = 1;
                           newQuiz();
                           currentQuizScore = 0;
