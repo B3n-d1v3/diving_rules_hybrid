@@ -1,0 +1,517 @@
+{
+    "navigationMenuRules": "Rules",
+    "@navigationMenuRules": {
+        "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /    /  /  Navigation - Rules Menu Item",
+        "type": "text"
+    },
+    "navigationMenuPenalties": "Penalties",
+    "@navigationMenuPenalties": {
+        "description": "Navigation - Penalties Menu Item",
+        "type": "text"
+    },
+    "navigationMenuQuizz": "Quiz",
+    "@navigationMenuQuizz": {
+        "description": "Navigation - Quiz Menu Item",
+        "type": "text"
+    },
+    "navigationMenuSearch": "Search",
+    "@navigationMenuSearch": {
+        "description": "Navigation - Search Menu Item",
+        "type": "text"
+    },
+    "penaltiesListTitle": "Penalty Cases",
+    "@penaltiesListTitle": {
+        "description": "Penalties List Page  /  Penalties List Page - Title",
+        "type": "text"
+    },
+    "buttonJudge": "Judge",
+    "@buttonJudge": {
+        "description": "Penalty - Ownership Section Button Judge",
+        "type": "text"
+    },
+    "penaltyRule": "Rule",
+    "@penaltyRule": {
+        "description": "Penalty Detail Page  /  Penalty - Rule Title",
+        "type": "text"
+    },
+    "penaltyDescription": "Description",
+    "@penaltyDescription": {
+        "description": "Penalty - Description Section Title",
+        "type": "text"
+    },
+    "penaltyPenalty": "Penalty",
+    "@penaltyPenalty": {
+        "description": "Penalty - Penalty Section Title",
+        "type": "text"
+    },
+    "penaltyOwnership": "By whom",
+    "@penaltyOwnership": {
+        "description": "Penalty - Ownership Section Title",
+        "type": "text"
+    },
+    "button0pts": "0 pts",
+    "@button0pts": {
+        "description": "Penalty Detail Page Buttons  /  Penalty - Penalty Section Button 0 pts",
+        "type": "text"
+    },
+    "buttonMax2pts": "max 2 pts",
+    "@buttonMax2pts": {
+        "description": "Penalty - Penalty Section Button max 2 pts",
+        "type": "text"
+    },
+    "buttonMax4Halfpts": "max 4 ½ pts",
+    "@buttonMax4Halfpts": {
+        "description": "Penalty - Penalty Section Button max 4 ½ pts",
+        "type": "text"
+    },
+    "buttonMinus2pts": "-2 pts",
+    "@buttonMinus2pts": {
+        "description": "Penalty - Penalty Section Button -2 pts",
+        "type": "text"
+    },
+    "buttonMinusHalfTo2pts": "- ½ to 2 pts",
+    "@buttonMinusHalfTo2pts": {
+        "description": "Penalty - Penalty Section Button - ½ to 2 pts",
+        "type": "text"
+    },
+    "buttonJudgeOpinion": "judge opinion",
+    "@buttonJudgeOpinion": {
+        "description": "Penalty - Penalty Section Button judge Opinion",
+        "type": "text"
+    },
+    "buttonReferee": "Referee",
+    "@buttonReferee": {
+        "description": "Penalty - Ownership Section Button Referee",
+        "type": "text"
+    },
+    "quizzIntroTitle": "Take A Quiz",
+    "@quizzIntroTitle": {
+        "description": "Quiz Selection Page /  Quiz - Intro Title",
+        "type": "text"
+    },
+    "quizzIntroDescription": "In order to train yourself on the Fina Diving Rules, with this test you will be able to review the Rule Book through questions on the various rules. \n\nSelect the number of questions you would like in your quiz.",
+    "@quizzIntroDescription": {
+        "description": "Quiz - Intro Description",
+        "type": "text"
+    },
+    "quizzIntroStartButton": "Start",
+    "@quizzIntroStartButton": {
+        "description": "Quiz - Intro Start Button",
+        "type": "text"
+    },
+    "quizzNext": "Next",
+    "@quizzNext": {
+        "description": "Quiz - Question Page Next Button",
+        "type": "text"
+    },
+    "cFBundleDisplayName": "diving rules 22-25",
+    "@cFBundleDisplayName": {
+        "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /  /  App Name - Full App name",
+        "type": "text"
+    },
+    "cFBundleName": "diving rules",
+    "@cFBundleName": {
+        "description": "App Name - Short App name 16 car",
+        "type": "text"
+    },
+    "quizzQuestionHeader": "Questions",
+    "@quizzQuestionHeader": {
+        "description": "Quiz Question Page /  Quiz - Questions - Top App Bar title",
+        "type": "text"
+    },
+    "quizzResultHeader": "Result",
+    "@quizzResultHeader": {
+        "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
+        "type": "text"
+    },
+    "quizzTitle": "Quiz",
+    "@quizzTitle": {
+        "description": "Quiz Selection Page /  Quiz - Title",
+        "type": "text"
+    },
+    "quizzResultTitle": "Quiz Result",
+    "@quizzResultTitle": {
+        "description": "Quiz - Result Title",
+        "type": "text"
+    },
+    "quizzResultDescription": "Here is the result of your answer to this Quiz: ",
+    "@quizzResultDescription": {
+        "description": "Quiz - Intro Description",
+        "type": "text"
+    },
+    "quizzResultStartButton": "New Quiz",
+    "@quizzResultStartButton": {
+        "description": "Quiz - Result Start Button",
+        "type": "text"
+    },
+    "quizzCorrectionListHeader": "Questions Review",
+    "@quizzCorrectionListHeader": {
+        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionDetailHeader": "Question Correction",
+    "@quizzCorrectionDetailHeader": {
+        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
+        "type": "text"
+    },
+    "passed": "Passed",
+    "@passed": {
+        "description": "Quiz - Good Sticker",
+        "type": "text"
+    },
+    "failed": "Failed",
+    "@failed": {
+        "description": "Quiz - Good Sticker",
+        "type": "text"
+    },
+    "searchTitle": "Search The Rules",
+    "@searchTitle": {
+        "description": "Search Selection Page /  Search - Title",
+        "type": "text"
+    },
+    "ruleBookTitle": "Rule Book",
+    "@ruleBookTitle": {
+        "description": "Rule Book Selection Page /  Rule Book - Title",
+        "type": "text"
+    },
+    "quizzQuestion": "Question",
+    "@quizzQuestion": {
+        "description": "Quiz - Question",
+        "type": "text"
+    },
+    "quizzQuestionWarningNext": "Select Penalty and by whom before going to next question.",
+        "@quizzQuestionWarningNext": {
+            "description": "Quiz - Question - warning snackbar message",
+            "type": "text"
+        },
+    "quizzResultReviewButton": "Errors",
+    "@quizzResultReviewButton": {
+        "description": "Quiz - Result Error Review Button",
+        "type": "text"
+    },
+    "quizzResultLegendUnused": "Unused",
+    "@quizzResultLegendUnused": {
+        "description": "Quiz - Result Result Review Legend - unused",
+        "type": "text"
+    },
+    "quizzResultLegendUserAnswer": "My answer",
+    "@quizzResultLegendUserAnswer": {
+        "description": "Quiz - Result Result Review Legend - unused",
+        "type": "text"
+    },
+    "quizzResultLegendRealAnswer": "Good answer",
+    "@quizzResultLegendRealAnswer": {
+        "description": "Quiz - Result Result Review Legend - unused",
+        "type": "text"
+    },
+    "penalty0": "If the diver takes more than one minute, after a warning.",
+    "@penalty0": {
+        "description": "Penalty Description List /  Penalty 0 - IV.6.4.8 - If the diver takes more than one minute, after a warning.",
+        "type": "text"
+    },
+    "penalty1": "If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
+    "@penalty1": {
+        "description": "Penalty 1 - IV.6.5.3 & IV.8.3.4 - If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
+        "type": "text"
+    },
+    "penalty2": "If the final step is not from one foot.",
+    "@penalty2": {
+        "description": "Penalty 2 - IV.6.5.5 & IV.8.3.3 - If the final step is not from one foot.",
+        "type": "text"
+    },
+    "penalty3": "If the take-off on the springboard is not from both feet simultaneously.",
+    "@penalty3": {
+        "description": "Penalty 3 - IV.6.5.6 & IV8.4.3 - If the take-off on the springboard is not from both feet simultaneously.",
+        "type": "text"
+    },
+    "penalty4": "If a twist is greater or less than that announced by 90 degrees or more.",
+    "@penalty4": {
+        "description": "Penalty 4 - IV.6.5.7 & IV.8.6.6- If a twist is greater or less than that announced by 90 degrees or more.",
+        "type": "text"
+    },
+    "penalty5": "If a diver has performed a dive of a number other than that announced.",
+    "@penalty5": {
+        "description": "Penalty 5 - IV.6.4.12 & IV.8.1.7 - If a diver has performed a dive of a number other than that announced.",
+        "type": "text"
+    },
+    "penalty6": "If the feet enter the water before the head or hands in a head first dive.",
+    "@penalty6": {
+        "description": "Penalty 6 - IV.6.5.8.1 - If the feet enter the water before the head or hands in a head first dive.",
+        "type": "text"
+    },
+    "penalty7": "If the head or hands enter the water before the feet in a feet first dive.",
+    "@penalty7": {
+        "description": "Penalty 7 - IV.6.5.8.2 - If the head or hands enter the water before the feet in a feet first dive.",
+        "type": "text"
+    },
+    "penalty8": "If assistance has been given to the diver after the starting signal.",
+    "@penalty8": {
+        "description": "Penalty 8 - IV.6.4.15 - If assistance has been given to the diver after the starting signal.",
+        "type": "text"
+    },
+    "penalty9": "When a second attempt (a re-start) is unsuccessful.",
+    "@penalty9": {
+        "description": "Penalty 9 - IV.6.5.3 - When a second attempt / (a re-start) is unsuccessful.",
+        "type": "text"
+    },
+    "penalty10": "If a diver refuses the execution of a dive.",
+    "@penalty10": {
+        "description": "Penalty 10 - IV.6.4.16 - If a diver refuses the execution of a dive.",
+        "type": "text"
+    },
+    "penalty11": "In synchronised diving if a diver, or both divers, perform a dive of a different number.",
+    "@penalty11": {
+        "description": "Penalty 11 - IV.9.2 & IV.9.8 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
+        "type": "text"
+    },
+    "penalty12": "In synchronised diving if all execution judges for one diver award zero (0) points.",
+    "@penalty12": {
+        "description": "Penalty 12 - IV.9.8 - In synchronised diving if all execution judges for one diver award zero (0) points.",
+        "type": "text"
+    },
+    "penalty13": "In synchronised diving if all synchronisation judges award zero (0) points.",
+    "@penalty13": {
+        "description": "Penalty 13 - IV.9.10 - In synchronised diving if all synchronisation judges award zero (0) points.",
+        "type": "text"
+    },
+    "penalty14": "In synchronised diving if a diver, or both divers, perform a dive of a different position.",
+    "@penalty14": {
+        "description": "Penalty 14 - IV.9.2 - If an execution judge considers that a dive of a different number has been performed.",
+        "type": "text"
+    },
+    "penalty15": "If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
+    "@penalty15": {
+        "description": "Penalty 15 - IV.6.5.1 - If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
+        "type": "text"
+    },
+    "penalty16": "If there is a re-start in a standing, running, or armstand dive.",
+    "@penalty16": {
+        "description": "Penalty 16 - IV.6.5.2 - If there is a  / re-start in a standing, running, or armstand dive.",
+        "type": "text"
+    },
+    "penalty17": "In synchronised diving if there is a re-start by one or both divers.",
+    "@penalty17": {
+        "description": "Penalty 17 - IV.9.6 - In synchronised diving if there is a re-start by one or both divers.",
+        "type": "text"
+    },
+    "penalty18": "If a diver performs a dive in a position other than that announced.",
+    "@penalty18": {
+        "description": "Penalty 18 - IV.6.4.13 & IV.8.1.4 - If a diver performs a dive in a position other than that announced.",
+        "type": "text"
+    },
+    "penalty19": "If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
+    "@penalty19": {
+        "description": "Penalty 19 - IV.8.5.4 - If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
+        "type": "text"
+    },
+    "penalty20": "If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
+    "@penalty20": {
+        "description": "Penalty 20 - IV.6.5.8, IV.8.6.3 & IV.8.6.4 - If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
+        "type": "text"
+    },
+    "penalty21": "If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
+    "@penalty21": {
+        "description": "Penalty 21 - IV.8.5.7 - If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
+        "type": "text"
+    },
+    "penalty22": "If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
+    "@penalty22": {
+        "description": "Penalty 22 - IV.8.5.7 - If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
+        "type": "text"
+    },
+    "penalty23": "If a dive is not performed in a position as described in the rules.",
+    "@penalty23": {
+        "description": "Penalty 23 - IV.8.1.6 - If a dive is not performed in a position as described.",
+        "type": "text"
+    },
+    "penalty24": "If the starting position is not straight, head erect, with the arms straight in any position.",
+    "@penalty24": {
+        "description": "Penalty 24 - IV.8.2.3 - If the starting position is not straight, head erect, with the arms straight in any position.",
+        "type": "text"
+    },
+    "penalty25": "If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
+    "@penalty25": {
+        "description": "Penalty 25 - IV.8.2.4.3 - If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
+        "type": "text"
+    },
+    "penalty26": "If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
+    "@penalty26": {
+        "description": "Penalty 26 - IV.8.2.6.2 - If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
+        "type": "text"
+    },
+    "penalty27": "If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
+    "@penalty27": {
+        "description": "Penalty 27 - IV.8.3.2 - If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
+        "type": "text"
+    },
+    "penalty28": "If the take-off is not bold, high, and confident.",
+    "@penalty28": {
+        "description": "Penalty 28 - IV.8.4.5 - If the take-off is not bold, high, and confident.",
+        "type": "text"
+    },
+    "penalty29": "If in a twist dive, the twisting is manifestly done from the springboard or platform.",
+    "@penalty29": {
+        "description": "Penalty 29 - IV.8.4.6 - If in a twist dive, the twisting is manifestly done from the springboard or platform.",
+        "type": "text"
+    },
+    "penalty30": "If the straight position is not shown as described in the rules.",
+    "@penalty30": {
+        "description": "Penalty 30 - IV.8.5.6 - If the straight position is not shown as described.",
+        "type": "text"
+    },
+    "penalty31": "If the pike position is not shown as described in the rules.",
+    "@penalty31": {
+        "description": "Penalty 31 - IV.8.5.9 - If the pike position is not shown as described.",
+        "type": "text"
+    },
+    "penalty32": "If in a pike dive with twist, the pike position is not clearly shown.",
+    "@penalty32": {
+        "description": "Penalty 32 - IV.8.5.10 - If in a pike dive with twist, the pike position is not clearly shown.",
+        "type": "text"
+    },
+    "penalty33": "If the tuck position is not shown as described in the rules.",
+    "@penalty33": {
+        "description": "Penalty 33 - IV.8.5.12 - If the tuck position is not shown as described.",
+        "type": "text"
+    },
+    "penalty34": "If in a tuck dive with twist, the tuck position is not clearly shown.",
+    "@penalty34": {
+        "description": "Penalty 34 - IV.8.5.13 - If in a tuck dive with twist, the tuck position is not clearly shown.",
+        "type": "text"
+    },
+    "penalty35": "If the free position is not shown as described in the rules.",
+    "@penalty35": {
+        "description": "Penalty 35 - IV.8.5.15 - If the free position is not shown as described.",
+        "type": "text"
+    },
+    "penalty36": "If the arms are not in the correct position in either the head first or feet first entry.",
+    "@penalty36": {
+        "description": "Penalty 36 - IV.8.6.5 - If the arms are not in the correct position in either the head first or feet first entry.",
+        "type": "text"
+    },
+    "penalty37": "In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
+    "@penalty37": {
+        "description": "Penalty 37 - IV.9.11 - In synchronised diving if / similarity of the starting position, approach, take-off and height is not shown.",
+        "type": "text"
+    },
+    "penalty38": "In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+    "@penalty38": {
+        "description": "Penalty 38 - IV.9.11 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+        "type": "text"
+    },
+    "penalty39": "In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+    "@penalty39": {
+        "description": "Penalty 39 - IV.9.11 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty40": "In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+    "@penalty40": {
+        "description": "Penalty 40 - IV.9.11 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+        "type": "text"
+    },
+    "penalty41": "In synchronised diving if coordinated timing of the entries is not shown.",
+    "@penalty41": {
+        "description": "Penalty 41 - IV.9.11 - In synchronised diving if coordinated timing of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty42": "If a dive is performed partially in a position other than that announced.",
+    "@penalty42": {
+        "description": "Penalty 42 - IV.8.1.5 - If a dive is performed partially in a position other than that announced.",
+        "type": "text"
+    },
+    "penalty43": "If in a dive, the diver dives to the side of the direct line of flight.",
+    "@penalty43": {
+        "description": "Penalty 43 - IV.8.5.2 - If in a dive, the diver dives to the side of the direct line of flight.",
+        "type": "text"
+    },
+    "penalty44": "If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+    "@penalty44": {
+        "description": "Penalty 44 - IV.8.5.3 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+        "type": "text"
+    },
+    "penalty45": "If the entry into the water is not vertical, or nearly so, or twisted with the body not straight, the feet not together, and the toes not pointed.",
+    "@penalty45": {
+        "description": "Penalty 45 - IV.8.6.2 - If the entry into the water is not vertical, or nearly so, or twisted with the body not straight, the feet not together, and the toes not pointed.",
+        "type": "text"
+    },
+    "penalty46": "In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
+    "@penalty46": {
+        "description": "Penalty 46 - IV.9.5 - In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
+        "type": "text"
+    },
+    "quizzIntroQuestionNumber": "Number of Questions: ",
+    "@quizzIntroQuestionNumber": {
+        "description": "Quiz - Intro Question Number",
+        "type": "text"
+    },
+    "aboutTitle": "About",
+    "@aboutTitle": {
+        "description": "About Selection Page /  About - Title",
+        "type": "text"
+    },
+    "aboutVersion": "Version: ",
+    "@aboutVersion": {
+        "description": "About - Version",
+        "type": "text"
+    },
+    "aboutDescription": "This application was created to allow users to learn and train on the diving rules from the FINA diving rules. This application is not a FINA official application, but uses the FINA official rules or it’s official translations as a work tool.\n\n With this App you can:\n✔︎ Read through the rules.\n✔︎ Learn the penalty summary.\n✔︎ Train with a quiz on the penalties.",
+    "@aboutDescription": {
+        "description": "About - Description",
+        "type": "text"
+    },
+    "aboutContactLink": "Contact us",
+    "@aboutContactLink": {
+        "description": "About - Contact Link",
+        "type": "text"
+    },
+    "aboutRulesReference": "Rules Reference: 2022-2025",
+    "@aboutRulesReference": {
+        "description": "About - Rules Reference",
+        "type": "text"
+    },
+    "aboutLicense": "The original version was created in 2021 by Benoît SUZANNE under the GPL 3.0 open source licence. This license is the GNU General Public License is a free copyleft license.",
+    "@aboutLicense": {
+        "description": "About - License",
+        "type": "text"
+    },
+    "aboutThanks": "Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app and for the Spanish translation\n- Piero ITALIANI for the help in the Italian translation.",
+    "@aboutThanks": {
+        "description": "About - Thanks",
+        "type": "text"
+    },
+    "aboutHelp": "Do not hesitate to contact us:\n- If you are willing to help for new translation updates\n- For any question, feedback and new features ideas",
+    "@aboutHelp": {
+        "description": "About - Help",
+        "type": "text"
+    },
+    "aboutDescriptionTitle": "App Description",
+    "@aboutDescriptionTitle": {
+        "description": "About - Description Title",
+        "type": "text"
+    },
+    "aboutLicenseTitle": "License",
+    "@aboutLicenseTitle": {
+        "description": "About - License Title",
+        "type": "text"
+    },
+    "aboutThanksTitle": "Thanks",
+    "@aboutThanksTitle": {
+        "description": "About - Help Title",
+        "type": "text"
+    },
+    "aboutContactTitle": "Contacts",
+    "@aboutContactTitle": {
+        "description": "About - Contact Title",
+        "type": "text"
+    },
+    "aboutShareTitle": "Share",
+    "@aboutShareTitle": {
+        "description": "About - Share Title",
+        "type": "text"
+    },
+    "aboutShare": "Share this App",
+    "@aboutShare": {
+        "description": "About - Share",
+        "type": "text"
+    }
+}
