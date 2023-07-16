@@ -54,6 +54,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.xl,
                   ),
 
+                  // Quiz text result description
                   Align(
                     alignment: Alignment.centerLeft,
                     child: RichText(
@@ -148,7 +149,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                   ),
 
                   SizedBox(
-                    height: DRSpacing.xl,
+                    height: DRSpacing.x6l,
                   ),
 
                   // Quiz Result footer
