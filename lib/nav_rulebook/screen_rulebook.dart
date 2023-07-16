@@ -17,11 +17,22 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
         //   title: Text(AppLocalizations.of(context)!.cFBundleName),
         //   backgroundColor: Colors.blue,
         // ),
+
+        // TODO: CURRENT >>> Add the spanish version of the rulebook
         body: Center(
             child: myLocale.languageCode == 'fr'
                 ? SfPdfViewer.asset(
                     'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf')
-                : SfPdfViewer.asset(
-                    'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')));
+                : myLocale.languageCode == 'es'
+                    ? SfPdfViewer.asset(
+                        'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_ES.pdf')
+                    : SfPdfViewer.asset(
+                        'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')));
   }
 }
+
+// en - English (plus 8 country variations)
+// es - Spanish Castilian (plus 20 country variations)
+// fr - French (plus one country variation)
+// it - Italian
+// Other supported languages: https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html
