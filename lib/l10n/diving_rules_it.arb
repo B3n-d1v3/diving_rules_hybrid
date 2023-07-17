@@ -488,5 +488,30 @@
     "@aboutShare": {
         "description": "About - Share",
         "type": "text"
+    },
+    "quizzQuestionHeader": "Domande",
+    "@quizzQuestionHeader": {
+        "description": "Quiz Question Page /  Quiz - Questions - Top App Bar title",
+        "type": "text"
+    },
+    "quizzResultHeader": "Risultato",
+    "@quizzResultHeader": {
+        "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionListHeader": "Domande Recensione",
+    "@quizzCorrectionListHeader": {
+        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionDetailHeader": "Domanda Correzione",
+    "@quizzCorrectionDetailHeader": {
+        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzQuestionWarningNext": "Selezionare Sanzione e da chi prima di passare alla domanda successiva.",
+    "@quizzQuestionWarningNext": {
+        "description": "Quiz - Question - warning snackbar message",
+        "type": "text"
     }
 }
