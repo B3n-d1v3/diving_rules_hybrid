@@ -21,7 +21,7 @@ import 'theme/model_theme.dart';
 import 'theme/theme_selector.dart';
 
 const int extendedNavigationRailMinScreenWidth = 600;
-const int mobileUiMaxScreenWidth = 500;
+const int mobileUiMaxScreenWidth = 640;
 
 class DivingRulesMainScreen extends StatefulWidget {
   @override
@@ -133,8 +133,6 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                       ),
                       child: IntrinsicHeight(
                         child: NavigationRail(
-                          extended: MediaQuery.of(context).size.width >=
-                              extendedNavigationRailMinScreenWidth,
                           destinations:
                               navigationItems.getNavigationRailDestinations(),
                           selectedIndex: _selectedIndex,
@@ -143,6 +141,19 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                               _selectedIndex = value;
                             });
                           },
+                          labelType: NavigationRailLabelType.all,
+                          selectedIconTheme: IconThemeData(
+                            color: colorScheme.primary,
+                          ),
+                          unselectedIconTheme:
+                              IconThemeData(color: colorScheme.tertiary),
+                          selectedLabelTextStyle: TextStyle(
+                            color: colorScheme.primary,
+                          ),
+                          unselectedLabelTextStyle: TextStyle(
+                            color: colorScheme.tertiary,
+                          ),
+                          useIndicator: false,
                         ),
                       ),
                     ),
