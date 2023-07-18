@@ -9,13 +9,17 @@ class DivingRulesLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (small == true) {
-      return Center(
-        child: SvgPicture.asset(
-          "assets/images/diving_rules_22_logo_horizontal.svg",
-          colorFilter: ColorFilter.mode(
-              Theme.of(context).colorScheme.primary, BlendMode.srcIn),
-          height: 30,
-        ),
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const SizedBox(width: 36),
+          SvgPicture.asset(
+            "assets/images/diving_rules_22_logo_horizontal.svg",
+            colorFilter: ColorFilter.mode(
+                Theme.of(context).colorScheme.primary, BlendMode.srcIn),
+            height: 30,
+          ),
+        ],
       );
     } else {
       return SvgPicture.asset(
