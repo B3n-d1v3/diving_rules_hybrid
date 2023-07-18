@@ -17,7 +17,7 @@ class DivingRulesLogo extends StatelessWidget {
             "assets/images/diving_rules_22_logo_horizontal.svg",
             colorFilter: ColorFilter.mode(
                 Theme.of(context).colorScheme.primary, BlendMode.srcIn),
-            height: 30,
+            height: 35,
           ),
         ],
       );
