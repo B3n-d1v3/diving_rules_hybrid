@@ -101,6 +101,7 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                   )
                 : Text(selectedItem.label),
             actions: [ThemeSelector()],
+            scrolledUnderElevation: 0,
           ),
           bottomNavigationBar:
               MediaQuery.of(context).size.width < mobileUiMaxScreenWidth
