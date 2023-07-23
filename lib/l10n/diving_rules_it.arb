@@ -89,7 +89,7 @@
         "description": "Quizz Selection Page\n Quizz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "Per allenarti sulle regole della Fina tuffi, con questo test potrai rivedere il regolamento attraverso domande sulle varie regole. \n\nSeleziona il numero di domande che vuoi nel tuo quiz.",
+    "quizzIntroDescription": "Per allenarsi sulle regole dei tuffi di World Aquatics, con questo test si potrà rivedere il riepilogo delle penalità del Regolamento attraverso domande sulle varie regole. \nQuesto test da solo non è sufficiente per superare l'esame da giudice, poiché è incentrato sul riepilogo delle penalità, ma aiuta a imparare l'assegnazione delle penalità delle regole. \n\nSeleziona il numero di domande che vuoi nel tuo quiz (da 5 a 40).",
     "@quizzIntroDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
@@ -429,7 +429,7 @@
         "description": "About - Version",
         "type": "text"
     },
-    "aboutDescription": "Questa applicazione è stata creata per permetterti di imparare e praticare le regole di immersione dalle regole FINA.\nQuesta applicazione non è un'applicazione ufficiale FINA, ma utilizza le regole ufficiali FINA o le loro traduzioni ufficiali come strumento di lavoro.\n\nCon questa applicazione è possibile:\n✔︎ Recupera il regolamento nella tua lingua.\n✔︎ Rivedere il riassunto delle sanzioni.\n✔︎ Esercitatevi con un quiz di riepilogo delle pene.\n✔︎ Scegliete di rivedere il tutto in inglese",
+    "aboutDescription": "Questa applicazione è stata creata per permetterti di imparare e praticare le regole di immersione dalle regole World Aquatics.\nQuesta applicazione non è un'applicazione ufficiale World Aquatics, ma utilizza le regole ufficiali World Aquatics o le loro traduzioni ufficiali come strumento di lavoro.\n\nCon questa applicazione è possibile:\n✔︎ Recupera il regolamento nella tua lingua.\n✔︎ Rivedere il riassunto delle sanzioni.\n✔︎ Esercitatevi con un quiz di riepilogo delle pene.\n✔︎ Scegliete di rivedere il tutto in inglese",
     "@aboutDescription": {
         "description": "About - Description",
         "type": "text"
