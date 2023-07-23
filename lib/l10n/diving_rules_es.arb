@@ -89,7 +89,7 @@
         "description": "Quizz Selection Page\n Quizz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "Para practicar las reglas de clavados de la Fina, con esta prueba podrás revisar  las reglas con preguntas sobre las diferentes reglas.\n\n Seleccione la cantidad de preguntas que deseas en tu cuestionario.",
+    "quizzIntroDescription": "Para practicar en las Reglas de Saltos de World Aquatics, con este test podrás repasar el Resumen de Penalizaciones del Libro de Reglas a través de preguntas sobre las distintas reglas. \nEste test por sí solo no es suficiente para aprobar el examen de juez, ya que se centra en el resumen de penalizaciones, pero ayuda a aprender la asignación de penalizaciones de las reglas. \n\n Seleccione la cantidad de preguntas que deseas en tu cuestionario (de 5 a 40).",
     "@quizzIntroDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
@@ -429,7 +429,7 @@
         "description": "About - Version",
         "type": "text"
     },
-    "aboutDescription": "Esta aplicación ha sido creada para que puedas aprender y practicar las reglas de buceo de las normas de la FINA.\nEsta aplicación no es una aplicación oficial de la FINA, pero utiliza las reglas oficiales de la FINA o sus traducciones oficiales como herramienta de trabajo.\n\nCon esta aplicación puedes:\n✔︎ Recuperar el regelmento en su idioma.\n✔︎ Revisar el resumen de las sanciones.\n✔︎ Practica con un cuestionario de resumen de penas.\n✔︎ Elige revisar todo en inglés",
+    "aboutDescription": "Esta aplicación ha sido creada para que puedas aprender y practicar las reglas de buceo de las normas de la World Aquatics.\nEsta aplicación no es una aplicación oficial de la World Aquatics, pero utiliza las reglas oficiales de la World Aquatics o sus traducciones oficiales como herramienta de trabajo.\n\nCon esta aplicación puedes:\n✔︎ Recuperar el regelmento en su idioma.\n✔︎ Revisar el resumen de las sanciones.\n✔︎ Practica con un cuestionario de resumen de penas.\n✔︎ Elige revisar todo en inglés",
     "@aboutDescription": {
         "description": "About - Description",
         "type": "text"
