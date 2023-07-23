@@ -170,8 +170,10 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       CupertinoIcons.eye, // envelope_circle
                       size: 24.0,
                     ),
-                    label: Text(AppLocalizations.of(context)!
-                        .quizzResultReviewButton), // <-- Text
+                    label: Text(
+                        AppLocalizations.of(context)!.quizzResultReviewButton,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900)), // <-- Text
                   ),
 
                   SizedBox(
@@ -201,8 +203,10 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                       CupertinoIcons.play_circle_fill, // envelope_circle
                       size: 24.0,
                     ),
-                    label: Text(AppLocalizations.of(context)!
-                        .quizzResultStartButton), // <-- Text
+                    label: Text(
+                        AppLocalizations.of(context)!.quizzResultStartButton,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900)), // <-- Text
                   ),
                 ],
               ),

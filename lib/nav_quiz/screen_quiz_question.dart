@@ -307,8 +307,10 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                                 size: 24.0,
                               ),
 
-                              label:
-                                  Text(AppLocalizations.of(context)!.quizzNext),
+                              label: Text(
+                                  AppLocalizations.of(context)!.quizzNext,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.w900)),
                             ),
                             // ),   // <- Obx
                           ],

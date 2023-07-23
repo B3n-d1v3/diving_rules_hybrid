@@ -191,7 +191,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         CupertinoIcons.share,
                         size: 24.0,
                       ),
-                      label: Text(AppLocalizations.of(context)!.aboutShare),
+                      label: Text(AppLocalizations.of(context)!.aboutShare,
+                          style: const TextStyle(fontWeight: FontWeight.w900)),
                     ),
 
                     SizedBox(
@@ -244,8 +245,10 @@ class _ScreenAboutState extends State<ScreenAbout> {
                           CupertinoIcons.mail_solid, // envelope_circle
                           size: 24.0,
                         ),
-                        label: Text(AppLocalizations.of(context)!
-                            .aboutContactLink), // <-- Text
+                        label: Text(
+                            AppLocalizations.of(context)!.aboutContactLink,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w900)), // <-- Text
                       ),
                     ]),
 

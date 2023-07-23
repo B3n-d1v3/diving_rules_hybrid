@@ -72,7 +72,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
               alignment: Alignment.centerLeft,
               child: Text(
                 AppLocalizations.of(context)!.quizzIntroQuestionNumber,
-                style: Theme.of(context).textTheme.bodyMedium,
+                style: Theme.of(context).textTheme.titleMedium,
                 textAlign: TextAlign.left,
               ),
             ),
@@ -166,8 +166,9 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 CupertinoIcons.play_circle_fill, // envelope_circle
                 size: 24.0,
               ),
-              label: Text(AppLocalizations.of(context)!
-                  .quizzIntroStartButton), // <-- Text
+              label: Text(AppLocalizations.of(context)!.quizzIntroStartButton,
+                  style:
+                      const TextStyle(fontWeight: FontWeight.w900)), // <-- Text
             ),
           ],
         ),
