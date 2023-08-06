@@ -12,7 +12,8 @@ class DivingRulesLogo extends StatelessWidget {
       return Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(width: 36),
+          const SizedBox(
+              width: 72), // 36x2 the 2 action icons in the header bar
           SvgPicture.asset(
             "assets/images/diving_rules_22_logo_horizontal.svg",
             colorFilter: ColorFilter.mode(

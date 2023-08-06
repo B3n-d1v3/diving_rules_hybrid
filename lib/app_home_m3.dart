@@ -12,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
+import 'l10n/language_selector.dart';
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_quiz/screen_quiz.dart';
@@ -100,7 +101,7 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                     small: true,
                   )
                 : Text(selectedItem.label),
-            actions: [ThemeSelector()],
+            actions: [LanguageSelector(), ThemeSelector()],
             scrolledUnderElevation: 0,
           ),
           bottomNavigationBar:

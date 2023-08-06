@@ -118,7 +118,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     ),
                     Text(
                       AppLocalizations.of(context)!.aboutLicense,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
 
                     SizedBox(
@@ -142,7 +142,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     ),
                     Text(
                       AppLocalizations.of(context)!.aboutThanks,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
 
                     SizedBox(

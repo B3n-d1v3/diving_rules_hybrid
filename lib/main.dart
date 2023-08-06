@@ -21,9 +21,14 @@ void main() {
   runApp(DivingRulesApp());
 }
 
-class DivingRulesApp extends StatelessWidget {
+class DivingRulesApp extends StatefulWidget {
   const DivingRulesApp({super.key});
 
+  @override
+  State<DivingRulesApp> createState() => _DivingRulesAppState();
+}
+
+class _DivingRulesAppState extends State<DivingRulesApp> {
   @override
   Widget build(BuildContext context) {
     // TODO: Correct the dark/light mode changer
@@ -60,6 +65,7 @@ class DivingRulesApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
           ],
+          fallbackLocale: const Locale('en', 'US'),
         );
       }),
     );
