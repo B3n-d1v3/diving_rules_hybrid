@@ -7,8 +7,10 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
 import '../buttons/quiz_correction_icon.dart';
+import '../l10n/language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/quiz_button_status.dart';
+import '../theme/theme_selector.dart';
 
 //import 'package:get/get.dart';
 
@@ -27,6 +29,7 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
     return Scaffold(
         appBar: AppBar(
           title: Text(AppLocalizations.of(context)!.quizzCorrectionListHeader),
+          actions: [LanguageSelector(), ThemeSelector()],
         ),
         body: SafeArea(
             child: ListView.builder(

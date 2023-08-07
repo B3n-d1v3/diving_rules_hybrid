@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 
 import '../buttons/button_ownership.dart';
 import '../buttons/button_penalties.dart';
+import '../l10n/language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
@@ -14,6 +15,7 @@ import '../models/quiz_model.dart';
 import '../models/quiz_score.dart';
 import '../models/token_spacing.dart';
 import '../theme/dr_colors.dart';
+import '../theme/theme_selector.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
   int index;
@@ -34,6 +36,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.quizzQuestionHeader),
+        actions: [LanguageSelector(), ThemeSelector()],
       ),
       body: SafeArea(
         child: Scrollbar(
