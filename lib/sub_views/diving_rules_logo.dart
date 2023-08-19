@@ -17,7 +17,7 @@ class DivingRulesLogo extends StatelessWidget {
         children: [
           if (!leftAligned) ...[
             const SizedBox(
-              width: 80, // size of the 2 actions buttons
+              width: 72, //80, // size of the 2 actions buttons
             ),
           ],
           SvgPicture.asset(
