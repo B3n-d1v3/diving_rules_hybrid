@@ -499,12 +499,12 @@
         "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
         "type": "text"
     },
-    "quizzCorrectionListHeader": "Domande Recensione",
+    "quizzCorrectionListHeader": "Correzioni",
     "@quizzCorrectionListHeader": {
         "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
         "type": "text"
     },
-    "quizzCorrectionDetailHeader": "Domanda Correzione",
+    "quizzCorrectionDetailHeader": "Correzione",
     "@quizzCorrectionDetailHeader": {
         "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
         "type": "text"
