@@ -131,11 +131,11 @@ TextTheme iosTextTheme = const TextTheme(
       fontSize: 28,
       fontWeight: FontWeight.w700,
       height: 1.3),
-  // Headline S > iOS: Headline
+  // Headline S > iOS: Headline is 17 - corrected to 24
   headlineSmall: TextStyle(
       debugLabel: 'Headline S',
       fontFamily: '.SF UI Display',
-      fontSize: 17,
+      fontSize: 24,
       fontWeight: FontWeight.w700,
       height: 1.3,
       letterSpacing: -0.41),

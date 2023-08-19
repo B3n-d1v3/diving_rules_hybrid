@@ -499,7 +499,7 @@
         "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
         "type": "text"
     },
-    "quizzCorrectionListHeader": "Corrections des Questions",
+    "quizzCorrectionListHeader": "Corrections",
     "@quizzCorrectionListHeader": {
         "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
         "type": "text"

@@ -14,59 +14,63 @@ class _LanguageSelectorState extends State<LanguageSelector> {
   @override
   Widget build(BuildContext context) {
     // TODO: CURRENT >>> Show the actions in the detailed pages of the app
-    return PopupMenuButton<String>(
-        onSelected: (item) => handleClick(item),
-        icon: const Icon(Icons.language),
-        itemBuilder: (context) => [
-              PopupMenuItem<String>(
-                  value: "en",
-                  child: Row(
-                    children: [
-                      const Text(
-                        "🇺🇸",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                      SizedBox(width: DRSpacing.s),
-                      const Text("English")
-                    ],
-                  )),
-              PopupMenuItem<String>(
-                  value: "fr",
-                  child: Row(
-                    children: [
-                      const Text(
-                        "🇫🇷",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                      SizedBox(width: DRSpacing.s),
-                      const Text("Français")
-                    ],
-                  )),
-              PopupMenuItem<String>(
-                  value: "es",
-                  child: Row(
-                    children: [
-                      const Text(
-                        "🇪🇸",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                      SizedBox(width: DRSpacing.s),
-                      const Text("Español")
-                    ],
-                  )),
-              PopupMenuItem<String>(
-                  value: "it",
-                  child: Row(
-                    children: [
-                      const Text(
-                        "🇮🇹",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                      SizedBox(width: DRSpacing.s),
-                      const Text("Italiano")
-                    ],
-                  )),
-            ]);
+    return Container(
+      width: 28,
+      child: PopupMenuButton<String>(
+          onSelected: (item) => handleClick(item),
+          tooltip: "language",
+          icon: const Icon(Icons.language),
+          itemBuilder: (context) => [
+                PopupMenuItem<String>(
+                    value: "en",
+                    child: Row(
+                      children: [
+                        const Text(
+                          "🇺🇸",
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        SizedBox(width: DRSpacing.s),
+                        const Text("English")
+                      ],
+                    )),
+                PopupMenuItem<String>(
+                    value: "fr",
+                    child: Row(
+                      children: [
+                        const Text(
+                          "🇫🇷",
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        SizedBox(width: DRSpacing.s),
+                        const Text("Français")
+                      ],
+                    )),
+                PopupMenuItem<String>(
+                    value: "es",
+                    child: Row(
+                      children: [
+                        const Text(
+                          "🇪🇸",
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        SizedBox(width: DRSpacing.s),
+                        const Text("Español")
+                      ],
+                    )),
+                PopupMenuItem<String>(
+                    value: "it",
+                    child: Row(
+                      children: [
+                        const Text(
+                          "🇮🇹",
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        SizedBox(width: DRSpacing.s),
+                        const Text("Italiano")
+                      ],
+                    )),
+              ]),
+    );
   }
 
   void handleClick(String item) {

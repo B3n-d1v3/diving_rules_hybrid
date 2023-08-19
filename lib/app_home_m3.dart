@@ -23,6 +23,7 @@ import 'theme/theme_selector.dart';
 
 const int extendedNavigationRailMinScreenWidth = 600;
 const int mobileUiMaxScreenWidth = 640;
+const int mobileHeaderMaxScreenWidth = 330;
 
 class DivingRulesMainScreen extends StatefulWidget {
   @override
@@ -97,14 +98,27 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
       return Scaffold(
           appBar: AppBar(
             title: (_selectedIndex == 0)
-                ? DivingRulesLogo(
-                    small: true,
-                  )
-                : Text(selectedItem.label),
+                ? MediaQuery.of(context).size.width <
+                        mobileHeaderMaxScreenWidth // if size too small
+                    // header will position the logo to the left
+                    ? DivingRulesLogo(
+                        small: true,
+                        leftAligned: true,
+                      )
+                    // otherwise logo will be centered
+                    : DivingRulesLogo(
+                        small: true,
+                      )
+                : Text(
+                    selectedItem.label,
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+            centerTitle: true,
             actions: [LanguageSelector(), ThemeSelector()],
             scrolledUnderElevation: 0,
           ),
           bottomNavigationBar:
+              // Todo: add if the viewport is landscape or portrait to keep bottom nav on portrait
               MediaQuery.of(context).size.width < mobileUiMaxScreenWidth
                   ? BottomNavigationBar(
                       type: BottomNavigationBarType.fixed,

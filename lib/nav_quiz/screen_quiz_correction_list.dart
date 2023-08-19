@@ -28,7 +28,10 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context)!.quizzCorrectionListHeader),
+          title: Text(
+            AppLocalizations.of(context)!.quizzCorrectionListHeader,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
           actions: [LanguageSelector(), ThemeSelector()],
         ),
         body: SafeArea(

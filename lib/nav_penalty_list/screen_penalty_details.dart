@@ -37,7 +37,10 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
+        title: Text(
+          AppLocalizations.of(context)!.penaltiesListTitle,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
         actions: [LanguageSelector(), ThemeSelector()],
       ),
       //   // Retrieves the screen size

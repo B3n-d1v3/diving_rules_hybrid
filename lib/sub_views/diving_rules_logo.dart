@@ -3,17 +3,23 @@ import 'package:flutter_svg/svg.dart';
 
 class DivingRulesLogo extends StatelessWidget {
   bool small;
+  bool leftAligned;
 
-  DivingRulesLogo({Key? key, required this.small}) : super(key: key);
+  DivingRulesLogo({Key? key, required this.small, this.leftAligned = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     if (small == true) {
       return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment:
+            !leftAligned ? MainAxisAlignment.center : MainAxisAlignment.start,
         children: [
-          const SizedBox(
-              width: 72), // 36x2 the 2 action icons in the header bar
+          if (!leftAligned) ...[
+            const SizedBox(
+              width: 80, // size of the 2 actions buttons
+            ),
+          ],
           SvgPicture.asset(
             "assets/images/diving_rules_22_logo_horizontal.svg",
             colorFilter: ColorFilter.mode(
