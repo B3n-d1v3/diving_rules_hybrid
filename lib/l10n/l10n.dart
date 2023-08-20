@@ -9,6 +9,6 @@ class L10n {
     const Locale('fr'),
     const Locale('it'),
     const Locale('es'),
-    // const Locale('es-419'),
+    const Locale('es_419'),
   ];
 }

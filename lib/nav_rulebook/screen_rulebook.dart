@@ -12,22 +12,32 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
   @override
   Widget build(BuildContext context) {
     Locale myLocale = Localizations.localeOf(context);
+    debugPrint(
+        '>>>>> ScreenRulebook > myLocale.languageCode: ${myLocale.languageCode} - myLocale.countryCode: ${myLocale.countryCode}');
+
     return Scaffold(
         // appBar: AppBar(
         //   title: Text(AppLocalizations.of(context)!.cFBundleName),
         //   backgroundColor: Colors.blue,
         // ),
 
-        // TODO: CURRENT >>> Add the spanish version of the rulebook
+        // TODO: CURRENT >>> Add the spanish latam version of the rulebook
         body: Center(
             child: myLocale.languageCode == 'fr'
                 ? SfPdfViewer.asset(
                     'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf')
-                : myLocale.languageCode == 'es'
+                : myLocale.countryCode == 'es_419'
                     ? SfPdfViewer.asset(
-                        'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_ES.pdf')
-                    : SfPdfViewer.asset(
-                        'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')));
+                        'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_419.pdf')
+                    : myLocale.languageCode == 'es'
+                        ? SfPdfViewer.asset(
+                            'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf')
+                        // Add Italian rulebook here
+                        // : myLocale.languageCode == 'it'
+                        //     ? SfPdfViewer.asset(
+                        //         'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
+                        : SfPdfViewer.asset(
+                            'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf')));
   }
 }
 

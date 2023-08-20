@@ -12,8 +12,10 @@ class AppLanguage {
       AppLanguage(2, "Français", "🇫🇷", "fr"),
       AppLanguage(3, "Español", "🇪🇸", "es"),
       AppLanguage(4, "Italiano", "🇮🇹", "it"),
-      // AppLanguage(5, "Mexican", "🇲🇽", "es-MX"),
+      AppLanguage(5, "Latam", "🇲🇽", "es_419"),
       // language iso codes: http://lingoes.net/en/translator/langcode.htm
     ];
   }
 }
+
+// add new language, run
