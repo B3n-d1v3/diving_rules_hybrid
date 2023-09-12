@@ -96,9 +96,30 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       AppLocalizations.of(context)!.aboutDescription,
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
-
                     SizedBox(
                       height: DRSpacing.xl,
+                    ),
+
+                    // link to WA: https://www.worldaquatics.com/diving
+                    OutlinedButton(
+                        onPressed: () async {
+                          Uri waUrl =
+                              Uri.parse("http://www.worldaquatics.com/diving");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
+                          } else {
+                            //browsing app did not opened
+                          }
+                        },
+                        child: Text(
+                          'World Aquatics',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
+                        )),
+
+                    SizedBox(
+                      height: DRSpacing.m,
                     ),
 
                     Divider(),
@@ -169,13 +190,24 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     ),
 
                     // QR Code
-                    SvgPicture.asset(
-                      "assets/images/diving_rules_22_qr_code.svg",
-                      colorFilter: ColorFilter.mode(
-                          Theme.of(context).colorScheme.primary,
-                          BlendMode.srcIn),
-                      width: 150,
-                      height: 150,
+                    GestureDetector(
+                      onTap: () async {
+                        Uri appUrl = Uri.parse("http://bit.ly/GetDivingRules");
+                        if (await launchUrl(appUrl,
+                            mode: LaunchMode.externalApplication)) {
+                          //browsing app opened
+                        } else {
+                          //browsing app did not opened
+                        }
+                      },
+                      child: SvgPicture.asset(
+                        "assets/images/diving_rules_22_qr_code.svg",
+                        colorFilter: ColorFilter.mode(
+                            Theme.of(context).colorScheme.primary,
+                            BlendMode.srcIn),
+                        width: 150,
+                        height: 150,
+                      ),
                     ),
 
                     SizedBox(width: DRSpacing.xl),
@@ -232,7 +264,6 @@ class _ScreenAboutState extends State<ScreenAbout> {
                               Uri.encodeComponent("Diving Rules 22 - Feedback");
                           String body = Uri.encodeComponent(
                               "Please provide your feedback here.");
-                          print(subject); //output: Hello%20Flutter
                           Uri mail = Uri.parse(
                               "mailto:$email?subject=$subject&body=$body");
                           if (await launchUrl(mail)) {
