@@ -13,7 +13,6 @@ class LanguageSelector extends StatefulWidget {
 class _LanguageSelectorState extends State<LanguageSelector> {
   @override
   Widget build(BuildContext context) {
-    // TODO: Show the actions in the detailed pages of the app
     return Container(
       width: 28,
       child: PopupMenuButton<String>(
@@ -57,18 +56,18 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                         const Text("Español")
                       ],
                     )),
-                // PopupMenuItem<String>(
-                //     value: "es_419",
-                //     child: Row(
-                //       children: [
-                //         const Text(
-                //           "🇲🇽",
-                //           style: TextStyle(fontSize: 24),
-                //         ),
-                //         SizedBox(width: DRSpacing.s),
-                //         const Text("Latin Am.")
-                //       ],
-                //     )),
+                PopupMenuItem<String>(
+                    value: "MX",
+                    child: Row(
+                      children: [
+                        const Text(
+                          "🇲🇽",
+                          style: TextStyle(fontSize: 24),
+                        ),
+                        SizedBox(width: DRSpacing.s),
+                        const Text("Mexicano")
+                      ],
+                    )),
                 PopupMenuItem<String>(
                     value: "it",
                     child: Row(
@@ -88,8 +87,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
   void handleClick(String item) {
     // changes the local app language
     Locale _tempLocale;
-    debugPrint(
-        '>>>>> Language_selector > before click: languageCode: ${Localizations.localeOf(context).languageCode} - countryCode: ${Localizations.localeOf(context).countryCode}');
+    // debugPrint('>>>>> Language_selector > before click: languageCode: ${Localizations.localeOf(context).languageCode} - countryCode: ${Localizations.localeOf(context).countryCode}');
     switch (item) {
       case 'en':
         _tempLocale = const Locale('en', 'US');
@@ -100,10 +98,8 @@ class _LanguageSelectorState extends State<LanguageSelector> {
       case 'es':
         _tempLocale = const Locale('es', 'ES');
         break;
-      // TODO: CURRENT >>>>> update the support of Latam spanish and mex rulebook
-      // TODO: CURRENT >>>>> testing why the countryCode setup does not work???
-      case 'es_419':
-        _tempLocale = const Locale('es', 'es_419');
+      case 'MX':
+        _tempLocale = const Locale('es', 'MX');
         break;
       case 'it':
         _tempLocale = const Locale('it', 'IT');
@@ -111,8 +107,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
       default:
         _tempLocale = const Locale('en', 'US');
     }
-    debugPrint(
-        '>>>>> Language_selector > before click: _tempLocale.languageCode: ${_tempLocale.languageCode} - _tempLocale.countryCode: ${_tempLocale.countryCode}');
+    // debugPrint('>>>>> Language_selector > before click: _tempLocale.languageCode: ${_tempLocale.languageCode} - _tempLocale.countryCode: ${_tempLocale.countryCode}');
 
     setState(() {
       Get.updateLocale(_tempLocale);
