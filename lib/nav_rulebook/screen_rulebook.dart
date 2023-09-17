@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class ScreenRulebook extends StatefulWidget {
@@ -9,6 +10,38 @@ class ScreenRulebook extends StatefulWidget {
 }
 
 class _ScreenRulebookState extends State<ScreenRulebook> {
+  late PdfViewerController _pdfViewerController;
+  OverlayEntry? _overlayEntry;
+
+  @override
+  void initState() {
+    _pdfViewerController = PdfViewerController();
+    super.initState();
+  }
+
+  void _showContextMenu(
+      BuildContext context, PdfTextSelectionChangedDetails details) {
+    final OverlayState _overlayState = Overlay.of(context)!;
+    _overlayEntry = OverlayEntry(
+      builder: (context) => Positioned(
+        top: details.globalSelectedRegion!.center.dy - 55,
+        left: details.globalSelectedRegion!.bottomLeft.dx,
+        child: ElevatedButton(
+          onPressed: () {
+            Clipboard.setData(
+                ClipboardData(text: details.selectedText.toString()));
+            // make translation
+            print(
+                'Text copied to clipboard: ' + details.selectedText.toString());
+            _pdfViewerController.clearSelection();
+          },
+          child: Text('Copy', style: TextStyle(fontSize: 17)),
+        ),
+      ),
+    );
+    _overlayState.insert(_overlayEntry!);
+  }
+
   @override
   Widget build(BuildContext context) {
     Locale myLocale = Localizations.localeOf(context);
@@ -16,6 +49,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     // debugPrint('>>>>> ScreenRulebook > myLocale.languageCode: ${myLocale.languageCode} - myLocale.countryCode: ${myLocale.countryCode}');
 
     getRulebookUrl(Locale appLocale) {
+      // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
           'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
       appLocale.languageCode == 'fr'
@@ -32,8 +66,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
               //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
               : tempUrl =
                   'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
-      debugPrint(
-          '>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
+      // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
       return tempUrl;
     }
 
@@ -42,6 +75,15 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
             child: SfPdfViewer.asset(
       getRulebookUrl(myLocale),
       enableTextSelection: true,
+      onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
+        if (details.selectedText == null && _overlayEntry != null) {
+          _overlayEntry!.remove();
+          _overlayEntry = null;
+        } else if (details.selectedText != null && _overlayEntry == null) {
+          _showContextMenu(context, details);
+        }
+      },
+      controller: _pdfViewerController,
     )));
   }
 }
