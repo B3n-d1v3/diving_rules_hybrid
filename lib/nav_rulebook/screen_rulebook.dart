@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class ScreenRulebook extends StatefulWidget {
@@ -11,11 +12,14 @@ class ScreenRulebook extends StatefulWidget {
 
 class _ScreenRulebookState extends State<ScreenRulebook> {
   late PdfViewerController _pdfViewerController;
+
+  // late PdfTextSearchResult _searchResult;
   OverlayEntry? _overlayEntry;
 
   @override
   void initState() {
     _pdfViewerController = PdfViewerController();
+    // _searchResult = PdfTextSearchResult();
     super.initState();
   }
 
@@ -30,12 +34,14 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           onPressed: () {
             Clipboard.setData(
                 ClipboardData(text: details.selectedText.toString()));
-            // make translation
-            print(
-                'Text copied to clipboard: ' + details.selectedText.toString());
+            // debugPrint('Text copied to clipboard: ' + details.selectedText.toString());
             _pdfViewerController.clearSelection();
           },
-          child: Text('Copy', style: TextStyle(fontSize: 17)),
+          // make translation
+          child: Text(
+            AppLocalizations.of(context)!.rulebookCopy,
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
         ),
       ),
     );
