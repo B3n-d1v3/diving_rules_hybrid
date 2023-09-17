@@ -513,5 +513,8 @@
     "@quizzQuestionWarningNext": {
         "description": "Quiz - Question - warning snackbar message",
         "type": "text"
+    },
+    "The copy button when a user selects text in the rulebook pdf view.": {
+        "rulebookCopy": "Copie"
     }
 }
