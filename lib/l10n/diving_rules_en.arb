@@ -516,7 +516,7 @@
     },
     "rulebookCopy": "Copy",
     "@rulebookCopy": {
-        "description": "The copy button when a user selects text in the rulebook pdf view.": {
+        "description": "The copy button when a user selects text in the rulebook pdf view.",
         "type": "text"
     }
 }
