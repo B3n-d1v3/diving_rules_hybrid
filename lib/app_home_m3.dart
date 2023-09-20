@@ -197,7 +197,7 @@ class _NavigationItems {
           activeIcon: Icon(CupertinoIcons.book_fill),
           icon: Icon(CupertinoIcons.book),
           label: AppLocalizations.of(context)!.navigationMenuRules,
-          // TODO: Change the rules header to use the diving rules correct font
+          // TODO - Later: Change the rules header to use the diving rules correct font
           screen: ScreenRulebook()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.square_list_fill),

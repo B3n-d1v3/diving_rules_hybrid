@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +19,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
       child: PopupMenuButton<String>(
           onSelected: (item) => handleClick(item),
           tooltip: "language",
-          icon: const Icon(Icons.language),
+          icon: const Icon(CupertinoIcons.globe), // Icon(Icons.language),
           itemBuilder: (context) => [
                 PopupMenuItem<String>(
                     value: "en",

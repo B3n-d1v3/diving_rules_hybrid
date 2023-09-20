@@ -76,7 +76,7 @@ class AppColor {
   static const Color myTertiaryColorLight = drColorDeselectedLight;
   static const Color myOnTertiaryColorLight = Color(0xFFFFFFFF);
 
-  static const Color mySurfaceColorLight = Color(0xffffffff);
+  static const Color mySurfaceColorLight = Color(0xffcccccc);
   static const Color myOnSurfaceColorLight = Color(0xff000000);
   static const Color myErrorColorLight = drColorNegativeLight;
   static const Color myOnErrorColorLight = Color(0xffFFFFFF);
@@ -128,7 +128,7 @@ class AppColor {
   static const Color myTertiaryColorDark = drColorDeselectedDark;
   static const Color myOnTertiaryColorDark = Color(0xFF000000);
 
-  static const Color mySurfaceColorDark = Color(0xff000000);
+  static const Color mySurfaceColorDark = Color(0xff484849);
   static const Color myOnSurfaceColorDark = Color(0xffffffff);
   static const Color myErrorColorDark = drColorNegativeDark;
   static const Color myOnErrorColorDark = Color(0xff000000);
