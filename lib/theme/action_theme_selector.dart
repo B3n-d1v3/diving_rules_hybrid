@@ -28,29 +28,33 @@ class _ThemeSelectorState extends State<ThemeSelector> {
     // correct the mode to set auto by default and to include the auto in the switch
 
     return
+        // TODO Later: Add accessibility on action icons
         // Semantics(
         // button: true,
         // label: themeNotifier.themeMode == ThemeMode.light
         //     ? AppLocalizations.of(context)!.themeSelectorSwitchDarkMode
         //     : AppLocalizations.of(context)!.themeSelectorSwitchLightMode,
         // child:
-        IconButton(
-            icon: Icon(themeNotifier.themeMode == ThemeMode.light
-                    ? CupertinoIcons.sun_max_fill //Icons.light_mode
-                    : CupertinoIcons.moon_stars_fill //Icons.dark_mode
-                ),
-            onPressed: () {
-              setState(() {
-                themeNotifier.themeMode =
-                    themeNotifier.themeMode == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light;
-              });
-            },
-            tooltip: themeNotifier.themeMode == ThemeMode.light
-                ? "Dark" // AppLocalizations.of(context)!.themeSelectorSwitchDarkMode
-                : "Light" // AppLocalizations.of(context)!.themeSelectorSwitchLightMode,
-            //    ), // Semantics
-            );
+        Container(
+            width: 42,
+            child: IconButton(
+                icon: Icon(themeNotifier.themeMode == ThemeMode.light
+                        ? CupertinoIcons.sun_max_fill //Icons.light_mode
+                        : CupertinoIcons.moon_stars_fill //Icons.dark_mode
+                    ),
+                onPressed: () {
+                  setState(() {
+                    themeNotifier.themeMode =
+                        themeNotifier.themeMode == ThemeMode.light
+                            ? ThemeMode.dark
+                            : ThemeMode.light;
+                  });
+                },
+                // TODO Translation text
+                tooltip: themeNotifier.themeMode == ThemeMode.light
+                    ? "Dark" // AppLocalizations.of(context)!.themeSelectorSwitchDarkMode
+                    : "Light" // AppLocalizations.of(context)!.themeSelectorSwitchLightMode,
+                //    ), // Semantics
+                ));
   }
 }

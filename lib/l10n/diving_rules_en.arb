@@ -518,5 +518,44 @@
     "@rulebookCopy": {
         "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
         "type": "text"
-    }
+    },
+     "rulebookSearch": "Search",
+     "@rulebookSearch": {
+         "description": "Rulebook - Search - Search button.",
+         "type": "text"
+     },
+          "rulebookSearchNoResult": "No result found",
+          "@rulebookSearchNoResult": {
+              "description": "Rulebook - Search - message when no result has been found.",
+              "type": "text"
+          },
+
+    "rulebookSearchHintText": "Search...",
+    "@rulebookSearchHintText": {
+        "description": "Rulebook - Search - Hit text in the input field.",
+        "type": "text"
+    },
+     "rulebookSearchPrevious": "Previous",
+     "@rulebookSearchPrevious": {
+         "description": "Rulebook - Search - previous button tooltip text description.",
+         "type": "text"
+     },
+       "rulebookSearchNext": "Next",
+       "@rulebookSearchNext": {
+           "description": "Rulebook - Search - previous button tooltip text description.",
+           "type": "text"
+     },
+     "rulebookSearchCancel": "Cancel Search",
+     "@rulebookSearchCancel": {
+         "description": "Rulebook - Search - previous button tooltip text description.",
+         "type": "text"
+     },
+       "languageSelection": "Language",
+       "@languageSelection": {
+           "description": "Top header bar language selection icon tooltip.",
+           "type": "text"
+       }
+
+
+
 }

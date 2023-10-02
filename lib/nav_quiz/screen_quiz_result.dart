@@ -6,13 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
-import '../l10n/language_selector.dart';
+import '../l10n/action_language_selector.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
 import '../models/token_spacing.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
-import '../theme/theme_selector.dart';
 
 class ScreenQuizResult extends StatefulWidget {
   const ScreenQuizResult({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
           AppLocalizations.of(context)!.quizzResultHeader,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
-        actions: [LanguageSelector(), ThemeSelector()],
+        actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
       ),
       body: SafeArea(
         child: Scrollbar(

@@ -5,13 +5,14 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../buttons/button_ownership.dart';
 import '../buttons/button_penalties.dart';
-import '../l10n/language_selector.dart';
+import '../l10n/action_language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/sanction_model.dart';
 import '../models/token_spacing.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
-import '../theme/theme_selector.dart';
 
 class PagePenaltyDescription extends StatefulWidget {
   int index;
@@ -41,7 +42,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
           AppLocalizations.of(context)!.penaltiesListTitle,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
-        actions: [LanguageSelector(), ThemeSelector()],
+        actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
       ),
       //   // Retrieves the screen size
       //   width: MediaQuery.of(context).size.width,

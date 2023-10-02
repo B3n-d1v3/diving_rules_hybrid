@@ -514,10 +514,46 @@
         "description": "Quiz - Question - warning snackbar message",
         "type": "text"
     },
-        "rulebookCopy": "Copie",
-        "@rulebookCopy": {
-            "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
+    "rulebookCopy": "Copie",
+    "@rulebookCopy": {
+        "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
+        "type": "text"
+    },
+         "rulebookSearch": "Recherche",
+         "@rulebookSearch": {
+             "description": "Rulebook - Search - Search button.",
+             "type": "text"
+         },
+
+      "rulebookSearchNoResult": "Aucun résultat trouvé",
+      "@rulebookSearchNoResult": {
+          "description": "Rulebook - Search - message when no result has been found.",
+          "type": "text"
+      },
+     "rulebookSearchHintText": "Recherche...",
+     "@rulebookSearchHintText": {
+         "description": "Rulebook - Search - Hit text in the input field.",
+         "type": "text"
+     },
+      "rulebookSearchPrevious": "Précédent",
+      "@rulebookSearchPrevious": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+        "rulebookSearchNext": "Suivant",
+        "@rulebookSearchNext": {
+            "description": "Rulebook - Search - previous button tooltip text description.",
             "type": "text"
-        }
+      },
+      "rulebookSearchCancel": "Annuler la recherche",
+      "@rulebookSearchCancel": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+              "languageSelection": "Langue",
+              "@languageSelection": {
+                  "description": "Top header bar language selection icon tooltip.",
+                  "type": "text"
+              }
 
 }

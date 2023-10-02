@@ -12,14 +12,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
-import 'l10n/language_selector.dart';
+import 'l10n/action_language_selector.dart';
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_quiz/screen_quiz.dart';
 import 'nav_rulebook/screen_rulebook.dart';
+import 'sub_views/action_search.dart';
+import 'theme/action_theme_selector.dart';
 // theme
 import 'theme/model_theme.dart';
-import 'theme/theme_selector.dart';
 
 const int extendedNavigationRailMinScreenWidth = 600;
 const int mobileUiMaxScreenWidth = 640;
@@ -98,23 +99,25 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
       return Scaffold(
           appBar: AppBar(
             title: (_selectedIndex == 0)
-                ? MediaQuery.of(context).size.width <
-                        mobileHeaderMaxScreenWidth // if size too small
-                    // header will position the logo to the left
-                    ? DivingRulesLogo(
-                        small: true,
-                        leftAligned: true,
-                      )
-                    // otherwise logo will be centered
-                    : DivingRulesLogo(
-                        small: true,
-                      )
+                ?
+                // Todo : Identify the right size to center le logo on larger screen sizes
+                // MediaQuery.of(context).size.width < mobileHeaderMaxScreenWidth // if size too small
+                // header will position the logo to the left
+                // ?
+                DivingRulesLogo(
+                    small: true,
+                    leftAligned: true,
+                  )
+                // otherwise logo will be centered
+                // : DivingRulesLogo(
+                //     small: true,
+                //   )
                 : Text(
                     selectedItem.label,
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
             centerTitle: true,
-            actions: [LanguageSelector(), ThemeSelector()],
+            actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
             scrolledUnderElevation: 0,
           ),
           bottomNavigationBar:

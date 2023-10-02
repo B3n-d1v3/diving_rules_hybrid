@@ -9,6 +9,9 @@ import 'package:get/get.dart';
 SanctionItems sanctionItems = SanctionItems(sanctions: []);
 PenaltySummary penaltySummary = PenaltySummary(penalties: []);
 
+// Search
+var search = false;
+
 // Quiz
 var quizTotalQuestionNumber = 20;
 var currentQuizScore = 0;

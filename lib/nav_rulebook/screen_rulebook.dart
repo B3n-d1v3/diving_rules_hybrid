@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
+import '../models/globals.dart';
 import '../models/token_spacing.dart';
 
 class ScreenRulebook extends StatefulWidget {
@@ -24,9 +25,19 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
 
   @override
   void initState() {
-    // _pdfViewerController = PdfViewerController();
-    _showToolbar = false;
-    _showScrollHead = true;
+    // TODO CURRENT: init with the toolbar when the global variable "search" is set to true
+    // TODO CURRENT: find a way to close the search bar
+    if (search == true) {
+      // Start with Search
+      _showScrollHead = false;
+      _showToolbar = true;
+      // BS: Is this needed?
+      // _ensureHistoryEntry();
+    } else {
+      // Start without opening the search
+      _showToolbar = false;
+      _showScrollHead = true;
+    }
     super.initState();
   }
 
@@ -105,8 +116,6 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     }
 
     return Scaffold(
-      // Added to test the search
-      // Test: Start
       appBar: _showToolbar
           ? AppBar(
               flexibleSpace: SafeArea(
@@ -139,26 +148,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
               automaticallyImplyLeading: false,
               // backgroundColor: Color(0xFFFAFAFA),
             )
-          : AppBar(
-              // TODO Current: change this scafold structure to keep the old one
-              title: Text('Test Search PDF Viewer'),
-              actions: <Widget>[
-                IconButton(
-                  icon: Icon(
-                    CupertinoIcons.search,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _showScrollHead = false;
-                      _showToolbar = true;
-                      _ensureHistoryEntry();
-                    });
-                  },
-                ),
-              ],
-              automaticallyImplyLeading: false,
-            ),
-      // Test: End
+          : null,
       body: Stack(
         children: [
           SfPdfViewer.asset(
@@ -198,9 +188,8 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
                         Radius.circular(DRSpacing.x2l),
                       ),
                     ),
-                    // TODO Current: Translate this text
                     child: Text(
-                      'No result found',
+                      AppLocalizations.of(context)!.rulebookSearchNoResult,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -212,6 +201,17 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
       ),
     );
   }
+}
+
+/// Strip out edge spaces at beginning and end of string
+String stripOutStartEndSpaces(String tmp) {
+  while (tmp.startsWith(' ')) {
+    tmp = tmp.substring(1);
+  }
+  while (tmp.endsWith(' ')) {
+    tmp = tmp.substring(0, tmp.length - 1);
+  }
+  return tmp;
 }
 
 /// Signature for the [SearchToolbar.onTap] callback.
@@ -285,8 +285,9 @@ class SearchToolbarState extends State<SearchToolbar> {
         /// Search input field
         Flexible(
           child: Padding(
-            padding: EdgeInsets.only(left: DRSpacing.m),
+            padding: EdgeInsets.only(left: DRSpacing.m, right: DRSpacing.m),
             child: TextFormField(
+              // TOdo : use existing styles
               style: TextStyle(fontSize: 16),
               enableInteractiveSelection: false,
               focusNode: focusNode,
@@ -294,9 +295,10 @@ class SearchToolbarState extends State<SearchToolbar> {
               textInputAction: TextInputAction.search,
               controller: _editingController,
               decoration: InputDecoration(
-                border: InputBorder.none,
-                // TODO Current: Translate this text
-                hintText: 'Search...',
+                prefixIcon: const Icon(CupertinoIcons.search),
+                // prefixIconColor: Theme.of(context).colorScheme.primary,
+                // border: InputBorder.none,
+                hintText: AppLocalizations.of(context)!.rulebookSearchHintText,
                 hintStyle: TextStyle(
                     color: Theme.of(context)
                         .colorScheme
@@ -309,6 +311,13 @@ class SearchToolbarState extends State<SearchToolbar> {
                 }
               },
               onFieldSubmitted: (String value) {
+                // debugPrint(
+                //     '>>>> ScreenRulebook > TextFormField > onFieldSubmitted > value: "${value}"');
+                // // TODO Current: take out the last extra space if any
+                // value = stripOutStartEndSpaces(value);
+                // debugPrint(
+                //     '>>>> ScreenRulebook > TextFormField > onFieldSubmitted > value stripped: "${value}"');
+
                 if (kIsWeb) {
                   _pdfTextSearchResult =
                       widget.controller!.searchText(_editingController.text);
@@ -348,9 +357,10 @@ class SearchToolbarState extends State<SearchToolbar> {
                           CupertinoIcons.arrowtriangle_left,
                           size: 24,
                         )
-                      : const Icon(
+                      : Icon(
                           CupertinoIcons.arrowtriangle_left_fill,
                           size: 24,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                   onPressed: () {
                     setState(() {
@@ -360,8 +370,9 @@ class SearchToolbarState extends State<SearchToolbar> {
                     });
                     widget.onTap!.call('Previous Instance');
                   },
-                  // TODO Current: Translate this text
-                  tooltip: widget.showTooltip ? 'Previous' : null,
+                  tooltip: widget.showTooltip
+                      ? AppLocalizations.of(context)!.rulebookSearchPrevious
+                      : null,
                 ),
               ),
 
@@ -392,9 +403,10 @@ class SearchToolbarState extends State<SearchToolbar> {
                           CupertinoIcons.arrowtriangle_right,
                           size: 24,
                         )
-                      : const Icon(
+                      : Icon(
                           CupertinoIcons.arrowtriangle_right_fill,
                           size: 24,
+                          color: Theme.of(context).colorScheme.primary,
                         ),
                   onPressed: () {
                     setState(() {
@@ -410,8 +422,9 @@ class SearchToolbarState extends State<SearchToolbar> {
                     });
                     widget.onTap!.call('Next Instance');
                   },
-                  // TODO Current: Translate this text
-                  tooltip: widget.showTooltip ? 'Next' : null,
+                  tooltip: widget.showTooltip
+                      ? AppLocalizations.of(context)!.rulebookSearchNext
+                      : null,
                 ),
               ),
             ],
@@ -436,26 +449,39 @@ class SearchToolbarState extends State<SearchToolbar> {
 
         /// Clear selection
         Visibility(
-          visible: _editingController.text.isNotEmpty,
+          visible: _editingController.text.isNotEmpty ||
+              _editingController.text.isEmpty,
           child: Material(
             color: Colors.transparent,
             child: IconButton(
-              icon: const Icon(
+              icon: Icon(
                 CupertinoIcons.clear_circled_solid,
                 size: 24,
+                color: Theme.of(context).colorScheme.primary,
               ),
               onPressed: () {
                 setState(() {
+                  // close the search bar (Currently testing
+                  search = false;
+                  // _handleHistoryEntryRemoved();
+                  // _showToolbar = false;
+                  // _showScrollHead = true;
+
+                  // previous code to clear the search
                   _editingController.clear();
                   _pdfTextSearchResult.clear();
                   widget.controller!.clearSelection();
                   _isSearchInitiated = false;
                   focusNode!.requestFocus();
+                  // clear the entire search field
+                  // search = false; // that did not work
                 });
-                widget.onTap!.call('Clear Text');
+                // widget.onTap!.call('Clear Text');
+                widget.onTap!.call('Cancel Search');
               },
-              // TODO Current: Translate this text
-              tooltip: widget.showTooltip ? 'Clear Search' : null,
+              tooltip: widget.showTooltip
+                  ? AppLocalizations.of(context)!.rulebookSearchCancel
+                  : null,
             ),
           ),
         ),
