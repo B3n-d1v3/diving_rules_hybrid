@@ -11,6 +11,9 @@ PenaltySummary penaltySummary = PenaltySummary(penalties: []);
 
 // Search
 var search = false;
+// current page or previous page
+var currentPage = 'start';
+// could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
 
 // Quiz
 var quizTotalQuestionNumber = 20;

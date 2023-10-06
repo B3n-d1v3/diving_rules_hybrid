@@ -1,3 +1,4 @@
+import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
@@ -26,6 +27,12 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
   @override
   void initState() {
+    debugPrint(
+        '>>>> ScreenAbout > initState in > currentPage: "${currentPage}"');
+    currentPage = 'about';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    debugPrint(
+        '>>>> ScreenAbout > initState out > currentPage: "${currentPage}"');
     super.initState();
     _initPackageInfo();
   }

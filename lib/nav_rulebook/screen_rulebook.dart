@@ -20,13 +20,22 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
   final GlobalKey<SearchToolbarState> _textSearchKey = GlobalKey();
   late bool _showToolbar;
   late bool _showScrollHead;
+  bool _showSearchInSameScreen = false;
   OverlayEntry? _overlayEntry;
   LocalHistoryEntry? _historyEntry;
 
   @override
   void initState() {
     // TODO CURRENT: init with the toolbar when the global variable "search" is set to true
-    // TODO CURRENT: find a way to close the search bar
+    debugPrint(
+        '>>>> ScreenRulebook > initState in > currentPage: "${currentPage}"');
+
+    if (currentPage == 'rulebook') {
+      _showSearchInSameScreen = true;
+    } else {
+      _showSearchInSameScreen = false;
+    }
+    ;
     if (search == true) {
       // Start with Search
       _showScrollHead = false;
@@ -38,6 +47,13 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
       _showToolbar = false;
       _showScrollHead = true;
     }
+    ;
+    // debugPrint(
+    //     '>>>> ScreenRulebook > initState in > currentPage: "${currentPage}"');
+    currentPage = 'rulebook';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    debugPrint(
+        '>>>> ScreenRulebook > initState out > currentPage: "${currentPage}"');
     super.initState();
   }
 
@@ -62,27 +78,31 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
   }
 
   /// Show the Copy Menu item
-  void _showContextMenu(
-      BuildContext context, PdfTextSelectionChangedDetails details) {
+  void _showContextMenu(BuildContext context,
+      PdfTextSelectionChangedDetails details) {
     final OverlayState _overlayState = Overlay.of(context)!;
     _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
-        top: details.globalSelectedRegion!.center.dy - 55,
-        left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: ElevatedButton(
-          onPressed: () {
-            Clipboard.setData(
-                ClipboardData(text: details.selectedText.toString()));
-            // debugPrint('Text copied to clipboard: ' + details.selectedText.toString());
-            _pdfViewerController.clearSelection();
-          },
-          // make translation
-          child: Text(
-            AppLocalizations.of(context)!.rulebookCopy,
-            style: Theme.of(context).textTheme.bodyMedium,
+      builder: (context) =>
+          Positioned(
+            top: details.globalSelectedRegion!.center.dy - 55,
+            left: details.globalSelectedRegion!.bottomLeft.dx,
+            child: ElevatedButton(
+              onPressed: () {
+                Clipboard.setData(
+                    ClipboardData(text: details.selectedText.toString()));
+                // debugPrint('Text copied to clipboard: ' + details.selectedText.toString());
+                _pdfViewerController.clearSelection();
+              },
+              // make translation
+              child: Text(
+                AppLocalizations.of(context)!.rulebookCopy,
+                style: Theme
+                    .of(context)
+                    .textTheme
+                    .bodyMedium,
+              ),
+            ),
           ),
-        ),
-      ),
     );
     _overlayState.insert(_overlayEntry!);
   }
@@ -99,18 +119,18 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
       appLocale.languageCode == 'fr'
           ? tempUrl =
-              'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
+      'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
           : appLocale.languageCode == 'es'
-              ? appLocale.countryCode == 'MX'
-                  ? tempUrl =
-                      'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
-                  : tempUrl =
-                      'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
-              // Add Italian rulebook here
-              // : appLocale.languageCode == 'it'
-              //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
-              : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
+          ? appLocale.countryCode == 'MX'
+          ? tempUrl =
+      'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
+          : tempUrl =
+      'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
+      // Add Italian rulebook here
+      // : appLocale.languageCode == 'it'
+      //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
+          : tempUrl =
+      'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
       // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
       return tempUrl;
     }
@@ -118,43 +138,48 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     return Scaffold(
       appBar: _showToolbar
           ? AppBar(
-              flexibleSpace: SafeArea(
-                child: SearchToolbar(
-                  key: _textSearchKey,
-                  showTooltip: true,
-                  controller: _pdfViewerController,
-                  onTap: (Object toolbarItem) async {
-                    if (toolbarItem.toString() == 'Cancel Search') {
-                      setState(() {
-                        _showToolbar = false;
-                        _showScrollHead = true;
-                        if (Navigator.canPop(context)) {
-                          Navigator.maybePop(context);
-                        }
-                      });
-                    }
-                    if (toolbarItem.toString() == 'noResultFound') {
-                      setState(() {
-                        _textSearchKey.currentState?._showToast = true;
-                      });
-                      await Future.delayed(Duration(seconds: 1));
-                      setState(() {
-                        _textSearchKey.currentState?._showToast = false;
-                      });
-                    }
-                  },
-                ),
-              ),
-              automaticallyImplyLeading: false,
-              // backgroundColor: Color(0xFFFAFAFA),
-            )
+        flexibleSpace: SafeArea(
+          child: SearchToolbar(
+            key: _textSearchKey,
+            showTooltip: true,
+            controller: _pdfViewerController,
+            onTap: (Object toolbarItem) async {
+              if (toolbarItem.toString() == 'Cancel Search') {
+                setState(() {
+                  _showToolbar = false;
+                  _showScrollHead = true;
+                  if (Navigator.canPop(context)) {
+                    Navigator.maybePop(context);
+                  }
+                });
+              }
+              if (toolbarItem.toString() == 'noResultFound') {
+                setState(() {
+                  _textSearchKey.currentState?._showToast = true;
+                });
+                await Future.delayed(Duration(seconds: 1));
+                setState(() {
+                  _textSearchKey.currentState?._showToast = false;
+                });
+              }
+            },
+          ),
+        ),
+        automaticallyImplyLeading: false,
+        // backgroundColor: Color(0xFFFAFAFA),
+      )
           : null,
       body: Stack(
         children: [
+
+          /// The display of the pdf file
+          // _showSearchInSameScreen == false
+          //     ?
           SfPdfViewer.asset(
             getRulebookUrl(myLocale),
             enableTextSelection: true,
-            onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
+            onTextSelectionChanged:
+                (PdfTextSelectionChangedDetails details) {
               if (details.selectedText == null && _overlayEntry != null) {
                 _overlayEntry!.remove();
                 _overlayEntry = null;
@@ -165,7 +190,8 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
             },
             controller: _pdfViewerController,
             canShowScrollHead: _showScrollHead,
-          ),
+          )
+          // :,
 
           /// Unsuccessful search result acknowledgement
           Visibility(
@@ -183,7 +209,10 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
                         right: DRSpacing.x2l,
                         bottom: DRSpacing.m),
                     decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.surface,
+                      color: Theme
+                          .of(context)
+                          .colorScheme
+                          .surface,
                       borderRadius: BorderRadius.all(
                         Radius.circular(DRSpacing.x2l),
                       ),
@@ -282,13 +311,16 @@ class SearchToolbarState extends State<SearchToolbar> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
+
         /// Search input field
         Flexible(
           child: Padding(
             padding: EdgeInsets.only(left: DRSpacing.m, right: DRSpacing.m),
             child: TextFormField(
-              // TOdo : use existing styles
-              style: TextStyle(fontSize: 16),
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .bodyLarge,
               enableInteractiveSelection: false,
               focusNode: focusNode,
               keyboardType: TextInputType.text,
@@ -300,7 +332,8 @@ class SearchToolbarState extends State<SearchToolbar> {
                 // border: InputBorder.none,
                 hintText: AppLocalizations.of(context)!.rulebookSearchHintText,
                 hintStyle: TextStyle(
-                    color: Theme.of(context)
+                    color: Theme
+                        .of(context)
                         .colorScheme
                         .tertiary
                         .withOpacity(0.4)),
@@ -317,10 +350,17 @@ class SearchToolbarState extends State<SearchToolbar> {
                 // value = stripOutStartEndSpaces(value);
                 // debugPrint(
                 //     '>>>> ScreenRulebook > TextFormField > onFieldSubmitted > value stripped: "${value}"');
-
+                // TODO: strip the text input from spaces before or after
+                debugPrint(
+                    '>>>> ScreenRulebook > TextFormField > onFieldSubmitted > _editingController.text: "${_editingController
+                        .text}"');
+                debugPrint(
+                    '>>>> ScreenRulebook > TextFormField > onFieldSubmitted > _editingController.text stripped: "${stripOutStartEndSpaces(
+                        _editingController.text)}"');
                 if (kIsWeb) {
-                  _pdfTextSearchResult =
-                      widget.controller!.searchText(_editingController.text);
+                  _pdfTextSearchResult = widget.controller!.searchText(
+                      stripOutStartEndSpaces(_editingController.text)
+                          .toString());
                   if (_pdfTextSearchResult.totalInstanceCount == 0) {
                     widget.onTap?.call('noResultFound');
                   }
@@ -354,14 +394,17 @@ class SearchToolbarState extends State<SearchToolbar> {
                 child: IconButton(
                   icon: (_pdfTextSearchResult.currentInstanceIndex <= 1)
                       ? const Icon(
-                          CupertinoIcons.arrowtriangle_left,
-                          size: 24,
-                        )
+                    CupertinoIcons.arrowtriangle_left,
+                    size: 24,
+                  )
                       : Icon(
-                          CupertinoIcons.arrowtriangle_left_fill,
-                          size: 24,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
+                    CupertinoIcons.arrowtriangle_left_fill,
+                    size: 24,
+                    color: Theme
+                        .of(context)
+                        .colorScheme
+                        .primary,
+                  ),
                   onPressed: () {
                     setState(() {
                       if (_pdfTextSearchResult.currentInstanceIndex > 1) {
@@ -395,27 +438,29 @@ class SearchToolbarState extends State<SearchToolbar> {
                 color: Colors.transparent,
                 child: IconButton(
                   icon: (_pdfTextSearchResult.currentInstanceIndex ==
-                              _pdfTextSearchResult.totalInstanceCount &&
-                          _pdfTextSearchResult.currentInstanceIndex != 0 &&
-                          _pdfTextSearchResult.totalInstanceCount != 0 &&
-                          _pdfTextSearchResult.isSearchCompleted)
+                      _pdfTextSearchResult.totalInstanceCount &&
+                      _pdfTextSearchResult.currentInstanceIndex != 0 &&
+                      _pdfTextSearchResult.totalInstanceCount != 0 &&
+                      _pdfTextSearchResult.isSearchCompleted)
                       ? const Icon(
-                          CupertinoIcons.arrowtriangle_right,
-                          size: 24,
-                        )
+                    CupertinoIcons.arrowtriangle_right,
+                    size: 24,
+                  )
                       : Icon(
-                          CupertinoIcons.arrowtriangle_right_fill,
-                          size: 24,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
+                    CupertinoIcons.arrowtriangle_right_fill,
+                    size: 24,
+                    color: Theme
+                        .of(context)
+                        .colorScheme
+                        .primary,
+                  ),
                   onPressed: () {
                     setState(() {
                       if (_pdfTextSearchResult.currentInstanceIndex ==
-                              _pdfTextSearchResult.totalInstanceCount &&
+                          _pdfTextSearchResult.totalInstanceCount &&
                           _pdfTextSearchResult.currentInstanceIndex != 0 &&
                           _pdfTextSearchResult.totalInstanceCount != 0 &&
-                          _pdfTextSearchResult.isSearchCompleted) {
-                      } else {
+                          _pdfTextSearchResult.isSearchCompleted) {} else {
                         widget.controller!.clearSelection();
                         _pdfTextSearchResult.nextInstance();
                       }
@@ -434,14 +479,17 @@ class SearchToolbarState extends State<SearchToolbar> {
         /// Progress indicator
         Visibility(
           visible:
-              !_pdfTextSearchResult.isSearchCompleted && _isSearchInitiated,
+          !_pdfTextSearchResult.isSearchCompleted && _isSearchInitiated,
           child: Padding(
             padding: EdgeInsets.only(right: DRSpacing.m),
             child: SizedBox(
               width: 24,
               height: 24,
               child: CircularProgressIndicator(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme
+                    .of(context)
+                    .colorScheme
+                    .primary,
               ),
             ),
           ),
@@ -457,7 +505,10 @@ class SearchToolbarState extends State<SearchToolbar> {
               icon: Icon(
                 CupertinoIcons.clear_circled_solid,
                 size: 24,
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme
+                    .of(context)
+                    .colorScheme
+                    .primary,
               ),
               onPressed: () {
                 setState(() {

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
-import '../models/globals.dart';
+import 'package:diving_rules_hybrid/models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
 import '../models/token_spacing.dart';
@@ -17,6 +17,17 @@ class ScreenQuiz extends StatefulWidget {
 }
 
 class _ScreenQuizState extends State<ScreenQuiz> {
+  @override
+  void initState() {
+    debugPrint(
+        '>>>> ScreenQuiz > initState in > currentPage: "${currentPage}"');
+    currentPage = 'quiz';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    debugPrint(
+        '>>>> ScreenQuiz > initState out > currentPage: "${currentPage}"');
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

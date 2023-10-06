@@ -17,6 +17,17 @@ class ScreenPenaltyList extends StatefulWidget {
 
 class _ScreenPenaltyListState extends State<ScreenPenaltyList> {
   @override
+  void initState() {
+    debugPrint(
+        '>>>> PenaltyList > initState in > currentPage: "${currentPage}"');
+    currentPage = 'penaties';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    debugPrint(
+        '>>>> PenaltyList > initState out > currentPage: "${currentPage}"');
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
