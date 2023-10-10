@@ -1,10 +1,10 @@
+import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
-import 'package:diving_rules_hybrid/models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
 import '../models/token_spacing.dart';
@@ -19,12 +19,11 @@ class ScreenQuiz extends StatefulWidget {
 class _ScreenQuizState extends State<ScreenQuiz> {
   @override
   void initState() {
-    debugPrint(
-        '>>>> ScreenQuiz > initState in > currentPage: "${currentPage}"');
+    // debugPrint('>>>> ScreenQuiz > initState in > currentPage: "${currentPage}"');
+    // Setup to check if the user is calling the search from within the rule book page
     currentPage = 'quiz';
     // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
-    debugPrint(
-        '>>>> ScreenQuiz > initState out > currentPage: "${currentPage}"');
+    // debugPrint('>>>> ScreenQuiz > initState out > currentPage: "${currentPage}"');
     super.initState();
   }
 
@@ -40,7 +39,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
         padding: EdgeInsets.all(DRSpacing.l),
         child: Column(
           children: [
-            // Quiz Title
+            /// Quiz Title
             Align(
               alignment: Alignment.center,
               child: RichText(
@@ -61,7 +60,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
 
             SizedBox(height: DRSpacing.s),
 
-            // Quiz description
+            /// Quiz description
             Align(
               alignment: Alignment.topLeft,
               child: Text(AppLocalizations.of(context)!.quizzIntroDescription,
@@ -78,7 +77,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
               height: DRSpacing.s,
             ),
 
-            // Number of questions selection
+            /// Number of questions selection
             Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -153,7 +152,7 @@ class _ScreenQuizState extends State<ScreenQuiz> {
               height: DRSpacing.xl,
             ),
 
-            // Start button
+            /// Start button
             ElevatedButton.icon(
               style: ElevatedButton.styleFrom(
                   foregroundColor: Theme.of(context).colorScheme.onPrimary,

@@ -36,6 +36,8 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
           actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
         ),
         body: SafeArea(
+
+            /// List of the questions in the quiz
             child: ListView.builder(
           itemCount: currentQuiz.questions.length,
           itemBuilder: (context, index) {

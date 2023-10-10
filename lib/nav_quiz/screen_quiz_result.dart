@@ -41,7 +41,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
               padding: EdgeInsets.all(DRSpacing.l),
               child: Column(
                 children: [
-                  // Quiz Question Title
+                  /// Quiz Question Title
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -61,7 +61,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.xl,
                   ),
 
-                  // Quiz text result description
+                  /// Quiz text result description
                   Align(
                     alignment: Alignment.centerLeft,
                     child: RichText(
@@ -80,8 +80,8 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.x6l,
                   ),
 
-                  // The Result of the Quiz
-                  // Result Badge
+                  /// The Result of the Quiz
+                  /// Result Badge
 
                   (currentQuizScore >= quizTotalQuestionNumber * 8)
                       ? Icon(
@@ -103,6 +103,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.s,
                   ),
 
+                  /// Quiz result values
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -128,7 +129,6 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                               (currentQuizScore >= quizTotalQuestionNumber * 8)
                                   ? AppLocalizations.of(context)!.passed
                                   : AppLocalizations.of(context)!.failed,
-                          //style: TextStyle(color: Theme.of(context).colorScheme.primary)
                         ),
                       ],
                     )),
@@ -159,10 +159,9 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.x6l,
                   ),
 
-                  // Quiz Result footer
+                  /// Quiz Result footer
 
-                  // Show correction
-                  // ElevatedButton.icon(
+                  /// Show correction
                   OutlinedButton.icon(
                     onPressed: () {
                       // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
@@ -187,7 +186,7 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     height: DRSpacing.xl,
                   ),
 
-                  // Restart New Quiz
+                  /// Restart New Quiz
                   ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                         foregroundColor:

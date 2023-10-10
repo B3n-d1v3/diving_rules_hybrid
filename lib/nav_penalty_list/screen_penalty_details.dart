@@ -59,17 +59,16 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               // left / right navigation in the penalty list to avoid going back to the main list
               // use example: https://www.youtube.com/watch?v=Kc-2MtZnfFo
 
-              // The Header + next / previous navigation
+              /// The Header + next / previous navigation
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  // Previous button
+                  /// Previous button
                   IconButton(
                       icon: (widget.index > 0)
                           ? Icon(CupertinoIcons.arrowtriangle_left_fill)
                           : Icon(CupertinoIcons.arrowtriangle_left),
-                      // To be localized
+                      // TODO: To be localized
                       tooltip: 'Previous',
                       color: (widget.index > 0)
                           ? Theme.of(context).colorScheme.primary
@@ -87,7 +86,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                         );
                       }),
 
-                  // Header
+                  /// Header
                   Expanded(
                     child: Align(
                       alignment: Alignment.center,
@@ -105,12 +104,12 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     ),
                   ),
 
-                  // Next Button
+                  /// Next Button
                   IconButton(
                     icon: (widget.index < penaltySummary.penalties.length - 1)
                         ? Icon(CupertinoIcons.arrowtriangle_right_fill)
                         : Icon(CupertinoIcons.arrowtriangle_right),
-                    // To be localized
+                    // Todo: To be localized
                     tooltip: 'Next',
                     color: (widget.index < penaltySummary.penalties.length - 1)
                         ? Theme.of(context).colorScheme.primary
@@ -132,7 +131,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 
               SizedBox(height: DRSpacing.s),
 
-              // Description Title
+              /// Description Title
               Align(
                 alignment: Alignment.centerLeft,
                 child: RichText(
@@ -147,7 +146,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 )),
               ),
 
-              // Description Content
+              /// Description Content
               Align(
                 alignment: Alignment.centerLeft,
                 child: PenaltyDescription(penaltyId: widget.index),
@@ -155,7 +154,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 
               SizedBox(height: DRSpacing.xs),
 
-              // Rules References
+              /// Rules References
               Align(
                 alignment: Alignment.centerRight,
                 child: DisplayRulesReferences(
@@ -171,7 +170,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 color: AppColor.drColorDeselectedLight,
               ),
 
-              // Penalty Sanction
+              /// Penalty Sanction
               // Penalty Title
               Align(
                 alignment: Alignment.centerLeft,
@@ -213,7 +212,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 color: AppColor.drColorDeselectedLight,
               ),
 
-              // Penalty ownership
+              /// Penalty ownership
               // Ownership Title
               Align(
                 alignment: Alignment.centerLeft,

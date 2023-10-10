@@ -50,7 +50,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
               padding: EdgeInsets.all(DRSpacing.l),
               child: Column(
                 children: [
-                  // Quiz Question Title
+                  /// Quiz Question Title
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -73,10 +73,11 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     )),
                   ),
 
-                  // The Penalty Question Body
+                  /// The Penalty Question Body
 
                   SizedBox(height: DRSpacing.s),
 
+                  /// Description
                   // Description Title
                   Align(
                     alignment: Alignment.centerLeft,
@@ -111,7 +112,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     color: AppColor.drColorDeselectedLight,
                   ),
 
-                  // Penalty Sanction
+                  /// Penalty Sanction
                   // Penalty Title
                   Align(
                     alignment: Alignment.centerLeft,
@@ -179,7 +180,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     color: AppColor.drColorDeselectedLight,
                   ),
 
-                  // Penalty ownership
+                  /// Penalty ownership
                   // Ownership Title
                   Align(
                     alignment: Alignment.centerLeft,
@@ -218,7 +219,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     ],
                   ),
 
-                  // The Footer
+                  /// The Footer
                   Divider(
                     height: DRSpacing.l,
                     thickness: .5,
@@ -250,7 +251,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
 
                             const Expanded(child: Text('')),
 
-                            // Next button
+                            /// Next button
                             // TODO Later: Identify where to update the obx observer to show/hide button
                             // was temporarily resolved with a snackbar message
                             ElevatedButton.icon(
@@ -326,7 +327,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                              // Correction Legend
+                              /// Correction Legend
                               // unselected
                               RichText(
                                   text: TextSpan(

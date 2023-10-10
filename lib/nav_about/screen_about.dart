@@ -27,12 +27,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
   @override
   void initState() {
-    debugPrint(
-        '>>>> ScreenAbout > initState in > currentPage: "${currentPage}"');
+    // debugPrint('>>>> ScreenAbout > initState in > currentPage: "${currentPage}"');
+    // Setup to check if the user is calling the search from within the rule book page
     currentPage = 'about';
     // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
-    debugPrint(
-        '>>>> ScreenAbout > initState out > currentPage: "${currentPage}"');
+    // debugPrint('>>>> ScreenAbout > initState out > currentPage: "${currentPage}"');
     super.initState();
     _initPackageInfo();
   }
@@ -53,7 +52,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                // Diving Board Photo
+                /// Diving Board Photo
                 SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Image.asset('assets/images/diving_board.png',
@@ -61,13 +60,13 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                 Padding(
                   padding: EdgeInsets.all(DRSpacing.l),
-                  // margin: const EdgeInsets.all(10),
                   child: Column(children: [
+                    /// Diving Rules Logo
                     DivingRulesLogo(small: false),
-                    // Image.asset('assets/images/diving_rules_22_logo_full.png', height: 180,),
 
                     SizedBox(height: DRSpacing.s),
 
+                    /// Version
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -76,6 +75,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         textAlign: TextAlign.start,
                       ),
                     ),
+
+                    /// World Aquatics Rules Reference version
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -89,7 +90,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    // Description
+                    /// App Description
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -107,6 +108,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
+                    /// World Aquatics link
                     // link to WA: https://www.worldaquatics.com/diving
                     OutlinedButton(
                         onPressed: () async {
@@ -135,7 +137,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    // License
+                    /// License
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -159,7 +161,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    // Thanks
+                    /// Thanks
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -182,7 +184,8 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     SizedBox(
                       height: DRSpacing.xl,
                     ),
-                    // Share Links
+
+                    /// Share
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -196,7 +199,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.m,
                     ),
 
-                    // QR Code
+                    /// QR Code
                     GestureDetector(
                       onTap: () async {
                         Uri appUrl = Uri.parse("http://bit.ly/GetDivingRules");
@@ -219,7 +222,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
                     SizedBox(width: DRSpacing.xl),
 
-                    // Share Button
+                    /// Share Button
                     OutlinedButton.icon(
                       onPressed: () {
                         Share.share(
@@ -244,7 +247,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    // Contact Links
+                    /// Contacts
                     Column(children: [
                       Align(
                         alignment: Alignment.topLeft,
