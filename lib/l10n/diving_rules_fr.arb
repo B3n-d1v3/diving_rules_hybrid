@@ -550,10 +550,20 @@
           "description": "Rulebook - Search - previous button tooltip text description.",
           "type": "text"
       },
-              "languageSelection": "Langue",
-              "@languageSelection": {
-                  "description": "Top header bar language selection icon tooltip.",
-                  "type": "text"
-              }
+      "languageSelection": "Langue",
+      "@languageSelection": {
+          "description": "Top header bar language selection icon tooltip.",
+          "type": "text"
+      },
+      "previous": "Précédente",
+      "@previous": {
+         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+         "type": "text"
+      },
+      "next": "Suivante",
+      "@next": {
+         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+         "type": "text"
+      }
 
 }

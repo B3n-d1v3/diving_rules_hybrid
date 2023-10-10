@@ -68,8 +68,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                       icon: (widget.index > 0)
                           ? Icon(CupertinoIcons.arrowtriangle_left_fill)
                           : Icon(CupertinoIcons.arrowtriangle_left),
-                      // TODO: To be localized
-                      tooltip: 'Previous',
+                      tooltip: AppLocalizations.of(context)!.previous,
                       color: (widget.index > 0)
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary,
@@ -109,8 +108,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     icon: (widget.index < penaltySummary.penalties.length - 1)
                         ? Icon(CupertinoIcons.arrowtriangle_right_fill)
                         : Icon(CupertinoIcons.arrowtriangle_right),
-                    // Todo: To be localized
-                    tooltip: 'Next',
+                    tooltip: AppLocalizations.of(context)!.next,
                     color: (widget.index < penaltySummary.penalties.length - 1)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,

@@ -519,41 +519,51 @@
         "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
         "type": "text"
     },
-         "rulebookSearch": "Ricerca",
-         "@rulebookSearch": {
-             "description": "Rulebook - Search - Search button.",
-             "type": "text"
-         },
+     "rulebookSearch": "Ricerca",
+     "@rulebookSearch": {
+         "description": "Rulebook - Search - Search button.",
+         "type": "text"
+     },
 
-          "rulebookSearchNoResult": "nessun risultato trovato",
-          "@rulebookSearchNoResult": {
-              "description": "Rulebook - Search - message when no result has been found.",
-              "type": "text"
-          },
-         "rulebookSearchHintText": "Ricerca...",
-         "@rulebookSearchHintText": {
-             "description": "Rulebook - Search - Hit text in the input field.",
-             "type": "text"
-         },
-          "rulebookSearchPrevious": "Precedente",
-          "@rulebookSearchPrevious": {
-              "description": "Rulebook - Search - previous button tooltip text description.",
-              "type": "text"
-          },
-            "rulebookSearchNext": "Prossimo",
-            "@rulebookSearchNext": {
-                "description": "Rulebook - Search - previous button tooltip text description.",
-                "type": "text"
-          },
-          "rulebookSearchCancel": "Annulla ricerca",
-          "@rulebookSearchCancel": {
-              "description": "Rulebook - Search - previous button tooltip text description.",
-              "type": "text"
-          },
-          "languageSelection": "lingua",
-          "@languageSelection": {
-              "description": "Top header bar language selection icon tooltip.",
-              "type": "text"
-          }
+      "rulebookSearchNoResult": "nessun risultato trovato",
+      "@rulebookSearchNoResult": {
+          "description": "Rulebook - Search - message when no result has been found.",
+          "type": "text"
+      },
+     "rulebookSearchHintText": "Ricerca...",
+     "@rulebookSearchHintText": {
+         "description": "Rulebook - Search - Hit text in the input field.",
+         "type": "text"
+     },
+      "rulebookSearchPrevious": "Precedente",
+      "@rulebookSearchPrevious": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+        "rulebookSearchNext": "Prossimo",
+        "@rulebookSearchNext": {
+            "description": "Rulebook - Search - previous button tooltip text description.",
+            "type": "text"
+      },
+      "rulebookSearchCancel": "Annulla ricerca",
+      "@rulebookSearchCancel": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+      "languageSelection": "lingua",
+      "@languageSelection": {
+          "description": "Top header bar language selection icon tooltip.",
+          "type": "text"
+      },
+    "previous": "Precedente",
+    "@previous": {
+       "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+       "type": "text"
+    },
+    "next": "Successiva",
+    "@next": {
+       "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+       "type": "text"
+    }
 
 }
