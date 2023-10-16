@@ -1,0 +1,33 @@
+name: Propose a new localization
+description: Propose your help to add a new language into the Driving Rules mobile app.
+title: "[i18n]: Propose new language"
+labels: ["🏳️ localization"]
+assignees: 
+  - B3n-d1v3
+body:
+ - type: input
+    id: name
+    attributes:
+      label: Your name
+      description: so that you can get contacted and support the localization effort
+      placeholder: First name LAST NAME
+    validations:
+      required: true
+
+     - type: input
+    id: email
+    attributes:
+      label: Your e-mail
+      description: 
+      placeholder: firstname.lastname@email.com
+    validations:
+      required: true
+
+     - type: input
+    id: language
+    attributes:
+      label: The Language you propose
+      description: describe the language you propose usint the following language-region 2 letter code description (https://www.loc.gov/standards/iso639-2/php/code_list.php )
+      placeholder: fr
+    validations:
+      required: true
