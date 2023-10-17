@@ -34,11 +34,11 @@ body:
         required: true
         
   - type: input
-      id: url
-      attributes:
-          label: Link to the reference rulebook
-          description: provide url to access the document
-          placeholder: 
-      validations:
-          required: false
+    id: url
+    attributes:
+        label: Link to the reference rulebook
+        description: provide url to access the document
+        placeholder: 
+    validations:
+        required: false
   
