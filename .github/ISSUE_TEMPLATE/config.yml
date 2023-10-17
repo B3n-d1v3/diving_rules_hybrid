@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Propose New Language
+    url: https://github.com/B3n-d1v3/diving_rules_hybrid/blob/main/.github/ISSUE_TEMPLATE/propose_localization_template.yml
+    about: If you want to help and add a new language the the Diving Rules app.
+  - name: Bug Report
+    url: https://github.com/B3n-d1v3/diving_rules_hybrid/blob/main/.github/ISSUE_TEMPLATE/bug_report_template.yml
+    about: Please report here any bugs you have found when using the app.
