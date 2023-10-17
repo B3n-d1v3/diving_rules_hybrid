@@ -1,7 +1,8 @@
-name: Propose a new localization
+name: 🏳️ Propose a new localization
 description: Propose your help to add a new language into the Driving Rules mobile app.
 title: "[i18n]: Propose new language"
 labels: ["🏳️ localization"]
+projects: ["B3n-d1v3/2"]
 assignees: 
   - B3n-d1v3
 body:
