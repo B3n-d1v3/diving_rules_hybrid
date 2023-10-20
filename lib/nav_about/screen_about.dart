@@ -247,12 +247,12 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    /// Contacts
+                    /// Feedback Contacts
                     Column(children: [
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          AppLocalizations.of(context)!.aboutContactTitle,
+                          AppLocalizations.of(context)!.aboutFeedbackTitle,
                           style: Theme.of(context).textTheme.titleLarge,
                           //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                           //padding: const EdgeInsets.all(50),
@@ -267,27 +267,40 @@ class _ScreenAboutState extends State<ScreenAbout> {
                                 Theme.of(context).colorScheme.onPrimary,
                             backgroundColor:
                                 Theme.of(context).colorScheme.primary),
+                        // Link to the github issues page
                         onPressed: () async {
-                          String email =
-                              Uri.encodeComponent("BenDivingJudge@gmail.com");
-                          String subject =
-                              Uri.encodeComponent("Diving Rules 22 - Feedback");
-                          String body = Uri.encodeComponent(
-                              "Please provide your feedback here.");
-                          Uri mail = Uri.parse(
-                              "mailto:$email?subject=$subject&body=$body");
-                          if (await launchUrl(mail)) {
-                            //email app opened
+                          Uri waUrl = Uri.parse(
+                              "https://github.com/B3n-d1v3/diving_rules_hybrid/discussions/categories/general");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
                           } else {
-                            //email app is not opened
+                            //browsing app did not opened
                           }
                         },
+                        // mail link
+                        // onPressed: () async {
+                        //   String email =
+                        //       Uri.encodeComponent("BenDivingJudge@gmail.com");
+                        //   String subject =
+                        //       Uri.encodeComponent("Diving Rules 22 - Feedback");
+                        //   String body = Uri.encodeComponent(
+                        //       "Please provide your feedback here.");
+                        //   Uri mail = Uri.parse(
+                        //       "mailto:$email?subject=$subject&body=$body");
+                        //   if (await launchUrl(mail)) {
+                        //     //email app opened
+                        //   } else {
+                        //     //email app is not opened
+                        //   }
+                        // },
                         icon: const Icon(
-                          CupertinoIcons.mail_solid, // envelope_circle
+                          // CupertinoIcons.mail_solid, // envelope_circle
+                          CupertinoIcons.chat_bubble_text_fill,
                           size: 24.0,
                         ),
                         label: Text(
-                            AppLocalizations.of(context)!.aboutContactLink,
+                            AppLocalizations.of(context)!.aboutFeedbackLink,
                             style: const TextStyle(
                                 fontWeight: FontWeight.w900)), // <-- Text
                       ),

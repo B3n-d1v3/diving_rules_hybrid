@@ -434,7 +434,7 @@
         "description": "About - Description",
         "type": "text"
     },
-    "aboutContactLink": "Contactez-nous",
+    "aboutFeedbackLink": "Suggestions",
     "@aboutContactLink": {
         "description": "About - Contact Link",
         "type": "text"
@@ -474,7 +474,7 @@
         "description": "About - Help Title",
         "type": "text"
     },
-    "aboutContactTitle": "Contacts",
+    "aboutFeedbackTitle": "Dite m'en plus",
     "@aboutContactTitle": {
         "description": "About - Contact Title",
         "type": "text"
