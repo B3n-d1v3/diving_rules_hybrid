@@ -253,7 +253,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         alignment: Alignment.topLeft,
                         child: Text(
                           AppLocalizations.of(context)!.aboutFeedbackTitle,
-                          style: Theme.of(context).textTheme.titleLarge,
+                          style: Theme.of(context).textTheme.titleMedium,
                           //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                           //padding: const EdgeInsets.all(50),
                         ),

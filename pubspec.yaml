@@ -18,7 +18,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 
-version: 2.2.2+13
+version: 2.2.4+15
+# v2.2.3+14 <- updated version of the rules EN and optimized the pdf files and corrected the search close
+# v2.2.2+13 <- contact updated to feedback
 # v2.2.0  & 2.2.1 <- Rule book pdf management updates (search & copy)
 # v2.1.1 <- Correction of the rulebook Language rules
 # v2.1.0 <- Addition of the Mexican version of the rulebook

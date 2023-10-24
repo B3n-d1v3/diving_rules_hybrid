@@ -519,6 +519,11 @@
         "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
         "type": "text"
     },
+    "rulebookBookmarks": "Signet",
+    "@rulebookBookmarks": {
+        "description": "Rulebook - The bookmark button.",
+        "type": "text"
+    },
          "rulebookSearch": "Recherche",
          "@rulebookSearch": {
              "description": "Rulebook - Search - Search button.",

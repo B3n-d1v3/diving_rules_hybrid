@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import '../models/globals.dart';
@@ -18,6 +19,8 @@ class ScreenRulebook extends StatefulWidget {
 class _ScreenRulebookState extends State<ScreenRulebook> {
   final PdfViewerController _pdfViewerController = PdfViewerController();
   final GlobalKey<SearchToolbarState> _textSearchKey = GlobalKey();
+
+  // final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
   late bool _showToolbar;
   late bool _showScrollHead;
   bool _showSearchInSameScreen = false;
@@ -103,14 +106,13 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
   @override
   Widget build(BuildContext context) {
     Locale myLocale = Localizations.localeOf(context);
-    // String rulebookUrl = 'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
     // debugPrint('>>>>> ScreenRulebook > myLocale.languageCode: ${myLocale.languageCode} - myLocale.countryCode: ${myLocale.countryCode}');
 
     /// Select the rules file depending on the language selected by the user or set by the OS
     getRulebookUrl(Locale appLocale) {
       // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
-          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
+          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20230705.pdf';
       appLocale.languageCode == 'fr'
           ? tempUrl =
               'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
@@ -124,7 +126,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
               // : appLocale.languageCode == 'it'
               //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
               : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en.pdf';
+                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20230705.pdf';
       // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
       return tempUrl;
     }
@@ -171,6 +173,8 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           //     ?
           SfPdfViewer.asset(
             getRulebookUrl(myLocale),
+            // key: _pdfViewerKey,
+            enableDoubleTapZooming: false,
             enableTextSelection: true,
             onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
               if (details.selectedText == null && _overlayEntry != null) {
@@ -301,6 +305,27 @@ class SearchToolbarState extends State<SearchToolbar> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
+        /// Bookmarks
+        // Visibility(
+        //   visible: _editingController.text.isEmpty,
+        //   child: Material(
+        //     color: Colors.transparent,
+        //     child: IconButton(
+        //       icon: Icon(
+        //         CupertinoIcons.bookmark_fill,
+        //         size: 24,
+        //         color: Theme.of(context).colorScheme.primary,
+        //       ),
+        //       onPressed: () {
+        //         _pdfViewerKey.currentState?.openBookmarkView();
+        //       },
+        //       tooltip: widget.showTooltip
+        //           ? AppLocalizations.of(context)!.rulebookBookmarks
+        //           : null,
+        //     ),
+        //   ),
+        // ),
+
         /// Search input field
         Flexible(
           child: Padding(
@@ -500,7 +525,10 @@ class SearchToolbarState extends State<SearchToolbar> {
                   // search = false; // that did not work
                 });
                 // widget.onTap!.call('Clear Text');
-                widget.onTap!.call('Cancel Search');
+                // widget.onTap!.call('Cancel Search');
+                Get.offAllNamed(
+                  '/',
+                );
               },
               tooltip: widget.showTooltip
                   ? AppLocalizations.of(context)!.rulebookSearchCancel
