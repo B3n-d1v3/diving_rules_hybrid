@@ -220,7 +220,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    SizedBox(width: DRSpacing.xl),
+                    SizedBox(height: DRSpacing.xl),
 
                     /// Share Button
                     OutlinedButton.icon(
@@ -259,7 +259,7 @@ class _ScreenAboutState extends State<ScreenAbout> {
                         ),
                       ),
                       SizedBox(
-                        height: DRSpacing.s,
+                        height: DRSpacing.l,
                       ),
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(

@@ -20,7 +20,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
   final PdfViewerController _pdfViewerController = PdfViewerController();
   final GlobalKey<SearchToolbarState> _textSearchKey = GlobalKey();
 
-  // final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
+  final GlobalKey<SfPdfViewerState> _pdfViewerStateKey = GlobalKey();
   late bool _showToolbar;
   late bool _showScrollHead;
   bool _showSearchInSameScreen = false;
@@ -112,7 +112,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     getRulebookUrl(Locale appLocale) {
       // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
-          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20230705.pdf';
+          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240101.pdf';
       appLocale.languageCode == 'fr'
           ? tempUrl =
               'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
@@ -126,7 +126,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
               // : appLocale.languageCode == 'it'
               //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
               : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20230705.pdf';
+                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240101.pdf';
       // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
       return tempUrl;
     }
@@ -173,7 +173,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           //     ?
           SfPdfViewer.asset(
             getRulebookUrl(myLocale),
-            // key: _pdfViewerKey,
+            key: _pdfViewerStateKey,
             enableDoubleTapZooming: false,
             enableTextSelection: true,
             onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
@@ -317,7 +317,7 @@ class SearchToolbarState extends State<SearchToolbar> {
         //         color: Theme.of(context).colorScheme.primary,
         //       ),
         //       onPressed: () {
-        //         _pdfViewerKey.currentState?.openBookmarkView();
+        //         _pdfViewerStateKey.currentState!.openBookmarkView();
         //       },
         //       tooltip: widget.showTooltip
         //           ? AppLocalizations.of(context)!.rulebookBookmarks

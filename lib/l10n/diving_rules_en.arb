@@ -439,7 +439,7 @@
         "description": "About - Contact Link",
         "type": "text"
     },
-    "aboutRulesReference": "Rules Reference: 2022-2025",
+    "aboutRulesReference": "Rules Reference: 2022-2025 (1 Jan 2024 - v3)",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
