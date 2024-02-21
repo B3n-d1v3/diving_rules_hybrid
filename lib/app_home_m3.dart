@@ -12,16 +12,19 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
+import 'l10n/action_language_selector.dart';
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_quiz/screen_quiz.dart';
 import 'nav_rulebook/screen_rulebook.dart';
+import 'sub_views/action_search.dart';
+import 'theme/action_theme_selector.dart';
 // theme
 import 'theme/model_theme.dart';
-import 'theme/theme_selector.dart';
 
 const int extendedNavigationRailMinScreenWidth = 600;
-const int mobileUiMaxScreenWidth = 500;
+const int mobileUiMaxScreenWidth = 640;
+const int mobileHeaderMaxScreenWidth = 330;
 
 class DivingRulesMainScreen extends StatefulWidget {
   @override
@@ -96,13 +99,29 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
       return Scaffold(
           appBar: AppBar(
             title: (_selectedIndex == 0)
-                ? DivingRulesLogo(
+                ?
+                // Todo : Identify the right size to center le logo on larger screen sizes
+                // MediaQuery.of(context).size.width < mobileHeaderMaxScreenWidth // if size too small
+                // header will position the logo to the left
+                // ?
+                DivingRulesLogo(
                     small: true,
+                    leftAligned: true,
                   )
-                : Text(selectedItem.label),
-            actions: [ThemeSelector()],
+                // otherwise logo will be centered
+                // : DivingRulesLogo(
+                //     small: true,
+                //   )
+                : Text(
+                    selectedItem.label,
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+            centerTitle: true,
+            actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
+            scrolledUnderElevation: 0,
           ),
           bottomNavigationBar:
+              // Todo: add if the viewport is landscape or portrait to keep bottom nav on portrait
               MediaQuery.of(context).size.width < mobileUiMaxScreenWidth
                   ? BottomNavigationBar(
                       type: BottomNavigationBarType.fixed,
@@ -133,8 +152,6 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                       ),
                       child: IntrinsicHeight(
                         child: NavigationRail(
-                          extended: MediaQuery.of(context).size.width >=
-                              extendedNavigationRailMinScreenWidth,
                           destinations:
                               navigationItems.getNavigationRailDestinations(),
                           selectedIndex: _selectedIndex,
@@ -143,6 +160,19 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
                               _selectedIndex = value;
                             });
                           },
+                          labelType: NavigationRailLabelType.all,
+                          selectedIconTheme: IconThemeData(
+                            color: colorScheme.primary,
+                          ),
+                          unselectedIconTheme:
+                              IconThemeData(color: colorScheme.tertiary),
+                          selectedLabelTextStyle: TextStyle(
+                            color: colorScheme.primary,
+                          ),
+                          unselectedLabelTextStyle: TextStyle(
+                            color: colorScheme.tertiary,
+                          ),
+                          useIndicator: false,
                         ),
                       ),
                     ),
@@ -170,7 +200,7 @@ class _NavigationItems {
           activeIcon: Icon(CupertinoIcons.book_fill),
           icon: Icon(CupertinoIcons.book),
           label: AppLocalizations.of(context)!.navigationMenuRules,
-          // TODO: Change the rules header to use the diving rules correct font
+          // TODO - Later: Change the rules header to use the diving rules correct font
           screen: ScreenRulebook()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.square_list_fill),

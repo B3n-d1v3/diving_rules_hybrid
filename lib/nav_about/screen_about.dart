@@ -1,11 +1,13 @@
+import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-// import 'package:share_plus/share_plus.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../models/token_spacing.dart';
 import '../sub_views/diving_rules_logo.dart';
 
 class ScreenAbout extends StatefulWidget {
@@ -25,6 +27,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
 
   @override
   void initState() {
+    // debugPrint('>>>> ScreenAbout > initState in > currentPage: "${currentPage}"');
+    // Setup to check if the user is calling the search from within the rule book page
+    currentPage = 'about';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    // debugPrint('>>>> ScreenAbout > initState out > currentPage: "${currentPage}"');
     super.initState();
     _initPackageInfo();
   }
@@ -45,35 +52,31 @@ class _ScreenAboutState extends State<ScreenAbout> {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                // Diving Board Photo
+                /// Diving Board Photo
                 SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Image.asset('assets/images/diving_board.png',
                         fit: BoxFit.fitWidth)),
 
                 Padding(
-                  padding: EdgeInsets.all(15),
-                  // margin: const EdgeInsets.all(10),
+                  padding: EdgeInsets.all(DRSpacing.l),
                   child: Column(children: [
+                    /// Diving Rules Logo
                     DivingRulesLogo(small: false),
-                    // Image.asset('assets/images/diving_rules_22_logo_full.png', height: 180,),
 
-                    const SizedBox(height: 8),
+                    SizedBox(height: DRSpacing.s),
 
+                    /// Version
                     Align(
                       alignment: Alignment.topLeft,
-                      child: Row(children: [
-                        Text(
-                          AppLocalizations.of(context)!.aboutVersion,
-                          style: Theme.of(context).textTheme.labelMedium,
-                          textAlign: TextAlign.start,
-                        ),
-                        Text(
-                          "v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                      ]),
+                      child: Text(
+                        "${AppLocalizations.of(context)!.aboutVersion}v${_packageInfo.version} (build ${_packageInfo.buildNumber})",
+                        style: Theme.of(context).textTheme.labelMedium,
+                        textAlign: TextAlign.start,
+                      ),
                     ),
+
+                    /// World Aquatics Rules Reference version
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -83,11 +86,11 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
-                    // Description
+                    /// App Description
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -101,18 +104,40 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       AppLocalizations.of(context)!.aboutDescription,
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
+                    SizedBox(
+                      height: DRSpacing.xl,
+                    ),
 
-                    const SizedBox(
-                      height: 20,
+                    /// World Aquatics link
+                    // link to WA: https://www.worldaquatics.com/diving
+                    OutlinedButton(
+                        onPressed: () async {
+                          Uri waUrl =
+                              Uri.parse("http://www.worldaquatics.com/diving");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
+                          } else {
+                            //browsing app did not opened
+                          }
+                        },
+                        child: Text(
+                          'World Aquatics',
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
+                        )),
+
+                    SizedBox(
+                      height: DRSpacing.m,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
-                    // License
+                    /// License
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -123,20 +148,20 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     ),
                     Text(
                       AppLocalizations.of(context)!.aboutLicense,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
-                    // Thanks
+                    /// Thanks
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -147,19 +172,20 @@ class _ScreenAboutState extends State<ScreenAbout> {
                     ),
                     Text(
                       AppLocalizations.of(context)!.aboutThanks,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
 
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: DRSpacing.x3l,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
-                    // Share Links
+
+                    /// Share
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -169,98 +195,117 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.m,
                     ),
 
-                    // QR Code
-                    SvgPicture.asset(
-                      "assets/images/diving_rules_22_qr_code.svg",
-                      colorFilter: ColorFilter.mode(
-                          Theme.of(context).colorScheme.primary,
-                          BlendMode.srcIn),
-                      width: 150,
+                    /// QR Code
+                    GestureDetector(
+                      onTap: () async {
+                        Uri appUrl = Uri.parse("http://bit.ly/GetDivingRules");
+                        if (await launchUrl(appUrl,
+                            mode: LaunchMode.externalApplication)) {
+                          //browsing app opened
+                        } else {
+                          //browsing app did not opened
+                        }
+                      },
+                      child: SvgPicture.asset(
+                        "assets/images/diving_rules_22_qr_code.svg",
+                        colorFilter: ColorFilter.mode(
+                            Theme.of(context).colorScheme.primary,
+                            BlendMode.srcIn),
+                        width: 150,
+                        height: 150,
+                      ),
                     ),
 
-                    const SizedBox(width: 20),
+                    SizedBox(height: DRSpacing.xl),
 
-                    ElevatedButton.icon(
+                    /// Share Button
+                    OutlinedButton.icon(
                       onPressed: () {
-                        // TODO: Create Native OS Share option => testing with share_plus
-                        //Share.share('I 😍 this app to learn the Diving Rules: http://bit.ly/DivingRulesApp', subject: 'diving rules');
+                        Share.share(
+                            'I 😍 this app to learn the Diving Rules: http://bit.ly/GetDivingRules',
+                            subject: 'diving rules app');
                       },
                       icon: const Icon(
                         CupertinoIcons.share,
                         size: 24.0,
                       ),
-                      label: Text(AppLocalizations.of(context)!.aboutShare),
+                      label: Text(AppLocalizations.of(context)!.aboutShare,
+                          style: const TextStyle(fontWeight: FontWeight.w900)),
                     ),
 
-                    const SizedBox(
-                      height: 30,
+                    SizedBox(
+                      height: DRSpacing.x3l,
                     ),
 
                     Divider(),
 
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: DRSpacing.xl,
                     ),
 
-                    // Contact Links
+                    /// Feedback Contacts
                     Column(children: [
                       Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          AppLocalizations.of(context)!.aboutContactTitle,
-                          style: Theme.of(context).textTheme.titleLarge,
+                          AppLocalizations.of(context)!.aboutFeedbackTitle,
+                          style: Theme.of(context).textTheme.titleMedium,
                           //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
                           //padding: const EdgeInsets.all(50),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: DRSpacing.l,
                       ),
                       ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                            foregroundColor:
+                                Theme.of(context).colorScheme.onPrimary,
+                            backgroundColor:
+                                Theme.of(context).colorScheme.primary),
+                        // Link to the github issues page
                         onPressed: () async {
-                          String email =
-                              Uri.encodeComponent("BenDivingJudge@gmail.com");
-                          String subject =
-                              Uri.encodeComponent("Diving Rules 22 - Feedback");
-                          String body = Uri.encodeComponent(
-                              "Please provide your feedback here.");
-                          print(subject); //output: Hello%20Flutter
-                          Uri mail = Uri.parse(
-                              "mailto:$email?subject=$subject&body=$body");
-                          if (await launchUrl(mail)) {
-                            //email app opened
+                          Uri waUrl = Uri.parse(
+                              "https://github.com/B3n-d1v3/diving_rules_hybrid/discussions/categories/general");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
                           } else {
-                            //email app is not opened
+                            //browsing app did not opened
                           }
                         },
+                        // mail link
+                        // onPressed: () async {
+                        //   String email =
+                        //       Uri.encodeComponent("BenDivingJudge@gmail.com");
+                        //   String subject =
+                        //       Uri.encodeComponent("Diving Rules 22 - Feedback");
+                        //   String body = Uri.encodeComponent(
+                        //       "Please provide your feedback here.");
+                        //   Uri mail = Uri.parse(
+                        //       "mailto:$email?subject=$subject&body=$body");
+                        //   if (await launchUrl(mail)) {
+                        //     //email app opened
+                        //   } else {
+                        //     //email app is not opened
+                        //   }
+                        // },
                         icon: const Icon(
-                          CupertinoIcons.mail_solid, // envelope_circle
+                          // CupertinoIcons.mail_solid, // envelope_circle
+                          CupertinoIcons.chat_bubble_text_fill,
                           size: 24.0,
                         ),
-                        label: Text(AppLocalizations.of(context)!
-                            .aboutContactLink), // <-- Text
+                        label: Text(
+                            AppLocalizations.of(context)!.aboutFeedbackLink,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w900)), // <-- Text
                       ),
                     ]),
 
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Align(
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                        AppLocalizations.of(context)!.aboutContactTitle,
-                        style: Theme.of(context).textTheme.titleLarge,
-                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2),
-                        //padding: const EdgeInsets.all(50),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
                     // TODO: Add a share header bar icon + share link
                     // shareText = "I 😍 this app to learn the Diving Rules"
                     // for apple: URL(string : "bit.ly/DivingRulesApp")

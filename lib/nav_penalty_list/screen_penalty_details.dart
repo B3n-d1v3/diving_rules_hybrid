@@ -1,13 +1,17 @@
-import 'package:diving_rules_hybrid/buttons/button_penalties.dart';
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../buttons/button_ownership.dart';
+import '../buttons/button_penalties.dart';
+import '../l10n/action_language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/sanction_model.dart';
+import '../models/token_spacing.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
 
 class PagePenaltyDescription extends StatefulWidget {
@@ -34,7 +38,11 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.penaltiesListTitle),
+        title: Text(
+          AppLocalizations.of(context)!.penaltiesListTitle,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+        actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
       ),
       //   // Retrieves the screen size
       //   width: MediaQuery.of(context).size.width,
@@ -45,24 +53,22 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
               child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(DRSpacing.l),
           child: Column(
             children: [
               // left / right navigation in the penalty list to avoid going back to the main list
               // use example: https://www.youtube.com/watch?v=Kc-2MtZnfFo
 
-              // The Header + next / previous navigation
+              /// The Header + next / previous navigation
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  // Previous button
+                  /// Previous button
                   IconButton(
                       icon: (widget.index > 0)
                           ? Icon(CupertinoIcons.arrowtriangle_left_fill)
                           : Icon(CupertinoIcons.arrowtriangle_left),
-                      // To be localized
-                      tooltip: 'Previous',
+                      tooltip: AppLocalizations.of(context)!.previous,
                       color: (widget.index > 0)
                           ? Theme.of(context).colorScheme.primary
                           : Theme.of(context).colorScheme.tertiary,
@@ -79,7 +85,7 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                         );
                       }),
 
-                  // Header
+                  /// Header
                   Expanded(
                     child: Align(
                       alignment: Alignment.center,
@@ -97,13 +103,12 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                     ),
                   ),
 
-                  // Next Button
+                  /// Next Button
                   IconButton(
                     icon: (widget.index < penaltySummary.penalties.length - 1)
                         ? Icon(CupertinoIcons.arrowtriangle_right_fill)
                         : Icon(CupertinoIcons.arrowtriangle_right),
-                    // To be localized
-                    tooltip: 'Next',
+                    tooltip: AppLocalizations.of(context)!.next,
                     color: (widget.index < penaltySummary.penalties.length - 1)
                         ? Theme.of(context).colorScheme.primary
                         : Theme.of(context).colorScheme.tertiary,
@@ -122,9 +127,9 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 ],
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.s),
 
-              // Description Title
+              /// Description Title
               Align(
                 alignment: Alignment.centerLeft,
                 child: RichText(
@@ -139,29 +144,31 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 )),
               ),
 
-              // Description Content
+              /// Description Content
               Align(
                 alignment: Alignment.centerLeft,
                 child: PenaltyDescription(penaltyId: widget.index),
               ),
-              SizedBox(height: 10),
 
-              // Rules References
+              SizedBox(height: DRSpacing.xs),
+
+              /// Rules References
               Align(
                 alignment: Alignment.centerRight,
                 child: DisplayRulesReferences(
                     rulesReferences:
                         penaltySummary.penalties[widget.index].rules),
               ),
-              const Divider(
-                height: 20,
+
+              Divider(
+                height: DRSpacing.l,
                 thickness: .5,
-                indent: 10,
-                endIndent: 10,
+                indent: DRSpacing.s,
+                endIndent: DRSpacing.s,
                 color: AppColor.drColorDeselectedLight,
               ),
 
-              // Penalty Sanction
+              /// Penalty Sanction
               // Penalty Title
               Align(
                 alignment: Alignment.centerLeft,
@@ -176,38 +183,35 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                   ],
                 )),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.xs),
 
-              // GridView to display the Penalty Sanctions
-              GridView.count(
-                crossAxisCount: 3,
-                primary: false,
-                padding: const EdgeInsets.all(1),
-                childAspectRatio: (1 / .8),
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 0,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                children: <Widget>[
-                  PenaltyButton(buttonType: 0, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 1, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 2, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 3, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 4, penaltyIndex: widget.index),
-                  PenaltyButton(buttonType: 5, penaltyIndex: widget.index),
+              Table(
+                defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                defaultColumnWidth: const FlexColumnWidth(1.0),
+                children: [
+                  TableRow(children: [
+                    PenaltyButton(buttonType: 0, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 2, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 3, penaltyIndex: widget.index),
+                  ]),
+                  TableRow(children: [
+                    PenaltyButton(buttonType: 1, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 4, penaltyIndex: widget.index),
+                    PenaltyButton(buttonType: 5, penaltyIndex: widget.index),
+                  ])
                 ],
               ),
 
-              const Divider(
-                height: 10,
+              Divider(
+                height: DRSpacing.s,
                 thickness: .5,
-                indent: 10,
-                endIndent: 10,
+                indent: DRSpacing.s,
+                endIndent: DRSpacing.s,
                 color: AppColor.drColorDeselectedLight,
               ),
 
-              // Penalty ownership
-              // Penalty Title
+              /// Penalty ownership
+              // Ownership Title
               Align(
                 alignment: Alignment.centerLeft,
                 child: RichText(
@@ -222,21 +226,16 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
                 )),
               ),
 
-              SizedBox(height: 10),
+              SizedBox(height: DRSpacing.xs),
 
-              // GridView to display the Penalty Owners
-              GridView.count(
-                crossAxisCount: 2,
-                primary: false,
-                padding: const EdgeInsets.all(1),
-                childAspectRatio: (1 / .7),
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 0,
-                scrollDirection: Axis.vertical,
-                shrinkWrap: true,
-                children: <Widget>[
-                  OwnershipButton(buttonType: 0, penaltyIndex: widget.index),
-                  OwnershipButton(buttonType: 1, penaltyIndex: widget.index),
+              Table(
+                defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                defaultColumnWidth: const FlexColumnWidth(1.0),
+                children: [
+                  TableRow(children: [
+                    OwnershipButton(buttonType: 0, penaltyIndex: widget.index),
+                    OwnershipButton(buttonType: 1, penaltyIndex: widget.index),
+                  ]),
                 ],
               ),
             ],

@@ -1,12 +1,13 @@
+import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_question.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
-import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
+import '../models/token_spacing.dart';
 
 class ScreenQuiz extends StatefulWidget {
   ScreenQuiz({Key? key}) : super(key: key);
@@ -17,6 +18,16 @@ class ScreenQuiz extends StatefulWidget {
 
 class _ScreenQuizState extends State<ScreenQuiz> {
   @override
+  void initState() {
+    // debugPrint('>>>> ScreenQuiz > initState in > currentPage: "${currentPage}"');
+    // Setup to check if the user is calling the search from within the rule book page
+    currentPage = 'quiz';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    // debugPrint('>>>> ScreenQuiz > initState out > currentPage: "${currentPage}"');
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         // appBar: AppBar(title: Text(AppLocalizations.of(context)!.quizzTitle)),
@@ -25,55 +36,62 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 child: SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Padding(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(DRSpacing.l),
         child: Column(
           children: [
-            // Quiz Title
+            /// Quiz Title
             Align(
               alignment: Alignment.center,
               child: RichText(
-                  text: TextSpan(
-                style: Theme.of(context).textTheme.headlineMedium,
-                children: [
-                  TextSpan(
-                      text: AppLocalizations.of(context)!.quizzIntroTitle,
-                      style: TextStyle(
-                          color: Theme.of(context).colorScheme.primary)
-                      // style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                ],
-              )),
+                text: TextSpan(
+                  style: Theme.of(context).textTheme.headlineMedium,
+                  children: [
+                    TextSpan(
+                        text: AppLocalizations.of(context)!.quizzIntroTitle,
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.primary)
+                        // style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                  ],
+                ),
+                textAlign: TextAlign.center,
+              ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: DRSpacing.s),
 
-            // Quiz description
+            /// Quiz description
             Align(
               alignment: Alignment.topLeft,
               child: Text(AppLocalizations.of(context)!.quizzIntroDescription,
                   style: Theme.of(context).textTheme.bodyMedium),
             ),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: DRSpacing.xl,
             ),
 
             Divider(),
 
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: DRSpacing.s,
             ),
 
-            // Number of questions selection
+            /// Number of questions selection
             Align(
               alignment: Alignment.centerLeft,
+              child: Text(
+                AppLocalizations.of(context)!.quizzIntroQuestionNumber,
+                style: Theme.of(context).textTheme.titleMedium,
+                textAlign: TextAlign.left,
+              ),
+            ),
+
+            Align(
+              alignment: Alignment.bottomCenter,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(AppLocalizations.of(context)!.quizzIntroQuestionNumber,
-                      style: Theme.of(context).textTheme.bodyMedium),
-                  const SizedBox(
-                    width: 16,
-                  ),
                   IconButton(
                     iconSize: 34,
                     icon: (quizTotalQuestionNumber > 5)
@@ -94,19 +112,13 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                       );
                     },
                   ),
-                  const SizedBox(
-                    width: 8,
-                  ),
                   Container(
-                      width: 20,
+                      //width: 20,
                       child: Text(
-                        quizTotalQuestionNumber.toString(),
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        textAlign: TextAlign.center,
-                      )),
-                  const SizedBox(
-                    width: 8,
-                  ),
+                    quizTotalQuestionNumber.toString(),
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
+                  )),
                   IconButton(
                     iconSize: 34,
                     icon: (quizTotalQuestionNumber < 40)
@@ -131,17 +143,21 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: DRSpacing.s,
             ),
             Divider(),
 
-            const SizedBox(
-              height: 20,
+            SizedBox(
+              height: DRSpacing.xl,
             ),
 
-            // Start button
+            /// Start button
             ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  backgroundColor: Theme.of(context).colorScheme.primary),
+
               onPressed: () {
                 currentQuizQuestionIndex = 1;
                 newQuiz();
@@ -160,8 +176,9 @@ class _ScreenQuizState extends State<ScreenQuiz> {
                 CupertinoIcons.play_circle_fill, // envelope_circle
                 size: 24.0,
               ),
-              label: Text(AppLocalizations.of(context)!
-                  .quizzIntroStartButton), // <-- Text
+              label: Text(AppLocalizations.of(context)!.quizzIntroStartButton,
+                  style:
+                      const TextStyle(fontWeight: FontWeight.w900)), // <-- Text
             ),
           ],
         ),

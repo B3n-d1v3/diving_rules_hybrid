@@ -17,7 +17,16 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 0.1.0+5
+
+version: 2.3.0+15
+# v2.3.0+15 <- updated version of the rules EN to v3 (01/01/2024) inc bookmarks & optimized size, added about reference details
+# v2.2.3+14 <- updated version of the rules EN with Bookmarks and optimized the pdf files and corrected the search close
+# v2.2.2+13 <- contact updated to feedback
+# v2.2.0  & 2.2.1 <- Rule book pdf management updates (search & copy)
+# v2.1.1 <- Correction of the rulebook Language rules
+# v2.1.0 <- Addition of the Mexican version of the rulebook
+# v2.0.1+8 <- Launch for iOS replacement of initial app (20 Aug 2023)
+# v2.0.0+5 <- initial launch for Android (11 Aug 2023)
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
@@ -40,22 +49,22 @@ dependencies:
 
   # Package version number retrieval
   # package_info_plus: ^3.0.3
-  package_info_plus: ^3.0.3
+  package_info_plus: ^5.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   # cupertino_icons: ^1.0.2
-  cupertino_icons: ^1.0.5
+  cupertino_icons: ^1.0.6
   # shared_preferences: ^2.0.15
   shared_preferences: ^2.1.1
   # provider: ^6.0.5
-  provider: ^6.0.5
+  provider: ^6.1.1
   # syncfusion_flutter_pdfviewer: ^20.4.38
-  syncfusion_flutter_pdfviewer: ^21.2.5
-  get: ^4.6.5
-  flutter_svg: ^2.0.5
-  url_launcher: ^6.1.5
-  #share_plus: ^7.0.1
+  syncfusion_flutter_pdfviewer: ^24.2.7
+  get: ^4.6.6
+  flutter_svg: ^2.0.10+1
+  url_launcher: ^6.2.4
+  share_plus: ^7.2.2
 
 
 
@@ -71,7 +80,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -7,11 +7,15 @@ import 'package:get/get.dart';
 
 import '../buttons/button_ownership.dart';
 import '../buttons/button_penalties.dart';
+import '../l10n/action_language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
 import '../models/quiz_score.dart';
+import '../models/token_spacing.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizQuestion extends StatefulWidget {
@@ -32,17 +36,21 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.quizzQuestionHeader),
+        title: Text(
+          AppLocalizations.of(context)!.quizzQuestionHeader,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+        actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
       ),
       body: SafeArea(
         child: Scrollbar(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(DRSpacing.l),
               child: Column(
                 children: [
-                  // Quiz Question Title
+                  /// Quiz Question Title
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -65,10 +73,11 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     )),
                   ),
 
-                  // The Penalty Question Body
+                  /// The Penalty Question Body
 
-                  SizedBox(height: 10),
+                  SizedBox(height: DRSpacing.s),
 
+                  /// Description
                   // Description Title
                   Align(
                     alignment: Alignment.centerLeft,
@@ -93,17 +102,17 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                             .questions[currentQuizQuestionIndex - 1]),
                   ),
 
-                  SizedBox(height: 10),
+                  SizedBox(height: DRSpacing.s),
 
-                  const Divider(
-                    height: 20,
+                  Divider(
+                    height: DRSpacing.l,
                     thickness: .5,
-                    indent: 10,
-                    endIndent: 10,
+                    indent: DRSpacing.s,
+                    endIndent: DRSpacing.s,
                     color: AppColor.drColorDeselectedLight,
                   ),
 
-                  // Penalty Sanction
+                  /// Penalty Sanction
                   // Penalty Title
                   Align(
                     alignment: Alignment.centerLeft,
@@ -118,62 +127,61 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                       ],
                     )),
                   ),
-                  SizedBox(height: 10),
 
-                  // GridView to display the Penalty Sanctions
-                  GridView.count(
-                    crossAxisCount: 3,
-                    primary: false,
-                    padding: const EdgeInsets.all(1),
-                    childAspectRatio: (1 / .8),
-                    crossAxisSpacing: 0,
-                    mainAxisSpacing: 0,
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    children: <Widget>[
-                      PenaltyButton(
-                        buttonType: 0,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      PenaltyButton(
-                        buttonType: 2,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      PenaltyButton(
-                        buttonType: 3,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      PenaltyButton(
-                        buttonType: 1,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      PenaltyButton(
-                        buttonType: 4,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      PenaltyButton(
-                        buttonType: 5,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
+                  SizedBox(height: DRSpacing.xs),
+
+                  // Penalty Sanctions options
+                  Table(
+                    defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                    defaultColumnWidth: const FlexColumnWidth(1.0),
+                    children: [
+                      TableRow(children: [
+                        PenaltyButton(
+                          buttonType: 0,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                        PenaltyButton(
+                          buttonType: 2,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                        PenaltyButton(
+                          buttonType: 3,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                      ]),
+                      TableRow(children: [
+                        PenaltyButton(
+                          buttonType: 1,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                        PenaltyButton(
+                          buttonType: 4,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                        PenaltyButton(
+                          buttonType: 5,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                      ])
                     ],
                   ),
 
-                  const Divider(
-                    height: 10,
+                  Divider(
+                    height: DRSpacing.s,
                     thickness: .5,
-                    indent: 10,
-                    endIndent: 10,
+                    indent: DRSpacing.s,
+                    endIndent: DRSpacing.s,
                     color: AppColor.drColorDeselectedLight,
                   ),
 
-                  // Penalty ownership
-                  // Penalty Title
+                  /// Penalty ownership
+                  // Ownership Title
                   Align(
                     alignment: Alignment.centerLeft,
                     child: RichText(
@@ -189,41 +197,38 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                     )),
                   ),
 
-                  SizedBox(height: 10),
+                  SizedBox(height: DRSpacing.xs),
 
-                  // GridView to display the Penalty Owners
-                  GridView.count(
-                    crossAxisCount: 2,
-                    primary: false,
-                    padding: const EdgeInsets.all(1),
-                    childAspectRatio: (1 / .6),
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 0,
-                    scrollDirection: Axis.vertical,
-                    shrinkWrap: true,
-                    children: <Widget>[
-                      OwnershipButton(
-                        buttonType: 0,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
-                      OwnershipButton(
-                        buttonType: 1,
-                        penaltyIndex: widget.index,
-                        viewMode: (widget.index == -1) ? 1 : 2,
-                      ),
+                  // Ownership options
+                  Table(
+                    defaultVerticalAlignment: TableCellVerticalAlignment.top,
+                    defaultColumnWidth: const FlexColumnWidth(1.0),
+                    children: [
+                      TableRow(children: [
+                        OwnershipButton(
+                          buttonType: 0,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                        OwnershipButton(
+                          buttonType: 1,
+                          penaltyIndex: widget.index,
+                          viewMode: (widget.index == -1) ? 1 : 2,
+                        ),
+                      ]),
                     ],
                   ),
 
-                  // The Footer
-                  const SizedBox(
-                    height: 10,
+                  /// The Footer
+                  Divider(
+                    height: DRSpacing.l,
+                    thickness: .5,
+                    indent: DRSpacing.s,
+                    endIndent: DRSpacing.s,
+                    color: AppColor.drColorDeselectedLight,
                   ),
-                  Divider(),
 
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  SizedBox(height: DRSpacing.s),
 
                   (widget.index == -1)
                       // Case when the page shows the question
@@ -246,8 +251,16 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
 
                             const Expanded(child: Text('')),
 
-                            // Next button
+                            /// Next button
+                            // TODO Later: Identify where to update the obx observer to show/hide button
+                            // was temporarily resolved with a snackbar message
                             ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                  foregroundColor:
+                                      Theme.of(context).colorScheme.onPrimary,
+                                  backgroundColor:
+                                      Theme.of(context).colorScheme.primary),
+
                               onPressed:
                                   // beginning on pressed
                                   // Show next question only if (user selected one penalty) & (user selected at least one ownership)
@@ -302,8 +315,10 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                                 size: 24.0,
                               ),
 
-                              label:
-                                  Text(AppLocalizations.of(context)!.quizzNext),
+                              label: Text(
+                                  AppLocalizations.of(context)!.quizzNext,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.w900)),
                             ),
                             // ),   // <- Obx
                           ],
@@ -312,7 +327,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                       : Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                              // Correction Legend
+                              /// Correction Legend
                               // unselected
                               RichText(
                                   text: TextSpan(

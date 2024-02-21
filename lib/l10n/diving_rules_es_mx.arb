@@ -1,50 +1,50 @@
 {
-    "navigationMenuRules": "Rules",
+    "navigationMenuRules": "Reglas",
     "@navigationMenuRules": {
         "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n  \n\n Navigation - Rules Menu Item",
         "type": "text"
     },
-    "navigationMenuPenalties": "Penalties",
+    "navigationMenuPenalties": "Sanciones",
     "@navigationMenuPenalties": {
         "description": "Navigation - Penalties Menu Item",
         "type": "text"
     },
-    "navigationMenuQuizz": "Quiz",
+    "navigationMenuQuizz": "Cuestionario",
     "@navigationMenuQuizz": {
         "description": "Navigation - Quizz Menu Item",
         "type": "text"
     },
-    "navigationMenuSearch": "Search",
+    "navigationMenuSearch": "Buscar",
     "@navigationMenuSearch": {
         "description": "Navigation - Search Menu Item",
         "type": "text"
     },
-    "penaltiesListTitle": "Penalty Cases",
+    "penaltiesListTitle": "Lista de Penalidades",
     "@penaltiesListTitle": {
         "description": "Penalties List Page \n Penalties List Page - Title",
         "type": "text"
     },
-    "buttonJudge": "Judge",
+    "buttonJudge": "Juez",
     "@buttonJudge": {
         "description": "Penalty - Ownership Section Button Judge",
         "type": "text"
     },
-    "penaltyRule": "Rule",
+    "penaltyRule": "Regla",
     "@penaltyRule": {
         "description": "Penalty Detail Page \n Penalty - Rule Title",
         "type": "text"
     },
-    "penaltyDescription": "Description",
+    "penaltyDescription": "Descripción",
     "@penaltyDescription": {
         "description": "Penalty - Description Section Title",
         "type": "text"
     },
-    "penaltyPenalty": "Penalty",
+    "penaltyPenalty": "Penalidad",
     "@penaltyPenalty": {
         "description": "Penalty - Penalty Section Title",
         "type": "text"
     },
-    "penaltyOwnership": "By whom",
+    "penaltyOwnership": "Quien ?",
     "@penaltyOwnership": {
         "description": "Penalty - Ownership Section Title",
         "type": "text"
@@ -54,52 +54,52 @@
         "description": "Penalty Detail Page Buttons \n Penalty - Penalty Section Button 0 pts",
         "type": "text"
     },
-    "buttonMax2pts": "max 2 pts",
+    "buttonMax2pts": "máx. 2",
     "@buttonMax2pts": {
         "description": "Penalty - Penalty Section Button max 2 pts",
         "type": "text"
     },
-    "buttonMax4Halfpts": "max 4 ½ pts",
+    "buttonMax4Halfpts": "máx. 4 ½",
     "@buttonMax4Halfpts": {
         "description": "Penalty - Penalty Section Button max 4 ½ pts",
         "type": "text"
     },
-    "buttonMinus2pts": "-2 pts",
+    "buttonMinus2pts": "-2",
     "@buttonMinus2pts": {
         "description": "Penalty - Penalty Section Button -2 pts",
         "type": "text"
     },
-    "buttonMinusHalfTo2pts": "- ½ to 2 pts",
+    "buttonMinusHalfTo2pts": "- ½ a 2",
     "@buttonMinusHalfTo2pts": {
         "description": "Penalty - Penalty Section Button - ½ to 2 pts",
         "type": "text"
     },
-    "buttonJudgeOpinion": "judge opinion",
+    "buttonJudgeOpinion": "Según opinión",
     "@buttonJudgeOpinion": {
         "description": "Penalty - Penalty Section Button judge Opinion",
         "type": "text"
     },
-    "buttonReferee": "Referee",
+    "buttonReferee": "Árbitro",
     "@buttonReferee": {
         "description": "Penalty - Ownership Section Button Referee",
         "type": "text"
     },
-    "quizzIntroTitle": "Take A Quiz",
+    "quizzIntroTitle": "Practique sus conocimientos",
     "@quizzIntroTitle": {
         "description": "Quizz Selection Page\n Quizz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "In order to train yourself on the World Aquatics Diving Rules, with this test you will be able to review the Rule Book's Penalty Summary through questions on the various rules. \nThis test alone is not enough to pass the judge exam, as it is focussed on the penalty summary, but it helps learn the rules penalty assignment. \n\nSelect the number of questions you would like in your quiz (from 5 to 40).",
+    "quizzIntroDescription": "Para practicar en las Reglas de clavados de World Aquatics, con este test podrás repasar el Resumen de Penalizaciones del Libro de Reglas a través de preguntas sobre las distintas reglas. \nEste test por sí solo no es suficiente para aprobar el examen de juez, ya que se centra en el resumen de penalizaciones, pero ayuda a aprender la asignación de penalizaciones de las reglas. \n\n Seleccione la cantidad de preguntas que deseas en tu cuestionario (de 5 a 40).",
     "@quizzIntroDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
     },
-    "quizzIntroStartButton": "Start",
+    "quizzIntroStartButton": "Comenzar",
     "@quizzIntroStartButton": {
         "description": "Quizz - Intro Start Button",
         "type": "text"
     },
-    "quizzNext": "Next",
+    "quizzNext": "Siguiente",
     "@quizzNext": {
         "description": "Quizz - Question Page Next Button",
         "type": "text"
@@ -114,302 +114,302 @@
         "description": "App Name - Short App name 16 car",
         "type": "text"
     },
-    "quizzTitle": "Quiz",
+    "quizzTitle": "Cuestionario",
     "@quizzTitle": {
         "description": "Quizz Selection Page\n Quizz - Title",
         "type": "text"
     },
-    "quizzResultTitle": "Quiz Result",
+    "quizzResultTitle": "Resultado del cuestionario",
     "@quizzResultTitle": {
         "description": "Quizz - Result Title",
         "type": "text"
     },
-    "quizzResultDescription": "Here is the result of your answer to this Quiz: ",
+    "quizzResultDescription": "Aquí está su resultado del cuestionario: ",
     "@quizzResultDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
     },
-    "quizzResultStartButton": "New Quiz",
+    "quizzResultStartButton": "Nuevo",
     "@quizzResultStartButton": {
         "description": "Quizz - Result Start Button",
         "type": "text"
     },
-    "passed": "Passed",
+    "passed": "Exito",
     "@passed": {
         "description": "Quizz - Good Sticker",
         "type": "text"
     },
-    "failed": "Failed",
+    "failed": "Fallado",
     "@failed": {
         "description": "Quizz - Good Sticker",
         "type": "text"
     },
-    "searchTitle": "Search The Rules",
+    "searchTitle": "Buscar la regla",
     "@searchTitle": {
         "description": "Search Selection Page\n Search - Title",
         "type": "text"
     },
-    "ruleBookTitle": "Rule Book",
+    "ruleBookTitle": "Reglamento",
     "@ruleBookTitle": {
         "description": "Rule Book Selection Page\n Rule Book - Title",
         "type": "text"
     },
-    "quizzQuestion": "Question",
+    "quizzQuestion": "Pregunta",
     "@quizzQuestion": {
         "description": "Quizz - Question",
         "type": "text"
     },
-    "quizzResultReviewButton": "Errors",
+    "quizzResultReviewButton": "Errores",
     "@quizzResultReviewButton": {
         "description": "Quizz - Result Error Review Button",
         "type": "text"
     },
-    "quizzResultLegendUnused": "Unused",
+    "quizzResultLegendUnused": "Sin utilización",
     "@quizzResultLegendUnused": {
         "description": "Quizz - Result Result Review Legend - unused",
         "type": "text"
     },
-    "quizzResultLegendUserAnswer": "My answer",
+    "quizzResultLegendUserAnswer": "Mi respuesta",
     "@quizzResultLegendUserAnswer": {
         "description": "Quizz - Result Result Review Legend - unused",
         "type": "text"
     },
-    "quizzResultLegendRealAnswer": "Good answer",
+    "quizzResultLegendRealAnswer": "Respuesta correcta",
     "@quizzResultLegendRealAnswer": {
         "description": "Quizz - Result Result Review Legend - unused",
         "type": "text"
     },
-    "penalty0": "If the diver takes more than one minute, after a warning.",
+    "penalty0": "Si el clavadista tarda más de un minuto, después de una advertencia.",
     "@penalty0": {
         "description": "Penalty Descripion List\n Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
         "type": "text"
     },
-    "penalty1": "If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
+    "penalty1": "Si un clavadista realiza un doble rebote en el extremo del trampolín o un doble salto en el extremo de la plataforma antes del despegue.",
     "@penalty1": {
         "description": "Penalty 1 - D6.16 & D8.3.4 - If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
         "type": "text"
     },
-    "penalty2": "If the final step is not from one foot.",
+    "penalty2": "Si el paso final no es con un pie.",
     "@penalty2": {
         "description": "Penalty 2 - D6.17 & D8.3.3 - If the final step is not from one foot.",
         "type": "text"
     },
-    "penalty3": "If the take-off on the springboard is not from both feet simultaneously.",
+    "penalty3": "Si el despegue en el trampolín no es con los dos pies simultáneamente.",
     "@penalty3": {
         "description": "Penalty 3 - D6.18 & D8.4.3 - If the take-off on the springboard is not from both feet simultaneously.",
         "type": "text"
     },
-    "penalty4": "If a twist is greater or less than that announced by 90 degrees or more.",
+    "penalty4": "Si un giro es mayor o menor que el anunciado de 90 grados o más.",
     "@penalty4": {
         "description": "Penalty 4 - D6.20 & D8.6.6- If a twist is greater or less than that announced by 90 degrees or more.",
         "type": "text"
     },
-    "penalty5": "If a diver has performed a dive of a number other than that announced.",
+    "penalty5": "Si un clavadista ha realizado un clavado de un número distinto al anunciado.",
     "@penalty5": {
         "description": "Penalty 5 - D6.21 & D8.1.7 - If a diver has performed a dive of a number other than that announced.",
         "type": "text"
     },
-    "penalty6": "If the feet enter the water before the head or hands in a head first dive.",
+    "penalty6": "Si los pies entran en el agua antes que la cabeza o las manos en una entrada con la cabeza por delante.",
     "@penalty6": {
         "description": "Penalty 6 - D6.22.1 - If the feet enter the water before the head or hands in a head first dive.",
         "type": "text"
     },
-    "penalty7": "If the head or hands enter the water before the feet in a feet first dive.",
+    "penalty7": "Si la cabeza o las manos entran en el agua antes que los pies en una entrada con los pies por delante.",
     "@penalty7": {
         "description": "Penalty 7 - D6.22.2 - If the head or hands enter the water before the feet in a feet first dive.",
         "type": "text"
     },
-    "penalty8": "If assistance has been given to the diver after the starting signal.",
+    "penalty8": "Si se ha prestado ayuda al clavadista después de la señal de salida.",
     "@penalty8": {
         "description": "Penalty 8 - D6.24 - If assistance has been given to the diver after the starting signal.",
         "type": "text"
     },
-    "penalty9": "When a second attempt (a re-start) is unsuccessful.",
+    "penalty9": "Cuando un segundo intento (un reinicio) no tiene éxito.",
     "@penalty9": {
         "description": "Penalty 9 - D6.27 - When a second attempt\n(a re-start) is unsuccessful.",
         "type": "text"
     },
-    "penalty10": "If a diver refuses the execution of a dive.",
+    "penalty10": "Si un clavadista rechaza la ejecución de un Calvados.",
     "@penalty10": {
         "description": "Penalty 10 - D6.28 - If a diver refuses the execution of a dive.",
         "type": "text"
     },
-    "penalty11": "In synchronised diving if a diver, or both divers, perform a dive of a different number.",
+    "penalty11": "En clavado sincronizado, si un clavadista o ambos clavadistas realizan un clavado de un número diferente.",
     "@penalty11": {
         "description": "Penalty 11 - D9.2 & D9.8 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
         "type": "text"
     },
-    "penalty12": "In synchronised diving if all execution judges for one diver award zero (0) points.",
+    "penalty12": "En los clavados sincronizados, si todos los jueces de ejecución de un clavadista otorgan cero (0) puntos.",
     "@penalty12": {
         "description": "Penalty 12 - D9.8 - In synchronised diving if all execution judges for one diver award zero (0) points.",
         "type": "text"
     },
-    "penalty13": "In synchronised diving if all synchronisation judges award zero (0) points.",
+    "penalty13": "En clavado sincronizado si todos los jueces de sincronización otorgan cero (0) puntos.",
     "@penalty13": {
         "description": "Penalty 13 - D9.10 - In synchronised diving if all synchronisation judges award zero (0) points.",
         "type": "text"
     },
-    "penalty14": "In synchronised diving if a diver, or both divers, perform a dive of a different position.",
+    "penalty14": "En clavado sincronizado, si un clavadista o ambos clavadistas realizan un clavado de un  posición diferente.",
     "@penalty14": {
         "description": "Penalty 14 - D9.8 - If an execution judge considers that a dive of a different number has been performed.",
         "type": "text"
     },
-    "penalty15": "If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
+    "penalty15": "Si un clavadista da un paso y se detiene en la caminata o detiene el movimiento para un despegue de pie después de que las piernas hayan comenzado a presionar.",
     "@penalty15": {
         "description": "Penalty 15 - D6.25 - If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
         "type": "text"
     },
-    "penalty16": "If there is a re-start in a standing, running, or armstand dive.",
+    "penalty16": "Si hay un nuevo intento en un clavado de pie, corriendo o un clavado en équilibrio.",
     "@penalty16": {
         "description": "Penalty 16 - D6.26 - If there is a \nre-start in a standing, running, or armstand dive.",
         "type": "text"
     },
-    "penalty17": "In synchronised diving if there is a re-start by one or both divers.",
+    "penalty17": "En clavado sincronizado, si hay un nuevo intento  por parte de uno o ambos clavadistas.",
     "@penalty17": {
         "description": "Penalty 17 - D9.6 - In synchronised diving if there is a re-start by one or both divers.",
         "type": "text"
     },
-    "penalty18": "If a diver performs a dive in a position other than that announced.",
+    "penalty18": "Si un clavadista realiza un clavado en una posición distinta a la anunciada.",
     "@penalty18": {
         "description": "Penalty 18 - D6.19 & D8.1.4 - If a diver performs a dive in a position other than that announced.",
         "type": "text"
     },
-    "penalty19": "If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
+    "penalty19": "Si en un clavado, un clavadista esta muy cerca del trampolín o a la plataforma o toca el extremo del trampolín o de la plataforma con la cabeza.",
     "@penalty19": {
         "description": "Penalty 19 - D8.5.4 - If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
         "type": "text"
     },
-    "penalty20": "If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
+    "penalty20": "Si un clavadista tiene uno o ambos brazos por encima de la cabeza en una entrada con los pies  o por debajo de la cabeza en una entrada con la cabeza.",
     "@penalty20": {
         "description": "Penalty 20 - D6.22, D8.6.3 & D8.6.4 - If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
         "type": "text"
     },
-    "penalty21": "If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
+    "penalty21": "Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos un cuarto de salto mortal (90º) en los clavados con salto mortal.",
     "@penalty21": {
         "description": "Penalty 21 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
         "type": "text"
     },
-    "penalty22": "If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
+    "penalty22": "Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos medio salto mortal (180º) en clavados con más de 1 salto mortal.",
     "@penalty22": {
         "description": "Penalty 22 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
         "type": "text"
     },
-    "penalty23": "If a dive is not performed in a position as described in the rules.",
+    "penalty23": "Si un clavado no se realiza en una posición como la descrita en el reglamento.",
     "@penalty23": {
         "description": "Penalty 23 - D8.1.6 - If a dive is not performed in a position as described.",
         "type": "text"
     },
-    "penalty24": "If the starting position is not straight, head erect, with the arms straight in any position.",
+    "penalty24": "Si la posición de partida no es recta, cabeza erguida, con los brazos rectos en cualquier posición.",
     "@penalty24": {
         "description": "Penalty 24 - D8.2.3 - If the starting position is not straight, head erect, with the arms straight in any position.",
         "type": "text"
     },
-    "penalty25": "If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
+    "penalty25": "Si los pies abandonan el trampolín o la plataforma (crow-hop) antes del despegue en una entrada de pie.",
     "@penalty25": {
         "description": "Penalty 25 - D8.2.4.3 - If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
         "type": "text"
     },
-    "penalty26": "If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
+    "penalty26": "Si en un clavado con equilibrio, no se muestra un equilibrio estacionario y firme en la posición vertical recta.",
     "@penalty26": {
         "description": "Penalty 26 - D8.2.6.2 - If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
         "type": "text"
     },
-    "penalty27": "If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
+    "penalty27": "Si la caminata no es suave, estéticamente agradable en una dirección hacia adelante hasta el final del trampolín o plataforma.",
     "@penalty27": {
         "description": "Penalty 27 - D8.3.2 - If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
         "type": "text"
     },
-    "penalty28": "If the take-off is not bold, high, and confident.",
+    "penalty28": "Si el despegue no es audaz, alto y seguro.",
     "@penalty28": {
         "description": "Penalty 28 - D8.4.5 - If the take-off is not bold, high, and confident.",
         "type": "text"
     },
-    "penalty29": "If in a twist dive, the twisting is manifestly done from the springboard or platform.",
+    "penalty29": "Si se trata de un clavado con giro, el giro se realiza manifiestamente desde el trampolín o la plataforma.",
     "@penalty29": {
         "description": "Penalty 29 - D8.4.6 - If in a twist dive, the twisting is manifestly done from the springboard or platform.",
         "type": "text"
     },
-    "penalty30": "If the straight position is not shown as described in the rules.",
+    "penalty30": "Si la posición extendida no se muestra como se describen el reglamento.",
     "@penalty30": {
         "description": "Penalty 30 - D8.5.6 - If the straight position is not shown as described.",
         "type": "text"
     },
-    "penalty31": "If the pike position is not shown as described in the rules.",
+    "penalty31": "Si la posición en escuadra (B) no se muestra como se describe en el reglamento.",
     "@penalty31": {
         "description": "Penalty 31 - D8.5.9 - If the pike position is not shown as described.",
         "type": "text"
     },
-    "penalty32": "If in a pike dive with twist, the pike position is not clearly shown.",
+    "penalty32": "Si en un clavado en escuadra con giro, la posición de escuadra no se muestra claramente.",
     "@penalty32": {
         "description": "Penalty 32 - D8.5.10 - If in a pike dive with twist, the pike position is not clearly shown.",
         "type": "text"
     },
-    "penalty33": "If the tuck position is not shown as described in the rules.",
+    "penalty33": "Si la posición de bola (C) no se muestra como se describen el reglamento.",
     "@penalty33": {
         "description": "Penalty 33 - D8.5.12 - If the tuck position is not shown as described.",
         "type": "text"
     },
-    "penalty34": "If in a tuck dive with twist, the tuck position is not clearly shown.",
+    "penalty34": "Si se trata de un clavado con giro, la posición escuadra no se muestra claramente.",
     "@penalty34": {
         "description": "Penalty 34 - D8.5.13 - If in a tuck dive with twist, the tuck position is not clearly shown.",
         "type": "text"
     },
-    "penalty35": "If the free position is not shown as described in the rules.",
+    "penalty35": "Si la posición libre no se muestra como se describe en el reglamento.",
     "@penalty35": {
         "description": "Penalty 35 - D8.5.15 - If the free position is not shown as described.",
         "type": "text"
     },
-    "penalty36": "If the arms are not in the correct position in either the head first or feet first entry.",
+    "penalty36": "Si los brazos no están en la posición correcta tanto en la entrada de cabeza como de pies.",
     "@penalty36": {
         "description": "Penalty 36 - D8.6.5 - If the arms are not in the correct position in either the head first or feet first entry.",
         "type": "text"
     },
-    "penalty37": "In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
+    "penalty37": "En clavado sincronizado si no se muestra la similitud de la posición inicial, la aproximación, el despegue y la altura.",
     "@penalty37": {
         "description": "Penalty 37 - D9.11 - In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
         "type": "text"
     },
-    "penalty38": "In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+    "penalty38": "En clavado sincronizado si no se muestra la sincronización del movimiento durante el vuelo.",
     "@penalty38": {
         "description": "Penalty 38 - D9.11 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
         "type": "text"
     },
-    "penalty39": "In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+    "penalty39": "En el clavado sincronizado si no se muestra la similitud de los ángulos verticales de las entradas.",
     "@penalty39": {
         "description": "Penalty 39 - D9.11 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
         "type": "text"
     },
-    "penalty40": "In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+    "penalty40": "En el clavado sincronizado si no se muestra la distancia comparativa desde el trampolín o la plataforma de la entrada.",
     "@penalty40": {
         "description": "Penalty 40 - D9.11 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
         "type": "text"
     },
-    "penalty41": "In synchronised diving if coordinated timing of the entries is not shown.",
+    "penalty41": "En clavado sincronizado si no se muestra el tiempo coordinado de las entradas.",
     "@penalty41": {
         "description": "Penalty 41 - D9.11 - In synchronised diving if coordinated timing of the entries is not shown.",
         "type": "text"
     },
-    "penalty42": "If a dive is performed partially in a position other than that announced.",
+    "penalty42": "Si un clavado se realiza parcialmente en una posición distinta a la anunciada.",
     "@penalty42": {
         "description": "Penalty 42 - D8.1.5 - If a dive is performed partially in a position other than that announced.",
         "type": "text"
     },
-    "penalty43": "If in a dive, the diver dives to the side of the direct line of flight.",
+    "penalty43": "Si en un clavado, el clavadista se sumerge hacia el lado de la línea directa de vuelo.",
     "@penalty43": {
         "description": "Penalty 43 - D8.5.2 - If in a dive, the diver dives to the side of the direct line of flight.",
         "type": "text"
     },
-    "penalty44": "If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+    "penalty44": "Si en un clavado, un clavadista toca el extremo del trampolín o la plataforma con los pies o las manos.",
     "@penalty44": {
         "description": "Penalty 44 - D8.5.3 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
         "type": "text"
     },
-    "penalty45": "If the entry into the water is not vertical, or nearly so, or twisted with the body not straight, the feet not together, and the toes not pointed.",
+    "penalty45": "Si la entrada en el agua no es vertical, o casi, o se tuerce con el cuerpo no recto, los pies no están juntos y los dedos no son puntiagudos.",
     "@penalty45": {
         "description": "Penalty 45 - D8.6.2 - If the entry into the water is not vertical, or nearly so, or twisted with the body not straight, the feet not together, and the toes not pointed.",
         "type": "text"
     },
-    "penalty46": "In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
+    "penalty46": "En clavado sincronizado, si uno de los clavadistas entra en la superficie del agua antes de que el otro abandone el trampolín o la plataforma.",
     "@penalty46": {
         "description": "Penalty 46 - D9.5 - In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
         "type": "text"
@@ -419,72 +419,72 @@
         "description": "Quizz - Intro Question Number",
         "type": "text"
     },
-    "aboutTitle": "About",
+    "aboutTitle": "Sobre",
     "@aboutTitle": {
         "description": "About Selection Page\n About - Title",
         "type": "text"
     },
-    "aboutVersion": "Version: ",
+    "aboutVersion": "Versión: ",
     "@aboutVersion": {
         "description": "About - Version",
         "type": "text"
     },
-    "aboutDescription": "This application was created to allow users to learn and train on the diving rules from the World Aquatics diving rules. This application is not a World Aquatics official application, but uses the World Aquatics official rules or it’s official translations as a work tool.\n\n With this App you can:\n✔︎ Read through the rules.\n✔︎ Learn the penalty summary.\n✔︎ Train with a quiz on the penalties.",
+    "aboutDescription": "Esta aplicación ha sido creada para que puedas aprender y practicar las reglas de buceo de las normas de la FINA.\nEsta aplicación no es una aplicación oficial de la FINA, pero utiliza las reglas oficiales de la FINA o sus traducciones oficiales como herramienta de trabajo.\n\nCon esta aplicación puedes:\n✔︎ Recuperar el regelmento en su idioma.\n✔︎ Revisar el resumen de las sanciones.\n✔︎ Practica con un cuestionario de resumen de penas.\n✔︎ Elige revisar todo en inglés",
     "@aboutDescription": {
         "description": "About - Description",
         "type": "text"
     },
-    "aboutFeedbackLink": "Feedback",
+    "aboutFeedbackLink": "propuestas",
     "@aboutContactLink": {
         "description": "About - Contact Link",
         "type": "text"
     },
-    "aboutRulesReference": "Rules Reference: 2022-2025 (1 Jan 2024 - v3)",
+    "aboutRulesReference": "Normas de referencia : 2022-2025",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
     },
-    "aboutLicense": "The original version was created in 2021 by Benoît SUZANNE under the GPL 3.0 open source licence. This license is the GNU General Public License is a free copyleft license.",
+    "aboutLicense": "La versión original fue creada en 2021 por Benoît SUZANNE bajo la licencia de código abierto GPL 3.0. Esta licencia es la Licencia Pública General GNU, una licencia libre con copyleft.",
     "@aboutLicense": {
         "description": "About - License",
         "type": "text"
     },
-    "aboutThanks": "Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app and for the Spanish translation\n- Piero ITALIANI for the help in the Italian translation.",
+    "aboutThanks": "Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud y por la traducción al español.\n• Piero ITALIANI por su ayuda en la traducción al italiano.",
     "@aboutThanks": {
         "description": "About - Thanks",
         "type": "text"
     },
-    "aboutHelp": "Do not hesitate to contact us:\n- If you are willing to help for new translation updates\n- For any question, feedback and new features ideas",
+    "aboutHelp": "No dude en ponerse en contacto con nosotros:\n• Si está dispuesto a ayudar con las nuevas actualizaciones de las traducciones.\n• Para preguntas, comentarios e ideas sobre nuevas funciones.",
     "@aboutHelp": {
         "description": "About - Help",
         "type": "text"
     },
-    "aboutDescriptionTitle": "App Description",
+    "aboutDescriptionTitle": "Descarga de la aplicación",
     "@aboutDescriptionTitle": {
         "description": "About - Description Title",
         "type": "text"
     },
-    "aboutLicenseTitle": "License",
+    "aboutLicenseTitle": "Licencia",
     "@aboutLicenseTitle": {
         "description": "About - License Title",
         "type": "text"
     },
-    "aboutThanksTitle": "Thanks",
+    "aboutThanksTitle": "Gracias",
     "@aboutThanksTitle": {
         "description": "About - Help Title",
         "type": "text"
     },
-    "aboutFeedbackTitle": "Tell me more",
+    "aboutFeedbackTitle": "Dígame más",
     "@aboutContactTitle": {
         "description": "About - Contact Title",
         "type": "text"
     },
-    "aboutShareTitle": "Share",
+    "aboutShareTitle": "Compartir",
     "@aboutShareTitle": {
         "description": "About - Share Title",
         "type": "text"
     },
-    "aboutShare": "Share this App",
+    "aboutShare": "Compartir esta aplicación",
     "@aboutShare": {
         "description": "About - Share",
         "type": "text"
@@ -514,63 +514,61 @@
         "description": "Quiz - Question - warning snackbar message",
         "type": "text"
     },
-    "rulebookCopy": "Copy",
-    "@rulebookCopy": {
-        "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
-        "type": "text"
-    },
-    "rulebookBookmarks": "Bookmarks",
+   "rulebookCopy": "Copia",
+   "@rulebookCopy": {
+       "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
+       "type": "text"
+   },
+    "rulebookBookmarks": "Marcador",
     "@rulebookBookmarks": {
         "description": "Rulebook - The bookmark button.",
         "type": "text"
     },
-     "rulebookSearch": "Search",
-     "@rulebookSearch": {
-         "description": "Rulebook - Search - Search button.",
+    "rulebookSearch": "Buscar",
+    "@rulebookSearch": {
+        "description": "Rulebook - Search - Search button.",
+        "type": "text"
+    },
+
+     "rulebookSearchNoResult": "No se han encontrado resultados",
+     "@rulebookSearchNoResult": {
+         "description": "Rulebook - Search - message when no result has been found.",
          "type": "text"
      },
-          "rulebookSearchNoResult": "No result found",
-          "@rulebookSearchNoResult": {
-              "description": "Rulebook - Search - message when no result has been found.",
-              "type": "text"
-          },
-
-    "rulebookSearchHintText": "Search...",
+    "rulebookSearchHintText": "Buscar...",
     "@rulebookSearchHintText": {
         "description": "Rulebook - Search - Hit text in the input field.",
         "type": "text"
     },
-     "rulebookSearchPrevious": "Previous",
+     "rulebookSearchPrevious": "Previo",
      "@rulebookSearchPrevious": {
          "description": "Rulebook - Search - previous button tooltip text description.",
          "type": "text"
      },
-       "rulebookSearchNext": "Next",
+       "rulebookSearchNext": "Próximo",
        "@rulebookSearchNext": {
            "description": "Rulebook - Search - previous button tooltip text description.",
            "type": "text"
      },
-     "rulebookSearchCancel": "Cancel Search",
+     "rulebookSearchCancel": "Cancelar búsqueda",
      "@rulebookSearchCancel": {
          "description": "Rulebook - Search - previous button tooltip text description.",
          "type": "text"
      },
-     "languageSelection": "Language",
+     "languageSelection": "lengua",
      "@languageSelection": {
-       "description": "Top header bar language selection icon tooltip.",
-       "type": "text"
+         "description": "Top header bar language selection icon tooltip.",
+         "type": "text"
      },
-     "previous": "Previous",
-     "@previous": {
-        "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
-        "type": "text"
-     },
-     "next": "Next",
-     "@next": {
-        "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
-        "type": "text"
-     }
-
-
+  "previous": "Anterior",
+  "@previous": {
+     "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+     "type": "text"
+  },
+  "next": "Siguiente",
+  "@next": {
+     "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+     "type": "text"
+  }
 
 }

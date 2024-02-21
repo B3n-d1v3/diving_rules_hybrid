@@ -1,7 +1,7 @@
 {
     "navigationMenuRules": "Règles",
     "@navigationMenuRules": {
-        "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /    /  /  Navigation - Rules Menu Item",
+        "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n  \n\n Navigation - Rules Menu Item",
         "type": "text"
     },
     "navigationMenuPenalties": "Pénalités",
@@ -21,7 +21,7 @@
     },
     "penaltiesListTitle": "Cas de pénalités",
     "@penaltiesListTitle": {
-        "description": "Penalties List Page  /  Penalties List Page - Title",
+        "description": "Penalties List Page \n Penalties List Page - Title",
         "type": "text"
     },
     "buttonJudge": "Juge",
@@ -31,7 +31,7 @@
     },
     "penaltyRule": "Règle",
     "@penaltyRule": {
-        "description": "Penalty Detail Page  /  Penalty - Rule Title",
+        "description": "Penalty Detail Page \n Penalty - Rule Title",
         "type": "text"
     },
     "penaltyDescription": "Description",
@@ -51,7 +51,7 @@
     },
     "button0pts": "0 pts",
     "@button0pts": {
-        "description": "Penalty Detail Page Buttons  /  Penalty - Penalty Section Button 0 pts",
+        "description": "Penalty Detail Page Buttons \n Penalty - Penalty Section Button 0 pts",
         "type": "text"
     },
     "buttonMax2pts": "max 2 pts",
@@ -86,10 +86,10 @@
     },
     "quizzIntroTitle": "Testez vos connaissances",
     "@quizzIntroTitle": {
-        "description": "Quizz Selection Page /  Quizz - Intro Title",
+        "description": "Quizz Selection Page\n Quizz - Intro Title",
         "type": "text"
     },
-    "quizzIntroDescription": "Afin de vous entraîner sur les règles Fina du plongeon, avec ce test, vous serez en mesure de réviser les règles avec des questions sur les différentes règles.\n\nSélectionnez le nombre de questions que vous souhaitez dans votre quiz.",
+    "quizzIntroDescription": "Afin de vous entraîner sur les règles World Aquatics du plongeon, avec ce test, vous serez en mesure de réviser les règles du résumé des pénalités avec des questions sur les différentes règles.\nCe test n'est pas suffisant pour passer l'examen du juge, puisqu'il est concentré sur le résumé des pénalités, mais il aide a apprendre les sanctions.\n\nSélectionnez le nombre de questions que vous souhaitez dans votre quiz (entre 5 et 40).",
     "@quizzIntroDescription": {
         "description": "Quizz - Intro Description",
         "type": "text"
@@ -106,7 +106,7 @@
     },
     "cFBundleDisplayName": "diving rules 22-25",
     "@cFBundleDisplayName": {
-        "description": "Localizable.strings /   Diving Rules /  /   Created by Benoit SUZANNE on 22/03/2021. /  /  App Name - Full App name",
+        "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n\n App Name - Full App name",
         "type": "text"
     },
     "cFBundleName": "diving rules",
@@ -114,19 +114,9 @@
         "description": "App Name - Short App name 16 car",
         "type": "text"
     },
-    "quizzQuestionHeader": "Questions",
-        "@quizzQuestionHeader": {
-            "description": "Quizz Question Page /  Quizz - Questions - Top App Bar title",
-            "type": "text"
-    },
-    "quizzResultHeader": "Résultat",
-    "@quizzResultHeader": {
-            "description": "Quizz Result Page /  Quizz - Result - Top App Bar title",
-            "type": "text"
-    },
     "quizzTitle": "Questionnaire",
     "@quizzTitle": {
-        "description": "Quizz Selection Page /  Quizz - Title",
+        "description": "Quizz Selection Page\n Quizz - Title",
         "type": "text"
     },
     "quizzResultTitle": "Résultat du Quizz",
@@ -144,16 +134,6 @@
         "description": "Quizz - Result Start Button",
         "type": "text"
     },
-    "quizzCorrectionListHeader": "Corrections des Questions",
-    "@quizzCorrectionListHeader": {
-        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
-        "type": "text"
-    },
-    "quizzCorrectionDetailHeader": "Correction",
-    "@quizzCorrectionDetailHeader": {
-        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
-        "type": "text"
-    },
     "passed": "Réussi",
     "@passed": {
         "description": "Quizz - Good Sticker",
@@ -166,23 +146,18 @@
     },
     "searchTitle": "Rechercher les Règles",
     "@searchTitle": {
-        "description": "Search Selection Page /  Search - Title",
+        "description": "Search Selection Page\n Search - Title",
         "type": "text"
     },
     "ruleBookTitle": "Règlement",
     "@ruleBookTitle": {
-        "description": "Rule Book Selection Page /  Rule Book - Title",
+        "description": "Rule Book Selection Page\n Rule Book - Title",
         "type": "text"
     },
     "quizzQuestion": "Question",
     "@quizzQuestion": {
         "description": "Quizz - Question",
         "type": "text"
-    },
-    "quizzQuestionWarningNext": "Sélectionnez la pénalité et qui l'applique anvant de passer à la question suivante.",
-        "@quizzQuestionWarningNext": {
-            "description": "Quiz - Question - warning snackbar message",
-            "type": "text"
     },
     "quizzResultReviewButton": "Erreurs",
     "@quizzResultReviewButton": {
@@ -206,7 +181,7 @@
     },
     "penalty0": "Quand un plongeur, après l'avertissement, attend plus d'une minute pour exécuter un plongeon.",
     "@penalty0": {
-        "description": "Penalty Descripion List /  Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
+        "description": "Penalty Descripion List\n Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
         "type": "text"
     },
     "penalty1": "Quand, avant l'envol, un plongeur ou une plongeuse rebondit deux fois à l'extrémité du tremplin, ou réalise un double saut à l’extrémité de la plate-forme.",
@@ -251,7 +226,7 @@
     },
     "penalty9": "Quand un second essai (un nouveau départ) est raté.",
     "@penalty9": {
-        "description": "Penalty 9 - D6.27 - When a second attempt / (a re-start) is unsuccessful.",
+        "description": "Penalty 9 - D6.27 - When a second attempt\n(a re-start) is unsuccessful.",
         "type": "text"
     },
     "penalty10": "Quand un plongeur refuse d’exécuter un plongeon.",
@@ -286,7 +261,7 @@
     },
     "penalty16": "Quand un plongeur fait un second départ pour un plongeon avec élan, sans élan ou partant de l’équilibre.",
     "@penalty16": {
-        "description": "Penalty 16 - D6.26 - If there is a  / re-start in a standing, running, or armstand dive.",
+        "description": "Penalty 16 - D6.26 - If there is a \nre-start in a standing, running, or armstand dive.",
         "type": "text"
     },
     "penalty17": "En plongeon synchronisé, quand un second départ est exécuté par l'un ou les deux plongeurs.",
@@ -391,7 +366,7 @@
     },
     "penalty37": "En plongeon synchronisé, pour un manque de similitude de la position de départ, de l'élan, de l'envol et de la hauteur.",
     "@penalty37": {
-        "description": "Penalty 37 - D9.11 - In synchronised diving if / similarity of the starting position, approach, take-off and height is not shown.",
+        "description": "Penalty 37 - D9.11 - In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
         "type": "text"
     },
     "penalty38": "En plongeon synchronisé, pour un manque de coordination gestuelles pendant la phase aérienne.",
@@ -446,7 +421,7 @@
     },
     "aboutTitle": "A propos de",
     "@aboutTitle": {
-        "description": "About Selection Page /  About - Title",
+        "description": "About Selection Page\n About - Title",
         "type": "text"
     },
     "aboutVersion": "Version : ",
@@ -454,17 +429,17 @@
         "description": "About - Version",
         "type": "text"
     },
-    "aboutDescription": "Cette application a été créée pour vous permettre d'apprendre et de s'entraîner sur les règles de plongeon à partir du règlement de la FINA.\nCette application n'est pas une application officielle de la FINA, mais utilise le règlement officiel de la FINA ou ses traductions officielles comme outil de travail.\n\n Avec cette application, vous pouvez :\n✔︎ Retrouver le règlement dans votre langue.\n✔︎ Réviser le résumé des penalités.\n✔︎ Vous entrainer avec un quizz sur le résumé des pénalités.\n✔︎ Choisir de réviser l'ensemble en Anglais.",
+    "aboutDescription": "Cette application a été créée pour vous permettre d'apprendre et de s'entraîner sur les règles de plongeon à partir du règlement de la World Aquatics.\nCette application n'est pas une application officielle de la World Aquatics, mais utilise le règlement officiel de la World Aquatics ou ses traductions officielles comme outil de travail.\n\n Avec cette application, vous pouvez :\n✔︎ Retrouver le règlement dans votre langue.\n✔︎ Réviser le résumé des penalités.\n✔︎ Vous entrainer avec un quizz sur le résumé des pénalités.\n✔︎ Choisir de réviser l'ensemble en Anglais.",
     "@aboutDescription": {
         "description": "About - Description",
         "type": "text"
     },
-    "aboutContactLink": "Contactez-nous",
+    "aboutFeedbackLink": "Suggestions",
     "@aboutContactLink": {
         "description": "About - Contact Link",
         "type": "text"
     },
-    "aboutRulesReference": "Règlement de référence : 2022-2025",
+    "aboutRulesReference": "Règlement de référence : 2022-2025 (5 Juil 2023 - v2)",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
@@ -499,7 +474,7 @@
         "description": "About - Help Title",
         "type": "text"
     },
-    "aboutContactTitle": "Contacts",
+    "aboutFeedbackTitle": "Dite m'en plus",
     "@aboutContactTitle": {
         "description": "About - Contact Title",
         "type": "text"
@@ -513,5 +488,87 @@
     "@aboutShare": {
         "description": "About - Share",
         "type": "text"
-    }
+    },
+    "quizzQuestionHeader": "Questions",
+    "@quizzQuestionHeader": {
+        "description": "Quiz Question Page /  Quiz - Questions - Top App Bar title",
+        "type": "text"
+    },
+    "quizzResultHeader": "Résultat",
+    "@quizzResultHeader": {
+        "description": "Quiz Result Page /  Quiz - Result - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionListHeader": "Corrections",
+    "@quizzCorrectionListHeader": {
+        "description": "Quiz Correction List Page /  Quiz - Question List for correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzCorrectionDetailHeader": "Correction",
+    "@quizzCorrectionDetailHeader": {
+        "description": "Quiz Correction Detail Page /  Quiz - Question Detailed correction - Top App Bar title",
+        "type": "text"
+    },
+    "quizzQuestionWarningNext": "Sélectionnez la pénalité et qui l'applique anvant de passer à la question suivante.",
+    "@quizzQuestionWarningNext": {
+        "description": "Quiz - Question - warning snackbar message",
+        "type": "text"
+    },
+    "rulebookCopy": "Copie",
+    "@rulebookCopy": {
+        "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
+        "type": "text"
+    },
+    "rulebookBookmarks": "Signet",
+    "@rulebookBookmarks": {
+        "description": "Rulebook - The bookmark button.",
+        "type": "text"
+    },
+         "rulebookSearch": "Recherche",
+         "@rulebookSearch": {
+             "description": "Rulebook - Search - Search button.",
+             "type": "text"
+         },
+
+      "rulebookSearchNoResult": "Aucun résultat trouvé",
+      "@rulebookSearchNoResult": {
+          "description": "Rulebook - Search - message when no result has been found.",
+          "type": "text"
+      },
+     "rulebookSearchHintText": "Recherche...",
+     "@rulebookSearchHintText": {
+         "description": "Rulebook - Search - Hit text in the input field.",
+         "type": "text"
+     },
+      "rulebookSearchPrevious": "Précédent",
+      "@rulebookSearchPrevious": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+        "rulebookSearchNext": "Suivant",
+        "@rulebookSearchNext": {
+            "description": "Rulebook - Search - previous button tooltip text description.",
+            "type": "text"
+      },
+      "rulebookSearchCancel": "Annuler la recherche",
+      "@rulebookSearchCancel": {
+          "description": "Rulebook - Search - previous button tooltip text description.",
+          "type": "text"
+      },
+      "languageSelection": "Langue",
+      "@languageSelection": {
+          "description": "Top header bar language selection icon tooltip.",
+          "type": "text"
+      },
+      "previous": "Précédente",
+      "@previous": {
+         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+         "type": "text"
+      },
+      "next": "Suivante",
+      "@next": {
+         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+         "type": "text"
+      }
+
 }

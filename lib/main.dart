@@ -21,11 +21,23 @@ void main() {
   runApp(DivingRulesApp());
 }
 
-class DivingRulesApp extends StatelessWidget {
+class DivingRulesApp extends StatefulWidget {
   const DivingRulesApp({super.key});
 
   @override
+  State<DivingRulesApp> createState() => _DivingRulesAppState();
+}
+
+class _DivingRulesAppState extends State<DivingRulesApp> {
+  @override
   Widget build(BuildContext context) {
+    // TODO: Correct the dark/light mode changer
+    // TODO: Add Italian rulebook
+    // TODO: Add Mx language and rulebook
+
+    // TODO: Later / check why the titles do not follow the text size growth
+    // TODO: Later / change the about icon to the app logo
+
     return ChangeNotifierProvider(
       create: (_) => ModelTheme(),
       child: Consumer<ModelTheme>(
@@ -53,6 +65,7 @@ class DivingRulesApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
           ],
+          fallbackLocale: const Locale('en', 'US'),
         );
       }),
     );

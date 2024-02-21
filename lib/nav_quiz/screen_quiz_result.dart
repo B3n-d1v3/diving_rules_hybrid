@@ -6,9 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
+import '../l10n/action_language_selector.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';
 import '../models/quiz_model.dart';
+import '../models/token_spacing.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizResult extends StatefulWidget {
@@ -23,17 +27,21 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.quizzResultHeader),
+        title: Text(
+          AppLocalizations.of(context)!.quizzResultHeader,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+        actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
       ),
       body: SafeArea(
         child: Scrollbar(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(DRSpacing.l),
               child: Column(
                 children: [
-                  // Quiz Question Title
+                  /// Quiz Question Title
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -49,10 +57,11 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: DRSpacing.xl,
                   ),
 
+                  /// Quiz text result description
                   Align(
                     alignment: Alignment.centerLeft,
                     child: RichText(
@@ -67,17 +76,12 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: DRSpacing.x6l,
                   ),
 
-                  // The Result of the Quiz
-
-                  const SizedBox(
-                    height: 20,
-                  ),
-
-                  // Result Badge
+                  /// The Result of the Quiz
+                  /// Result Badge
 
                   (currentQuizScore >= quizTotalQuestionNumber * 8)
                       ? Icon(
@@ -95,10 +99,11 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                               : AppColor.drColorNegativeLight,
                         ),
 
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: DRSpacing.s,
                   ),
 
+                  /// Quiz result values
                   Align(
                     alignment: Alignment.center,
                     child: RichText(
@@ -124,14 +129,13 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                               (currentQuizScore >= quizTotalQuestionNumber * 8)
                                   ? AppLocalizations.of(context)!.passed
                                   : AppLocalizations.of(context)!.failed,
-                          //style: TextStyle(color: Theme.of(context).colorScheme.primary)
                         ),
                       ],
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 8,
+                  SizedBox(
+                    height: DRSpacing.s,
                   ),
 
                   Align(
@@ -151,56 +155,64 @@ class _ScreenQuizResultState extends State<ScreenQuizResult> {
                     )),
                   ),
 
-                  const SizedBox(
-                    height: 40,
+                  SizedBox(
+                    height: DRSpacing.x6l,
                   ),
 
-                  // Quiz Result footer
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // Show correction
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
+                  /// Quiz Result footer
 
-                          Get.to(
-                            () => ScreenCorrectionList(),
-                            transition: Transition.rightToLeftWithFade,
-                            curve: Curves.ease,
-                          );
-                        },
-                        icon: const Icon(
-                          CupertinoIcons.eye, // envelope_circle
-                          size: 24.0,
-                        ),
-                        label: Text(AppLocalizations.of(context)!
-                            .quizzResultReviewButton), // <-- Text
-                      ),
+                  /// Show correction
+                  OutlinedButton.icon(
+                    onPressed: () {
+                      // debugPrint('>>>>> Quiz Result Page > currentQuiz.questions: ${currentQuiz.questions}');
 
-                      // Restart New Quiz
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          // TODO: Save previous Quiz
-                          currentQuizQuestionIndex = 1;
-                          newQuiz();
-                          currentQuizScore = 0;
-                          buttonStatusReset();
+                      Get.to(
+                        () => ScreenCorrectionList(),
+                        transition: Transition.rightToLeftWithFade,
+                        curve: Curves.ease,
+                      );
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.eye, // envelope_circle
+                      size: 24.0,
+                    ),
+                    label: Text(
+                        AppLocalizations.of(context)!.quizzResultReviewButton,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900)), // <-- Text
+                  ),
 
-                          Get.off(
-                            () => ScreenQuizQuestion(),
-                            transition: Transition.rightToLeftWithFade,
-                            curve: Curves.ease,
-                          );
-                        },
-                        icon: const Icon(
-                          CupertinoIcons.play_circle_fill, // envelope_circle
-                          size: 24.0,
-                        ),
-                        label: Text(AppLocalizations.of(context)!
-                            .quizzResultStartButton), // <-- Text
-                      ),
-                    ],
+                  SizedBox(
+                    height: DRSpacing.xl,
+                  ),
+
+                  /// Restart New Quiz
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                        foregroundColor:
+                            Theme.of(context).colorScheme.onPrimary,
+                        backgroundColor: Theme.of(context).colorScheme.primary),
+                    onPressed: () {
+                      // TODO: Later / Save previous Quiz
+                      currentQuizQuestionIndex = 1;
+                      newQuiz();
+                      currentQuizScore = 0;
+                      buttonStatusReset();
+
+                      Get.off(
+                        () => ScreenQuizQuestion(),
+                        transition: Transition.rightToLeftWithFade,
+                        curve: Curves.ease,
+                      );
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.play_circle_fill, // envelope_circle
+                      size: 24.0,
+                    ),
+                    label: Text(
+                        AppLocalizations.of(context)!.quizzResultStartButton,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w900)), // <-- Text
                   ),
                 ],
               ),

@@ -17,6 +17,16 @@ class ScreenPenaltyList extends StatefulWidget {
 
 class _ScreenPenaltyListState extends State<ScreenPenaltyList> {
   @override
+  void initState() {
+    // debugPrint('>>>> PenaltyList > initState in > currentPage: "${currentPage}"');
+    // Setup to check if the user is calling the search from within the rule book page
+    currentPage = 'penalties';
+    // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
+    // debugPrint('>>>> PenaltyList > initState out > currentPage: "${currentPage}"');
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       // appBar: AppBar(
@@ -32,6 +42,7 @@ class _ScreenPenaltyListState extends State<ScreenPenaltyList> {
 class PenaltyListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    /// List of the penalties
     return ListView.builder(
       itemCount: penaltySummary.penalties.length,
       itemBuilder: (context, index) {

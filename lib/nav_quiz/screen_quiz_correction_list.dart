@@ -7,11 +7,13 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
 import '../buttons/quiz_correction_icon.dart';
+import '../l10n/action_language_selector.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/quiz_button_status.dart';
+import '../sub_views/action_search.dart';
+import '../theme/action_theme_selector.dart';
 
 //import 'package:get/get.dart';
-//import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_correction_details.dart';
 
 //import '../models/globals.dart';
 
@@ -27,9 +29,15 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(AppLocalizations.of(context)!.quizzCorrectionListHeader),
+          title: Text(
+            AppLocalizations.of(context)!.quizzCorrectionListHeader,
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          actions: [ActionSearch(), LanguageSelector(), ThemeSelector()],
         ),
         body: SafeArea(
+
+            /// List of the questions in the quiz
             child: ListView.builder(
           itemCount: currentQuiz.questions.length,
           itemBuilder: (context, index) {

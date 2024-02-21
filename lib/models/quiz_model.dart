@@ -52,7 +52,7 @@ newListOfQuestions() {
 
 // Log the answer provided by the user in currentQuiz Object
 logUserAnswer() {
-  // TODO: log previous quiz content to keep quiz history in a new object to create 'allQuizzes'
+  // TODO: Later / log previous quiz content to keep quiz history in a new object to create 'allQuizzes'
   var loggedPenalty = Penalty(
       id: currentQuiz.questions[currentQuizQuestionIndex - 1],
       description: '',

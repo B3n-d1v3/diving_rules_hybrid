@@ -6,6 +6,7 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 // import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../models/globals.dart';
+import '../models/token_spacing.dart';
 
 class PenaltyContentObsv extends StatefulWidget {
   int buttonType;
@@ -32,7 +33,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
       case 0: //    0 -> 0 pts
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.clear_circled,
                     size: 40,
                     // if viewed in Quiz  (not in penalty view)
@@ -47,9 +48,11 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 0
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+
                 Text(
                   AppLocalizations.of(context)!.button0pts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyZeroPts.value
@@ -61,32 +64,35 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
+
+                SizedBox(height: DRSpacing.xs),
                 // Show the divider
                 // if in quiz view and the user selected this penalty
                 // or if not in quiz view and this is the corresponding penalty sanction value
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyZeroPts.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            0))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus.penaltyZeroPts.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  0)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
       case 1: //    1 -> - 2 pts
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.gobackward_minus,
                     size: 40,
                     color: widget.viewMode != 0
@@ -98,9 +104,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 1
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Text(
                   AppLocalizations.of(context)!.buttonMinus2pts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMinusTwoPts.value
@@ -112,29 +119,29 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyMinusTwoPts.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            1))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus.penaltyMinusTwoPts.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  1)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
       case 2: //    2 -> Max 2 pts
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.lessthan_circle_fill,
                     size: 40,
                     color: widget.viewMode != 0
@@ -146,9 +153,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 2
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Text(
                   AppLocalizations.of(context)!.buttonMax2pts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMaxTwoPts.value
@@ -160,29 +168,29 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyMaxTwoPts.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            2))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus.penaltyMaxTwoPts.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  2)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
       case 3: //    3 -> Max 4.5 pts
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.lessthan_circle,
                     size: 40,
                     color: widget.viewMode != 0
@@ -194,9 +202,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 3
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Text(
                   AppLocalizations.of(context)!.buttonMax4Halfpts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMaxFourHalfPts.value
@@ -208,29 +217,30 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyMaxFourHalfPts.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            3))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus
+                                  .penaltyMaxFourHalfPts.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  3)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
       case 4: //    4 > - 0.5 to 2 pts
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.arrow_left_right_circle,
                     size: 40,
                     color: widget.viewMode != 0
@@ -242,9 +252,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 4
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Text(
                   AppLocalizations.of(context)!.buttonMinusHalfTo2pts,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyMinusHalfToTwoPts.value
@@ -256,29 +267,30 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyMinusHalfToTwoPts.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            4))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus
+                                  .penaltyMinusHalfToTwoPts.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  4)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
       case 5: //    5 -> Judge Opinion
         return Obx(() => Column(
               children: [
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Icon(CupertinoIcons.plusminus_circle,
                     size: 40,
                     color: widget.viewMode != 0
@@ -290,9 +302,10 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                 5
                             ? Theme.of(context).colorScheme.primary
                             : Theme.of(context).colorScheme.tertiary),
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
                 Text(
                   AppLocalizations.of(context)!.buttonJudgeOpinion,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                       color: widget.viewMode != 0
                           ? currentPenaltyStatus.penaltyJudgeOpinion.value
@@ -304,22 +317,22 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                               ? Theme.of(context).colorScheme.primary
                               : Theme.of(context).colorScheme.tertiary),
                 ),
-                SizedBox(height: 4),
-                if ((widget.viewMode != 0 &&
-                        currentPenaltyStatus.penaltyJudgeOpinion.value) ||
-                    (widget.viewMode == 0 &&
-                        (penaltySummary
-                                .penalties[widget.penaltyIndex].sanctionValue ==
-                            5))) ...{
-                  Divider(
-                    height: 3,
-                    thickness: 3,
-                    indent: 15,
-                    endIndent: 15,
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
-                },
-                SizedBox(height: 4),
+                SizedBox(height: DRSpacing.xs),
+                Divider(
+                  height: DRSpacing.xs,
+                  thickness: 3,
+                  indent: DRSpacing.s,
+                  endIndent: DRSpacing.s,
+                  color: ((widget.viewMode != 0 &&
+                              currentPenaltyStatus.penaltyJudgeOpinion.value) ||
+                          (widget.viewMode == 0 &&
+                              (penaltySummary.penalties[widget.penaltyIndex]
+                                      .sanctionValue ==
+                                  5)))
+                      ? Theme.of(context).colorScheme.primary
+                      : Theme.of(context).colorScheme.background,
+                ),
+                SizedBox(height: DRSpacing.xs),
               ],
             ));
         break;
