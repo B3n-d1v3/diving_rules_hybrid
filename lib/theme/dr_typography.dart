@@ -168,7 +168,7 @@ TextTheme iosTextTheme = const TextTheme(
   // Body L > iOS: Body
   bodyLarge: TextStyle(
       debugLabel: 'Body L',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 17,
       fontWeight: FontWeight.w400,
       height: 1.29,
@@ -176,7 +176,7 @@ TextTheme iosTextTheme = const TextTheme(
   // Body M > iOS: Callout
   bodyMedium: TextStyle(
       debugLabel: 'Body M',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 16,
       fontWeight: FontWeight.w400,
       height: 1.31,
@@ -184,7 +184,7 @@ TextTheme iosTextTheme = const TextTheme(
   // Body S > iOS: Subheadline
   bodySmall: TextStyle(
       debugLabel: 'Body S',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 15,
       fontWeight: FontWeight.w700,
       height: 1.33,
@@ -193,7 +193,7 @@ TextTheme iosTextTheme = const TextTheme(
   // Label L > iOS: Footnote
   labelLarge: TextStyle(
       debugLabel: 'Label L',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 13,
       fontWeight: FontWeight.w400,
       height: 1.38,
@@ -201,14 +201,14 @@ TextTheme iosTextTheme = const TextTheme(
   // Label M > iOS: Caption 1
   labelMedium: TextStyle(
       debugLabel: 'Label M',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 12,
       height: 1.33,
       fontWeight: FontWeight.w400),
   // Label S > iOS: Caption 2
   labelSmall: TextStyle(
       debugLabel: 'Label S',
-      fontFamily: '.SF UI Display',
+      fontFamily: '.SF UI Text',
       fontSize: 11,
       fontWeight: FontWeight.w400,
       height: 1.18,
