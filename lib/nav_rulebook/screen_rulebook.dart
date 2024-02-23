@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
@@ -49,7 +48,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
       _showToolbar = false;
       _showScrollHead = true;
     }
-    ;
+
     // debugPrint('>>>> ScreenRulebook > initState in > currentPage: "${currentPage}"');
     currentPage = 'rulebook';
     // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
@@ -75,32 +74,6 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
       _showToolbar = false;
     });
     _historyEntry = null;
-  }
-
-  /// Show the Copy Menu item
-  void _showContextMenu(
-      BuildContext context, PdfTextSelectionChangedDetails details) {
-    final OverlayState _overlayState = Overlay.of(context)!;
-    _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
-        top: details.globalSelectedRegion!.center.dy - 55,
-        left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: ElevatedButton(
-          onPressed: () {
-            Clipboard.setData(
-                ClipboardData(text: details.selectedText.toString()));
-            // debugPrint('Text copied to clipboard: ' + details.selectedText.toString());
-            _pdfViewerController.clearSelection();
-          },
-          // make translation
-          child: Text(
-            AppLocalizations.of(context)!.rulebookCopy,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ),
-      ),
-    );
-    _overlayState.insert(_overlayEntry!);
   }
 
   @override
@@ -176,19 +149,43 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
             key: _pdfViewerStateKey,
             enableDoubleTapZooming: false,
             enableTextSelection: true,
-            onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-              if (details.selectedText == null && _overlayEntry != null) {
-                _overlayEntry!.remove();
-                _overlayEntry = null;
-              } else if (details.selectedText != null &&
-                  _overlayEntry == null) {
-                _showContextMenu(context, details);
-              }
-            },
             controller: _pdfViewerController,
             canShowScrollHead: _showScrollHead,
           ),
           // :,
+
+          /// Display bookmarks button within the pdf top right corner
+          Visibility(
+            visible: search,
+            child: Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.all(DRSpacing.m),
+                  child: Container(
+                    // padding: EdgeInsets.all(DRSpacing.none),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        border: Border.all(
+                          width: 2,
+                          color: Theme.of(context).colorScheme.primary,
+                        )),
+                    child: IconButton(
+                      icon: Icon(
+                        CupertinoIcons.bookmark_fill,
+                        size: 24,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _pdfViewerStateKey.currentState!.openBookmarkView();
+                        });
+                      },
+                      tooltip: AppLocalizations.of(context)!.rulebookBookmarks,
+                    ),
+                  ),
+                )),
+          ),
 
           /// Unsuccessful search result acknowledgement
           Visibility(
@@ -305,7 +302,8 @@ class SearchToolbarState extends State<SearchToolbar> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        /// Bookmarks
+        /// Bookmarks in the search bar
+        /// Not setup to launch the bookmarks correctly yet
         // Visibility(
         //   visible: _editingController.text.isEmpty,
         //   child: Material(
@@ -317,7 +315,23 @@ class SearchToolbarState extends State<SearchToolbar> {
         //         color: Theme.of(context).colorScheme.primary,
         //       ),
         //       onPressed: () {
-        //         _pdfViewerStateKey.currentState!.openBookmarkView();
+        //         setState(() {
+        //           // open bookmark view (Currently testing
+        //           search = false;
+        //           bookmark = true;
+        //
+        //           // previous code to clear the search
+        //           _editingController.clear();
+        //           _pdfTextSearchResult.clear();
+        //           widget.controller!.clearSelection();
+        //           _isSearchInitiated = false;
+        //           focusNode!.requestFocus();
+        //         });
+        //         Get.offAllNamed(
+        //           '/',
+        //         );
+        //
+        //         // _pdfViewerStateKey.currentState!.openBookmarkView();
         //       },
         //       tooltip: widget.showTooltip
         //           ? AppLocalizations.of(context)!.rulebookBookmarks

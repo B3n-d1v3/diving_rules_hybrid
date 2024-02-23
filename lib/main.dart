@@ -8,9 +8,9 @@ import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:provider/provider.dart';
+import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
-import 'app_home_m3.dart';
-// Localization (inline command to generate files with new values: flutter gen-l10n)
+import 'app_home_m3.dart'; // Localization (inline command to generate files with new values: flutter gen-l10n)
 import 'l10n/l10n.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_rulebook/screen_rulebook.dart';
@@ -64,6 +64,7 @@ class _DivingRulesAppState extends State<DivingRulesApp> {
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
+            SfGlobalLocalizations.delegate,
           ],
           fallbackLocale: const Locale('en', 'US'),
         );

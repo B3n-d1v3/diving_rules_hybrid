@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 
 version: 2.3.1+16
-# v2.3.1+16 <- tbd
+# v2.3.1+16 <- fix ios font and pdf copy feature update / added pdf bookmarks access / Corrected and localized the selection menu options
 # v2.3.0+15 <- updated version of the rules EN to v3 (01/01/2024) inc bookmarks & optimized size, added about reference details
 # v2.2.3+14 <- updated version of the rules EN with Bookmarks and optimized the pdf files and corrected the search close
 # v2.2.2+13 <- contact updated to feedback
@@ -47,6 +47,7 @@ dependencies:
     sdk: flutter
   # intl: ^0.18.0
   intl: ^0.18.0
+  syncfusion_localizations: ^24.1.46
 
   # Package version number retrieval
   # package_info_plus: ^3.0.3
@@ -62,9 +63,10 @@ dependencies:
   provider: ^6.1.1
   # syncfusion_flutter_pdfviewer: ^20.4.38
   syncfusion_flutter_pdfviewer: ^24.2.7
+
   get: ^4.6.6
   flutter_svg: ^2.0.10+1
-  url_launcher: ^6.2.4
+  url_launcher: ^6.2.5
   share_plus: ^7.2.2
 
 
