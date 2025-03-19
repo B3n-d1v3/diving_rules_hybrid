@@ -52,8 +52,8 @@ android {
 
         // minSdkVersion flutter.minSdkVersion
         // Change to support share_plus
-        minSdkVersion 19
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 34 //flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
