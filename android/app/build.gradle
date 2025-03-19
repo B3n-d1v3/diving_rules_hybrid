@@ -29,6 +29,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
+    namespace "com.bendivingjudge.diving_rules.hybrid"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
