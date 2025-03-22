@@ -364,9 +364,9 @@
         "description": "Penalty 36 - D8.6.5 - If the arms are not in the correct position in either the head first or feet first entry.",
         "type": "text"
     },
-    "penalty37": "In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
+    "penalty37": "In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
     "@penalty37": {
-        "description": "Penalty 37 - D9.11 - In synchronised diving if\nsimilarity of the starting position, approach, take-off and height is not shown.",
+        "description": "Penalty 37 - D9.11 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
         "type": "text"
     },
     "penalty38": "In synchronised diving if coordinated timing of the movement during the flight is not shown.",
