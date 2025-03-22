@@ -251,7 +251,7 @@
     },
     "penalty14": "In synchronised diving if a diver, or both divers, perform a dive of a different position.",
     "@penalty14": {
-        "description": "Penalty 14 - D9.8 - If an execution judge considers that a dive of a different number has been performed.",
+        "description": "Penalty 14 - D9.8 & 9.9 - If an execution judge considers that a dive of a different number has been performed.",
         "type": "text"
     },
     "penalty15": "If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",

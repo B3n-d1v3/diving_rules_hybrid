@@ -192,11 +192,14 @@
       "rules": [
         {
           "ruleId": "IV.9.2"
+        },
+        {
+          "ruleId": "IV.9.9"
         }
       ],
       "sanctionValue": 0,
       "referee": true,
-      "judge": false
+      "judge": true
     },
     {
       "id": 15,
