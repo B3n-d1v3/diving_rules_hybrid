@@ -85,7 +85,9 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     getRulebookUrl(Locale appLocale) {
       // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
-          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240701.pdf';
+          '2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
+      // When updating the file URL's also think of updating the "aboutRulesReference" in the translation file of the corresponding language
+
       appLocale.languageCode == 'fr'
           ? tempUrl =
               'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
@@ -99,7 +101,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
               // : appLocale.languageCode == 'it'
               //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
               : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240701.pdf';
+                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
       // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
       return tempUrl;
     }
