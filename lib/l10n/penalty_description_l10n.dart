@@ -177,7 +177,6 @@ class _PenaltyDescriptionState extends State<PenaltyDescription> {
         return Text(AppLocalizations.of(context)!.penalty39,
             style: Theme.of(context).textTheme.bodyLarge);
         break;
-
       case 40:
         return Text(AppLocalizations.of(context)!.penalty40,
             style: Theme.of(context).textTheme.bodyLarge);
@@ -204,6 +203,18 @@ class _PenaltyDescriptionState extends State<PenaltyDescription> {
         break;
       case 46:
         return Text(AppLocalizations.of(context)!.penalty46,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 47:
+        return Text(AppLocalizations.of(context)!.penalty47,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 48:
+        return Text(AppLocalizations.of(context)!.penalty48,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 49:
+        return Text(AppLocalizations.of(context)!.penalty49,
             style: Theme.of(context).textTheme.bodyLarge);
         break;
       case -1: // safe guard for unused case
