@@ -236,7 +236,7 @@
     },
     "penalty11": "En plongeon synchronisé, si un ou les deux plongeurs exécute(ent) un plongeon de numéro différent du plongeon annoncé.",
     "@penalty11": {
-        "description": "Penalty 11 - D9.2 & D9.8 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
+        "description": "Penalty 11 - D9.2 & D9.9 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
         "type": "text"
     },
     "penalty12": "En plongeon synchronisé, si tous les juges d’exécution pour un plongeur attribuent la note zéro (0).",

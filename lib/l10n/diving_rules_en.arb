@@ -236,7 +236,7 @@
     },
     "penalty11": "In synchronised diving if a diver, or both divers, perform a dive of a different number.",
     "@penalty11": {
-        "description": "Penalty 11 - D9.2 & D9.8 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
+        "description": "Penalty 11 - D9.2 & D9.9 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
         "type": "text"
     },
     "penalty12": "In synchronised diving if all execution judges for one diver award zero (0) points.",

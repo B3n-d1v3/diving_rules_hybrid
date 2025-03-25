@@ -236,7 +236,7 @@
     },
     "penalty11": "Nei tuffi sincronizzati, se uno o entrambi i tuffatori eseguono un tuffo di numero differente rispetto a quanto annunciato.",
     "@penalty11": {
-        "description": "Penalty 11 - D9.2 & D9.8 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
+        "description": "Penalty 11 - D9.2 & D9.9 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
         "type": "text"
     },
     "penalty12": "Nei tuffi sincronizzati, se tutti i Giudici di esecuzione di un tuffatore assegnano zero (0) punti.",
