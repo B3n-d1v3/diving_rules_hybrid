@@ -108,7 +108,18 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    /// World Aquatics link
+                    Divider(),
+
+                    /// World Aquatics links
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'World Aquatics Links',
+                        style: Theme.of(context).textTheme.titleMedium,
+
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2, color: primaryColor),
+                      ),
+                    ),
                     // link to WA: https://www.worldaquatics.com/diving
                     OutlinedButton(
                         onPressed: () async {
@@ -122,7 +133,23 @@ class _ScreenAboutState extends State<ScreenAbout> {
                           }
                         },
                         child: Text(
-                          'World Aquatics',
+                          AppLocalizations.of(context)!.aboutWADivingLink,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
+                        )),
+                    OutlinedButton(
+                        onPressed: () async {
+                          Uri waUrl = Uri.parse(
+                              "https://www.worldaquatics.com/rules/competition-regulations");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
+                          } else {
+                            //browsing app did not opened
+                          }
+                        },
+                        child: Text(
+                          AppLocalizations.of(context)!.aboutWARulesLink,
                           style: Theme.of(context).textTheme.bodyMedium,
                           // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
                         )),

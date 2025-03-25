@@ -474,9 +474,19 @@
         "description": "About - Help",
         "type": "text"
     },
-    "aboutDescriptionTitle": "Description de l'application",
+    "aboutDescriptionTitle": "A propos de l'application",
     "@aboutDescriptionTitle": {
         "description": "About - Description Title",
+        "type": "text"
+    },
+    "aboutWADivingLink": "Plongeon (🇬🇧)",
+    "@aboutWADivingLink": {
+        "description": "About - World Aquatics Diving Link",
+        "type": "text"
+    },
+    "aboutWARulesLink": "Dernières règles (🇬🇧)",
+    "@aboutWARulesLink": {
+        "description": "About - World Aquatics Rules Link",
         "type": "text"
     },
     "aboutLicenseTitle": "License",

@@ -474,9 +474,19 @@
         "description": "About - Help",
         "type": "text"
     },
-    "aboutDescriptionTitle": "App Description",
+    "aboutDescriptionTitle": "About this App",
     "@aboutDescriptionTitle": {
         "description": "About - Description Title",
+        "type": "text"
+    },
+    "aboutWADivingLink": "WA Diving",
+    "@aboutWADivingLink": {
+        "description": "About - World Aquatics Diving Link",
+        "type": "text"
+    },
+    "aboutWARulesLink": "Latest Rules",
+    "@aboutWARulesLink": {
+        "description": "About - World Aquatics Rules Link",
         "type": "text"
     },
     "aboutLicenseTitle": "License",

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+import 'package:get/get.dart';
 
 import '../models/token_spacing.dart';
 
@@ -28,7 +28,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
               child: Row(
                 children: [
                   const Text(
-                    "🇺🇸",
+                    "🇬🇧",
                     style: TextStyle(fontSize: 24),
                   ),
                   SizedBox(width: DRSpacing.s),

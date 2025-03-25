@@ -479,7 +479,17 @@
         "description": "About - Description Title",
         "type": "text"
     },
-    "aboutLicenseTitle": "Licenza",
+     "aboutWADivingLink": "WA Diving (🇬🇧)",
+     "@aboutWADivingLink": {
+         "description": "About - World Aquatics Diving Link",
+         "type": "text"
+     },
+     "aboutWARulesLink": "Ultime regole (🇬🇧)",
+     "@aboutWARulesLink": {
+         "description": "About - World Aquatics Rules Link",
+         "type": "text"
+     },
+   "aboutLicenseTitle": "Licenza",
     "@aboutLicenseTitle": {
         "description": "About - License Title",
         "type": "text"
