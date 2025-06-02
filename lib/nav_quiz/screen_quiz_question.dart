@@ -2,12 +2,12 @@
 import 'package:diving_rules_hybrid/nav_quiz/screen_quiz_result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 
 import '../buttons/button_ownership.dart';
 import '../buttons/button_penalties.dart';
 import '../l10n/action_language_selector.dart';
+import '../l10n/diving_rules_localizations.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/quiz_button_status.dart';

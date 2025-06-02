@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 // import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/globals.dart';
 import '../models/token_spacing.dart';
 

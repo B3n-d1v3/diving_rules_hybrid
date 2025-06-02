@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
+import 'diving_rules_localizations.dart';
 
 class PenaltyDescription extends StatefulWidget {
   int penaltyId;
@@ -217,6 +218,7 @@ class _PenaltyDescriptionState extends State<PenaltyDescription> {
         return Text(AppLocalizations.of(context)!.penalty49,
             style: Theme.of(context).textTheme.bodyLarge);
         break;
+        // TODO: Add missing cases translation
       case -1: // safe guard for unused case
         return Text(' ');
         break;
