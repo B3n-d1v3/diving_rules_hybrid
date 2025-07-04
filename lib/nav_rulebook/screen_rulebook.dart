@@ -85,24 +85,39 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     getRulebookUrl(Locale appLocale) {
       // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
-          '2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
+          'url/filename.pdf';
       // When updating the file URL's also think of updating the "aboutRulesReference" in the translation file of the corresponding language
 
-      appLocale.languageCode == 'fr'
-          ? tempUrl =
-              'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
-          : appLocale.languageCode == 'es'
-              ? appLocale.countryCode == 'MX'
-                  ? tempUrl =
-                      'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
-                  : tempUrl =
-                      'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
+      // appLocale.languageCode == 'fr'
+      //     ? tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
+      //      : appLocale.languageCode == 'es'
+      //         ? appLocale.countryCode == 'MX'
+      //             ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
+                      //               : tempUrl ='assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
               // Add Italian rulebook here
               // : appLocale.languageCode == 'it'
               //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
-              : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
+      //         : tempUrl =
+      //             'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
       // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
+
+      switch (appLocale.languageCode) {
+        case 'fr':
+          tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf';
+          break;
+        case 'de':
+          tempUrl = 'assets/rulebooks/2018-07-13_WA_Wettkampfbestimmungen-Wasserspringen_de.pdf';
+          break;
+        case 'es':
+          appLocale.countryCode == 'MX'
+              ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
+              : tempUrl = 'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf';
+          break;
+
+        default:
+          tempUrl = 'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
+      }
+
       return tempUrl;
     }
 

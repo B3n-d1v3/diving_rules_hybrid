@@ -83,6 +83,18 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                   const Text("Italiano")
                 ],
               )),
+          PopupMenuItem<String>(
+              value: "de",
+              child: Row(
+                children: [
+                  const Text(
+                    "🇩🇪",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  SizedBox(width: DRSpacing.s),
+                  const Text("Deutsch")
+                ],
+              )),
         ],
       ),
     );
@@ -107,6 +119,9 @@ class _LanguageSelectorState extends State<LanguageSelector> {
         break;
       case 'it':
         _tempLocale = const Locale('it', 'IT');
+        break;
+      case 'de':
+        _tempLocale = const Locale('de', 'DE');
         break;
       default:
         _tempLocale = const Locale('en', 'US');

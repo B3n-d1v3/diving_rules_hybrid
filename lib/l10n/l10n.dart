@@ -8,6 +8,7 @@ class L10n {
     const Locale('en'),
     const Locale('fr'),
     const Locale('it'),
+    const Locale('de'),
     // const Locale('es'),
     const Locale.fromSubtags(languageCode: 'es', countryCode: 'ES'),
     // const Locale('es_419'),

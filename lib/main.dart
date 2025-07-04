@@ -34,7 +34,6 @@ class _DivingRulesAppState extends State<DivingRulesApp> {
   Widget build(BuildContext context) {
     // TODO: Correct the dark/light mode changer
     // TODO: Add Italian rulebook
-    // TODO: Add Mx language and rulebook
 
     // TODO: Later / check why the titles do not follow the text size growth
     // TODO: Later / change the about icon to the app logo

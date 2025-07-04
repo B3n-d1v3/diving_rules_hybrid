@@ -218,7 +218,6 @@ class _PenaltyDescriptionState extends State<PenaltyDescription> {
         return Text(AppLocalizations.of(context)!.penalty49,
             style: Theme.of(context).textTheme.bodyLarge);
         break;
-        // TODO: Add missing cases translation
       case -1: // safe guard for unused case
         return Text(' ');
         break;
