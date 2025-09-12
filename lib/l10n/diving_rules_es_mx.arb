@@ -464,7 +464,7 @@
         "description": "About - License",
         "type": "text"
     },
-    "aboutThanks": "Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud y por la traducción al español.\n• Piero ITALIANI por su ayuda en la traducción al italiano.",
+    "aboutThanks": "Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud y por la traducción al español.\n• Piero ITALIANI por su ayuda en la traducción al italiano.\n- Macarena SALGADO PATON y Daniel AZORIN por la traducción al español\n- Thomas HAUSOTTER  por la traducción al alemán",
     "@aboutThanks": {
         "description": "About - Thanks",
         "type": "text"

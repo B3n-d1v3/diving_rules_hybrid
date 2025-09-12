@@ -464,7 +464,7 @@
         "description": "About - License",
         "type": "text"
     },
-    "aboutThanks": "Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app and for the Spanish translation\n- Piero ITALIANI for the help in the Italian translation.",
+    "aboutThanks": "Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app\n- Piero ITALIANI for the help in the Italian translation.\n- Macarena SALGADO PATON and Daniel AZORIN for the Spanish translation\n- Thomas HAUSOTTER for the German translation",
     "@aboutThanks": {
         "description": "About - Thanks",
         "type": "text"
