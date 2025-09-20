@@ -18,7 +18,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 
-version: 2.6.0+20
+version: 2.6.1+21
+# v2.6.1+21 <- Creation of the MacOS version of the app
 # v2.6.0+20 <- Update Dependencies and language support update / Add the German Language
 # v2.5.0+19 <- add the EN rulebook form Feb 2025
 # v2.4.1+18 <- add the EN rulebook form July 2024 with the bookmarks set and optimize file size
