@@ -21,7 +21,7 @@ import '../theme/dr_colors.dart';
 class ScreenQuizQuestion extends StatefulWidget {
   int index;
 
-  ScreenQuizQuestion({Key? key, this.index = -1}) : super(key: key);
+  ScreenQuizQuestion({super.key, this.index = -1});
 
   // index argument usage
   // if (widget.index != -1) then the widget will display a quiz correction
@@ -241,7 +241,7 @@ class _ScreenQuizQuestionState extends State<ScreenQuizQuestion> {
                               style: Theme.of(context).textTheme.labelSmall,
                               children: [
                                 TextSpan(
-                                    text: '${currentQuizScore} pts',
+                                    text: '$currentQuizScore pts',
                                     style: TextStyle(
                                         color: Theme.of(context)
                                             .colorScheme

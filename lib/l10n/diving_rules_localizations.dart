@@ -676,7 +676,7 @@ abstract class AppLocalizations {
   /// About - Rules Reference
   ///
   /// In en, this message translates to:
-  /// **'Rules Reference: 2022-2025 (1st March 2025 - v5)'**
+  /// **'Rules Reference: 2022-2025 (1st July 2025 - v6)'**
   String get aboutRulesReference;
 
   /// About - License
@@ -688,7 +688,7 @@ abstract class AppLocalizations {
   /// About - Thanks
   ///
   /// In en, this message translates to:
-  /// **'Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app and for the Spanish translation\n- Piero ITALIANI for the help in the Italian translation.'**
+  /// **'Special thanks to :\n• Daniel AZORIN for his support in the finalization of the app\n• Piero ITALIANI for the help in the Italian translation.\n• Macarena SALGADO PATON and Daniel AZORIN for the Spanish translation\n• Thomas HAUSOTTER for the German translation'**
   String get aboutThanks;
 
   /// About - Help

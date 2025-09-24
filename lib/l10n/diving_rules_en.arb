@@ -454,7 +454,7 @@
         "description": "About - Contact Link",
         "type": "text"
     },
-    "aboutRulesReference": "Rules Reference: 2022-2025 (1st March 2025 - v5)",
+    "aboutRulesReference": "Rules Reference: 2022-2025 (1st July 2025 - v6)",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
@@ -464,7 +464,7 @@
         "description": "About - License",
         "type": "text"
     },
-    "aboutThanks": "Special thanks to :\n- Daniel AZORIN for his support in the finalization of the app\n- Piero ITALIANI for the help in the Italian translation.\n- Macarena SALGADO PATON and Daniel AZORIN for the Spanish translation\n- Thomas HAUSOTTER for the German translation",
+    "aboutThanks": "Special thanks to :\n• Daniel AZORIN for his support in the finalization of the app\n• Piero ITALIANI for the help in the Italian translation.\n• Macarena SALGADO PATON and Daniel AZORIN for the Spanish translation\n• Thomas HAUSOTTER for the German translation",
     "@aboutThanks": {
         "description": "About - Thanks",
         "type": "text"

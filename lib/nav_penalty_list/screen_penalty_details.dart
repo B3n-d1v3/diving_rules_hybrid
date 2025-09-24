@@ -17,7 +17,7 @@ import '../theme/dr_colors.dart';
 class PagePenaltyDescription extends StatefulWidget {
   int index;
 
-  PagePenaltyDescription({Key? key, required this.index}) : super(key: key);
+  PagePenaltyDescription({super.key, required this.index});
 
   @override
   _PagePenaltyDescriptionState createState() => _PagePenaltyDescriptionState();
@@ -249,13 +249,13 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 class DisplayRulesReferences extends StatelessWidget {
   final List<Rule> rulesReferences;
 
-  DisplayRulesReferences({required this.rulesReferences});
+  const DisplayRulesReferences({super.key, required this.rulesReferences});
 
   @override
   Widget build(BuildContext context) {
     String rulesToDisplay = "";
     for (var i = 0; i < rulesReferences.length; i++) {
-      rulesToDisplay = rulesToDisplay + " - ${rulesReferences[i].ruleId}";
+      rulesToDisplay = "$rulesToDisplay - ${rulesReferences[i].ruleId}";
     }
     return (RichText(
         text: TextSpan(

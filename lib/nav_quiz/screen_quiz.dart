@@ -10,7 +10,7 @@ import '../models/quiz_model.dart';
 import '../models/token_spacing.dart';
 
 class ScreenQuiz extends StatefulWidget {
-  ScreenQuiz({Key? key}) : super(key: key);
+  const ScreenQuiz({super.key});
 
   @override
   State<ScreenQuiz> createState() => _ScreenQuizState();

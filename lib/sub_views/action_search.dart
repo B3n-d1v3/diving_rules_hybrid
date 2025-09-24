@@ -17,7 +17,7 @@ class ActionSearch extends StatefulWidget {
 class _ActionSearchState extends State<ActionSearch> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: 32,
         child: IconButton(
           icon: Icon(CupertinoIcons.search),

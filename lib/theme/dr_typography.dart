@@ -7,7 +7,7 @@ Typography drTypography = Typography.material2021(
   white: _getPlatformTypography(),
 );
 
-_getPlatformTypography() {
+TextTheme _getPlatformTypography() {
   if (defaultTargetPlatform == TargetPlatform.iOS) {
     return iosTextTheme;
   } else {

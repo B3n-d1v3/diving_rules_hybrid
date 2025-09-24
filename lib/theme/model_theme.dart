@@ -20,7 +20,7 @@ class ModelTheme extends ChangeNotifier {
     notifyListeners();
   }
 
-  _getPreferences() async {
+  Future<void> _getPreferences() async {
     _themeMode = await _preferences.getThemeMode();
     notifyListeners();
   }

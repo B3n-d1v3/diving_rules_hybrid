@@ -19,7 +19,7 @@ class PenaltyButton extends StatefulWidget {
   // vieMode 2 = Quiz Answer Correction View
 
   PenaltyButton(
-      {required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
+      {super.key, required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
 
   @override
   _PenaltyButtonState createState() => _PenaltyButtonState();
@@ -66,10 +66,10 @@ class _PenaltyButtonState extends State<PenaltyButton> {
                             : AppColor.drColorPositiveLight
                         // this item is not the right answer
                         // else hide the border
-                        : Theme.of(context).colorScheme.background
+                        : Theme.of(context).colorScheme.surface
                     // if the page is in question mode
                     // else hide the border
-                    : Theme.of(context).colorScheme.background)),
+                    : Theme.of(context).colorScheme.surface)),
         child: (widget.viewMode == 0)
             ? PenaltyContentStatic(
                 buttonType: widget.buttonType,

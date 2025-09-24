@@ -27,6 +27,8 @@ const int mobileUiMaxScreenWidth = 640;
 const int mobileHeaderMaxScreenWidth = 330;
 
 class DivingRulesMainScreen extends StatefulWidget {
+  const DivingRulesMainScreen({super.key});
+
   @override
   State<DivingRulesMainScreen> createState() => _DivingRulesMainScreenState();
 }
@@ -87,7 +89,7 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
     // The container for the current page, with its background color
     // and subtle switching animation.
     var mainArea = ColoredBox(
-      color: colorScheme.surfaceVariant,
+      color: colorScheme.surfaceContainerHighest,
       child: AnimatedSwitcher(
         duration: Duration(milliseconds: 200),
         child: selectedItem.screen,
@@ -220,18 +222,18 @@ class _NavigationItems {
     ];
   }
 
-  getSelectedMenuItem(int index) {
+  _MainMenuItem getSelectedMenuItem(int index) {
     return _mainMenuItems[index];
   }
 
-  getBottomNavigationBarItems() {
+  List<BottomNavigationBarItem> getBottomNavigationBarItems() {
     return _mainMenuItems
         .map((e) => BottomNavigationBarItem(
             icon: e.icon, activeIcon: e.activeIcon, label: e.label))
         .toList();
   }
 
-  getNavigationRailDestinations() {
+  List<NavigationRailDestination> getNavigationRailDestinations() {
     return _mainMenuItems
         .map((e) => NavigationRailDestination(
             icon: e.icon, selectedIcon: e.activeIcon, label: Text(e.label)))

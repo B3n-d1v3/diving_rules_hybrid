@@ -5,8 +5,7 @@ class DivingRulesLogo extends StatelessWidget {
   bool small;
   bool leftAligned;
 
-  DivingRulesLogo({Key? key, required this.small, this.leftAligned = false})
-      : super(key: key);
+  DivingRulesLogo({super.key, required this.small, this.leftAligned = false});
 
   @override
   Widget build(BuildContext context) {

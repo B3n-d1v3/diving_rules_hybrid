@@ -341,7 +341,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get aboutThanks =>
-      'Remerciements à :\n• Daniel AZORIN pour son soutien dans la finalisation de l\'appli et pour la traduction en espagnol.\n• Piero ITALIANI pour son aide dans la traduction italienne.';
+      'Remerciements à :\n• Daniel AZORIN pour son soutien dans la finalisation de l\'appli et pour la traduction en espagnol.\n• Piero ITALIANI pour la traduction italienne.\n• Macarena SALGADO PATON et Daniel AZORIN pour la traduction espagnol\n• Thomas HAUSOTTER pour la traduction allemande';
 
   @override
   String get aboutHelp =>

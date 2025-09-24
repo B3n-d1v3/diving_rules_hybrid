@@ -9,7 +9,7 @@ import '../models/globals.dart';
 import '../models/token_spacing.dart';
 
 class ScreenRulebook extends StatefulWidget {
-  const ScreenRulebook({Key? key}) : super(key: key);
+  const ScreenRulebook({super.key});
 
   @override
   State<ScreenRulebook> createState() => _ScreenRulebookState();
@@ -88,25 +88,15 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           'url/filename.pdf';
       // When updating the file URL's also think of updating the "aboutRulesReference" in the translation file of the corresponding language
 
-      // appLocale.languageCode == 'fr'
-      //     ? tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
-      //      : appLocale.languageCode == 'es'
-      //         ? appLocale.countryCode == 'MX'
-      //             ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
-                      //               : tempUrl ='assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
-              // Add Italian rulebook here
-              // : appLocale.languageCode == 'it'
-              //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
-      //         : tempUrl =
-      //             'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
-      // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
-
       switch (appLocale.languageCode) {
         case 'fr':
           tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf';
           break;
         case 'de':
           tempUrl = 'assets/rulebooks/2018-07-13_WA_Wettkampfbestimmungen-Wasserspringen_de.pdf';
+          break;
+        case 'it':
+          tempUrl = 'assets/rulebooks/2022-2025_WA-Reglamento-Aqua-Tuffi_it-r.pdf';
           break;
         case 'es':
           appLocale.countryCode == 'MX'
@@ -115,7 +105,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           break;
 
         default:
-          tempUrl = 'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20250301_v2-r.pdf';
+          tempUrl = 'assets/rulebooks/2025-07-01_World-Aquatics-Diving-Rules_en-r.pdf';
       }
 
       return tempUrl;
@@ -257,12 +247,12 @@ typedef SearchTapCallback = void Function(Object item);
 /// SearchToolbar widget
 class SearchToolbar extends StatefulWidget {
   ///it describe the search toolbar constructor
-  SearchToolbar({
+  const SearchToolbar({
     this.controller,
     this.onTap,
     this.showTooltip = true,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   /// Indicates whether the tooltip for the search toolbar items need to be shown or not.
   final bool showTooltip;

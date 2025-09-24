@@ -15,7 +15,7 @@ class LanguageSelector extends StatefulWidget {
 class _LanguageSelectorState extends State<LanguageSelector> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 32,
       child: PopupMenuButton<String>(
         onSelected: (item) => handleClick(item),
@@ -102,34 +102,34 @@ class _LanguageSelectorState extends State<LanguageSelector> {
 
   void handleClick(String item) {
     // changes the local app language
-    Locale _tempLocale;
+    Locale tempLocale;
     // debugPrint('>>>>> Language_selector > before click: languageCode: ${Localizations.localeOf(context).languageCode} - countryCode: ${Localizations.localeOf(context).countryCode}');
     switch (item) {
       case 'en':
-        _tempLocale = const Locale('en', 'US');
+        tempLocale = const Locale('en', 'US');
         break;
       case 'fr':
-        _tempLocale = const Locale('fr', 'FR');
+        tempLocale = const Locale('fr', 'FR');
         break;
       case 'es':
-        _tempLocale = const Locale('es', 'ES');
+        tempLocale = const Locale('es', 'ES');
         break;
       case 'MX':
-        _tempLocale = const Locale('es', 'MX');
+        tempLocale = const Locale('es', 'MX');
         break;
       case 'it':
-        _tempLocale = const Locale('it', 'IT');
+        tempLocale = const Locale('it', 'IT');
         break;
       case 'de':
-        _tempLocale = const Locale('de', 'DE');
+        tempLocale = const Locale('de', 'DE');
         break;
       default:
-        _tempLocale = const Locale('en', 'US');
+        tempLocale = const Locale('en', 'US');
     }
     // debugPrint('>>>>> Language_selector > before click: _tempLocale.languageCode: ${_tempLocale.languageCode} - _tempLocale.countryCode: ${_tempLocale.countryCode}');
 
     setState(() {
-      Get.updateLocale(_tempLocale);
+      Get.updateLocale(tempLocale);
       // Test current Local
     });
   }

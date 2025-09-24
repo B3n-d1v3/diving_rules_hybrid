@@ -16,7 +16,7 @@ import '../theme/action_theme_selector.dart';
 import '../theme/dr_colors.dart';
 
 class ScreenQuizResult extends StatefulWidget {
-  const ScreenQuizResult({Key? key}) : super(key: key);
+  const ScreenQuizResult({super.key});
 
   @override
   State<ScreenQuizResult> createState() => _ScreenQuizResultState();

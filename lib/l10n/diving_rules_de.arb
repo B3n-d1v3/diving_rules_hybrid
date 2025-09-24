@@ -460,7 +460,7 @@
         "description": "About - License",
         "type": "text"
     },
-    "aboutThanks": "Besonderer Dank geht an:\n- Daniel AZORIN für seine Unterstützung bei der Fertigstellung der App,\n- Piero ITALIANI für die Hilfe bei der italienischen Übersetzung,\n- Macarena SALGADO PATON und Daniel AZORIN für die Hilfe bei der spanischen \n- Thomas HAUSOTTER für die deutsche übersetzung.",
+    "aboutThanks": "Besonderer Dank geht an:\n• Daniel AZORIN für seine Unterstützung bei der Fertigstellung der App,\n• Piero ITALIANI für die Hilfe bei der italienischen Übersetzung,\n• Macarena SALGADO PATON und Daniel AZORIN für die Hilfe bei der spanischen \n• Thomas HAUSOTTER für die deutsche übersetzung.",
     "@aboutThanks": {
         "description": "About - Thanks",
         "type": "text"

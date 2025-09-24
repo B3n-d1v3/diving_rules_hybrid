@@ -15,7 +15,7 @@ class OwnershipContent extends StatefulWidget {
   // vieMode 2 = Quiz Answer Correction View
 
   OwnershipContent(
-      {required this.buttonType,
+      {super.key, required this.buttonType,
       required this.penaltyIndex,
       required this.viewMode});
 
@@ -65,7 +65,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           penaltySummary
                               .penalties[widget.penaltyIndex].referee))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -109,7 +109,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                       (widget.viewMode == 0 &&
                           penaltySummary.penalties[widget.penaltyIndex].judge))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
 
             SizedBox(height: DRSpacing.xs),

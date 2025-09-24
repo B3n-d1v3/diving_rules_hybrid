@@ -342,7 +342,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get aboutThanks =>
-      'Besonderer Dank geht an:\n- Daniel AZORIN für seine Unterstützung bei der Fertigstellung der App,\n- Piero ITALIANI für die Hilfe bei der italienischen Übersetzung,\n- Macarena SALGADO PATON und Daniel AZORIN für die Hilfe bei der spanischen \n   Übersetzung.';
+      'Besonderer Dank geht an:\n• Daniel AZORIN für seine Unterstützung bei der Fertigstellung der App,\n• Piero ITALIANI für die Hilfe bei der italienischen Übersetzung,\n• Macarena SALGADO PATON und Daniel AZORIN für die Hilfe bei der spanischen \n• Thomas HAUSOTTER für die deutsche übersetzung.';
 
   @override
   String get aboutHelp =>

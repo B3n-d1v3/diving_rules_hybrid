@@ -5,7 +5,7 @@ import 'diving_rules_localizations.dart';
 class PenaltyDescription extends StatefulWidget {
   int penaltyId;
 
-  PenaltyDescription({required this.penaltyId});
+  PenaltyDescription({super.key, required this.penaltyId});
 
   @override
   _PenaltyDescriptionState createState() => _PenaltyDescriptionState();

@@ -12,7 +12,7 @@ import '../models/token_spacing.dart';
 import '../sub_views/diving_rules_logo.dart';
 
 class ScreenAbout extends StatefulWidget {
-  const ScreenAbout({Key? key}) : super(key: key);
+  const ScreenAbout({super.key});
 
   @override
   State<ScreenAbout> createState() => _ScreenAboutState();

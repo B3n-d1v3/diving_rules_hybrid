@@ -1,6 +1,6 @@
 import '../models/globals.dart';
 
-canUserGoNext() {
+void canUserGoNext() {
   // debugPrint('>>>>> Quiz Next > currentPenaltyStatus.nextQuestion (before): ${currentPenaltyStatus.nextQuestion}');
   // debugPrint('>>>>> Quiz Next > currentPenaltyStatus.userSanctionSelection: ${currentPenaltyStatus.userSanctionSelection}');
   // debugPrint('>>>>> Quiz Next > currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee.value}');

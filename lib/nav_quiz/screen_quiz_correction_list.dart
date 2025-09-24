@@ -18,7 +18,7 @@ import '../theme/action_theme_selector.dart';
 //import '../models/globals.dart';
 
 class ScreenCorrectionList extends StatefulWidget {
-  const ScreenCorrectionList({Key? key}) : super(key: key);
+  const ScreenCorrectionList({super.key});
 
   @override
   State<ScreenCorrectionList> createState() => _ScreenCorrectionListState();

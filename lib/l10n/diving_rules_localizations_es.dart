@@ -339,7 +339,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutThanks =>
-      'Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud y por la traducción al español.\n• Piero ITALIANI por su ayuda en la traducción al italiano.';
+      'Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud\n• Piero ITALIANI por su ayuda en la traducción al italiano.\n• Macarena SALGADO PATON y Daniel AZORIN por la traducción al español\n• Thomas HAUSOTTER  por la traducción al alemán';
 
   @override
   String get aboutHelp =>
@@ -754,7 +754,7 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
 
   @override
   String get aboutThanks =>
-      'Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud y por la traducción al español.\n• Piero ITALIANI por su ayuda en la traducción al italiano.';
+      'Muchas gracias a :\n• Daniel AZORIN por su apoyo en la finalización de la solicitud.\n• Piero ITALIANI por su ayuda en la traducción al italiano.\n• Macarena SALGADO PATON y Daniel AZORIN por la traducción al español\n• Thomas HAUSOTTER  por la traducción al alemán';
 
   @override
   String get aboutHelp =>

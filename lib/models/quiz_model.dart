@@ -24,7 +24,7 @@ class Quiz {
 }
 
 // Generate new Quiz question list in currentQuiz Object
-newQuiz() {
+void newQuiz() {
   // Init new quiz information
   currentQuiz.questions = newListOfQuestions();
   currentQuiz.answers = [];
@@ -32,7 +32,7 @@ newQuiz() {
 }
 
 // create a new Quiz list
-newListOfQuestions() {
+List<int> newListOfQuestions() {
   List<int> questionList = [];
   Random random = Random();
   for (var i = 0; i < quizTotalQuestionNumber; i++) {
@@ -51,7 +51,7 @@ newListOfQuestions() {
 }
 
 // Log the answer provided by the user in currentQuiz Object
-logUserAnswer() {
+void logUserAnswer() {
   // TODO: Later / log previous quiz content to keep quiz history in a new object to create 'allQuizzes'
   var loggedPenalty = Penalty(
       id: currentQuiz.questions[currentQuizQuestionIndex - 1],
@@ -64,7 +64,7 @@ logUserAnswer() {
   currentQuiz.answers.add(loggedPenalty);
 }
 
-userAnswerDebug({required int index}) {
+void userAnswerDebug({required int index}) {
   debugPrint('>>>>> Quiz Model > User Answer Debug ---:');
   debugPrint(
       '>>>>> Quiz Model > currentPenaltyStatus.penaltyZeroPts: ${currentPenaltyStatus.penaltyZeroPts.value}');
