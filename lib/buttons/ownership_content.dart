@@ -30,7 +30,8 @@ class _OwnershipContentState extends State<OwnershipContent> {
       case 0:
         return Column(
           children: [
-            Icon(CupertinoIcons.person_crop_circle_badge_exclam,
+//            Icon(CupertinoIcons.person_crop_circle_badge_exclam,
+            Icon(CupertinoIcons.person_fill,
                 size: 40,
                 color: widget.viewMode != 0
                     ? currentPenaltyStatus.ownershipReferee.value

@@ -302,14 +302,14 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty46 =>
-      'Si l’entrée dans l’eau n\'est pas verticale, ou presque verticale (« plate » ou « passée »).';
+      'Si l’entrée dans l’eau n\'est pas verticale, ou presque verticale (« trop court » ou « passée »).';
 
   @override
   String get penalty47 => 'Si l’entrée dans l’eau est vrillée.';
 
   @override
   String get penalty48 =>
-      'Si à l’entrée dans l’eau le corps n’est pas en ligne.';
+      'Si à l’entrée dans l’eau le corps n’est pas avec le corp bien droit.';
 
   @override
   String get penalty49 =>

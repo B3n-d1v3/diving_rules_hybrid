@@ -409,7 +409,7 @@
         "description": "Penalty 45 - D8.5.3 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
         "type": "text"
     },
-    "penalty46": "Si l’entrée dans l’eau n'est pas verticale, ou presque verticale (« plate » ou « passée »).",
+    "penalty46": "Si l’entrée dans l’eau n'est pas verticale, ou presque verticale (« trop court » ou « passée »).",
     "@penalty46": {
         "description": "Penalty 46 - D8.6.2 - If the entry into the water is not vertical, or nearly so.",
         "type": "text"
@@ -419,7 +419,7 @@
         "description": "Penalty 47 - D8.6.2 - If the entry into the water is twisted.",
         "type": "text"
     },
-    "penalty48": "Si à l’entrée dans l’eau le corps n’est pas en ligne.",
+    "penalty48": "Si à l’entrée dans l’eau le corps n’est pas avec le corp bien droit.",
     "@penalty48": {
         "description": "Penalty 48 - D8.6.2 - If in the entry into the water the body is not straight.",
         "type": "text"
