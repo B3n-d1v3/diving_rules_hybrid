@@ -100,7 +100,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           break;
         case 'es':
           appLocale.countryCode == 'MX'
-              ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
+              ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-de-Clavados-FMN_es-mx-r.pdf'
               : tempUrl = 'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf';
           break;
 
