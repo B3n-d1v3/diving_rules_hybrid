@@ -4,11 +4,13 @@
 The Diving Rules Application is a mobile hybrid app to train on the Fina Diving Rules. It is targeted for the diving judges and referees to learn the rule of the discipline and train on this knowledge.
 This document is the Flutter App Readme.
 
+The mobile app is discribed annd can be downloaded at [Diving Rules](https://b3n-d1v3.github.io/diving-rules/).
+
 ## Technology
 ### Flutter Development
 The Flutter version of the app is using dart coding and is transformed into Swift & Jetpack code.
 The App is for the moment compatible with iOS vXX and Android vXX
-[//] # (The app uses the SF Symbol Library for all this icons within the app.)
+[//] # (The app uses the [CupertinoIcons](https://api.flutter.dev/flutter/cupertino/CupertinoIcons-class.html) Library for all the icons within the app.)
 
 ### Localization
 The app has been localized in multiple languages. It is for the moment compatible with:
@@ -16,7 +18,9 @@ The app has been localized in multiple languages. It is for the moment compatibl
 * FR
 * ES & Lat Am
 * IT
-  The [PO Editor](https://poeditor.com/projects/view?id=425927) tool is used to generate the various localizations Languages
+* DE
+
+The [PO Editor](https://poeditor.com/projects/view?id=425927) tool is used to generate the various localizations Languages
 
 ## Version Control
 The Project repository is hosted on GitHub:
@@ -49,16 +53,16 @@ _[Open The Full Blueprint](/readme/DivingRulesFlow.pdf)_
 ## Data Model Structure
 ### Input Source Data (To be updated)
 The code is structured around
-* [divingPenaltiesSummary.json](https://github.com/B3n-d1v3/Diving-Rules-iOS/blob/main/Diving%20Rules/Ressources/divingPenaltiesSummary.json): a json to declare the penalties sanctions and ownerships
-* [divingPenaltiesSanctions.json](https://github.com/B3n-d1v3/Diving-Rules-iOS/blob/main/Diving%20Rules/Ressources/divingPenaltiesSanctions.json): a json to list the sanctions descriptions (to check if still needed)
-* The [localization files](https://github.com/B3n-d1v3/Diving-Rules-iOS/blob/main/Diving%20Rules/en.lproj/Localizable.strings) holding:
+* [divingPenaltiesSummary.json](https://github.com/B3n-d1v3/diving_rules_hybrid/tree/main/assets/data/divingPenaltiesSummary.json): a json to declare the penalties sanctions and ownerships
+* [divingPenaltiesSanctions.json](https://github.com/B3n-d1v3/diving_rules_hybrid/tree/main/assets/data/divingPenaltiesSanctions.json): a json to list the sanctions descriptions (to check if still needed)
+* The [localization files](https://github.com/B3n-d1v3/diving_rules_hybrid/blob/main/lib/l10n/) holding:
     * the app texts localization
     * the penalties description (the data presented in the app for a penalty is using the localization data and not the json description  - it is used in the description as a reference for the json creation and updates)
 
 ### Used Data model (To be updated)
 ![Diving Rules Data Model](readme/DivingRulesDataModel.png)
 
-#### The penalty mangement (To be updated)
+#### The penalty mangement (To be updated from previous swift project to dart)
 * Penalty (refering v1.1): The information about one penalty
 ``` swift
     // penalty id number
@@ -80,7 +84,7 @@ The code is structured around
 ```
 
 
-#### The Quizz Management (To be updated)
+#### The Quizz Management (To be updated from previous swift project to dart)
 
 * Quizz (refering v1.1): The information about the quizz
 ``` swift
@@ -124,7 +128,7 @@ The code is structured around
 ```
 
 ## Project Status
-The app is in creation in this new flutter technology.
+The app was re-created in this repo under a flutter technology.
 
 I would like to grow a comunity around this project to get new contributors to help on this open source project to update in the code.
 It is possible to add new localization if we get a local language support.
@@ -132,18 +136,6 @@ It is possible to add new localization if we get a local language support.
 New feature will be added
 
 ## Future Updates
-These are the high level features to work on next:
-- [ ] Add the pdf support to read the rule book
-- [ ] Include the About page description
-- [ ] Multilingual support
-- [ ] View the list of the summary of penalties
-- [ ] Add the Initial quizz support
-- [ ] Add the ability to change the language at anytime within the app (user should always be able to switch from local language to EN)
-- [ ] update the pdf to read an online version of the file and enclose the english as a fallback
-- [ ] allow the user to view the history of his previous tests
-- [ ] Add new Quizz not just based on the penalties list (Add multiple choice questions and true/false questions)
-- [ ] Add a search functionality to search through the pdf and through the penalties
-
 The full list can be found on the [Github Hybrid Kanban](https://github.com/users/B3n-d1v3/projects/2/views/1)
 
 ## Authors
