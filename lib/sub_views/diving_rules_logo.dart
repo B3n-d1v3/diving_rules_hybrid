@@ -29,7 +29,8 @@ class DivingRulesLogo extends StatelessWidget {
       );
     } else {
       return SvgPicture.asset(
-        "assets/images/diving_rules_22_logo_horizontal_22-25.svg",
+        // "assets/images/diving_rules_22_logo_horizontal_22-25.svg",
+        "assets/images/diving_rules_22_logo_horizontal.svg",
         colorFilter: ColorFilter.mode(
             Theme.of(context).colorScheme.primary, BlendMode.srcIn),
         height: 45,

@@ -104,12 +104,12 @@
         "description": "Quizz - Question Page Next Button",
         "type": "text"
     },
-    "cFBundleDisplayName": "Reglas de saltos 22-25",
+    "cFBundleDisplayName": "diving rules",
     "@cFBundleDisplayName": {
         "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n\n App Name - Full App name",
         "type": "text"
     },
-    "cFBundleName": "Reglas de saltos",
+    "cFBundleName": "diving rules",
     "@cFBundleName": {
         "description": "App Name - Short App name 16 car",
         "type": "text"
@@ -450,7 +450,16 @@
         "type": "text"
     },
     "aboutFeedbackLink": "Propuestas",
-    "aboutRulesReference": "Norma de referencia : 2022-2025",
+    "@aboutContactLink": {
+        "description": "About - Contact Link",
+        "type": "text"
+    },
+    "aboutRulesLocal": "Norma española: Rfen Aquatics - 3 oct 2022",
+    "@aboutRulesLocal": {
+        "description": "About - Rules Local",
+        "type": "text"
+    },
+    "aboutRulesReference": "Norma de la aplicación: World Aquatics - 1st July 2025 - v6",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"

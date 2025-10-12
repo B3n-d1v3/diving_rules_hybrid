@@ -77,7 +77,17 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    /// World Aquatics Rules Reference version
+                    /// Local Rules Reference version
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutRulesLocal,
+                        textAlign: TextAlign.start,
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
+                    ),
+
+                    /// World Aquatics Rules Reference version for the app
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(

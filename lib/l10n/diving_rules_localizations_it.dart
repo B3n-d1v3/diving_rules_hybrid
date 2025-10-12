@@ -73,7 +73,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get quizzNext => 'Quiz successivo';
 
   @override
-  String get cFBundleDisplayName => 'diving rules 22-25';
+  String get cFBundleDisplayName => 'diving rules';
 
   @override
   String get cFBundleName => 'diving rules';
@@ -328,7 +328,12 @@ class AppLocalizationsIt extends AppLocalizations {
   String get aboutFeedbackLink => 'suggerimenti';
 
   @override
-  String get aboutRulesReference => 'Regole di riferimento : 2022-2025';
+  String get aboutRulesLocal =>
+      'Regole italiana: FIN settore tuffi - 2022-2025';
+
+  @override
+  String get aboutRulesReference =>
+      'Regole per l\'app: World Aquatics - 1st July 2025 - v6';
 
   @override
   String get aboutLicense =>

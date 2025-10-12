@@ -2,7 +2,7 @@
     package="com.bendivingjudge.diving_rules.hybrid">
 
     <application
-        android:label="Diving Rules 22"
+        android:label="Diving Rules"
         android:name="${applicationName}"
         android:roundIcon="@mipmap/diving_rules_icon_22_round"
         android:icon="@mipmap/diving_rules_icon_22">

@@ -73,10 +73,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get quizzNext => 'Siguiente';
 
   @override
-  String get cFBundleDisplayName => 'Reglas de saltos 22-25';
+  String get cFBundleDisplayName => 'diving rules';
 
   @override
-  String get cFBundleName => 'Reglas de saltos';
+  String get cFBundleName => 'diving rules';
 
   @override
   String get quizzTitle => 'Cuestionario';
@@ -330,7 +330,11 @@ class AppLocalizationsEs extends AppLocalizations {
   String get aboutFeedbackLink => 'Propuestas';
 
   @override
-  String get aboutRulesReference => 'Norma de referencia : 2022-2025';
+  String get aboutRulesLocal => 'Norma española: Rfen Aquatics - 3 oct 2022';
+
+  @override
+  String get aboutRulesReference =>
+      'Norma de la aplicación: World Aquatics - 1st July 2025 - v6';
 
   @override
   String get aboutLicense =>
@@ -487,7 +491,7 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
   String get quizzNext => 'Siguiente';
 
   @override
-  String get cFBundleDisplayName => 'diving rules 22-25';
+  String get cFBundleDisplayName => 'diving rules';
 
   @override
   String get cFBundleName => 'diving rules';
@@ -745,7 +749,11 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
   String get aboutFeedbackLink => 'propuestas';
 
   @override
-  String get aboutRulesReference => 'Normas de referencia : 2022-2025';
+  String get aboutRulesLocal => 'Norma Mexicana: 1 julio 2024';
+
+  @override
+  String get aboutRulesReference =>
+      'Normas de la aplicación: World Aquatics - 1st July 2025 - v6';
 
   @override
   String get aboutLicense =>

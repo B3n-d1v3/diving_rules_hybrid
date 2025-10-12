@@ -60,18 +60,6 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                 ],
               )),
           PopupMenuItem<String>(
-              value: "MX",
-              child: Row(
-                children: [
-                  const Text(
-                    "🇲🇽",
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  SizedBox(width: DRSpacing.s),
-                  const Text("Mexicano")
-                ],
-              )),
-          PopupMenuItem<String>(
               value: "it",
               child: Row(
                 children: [
@@ -93,6 +81,18 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                   ),
                   SizedBox(width: DRSpacing.s),
                   const Text("Deutsch")
+                ],
+              )),
+          PopupMenuItem<String>(
+              value: "MX",
+              child: Row(
+                children: [
+                  const Text(
+                    "🇲🇽",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  SizedBox(width: DRSpacing.s),
+                  const Text("Mexicano")
                 ],
               )),
         ],

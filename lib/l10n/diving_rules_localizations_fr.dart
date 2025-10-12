@@ -73,7 +73,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get quizzNext => 'Suivant';
 
   @override
-  String get cFBundleDisplayName => 'diving rules 22-25';
+  String get cFBundleDisplayName => 'diving rules';
 
   @override
   String get cFBundleName => 'diving rules';
@@ -332,8 +332,11 @@ class AppLocalizationsFr extends AppLocalizations {
   String get aboutFeedbackLink => 'Suggestions';
 
   @override
+  String get aboutRulesLocal => 'Règlement Francais: FFN - 5 Juil 2023 - v2';
+
+  @override
   String get aboutRulesReference =>
-      'Règlement de référence : 2022-2025 (5 Juil 2023 - v2)';
+      'Règlement de l\'app : World Aquatics - 1st July 2025 - v6';
 
   @override
   String get aboutLicense =>

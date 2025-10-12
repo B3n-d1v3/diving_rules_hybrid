@@ -249,7 +249,7 @@ abstract class AppLocalizations {
   ///  App Name - Full App name
   ///
   /// In en, this message translates to:
-  /// **'diving rules 22-25'**
+  /// **'diving rules'**
   String get cFBundleDisplayName;
 
   /// App Name - Short App name 16 car
@@ -673,10 +673,16 @@ abstract class AppLocalizations {
   /// **'Feedback'**
   String get aboutFeedbackLink;
 
+  /// About - Rules Local
+  ///
+  /// In en, this message translates to:
+  /// **'Current Rulebook: World Aquatics - 1st July 2025 - v6'**
+  String get aboutRulesLocal;
+
   /// About - Rules Reference
   ///
   /// In en, this message translates to:
-  /// **'Rules Reference: 2022-2025 (1st July 2025 - v6)'**
+  /// **'Rules for the app: World Aquatics - 1st July 2025 - v6'**
   String get aboutRulesReference;
 
   /// About - License

@@ -104,7 +104,7 @@
         "description": "Quizz - Question Page Next Button",
         "type": "text"
     },
-    "cFBundleDisplayName": "diving rules 22-25",
+    "cFBundleDisplayName": "diving rules",
     "@cFBundleDisplayName": {
         "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n\n App Name - Full App name",
         "type": "text"
@@ -450,7 +450,16 @@
         "type": "text"
     },
     "aboutFeedbackLink": "Rückmeldung",
-    "aboutRulesReference": "Regelreferenz: 2022–2025 (1. März 2025 – v5)",
+    "@aboutContactLink": {
+        "description": "About - Contact Link",
+        "type": "text"
+    },
+     "aboutRulesLocal": "Deutsche Vorschriften: DSV vom 26. Mai 2018",
+     "@aboutRulesLocal": {
+         "description": "About - Rules Local",
+         "type": "text"
+     },
+   "aboutRulesReference": "Regelreferenz zur App: World Aquatics - 1st July 2025 - v6",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"
