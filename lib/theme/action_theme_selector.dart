@@ -35,7 +35,7 @@ class _ThemeSelectorState extends State<ThemeSelector> {
         //     ? AppLocalizations.of(context)!.themeSelectorSwitchDarkMode
         //     : AppLocalizations.of(context)!.themeSelectorSwitchLightMode,
         // child:
-        Container(
+        SizedBox(
             width: 42,
             child: IconButton(
                 icon: Icon(themeNotifier.themeMode == ThemeMode.light

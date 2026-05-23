@@ -5,7 +5,7 @@ class PenaltyIcon extends StatefulWidget {
   int buttonType;
   double size;
 
-  PenaltyIcon({required this.buttonType, required this.size});
+  PenaltyIcon({super.key, required this.buttonType, required this.size});
 
   @override
   _PenaltyIconState createState() => _PenaltyIconState();

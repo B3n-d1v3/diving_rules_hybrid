@@ -1,8 +1,8 @@
 import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/token_spacing.dart';
 
 class OwnershipContent extends StatefulWidget {
@@ -15,7 +15,7 @@ class OwnershipContent extends StatefulWidget {
   // vieMode 2 = Quiz Answer Correction View
 
   OwnershipContent(
-      {required this.buttonType,
+      {super.key, required this.buttonType,
       required this.penaltyIndex,
       required this.viewMode});
 
@@ -30,7 +30,8 @@ class _OwnershipContentState extends State<OwnershipContent> {
       case 0:
         return Column(
           children: [
-            Icon(CupertinoIcons.person_crop_circle_badge_exclam,
+//            Icon(CupertinoIcons.person_crop_circle_badge_exclam,
+            Icon(CupertinoIcons.person_fill,
                 size: 40,
                 color: widget.viewMode != 0
                     ? currentPenaltyStatus.ownershipReferee.value
@@ -65,7 +66,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                           penaltySummary
                               .penalties[widget.penaltyIndex].referee))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -109,7 +110,7 @@ class _OwnershipContentState extends State<OwnershipContent> {
                       (widget.viewMode == 0 &&
                           penaltySummary.penalties[widget.penaltyIndex].judge))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
 
             SizedBox(height: DRSpacing.xs),

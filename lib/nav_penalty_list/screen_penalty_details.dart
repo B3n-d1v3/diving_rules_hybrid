@@ -1,11 +1,11 @@
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../buttons/button_ownership.dart';
 import '../buttons/button_penalties.dart';
 import '../l10n/action_language_selector.dart';
+import '../l10n/diving_rules_localizations.dart';
 import '../l10n/penalty_description_l10n.dart';
 import '../models/globals.dart';
 import '../models/sanction_model.dart';
@@ -17,7 +17,7 @@ import '../theme/dr_colors.dart';
 class PagePenaltyDescription extends StatefulWidget {
   int index;
 
-  PagePenaltyDescription({Key? key, required this.index}) : super(key: key);
+  PagePenaltyDescription({super.key, required this.index});
 
   @override
   _PagePenaltyDescriptionState createState() => _PagePenaltyDescriptionState();
@@ -249,13 +249,13 @@ class _PagePenaltyDescriptionState extends State<PagePenaltyDescription> {
 class DisplayRulesReferences extends StatelessWidget {
   final List<Rule> rulesReferences;
 
-  DisplayRulesReferences({required this.rulesReferences});
+  const DisplayRulesReferences({super.key, required this.rulesReferences});
 
   @override
   Widget build(BuildContext context) {
     String rulesToDisplay = "";
     for (var i = 0; i < rulesReferences.length; i++) {
-      rulesToDisplay = rulesToDisplay + " - ${rulesReferences[i].ruleId}";
+      rulesToDisplay = "$rulesToDisplay - ${rulesReferences[i].ruleId}";
     }
     return (RichText(
         text: TextSpan(

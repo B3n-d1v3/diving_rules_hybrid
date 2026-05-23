@@ -48,7 +48,7 @@ class ButtonsStatus extends GetxController {
 }
 
 // Reset the current question status display model
-buttonStatusReset() {
+void buttonStatusReset() {
   // Reset the current question status display model
   currentPenaltyStatus.penaltyZeroPts(false);
   currentPenaltyStatus.penaltyMaxTwoPts(false);
@@ -79,7 +79,7 @@ buttonStatusReset() {
 
 // Set the ButtonsStatus Object to the penalty's status display model
 // This is used by the error review page to set the data display model to the penalty's reference sanction & ownership
-buttonAllStatusSet({required int penaltyNb}) {
+void buttonAllStatusSet({required int penaltyNb}) {
   buttonPenaltyStatusSet(
       sanctionID: penaltySummary.penalties[penaltyNb].sanctionValue);
 
@@ -90,7 +90,7 @@ buttonAllStatusSet({required int penaltyNb}) {
 }
 
 // Set the penalty status sanctions to false and the sanction id correspondence to true
-buttonPenaltyStatusSet({required int sanctionID}) {
+void buttonPenaltyStatusSet({required int sanctionID}) {
   //int sanctionID = penaltySummary.penalties[penaltyNb].sanctionValue;
   if (sanctionID == 0) {
     currentPenaltyStatus.penaltyZeroPts(true);
@@ -125,7 +125,7 @@ buttonPenaltyStatusSet({required int sanctionID}) {
 }
 
 // Set the penalty status sanctions to false and the sanction id correspondence to it's oposit value
-buttonPenaltyStatusChange({required int sanctionID}) {
+ButtonsStatus buttonPenaltyStatusChange({required int sanctionID}) {
   //currentPenaltyStatus.userSanctionSelection = sanctionID.obs;
 
   switch (sanctionID) {
@@ -196,7 +196,7 @@ buttonPenaltyStatusChange({required int sanctionID}) {
 }
 
 // Set the penalties and the ownership the the user's response
-buttonAllStatusSetToUserAnswer({required int quizIndex}) {
+void buttonAllStatusSetToUserAnswer({required int quizIndex}) {
   buttonPenaltyStatusSet(
       sanctionID: currentQuiz.answers[quizIndex].sanctionValue);
   currentPenaltyStatus.ownershipJudge(currentQuiz.answers[quizIndex].judge);
@@ -204,7 +204,7 @@ buttonAllStatusSetToUserAnswer({required int quizIndex}) {
 }
 
 // Log views
-buttonPenaltyDebug() {
+void buttonPenaltyDebug() {
   debugPrint('>>>>> Button Status Object > penaltyButtonStatus ---:');
   debugPrint(
       '>>>>> currentPenaltyStatus.penaltyZeroPts: ${currentPenaltyStatus.penaltyZeroPts.value}');
@@ -220,7 +220,7 @@ buttonPenaltyDebug() {
       '>>>>> currentPenaltyStatus.penaltyJudgeOpinion: ${currentPenaltyStatus.penaltyJudgeOpinion.value}');
 }
 
-buttonOwnershipDebug() {
+void buttonOwnershipDebug() {
   debugPrint('>>>>> Button Status Object > OwnershipButtonStatus ---:');
   debugPrint(
       '>>>>> currentPenaltyStatus.ownershipReferee: ${currentPenaltyStatus.ownershipReferee.value}');

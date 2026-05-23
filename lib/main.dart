@@ -4,13 +4,14 @@ import 'package:diving_rules_hybrid/nav_quiz/screen_quiz.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // Localization
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:provider/provider.dart';
+import 'package:syncfusion_localizations/syncfusion_localizations.dart';
 
-import 'app_home_m3.dart';
-// Localization (inline command to generate files with new values: flutter gen-l10n)
+import 'app_home_m3.dart'; // Localization (inline command to generate files with new values: flutter gen-l10n)
+import 'l10n/diving_rules_localizations.dart';
 import 'l10n/l10n.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_rulebook/screen_rulebook.dart';
@@ -33,7 +34,6 @@ class _DivingRulesAppState extends State<DivingRulesApp> {
   Widget build(BuildContext context) {
     // TODO: Correct the dark/light mode changer
     // TODO: Add Italian rulebook
-    // TODO: Add Mx language and rulebook
 
     // TODO: Later / check why the titles do not follow the text size growth
     // TODO: Later / change the about icon to the app logo
@@ -64,6 +64,7 @@ class _DivingRulesAppState extends State<DivingRulesApp> {
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
+            SfGlobalLocalizations.delegate,
           ],
           fallbackLocale: const Locale('en', 'US'),
         );

@@ -9,10 +9,10 @@ import 'package:diving_rules_hybrid/sub_views/diving_rules_logo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:provider/provider.dart';
 
 import 'l10n/action_language_selector.dart';
+import 'l10n/diving_rules_localizations.dart';
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
 import 'nav_quiz/screen_quiz.dart';
@@ -27,6 +27,8 @@ const int mobileUiMaxScreenWidth = 640;
 const int mobileHeaderMaxScreenWidth = 330;
 
 class DivingRulesMainScreen extends StatefulWidget {
+  const DivingRulesMainScreen({super.key});
+
   @override
   State<DivingRulesMainScreen> createState() => _DivingRulesMainScreenState();
 }
@@ -87,7 +89,7 @@ class _DivingRulesMainScreenState extends State<DivingRulesMainScreen> {
     // The container for the current page, with its background color
     // and subtle switching animation.
     var mainArea = ColoredBox(
-      color: colorScheme.surfaceVariant,
+      color: colorScheme.surfaceContainerHighest,
       child: AnimatedSwitcher(
         duration: Duration(milliseconds: 200),
         child: selectedItem.screen,
@@ -220,18 +222,18 @@ class _NavigationItems {
     ];
   }
 
-  getSelectedMenuItem(int index) {
+  _MainMenuItem getSelectedMenuItem(int index) {
     return _mainMenuItems[index];
   }
 
-  getBottomNavigationBarItems() {
+  List<BottomNavigationBarItem> getBottomNavigationBarItems() {
     return _mainMenuItems
         .map((e) => BottomNavigationBarItem(
             icon: e.icon, activeIcon: e.activeIcon, label: e.label))
         .toList();
   }
 
-  getNavigationRailDestinations() {
+  List<NavigationRailDestination> getNavigationRailDestinations() {
     return _mainMenuItems
         .map((e) => NavigationRailDestination(
             icon: e.icon, selectedIcon: e.activeIcon, label: Text(e.label)))

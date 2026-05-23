@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 import '../models/token_spacing.dart';
+import 'diving_rules_localizations.dart';
 
 class LanguageSelector extends StatefulWidget {
   const LanguageSelector({super.key});
@@ -15,7 +15,7 @@ class LanguageSelector extends StatefulWidget {
 class _LanguageSelectorState extends State<LanguageSelector> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 32,
       child: PopupMenuButton<String>(
         onSelected: (item) => handleClick(item),
@@ -28,7 +28,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
               child: Row(
                 children: [
                   const Text(
-                    "🇺🇸",
+                    "🇬🇧",
                     style: TextStyle(fontSize: 24),
                   ),
                   SizedBox(width: DRSpacing.s),
@@ -60,18 +60,6 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                 ],
               )),
           PopupMenuItem<String>(
-              value: "MX",
-              child: Row(
-                children: [
-                  const Text(
-                    "🇲🇽",
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  SizedBox(width: DRSpacing.s),
-                  const Text("Mexicano")
-                ],
-              )),
-          PopupMenuItem<String>(
               value: "it",
               child: Row(
                 children: [
@@ -83,6 +71,30 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                   const Text("Italiano")
                 ],
               )),
+          PopupMenuItem<String>(
+              value: "de",
+              child: Row(
+                children: [
+                  const Text(
+                    "🇩🇪",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  SizedBox(width: DRSpacing.s),
+                  const Text("Deutsch")
+                ],
+              )),
+          PopupMenuItem<String>(
+              value: "MX",
+              child: Row(
+                children: [
+                  const Text(
+                    "🇲🇽",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  SizedBox(width: DRSpacing.s),
+                  const Text("Mexicano")
+                ],
+              )),
         ],
       ),
     );
@@ -90,31 +102,34 @@ class _LanguageSelectorState extends State<LanguageSelector> {
 
   void handleClick(String item) {
     // changes the local app language
-    Locale _tempLocale;
+    Locale tempLocale;
     // debugPrint('>>>>> Language_selector > before click: languageCode: ${Localizations.localeOf(context).languageCode} - countryCode: ${Localizations.localeOf(context).countryCode}');
     switch (item) {
       case 'en':
-        _tempLocale = const Locale('en', 'US');
+        tempLocale = const Locale('en', 'US');
         break;
       case 'fr':
-        _tempLocale = const Locale('fr', 'FR');
+        tempLocale = const Locale('fr', 'FR');
         break;
       case 'es':
-        _tempLocale = const Locale('es', 'ES');
+        tempLocale = const Locale('es', 'ES');
         break;
       case 'MX':
-        _tempLocale = const Locale('es', 'MX');
+        tempLocale = const Locale('es', 'MX');
         break;
       case 'it':
-        _tempLocale = const Locale('it', 'IT');
+        tempLocale = const Locale('it', 'IT');
+        break;
+      case 'de':
+        tempLocale = const Locale('de', 'DE');
         break;
       default:
-        _tempLocale = const Locale('en', 'US');
+        tempLocale = const Locale('en', 'US');
     }
     // debugPrint('>>>>> Language_selector > before click: _tempLocale.languageCode: ${_tempLocale.languageCode} - _tempLocale.countryCode: ${_tempLocale.countryCode}');
 
     setState(() {
-      Get.updateLocale(_tempLocale);
+      Get.updateLocale(tempLocale);
       // Test current Local
     });
   }

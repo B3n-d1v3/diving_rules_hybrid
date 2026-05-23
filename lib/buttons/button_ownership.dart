@@ -13,7 +13,7 @@ class OwnershipButton extends StatefulWidget {
   int viewMode;
 
   OwnershipButton(
-      {required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
+      {super.key, required this.buttonType, this.penaltyIndex = -1, this.viewMode = 0});
 
   @override
   _OwnershipButtonState createState() => _OwnershipButtonState();
@@ -78,10 +78,10 @@ class _OwnershipButtonState extends State<OwnershipButton> {
                               : AppColor.drColorPositiveLight
                           // this item is not the right answer
                           // else hide the border
-                          : Theme.of(context).colorScheme.background
+                          : Theme.of(context).colorScheme.surface
                       // if the page is in question mode
                       // else hide the border
-                      : Theme.of(context).colorScheme.background)),
+                      : Theme.of(context).colorScheme.surface)),
           child: OwnershipContent(
               buttonType: widget.buttonType,
               penaltyIndex: widget.penaltyIndex,

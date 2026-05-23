@@ -29,8 +29,10 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
+    namespace "com.bendivingjudge.diving_rules.hybrid"
     compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    //ndkVersion flutter.ndkVersion
+    ndkVersion = "28.0.13004108"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -52,8 +54,8 @@ android {
 
         // minSdkVersion flutter.minSdkVersion
         // Change to support share_plus
-        minSdkVersion 19
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion 35 //flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }

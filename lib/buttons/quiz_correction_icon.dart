@@ -11,7 +11,7 @@ class QuizCorrectionIcon extends StatefulWidget {
   double size;
 
   QuizCorrectionIcon(
-      {required this.penaltyQuestion,
+      {super.key, required this.penaltyQuestion,
       required this.penaltyAnswer,
       required this.size});
 

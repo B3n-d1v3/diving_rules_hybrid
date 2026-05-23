@@ -1,16 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/globals.dart';
 import '../models/token_spacing.dart';
 
 class ScreenRulebook extends StatefulWidget {
-  const ScreenRulebook({Key? key}) : super(key: key);
+  const ScreenRulebook({super.key});
 
   @override
   State<ScreenRulebook> createState() => _ScreenRulebookState();
@@ -49,7 +48,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
       _showToolbar = false;
       _showScrollHead = true;
     }
-    ;
+
     // debugPrint('>>>> ScreenRulebook > initState in > currentPage: "${currentPage}"');
     currentPage = 'rulebook';
     // could be 'start', 'rulebook', 'penalties', 'quiz', 'about'
@@ -77,32 +76,6 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     _historyEntry = null;
   }
 
-  /// Show the Copy Menu item
-  void _showContextMenu(
-      BuildContext context, PdfTextSelectionChangedDetails details) {
-    final OverlayState _overlayState = Overlay.of(context)!;
-    _overlayEntry = OverlayEntry(
-      builder: (context) => Positioned(
-        top: details.globalSelectedRegion!.center.dy - 55,
-        left: details.globalSelectedRegion!.bottomLeft.dx,
-        child: ElevatedButton(
-          onPressed: () {
-            Clipboard.setData(
-                ClipboardData(text: details.selectedText.toString()));
-            // debugPrint('Text copied to clipboard: ' + details.selectedText.toString());
-            _pdfViewerController.clearSelection();
-          },
-          // make translation
-          child: Text(
-            AppLocalizations.of(context)!.rulebookCopy,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ),
-      ),
-    );
-    _overlayState.insert(_overlayEntry!);
-  }
-
   @override
   Widget build(BuildContext context) {
     Locale myLocale = Localizations.localeOf(context);
@@ -112,22 +85,29 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
     getRulebookUrl(Locale appLocale) {
       // Select the document to be displayed in the pdf viewer based on the selected locale
       String tempUrl =
-          'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240101.pdf';
-      appLocale.languageCode == 'fr'
-          ? tempUrl =
-              'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf'
-          : appLocale.languageCode == 'es'
-              ? appLocale.countryCode == 'MX'
-                  ? tempUrl =
-                      'assets/rulebooks/2022-2025_Reglas-WA-Clavados-FMN_es_MX.pdf'
-                  : tempUrl =
-                      'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf'
-              // Add Italian rulebook here
-              // : appLocale.languageCode == 'it'
-              //     ? tempUrl = 'assets/rulebooks/2022-2025_xxxxxxx_it.pdf')
-              : tempUrl =
-                  'assets/rulebooks/2022-2025_World-Aquatics-Diving-Rules_en_20240101.pdf';
-      // debugPrint('>>>>> ScreenRulebook > getRulebookUrl > tempUrl: ${tempUrl} ');
+          'url/filename.pdf';
+      // When updating the file URL's also think of updating the "aboutRulesReference" in the translation file of the corresponding language
+
+      switch (appLocale.languageCode) {
+        case 'fr':
+          tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf';
+          break;
+        case 'de':
+          tempUrl = 'assets/rulebooks/2018-07-13_WA_Wettkampfbestimmungen-Wasserspringen_de.pdf';
+          break;
+        case 'it':
+          tempUrl = 'assets/rulebooks/2022-2025_WA-Reglamento-Aqua-Tuffi_it-r.pdf';
+          break;
+        case 'es':
+          appLocale.countryCode == 'MX'
+              ? tempUrl = 'assets/rulebooks/2022-2025_Reglas-WA-de-Clavados-FMN_es-mx-r.pdf'
+              : tempUrl = 'assets/rulebooks/2022-2025_WA_Reglamento_Saltos_es.pdf';
+          break;
+
+        default:
+          tempUrl = 'assets/rulebooks/2025-07-01_World-Aquatics-Diving-Rules_en-r.pdf';
+      }
+
       return tempUrl;
     }
 
@@ -176,19 +156,43 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
             key: _pdfViewerStateKey,
             enableDoubleTapZooming: false,
             enableTextSelection: true,
-            onTextSelectionChanged: (PdfTextSelectionChangedDetails details) {
-              if (details.selectedText == null && _overlayEntry != null) {
-                _overlayEntry!.remove();
-                _overlayEntry = null;
-              } else if (details.selectedText != null &&
-                  _overlayEntry == null) {
-                _showContextMenu(context, details);
-              }
-            },
             controller: _pdfViewerController,
             canShowScrollHead: _showScrollHead,
           ),
           // :,
+
+          /// Display bookmarks button within the pdf top right corner
+          Visibility(
+            visible: search,
+            child: Align(
+                alignment: Alignment.topRight,
+                child: Padding(
+                  padding: EdgeInsets.all(DRSpacing.m),
+                  child: Container(
+                    // padding: EdgeInsets.all(DRSpacing.none),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                        border: Border.all(
+                          width: 2,
+                          color: Theme.of(context).colorScheme.primary,
+                        )),
+                    child: IconButton(
+                      icon: Icon(
+                        CupertinoIcons.bookmark_fill,
+                        size: 24,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _pdfViewerStateKey.currentState!.openBookmarkView();
+                        });
+                      },
+                      tooltip: AppLocalizations.of(context)!.rulebookBookmarks,
+                    ),
+                  ),
+                )),
+          ),
 
           /// Unsuccessful search result acknowledgement
           Visibility(
@@ -243,12 +247,12 @@ typedef SearchTapCallback = void Function(Object item);
 /// SearchToolbar widget
 class SearchToolbar extends StatefulWidget {
   ///it describe the search toolbar constructor
-  SearchToolbar({
+  const SearchToolbar({
     this.controller,
     this.onTap,
     this.showTooltip = true,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   /// Indicates whether the tooltip for the search toolbar items need to be shown or not.
   final bool showTooltip;
@@ -305,7 +309,8 @@ class SearchToolbarState extends State<SearchToolbar> {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        /// Bookmarks
+        /// Bookmarks in the search bar
+        /// Not setup to launch the bookmarks correctly yet
         // Visibility(
         //   visible: _editingController.text.isEmpty,
         //   child: Material(
@@ -317,7 +322,23 @@ class SearchToolbarState extends State<SearchToolbar> {
         //         color: Theme.of(context).colorScheme.primary,
         //       ),
         //       onPressed: () {
-        //         _pdfViewerStateKey.currentState!.openBookmarkView();
+        //         setState(() {
+        //           // open bookmark view (Currently testing
+        //           search = false;
+        //           bookmark = true;
+        //
+        //           // previous code to clear the search
+        //           _editingController.clear();
+        //           _pdfTextSearchResult.clear();
+        //           widget.controller!.clearSelection();
+        //           _isSearchInitiated = false;
+        //           focusNode!.requestFocus();
+        //         });
+        //         Get.offAllNamed(
+        //           '/',
+        //         );
+        //
+        //         // _pdfViewerStateKey.currentState!.openBookmarkView();
         //       },
         //       tooltip: widget.showTooltip
         //           ? AppLocalizations.of(context)!.rulebookBookmarks

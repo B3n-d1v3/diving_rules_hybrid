@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TestTextStyles extends StatefulWidget {
-  const TestTextStyles({Key? key}) : super(key: key);
+  const TestTextStyles({super.key});
 
   @override
   _TestTextStylesState createState() => _TestTextStylesState();
@@ -18,7 +18,7 @@ class _TestTextStylesState extends State<TestTextStyles> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         title: Text('Typography tests'),
       ),

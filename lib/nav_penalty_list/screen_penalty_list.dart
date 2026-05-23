@@ -9,7 +9,7 @@ import '../buttons/penalty_sanction_icon.dart';
 import '../l10n/penalty_description_l10n.dart';
 
 class ScreenPenaltyList extends StatefulWidget {
-  const ScreenPenaltyList({Key? key}) : super(key: key);
+  const ScreenPenaltyList({super.key});
 
   @override
   State<ScreenPenaltyList> createState() => _ScreenPenaltyListState();
@@ -40,6 +40,8 @@ class _ScreenPenaltyListState extends State<ScreenPenaltyList> {
 }
 
 class PenaltyListView extends StatelessWidget {
+  const PenaltyListView({super.key});
+
   @override
   Widget build(BuildContext context) {
     /// List of the penalties

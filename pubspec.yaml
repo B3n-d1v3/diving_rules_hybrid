@@ -1,5 +1,5 @@
 name: diving_rules_hybrid
-description: An mobile app to learn the Fina Diving Rules.
+description: A mobile app to learn the World Aquatics Diving Rules.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -18,7 +18,16 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 
-version: 2.3.0+15
+version: 2.6.4+24
+# v2.6.4+24 <- Change of the language order / New version to update in Google Play store with Android api level 35
+# v2.6.3+23 <- Updated name of the app to Diving Rules instead of Diving Rule 22 / Added in the About the local rulebook version
+# v2.6.2+22 <- Update of the EN rulebook form Jul 2025 / add the DE Language and rulebook / add of IT rulebook / updated the ES language
+# v2.6.1+21 <- Creation of the MacOS version of the app
+# v2.6.0+20 <- Update Dependencies and language support update / Add the German Language
+# v2.5.0+19 <- add the EN rulebook form Feb 2025
+# v2.4.1+18 <- add the EN rulebook form July 2024 with the bookmarks set and optimize file size
+# v2.4.0+17 <- add the EN rulebook form July
+# v2.3.1+16 <- fix ios font and pdf copy feature update / added pdf bookmarks access / Corrected and localized the selection menu options
 # v2.3.0+15 <- updated version of the rules EN to v3 (01/01/2024) inc bookmarks & optimized size, added about reference details
 # v2.2.3+14 <- updated version of the rules EN with Bookmarks and optimized the pdf files and corrected the search close
 # v2.2.2+13 <- contact updated to feedback
@@ -29,7 +38,8 @@ version: 2.3.0+15
 # v2.0.0+5 <- initial launch for Android (11 Aug 2023)
 
 environment:
-  sdk: '>=2.18.4 <3.0.0'
+  #sdk: '>=2.18.4 <3.0.0'
+  sdk: ^3.2.0
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -45,26 +55,34 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   # intl: ^0.18.0
-  intl: ^0.18.0
+  # intl: ^0.19.0
+  intl: ^0.20.2
+
+#  syncfusion_localizations: ^29.2.9
+  syncfusion_localizations: ^31.1.20
 
   # Package version number retrieval
-  # package_info_plus: ^3.0.3
-  package_info_plus: ^5.0.1
+  # package_info_plus: ^8.3.0
+  package_info_plus: ^9.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   # cupertino_icons: ^1.0.2
-  cupertino_icons: ^1.0.6
-  # shared_preferences: ^2.0.15
-  shared_preferences: ^2.1.1
-  # provider: ^6.0.5
-  provider: ^6.1.1
-  # syncfusion_flutter_pdfviewer: ^20.4.38
-  syncfusion_flutter_pdfviewer: ^24.2.7
-  get: ^4.6.6
-  flutter_svg: ^2.0.10+1
-  url_launcher: ^6.2.4
-  share_plus: ^7.2.2
+  cupertino_icons: ^1.0.8
+  # shared_preferences: ^2.1.1
+  shared_preferences: ^2.5.3
+  # provider: ^6.1.5
+  provider: ^6.1.5+1
+  # syncfusion_flutter_pdfviewer: ^29.2.9
+  syncfusion_flutter_pdfviewer: ^31.1.20
+
+  get: ^4.7.2
+  # flutter_svg: ^2.1.0
+  flutter_svg: ^2.2.1
+  # url_launcher: ^6.3.1
+  url_launcher: ^6.3.2
+  # share_plus: ^11.0.0
+  share_plus: ^12.0.0
 
 
 
@@ -80,7 +98,8 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.1
+  #flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -95,6 +114,7 @@ flutter:
 
   # Localization setup
   generate: true
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

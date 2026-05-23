@@ -5,8 +5,7 @@ class DivingRulesLogo extends StatelessWidget {
   bool small;
   bool leftAligned;
 
-  DivingRulesLogo({Key? key, required this.small, this.leftAligned = false})
-      : super(key: key);
+  DivingRulesLogo({super.key, required this.small, this.leftAligned = false});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +29,8 @@ class DivingRulesLogo extends StatelessWidget {
       );
     } else {
       return SvgPicture.asset(
-        "assets/images/diving_rules_22_logo_horizontal_22-25.svg",
+        // "assets/images/diving_rules_22_logo_horizontal_22-25.svg",
+        "assets/images/diving_rules_22_logo_horizontal.svg",
         colorFilter: ColorFilter.mode(
             Theme.of(context).colorScheme.primary, BlendMode.srcIn),
         height: 45,

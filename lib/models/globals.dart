@@ -1,4 +1,4 @@
-library diving_rules_hybrid.globals;
+library;
 
 import 'package:diving_rules_hybrid/models/penalty_model.dart';
 import 'package:diving_rules_hybrid/models/quiz_button_status.dart';

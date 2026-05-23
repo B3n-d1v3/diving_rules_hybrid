@@ -1,17 +1,18 @@
 import 'package:diving_rules_hybrid/models/globals.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
+
 import 'package:flutter_svg/svg.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/token_spacing.dart';
 import '../sub_views/diving_rules_logo.dart';
 
 class ScreenAbout extends StatefulWidget {
-  const ScreenAbout({Key? key}) : super(key: key);
+  const ScreenAbout({super.key});
 
   @override
   State<ScreenAbout> createState() => _ScreenAboutState();
@@ -76,7 +77,17 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       ),
                     ),
 
-                    /// World Aquatics Rules Reference version
+                    /// Local Rules Reference version
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        AppLocalizations.of(context)!.aboutRulesLocal,
+                        textAlign: TextAlign.start,
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
+                    ),
+
+                    /// World Aquatics Rules Reference version for the app
                     Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -108,7 +119,18 @@ class _ScreenAboutState extends State<ScreenAbout> {
                       height: DRSpacing.xl,
                     ),
 
-                    /// World Aquatics link
+                    Divider(),
+
+                    /// World Aquatics links
+                    Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'World Aquatics Links',
+                        style: Theme.of(context).textTheme.titleMedium,
+
+                        //style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25, height: 2, color: primaryColor),
+                      ),
+                    ),
                     // link to WA: https://www.worldaquatics.com/diving
                     OutlinedButton(
                         onPressed: () async {
@@ -122,7 +144,23 @@ class _ScreenAboutState extends State<ScreenAbout> {
                           }
                         },
                         child: Text(
-                          'World Aquatics',
+                          AppLocalizations.of(context)!.aboutWADivingLink,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                          // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
+                        )),
+                    OutlinedButton(
+                        onPressed: () async {
+                          Uri waUrl = Uri.parse(
+                              "https://www.worldaquatics.com/rules/competition-regulations");
+                          if (await launchUrl(waUrl,
+                              mode: LaunchMode.externalApplication)) {
+                            //browsing app opened
+                          } else {
+                            //browsing app did not opened
+                          }
+                        },
+                        child: Text(
+                          AppLocalizations.of(context)!.aboutWARulesLink,
                           style: Theme.of(context).textTheme.bodyMedium,
                           // style: TextStyle(color: Theme.of(context).colorScheme.primary,)
                         )),

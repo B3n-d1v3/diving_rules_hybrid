@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
 // import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/globals.dart';
 import '../models/token_spacing.dart';
 
@@ -17,7 +17,7 @@ class PenaltyContentStatic extends StatefulWidget {
   // vieMode 2 = Quiz Answer Correction View
 
   PenaltyContentStatic(
-      {required this.buttonType,
+      {super.key, required this.buttonType,
       required this.penaltyIndex,
       required this.viewMode});
 
@@ -79,7 +79,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               0)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
 
             SizedBox(height: DRSpacing.xs),
@@ -129,7 +129,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               1)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -178,7 +178,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               2)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -227,7 +227,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               3)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -277,7 +277,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               4)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],
@@ -329,7 +329,7 @@ class _PenaltyContentStaticState extends State<PenaltyContentStatic> {
                                   .sanctionValue ==
                               5)))
                   ? Theme.of(context).colorScheme.primary
-                  : Theme.of(context).colorScheme.background,
+                  : Theme.of(context).colorScheme.surface,
             ),
             SizedBox(height: DRSpacing.xs),
           ],

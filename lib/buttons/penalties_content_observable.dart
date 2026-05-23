@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 // import 'package:flutter_gen/gen_l10n/diving_rules_localizations.dart';
 
+import '../l10n/diving_rules_localizations.dart';
 import '../models/globals.dart';
 import '../models/token_spacing.dart';
 
@@ -18,7 +18,7 @@ class PenaltyContentObsv extends StatefulWidget {
   // vieMode 2 = Quiz Answer Correction View
 
   PenaltyContentObsv(
-      {required this.buttonType,
+      {super.key, required this.buttonType,
       required this.penaltyIndex,
       required this.viewMode});
 
@@ -82,7 +82,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   0)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
 
                 SizedBox(height: DRSpacing.xs),
@@ -132,7 +132,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   1)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
                 SizedBox(height: DRSpacing.xs),
               ],
@@ -181,7 +181,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   2)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
                 SizedBox(height: DRSpacing.xs),
               ],
@@ -231,7 +231,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   3)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
                 SizedBox(height: DRSpacing.xs),
               ],
@@ -281,7 +281,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   4)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
                 SizedBox(height: DRSpacing.xs),
               ],
@@ -330,7 +330,7 @@ class _PenaltyContentObsvState extends State<PenaltyContentObsv> {
                                       .sanctionValue ==
                                   5)))
                       ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.background,
+                      : Theme.of(context).colorScheme.surface,
                 ),
                 SizedBox(height: DRSpacing.xs),
               ],
