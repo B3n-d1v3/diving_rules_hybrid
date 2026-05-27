@@ -340,307 +340,312 @@ abstract class AppLocalizations {
   String get quizzResultLegendRealAnswer;
 
   /// Penalty Descripion List
-  ///  Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.
+  ///  Penalty 0 - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).
   ///
   /// In en, this message translates to:
-  /// **'If the diver takes more than one minute, after a warning.'**
+  /// **'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).'**
   String get penalty0;
 
-  /// Penalty 1 - D6.16 & D8.3.4 - If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.
+  /// Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.
   ///
   /// In en, this message translates to:
-  /// **'If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.'**
+  /// **'If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.'**
   String get penalty1;
 
-  /// Penalty 2 - D6.17 & D8.3.3 - If the final step is not from one foot.
+  /// Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.
   ///
   /// In en, this message translates to:
-  /// **'If the final step is not from one foot.'**
+  /// **'If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.'**
   String get penalty2;
 
-  /// Penalty 3 - D6.18 & D8.4.3 - If the take-off on the springboard is not from both feet simultaneously.
+  /// Penalty 3 - 8.6.5.4 - 10.4.4 - If the take-off from the springboard or platform is not from both feet simultaneously.
   ///
   /// In en, this message translates to:
-  /// **'If the take-off on the springboard is not from both feet simultaneously.'**
+  /// **'If the take-off from the springboard or platform is not from both feet simultaneously.'**
   String get penalty3;
 
-  /// Penalty 4 - D6.20 & D8.6.6- If a twist is greater or less than that announced by 90 degrees or more.
+  /// Penalty 4 - 8.6.5.5 - 10.6.6 - If the twist in a dive at entry is greater or less than that announced by 90 degrees or more.
   ///
   /// In en, this message translates to:
-  /// **'If a twist is greater or less than that announced by 90 degrees or more.'**
+  /// **'If the twist in a dive at entry is greater or less than that announced by 90º or more.'**
   String get penalty4;
 
-  /// Penalty 5 - D6.21 & D8.1.7 - If a diver has performed a dive of a number other than that announced.
+  /// Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If an Athlete has performed a dive of a number other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'If a diver has performed a dive of a number other than that announced.'**
+  /// **'If an Athlete has performed a dive of a number other than that announced.'**
   String get penalty5;
 
-  /// Penalty 6 - D6.22.1 - If the feet enter the water before the head or hands in a head first dive.
+  /// Penalty 6 - 8.6.5.6 - If in a head-first entry dive, the feet enter the water before the head or hands.
   ///
   /// In en, this message translates to:
-  /// **'If the feet enter the water before the head or hands in a head first dive.'**
+  /// **'If in a head-first entry dive, the feet enter the water before the head or hands.'**
   String get penalty6;
 
-  /// Penalty 7 - D6.22.2 - If the head or hands enter the water before the feet in a feet first dive.
+  /// Penalty 7 - 8.6.5.7  - If in a feet-first entry dive, the head or hands enter the water before the feet.
   ///
   /// In en, this message translates to:
-  /// **'If the head or hands enter the water before the feet in a feet first dive.'**
+  /// **'If in a feet-first entry dive, the head or hands enter the water before the feet.'**
   String get penalty7;
 
-  /// Penalty 8 - D6.24 - If assistance has been given to the diver after the starting signal.
+  /// Penalty 8 - 8.7 - If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.
   ///
   /// In en, this message translates to:
-  /// **'If assistance has been given to the diver after the starting signal.'**
+  /// **'If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.'**
   String get penalty8;
 
-  /// Penalty 9 - D6.27 - When a second attempt
+  /// Penalty 9 - 8.6.5.1 - When a second attempt
   /// (a re-start) is unsuccessful.
   ///
   /// In en, this message translates to:
   /// **'When a second attempt (a re-start) is unsuccessful.'**
   String get penalty9;
 
-  /// Penalty 10 - D6.28 - If a diver refuses the execution of a dive.
+  /// Penalty 10 - 8.5.7 - If an Athlete refuses or fails to perform a dive.
   ///
   /// In en, this message translates to:
-  /// **'If a diver refuses the execution of a dive.'**
+  /// **'If an Athlete refuses or fails to perform a dive.'**
   String get penalty10;
 
-  /// Penalty 11 - D9.2 & D9.9 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.
+  /// Penalty 11 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if a diver, or both divers, perform a dive of a different number.'**
+  /// **'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number other than that announced.'**
   String get penalty11;
 
-  /// Penalty 12 - D9.8 - In synchronised diving if all execution judges for one diver award zero (0) points.
+  /// Penalty 12 - 11.6.3 - In synchronised diving if all execution judges for one Athlete award 0 points.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if all execution judges for one diver award zero (0) points.'**
+  /// **'In synchronised diving if all execution judges for one Athlete award 0 points.'**
   String get penalty12;
 
-  /// Penalty 13 - D9.10 - In synchronised diving if all synchronisation judges award zero (0) points.
+  /// Penalty 13 - 11.7.5 - In synchronised diving, if all synchronisation Judges award 0 points.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if all synchronisation judges award zero (0) points.'**
+  /// **'In synchronised diving, if all synchronisation Judges award 0 points.'**
   String get penalty13;
 
-  /// Penalty 14 - D9.8 & 9.9 - If an execution judge considers that a dive of a different number has been performed.
+  /// Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if a diver, or both divers, perform a dive of a different position.'**
+  /// **'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.'**
   String get penalty14;
 
-  /// Penalty 15 - D9.5 - In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.
+  /// Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.'**
+  /// **'In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.'**
   String get penalty15;
 
-  /// Penalty 16 - D6.25 - If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.
+  /// Penalty 16 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.
   ///
   /// In en, this message translates to:
-  /// **'If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.'**
+  /// **'If during a running dive, an Athlete takes any step(s) during the approach and then stops.'**
   String get penalty16;
 
-  /// Penalty 17 - D6.26 - If there is a
-  /// re-start in a standing, running, or armstand dive.
+  /// Penalty 17 - 8.6.4 - When there is a restart in a running, standing, or Armstand dive.
   ///
   /// In en, this message translates to:
-  /// **'If there is a re-start in a standing, running, or armstand dive.'**
+  /// **'When there is a restart in a running, standing, or Armstand dive.'**
   String get penalty17;
 
-  /// Penalty 18 - D9.6 - In synchronised diving if there is a re-start by one or both divers.
+  /// Penalty 18 - 11.4 - In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if there is a re-start by one or both divers.'**
+  /// **'In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.'**
   String get penalty18;
 
-  /// Penalty 19 - D6.19 & D8.1.4 - If a diver performs a dive in a position other than that announced.
+  /// Penalty 19 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'If a diver performs a dive in a position other than that announced.'**
+  /// **'If an Athlete performs a dive in a Position other than that announced.'**
   String get penalty19;
 
-  /// Penalty 20 - D8.5.4 - If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.
+  /// Penalty 20 - 10.5.4.2.1 - If in a dive, an Athlete is unsafely close to the springboard or platform or touches the end of the springboard or platform with their head.
   ///
   /// In en, this message translates to:
-  /// **'If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.'**
+  /// **'If in a dive, an Athlete is unsafely close to the springboard or platform or touches the end of the springboard or platform with their head.'**
   String get penalty20;
 
-  /// Penalty 21 - D6.22, D8.6.3 & D8.6.4 - If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.
+  /// Penalty 21 - 8.6.7.1 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.
   ///
   /// In en, this message translates to:
-  /// **'If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.'**
+  /// **'If in a feet-first entry dive, an Athlete has one or both arms held above the head.'**
   String get penalty21;
 
-  /// Penalty 22 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.
+  /// Penalty 22 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.
   ///
   /// In en, this message translates to:
-  /// **'If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.'**
+  /// **'In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.'**
   String get penalty22;
 
-  /// Penalty 23 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.
+  /// Penalty 23 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.
   ///
   /// In en, this message translates to:
-  /// **'If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.'**
+  /// **'In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.'**
   String get penalty23;
 
-  /// Penalty 24 - D8.1.6 - If a dive is not performed in a position as described.
+  /// Penalty 24 - 10.1.6 - If a dive is not performed in a Position as described.
   ///
   /// In en, this message translates to:
-  /// **'If a dive is not performed in a position as described in the rules.'**
+  /// **'If a dive is not performed in a Position as described in the rules.'**
   String get penalty24;
 
-  /// Penalty 25 - D8.2.3 - If the starting position is not straight, head erect, with the arms straight in any position.
+  /// Penalty 25 - 10.2.2 - If the starting position is not body straight, head erect and facing forward, arms straight (along the body, perpendicular to the body or overhead).
   ///
   /// In en, this message translates to:
-  /// **'If the starting position is not straight, head erect, with the arms straight in any position.'**
+  /// **'If the starting position is not body straight, head erect and facing forward, arms straight along the body, or perpendicular to the body or overhead.'**
   String get penalty25;
 
-  /// Penalty 26 - D8.2.4.3 - If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.
+  /// Penalty 26 - 10.2.3.3 - If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.
   ///
   /// In en, this message translates to:
-  /// **'If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.'**
+  /// **'If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.'**
   String get penalty26;
 
-  /// Penalty 27 - D8.2.6.2 - If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.
+  /// Penalty 27 - 10.2.5.2 - If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.
   ///
   /// In en, this message translates to:
-  /// **'If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.'**
+  /// **'If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.'**
   String get penalty27;
 
-  /// Penalty 28 - D8.3.2 - If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.
+  /// Penalty 28 - 10.3.2 - If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.
   ///
   /// In en, this message translates to:
-  /// **'If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.'**
+  /// **'If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.'**
   String get penalty28;
 
-  /// Penalty 29 - D8.4.5 - If the take-off is not bold, high, and confident.
+  /// Penalty 29 - 10.4.6 - If in running and standing dives, the take-off is not balanced or high.
   ///
   /// In en, this message translates to:
-  /// **'If the take-off is not bold, high, and confident.'**
+  /// **'If in running and standing dives, the take-off is not balanced or high.'**
   String get penalty29;
 
-  /// Penalty 30 - D8.4.6 - If in a twist dive, the twisting is manifestly done from the springboard or platform.
+  /// Penalty 30 - 10.4.7 - If in a twisting dive, the twist is manifestly done meaning that twisting has clearly begun on the springboard or platform.
   ///
   /// In en, this message translates to:
-  /// **'If in a twist dive, the twisting is manifestly done from the springboard or platform.'**
+  /// **'If in a twisting dive, the twist is manifestly done meaning that twisting has clearly begun on the springboard or platform.'**
   String get penalty30;
 
-  /// Penalty 31 - D8.5.6 - If the straight position is not shown as described.
+  /// Penalty 31 - 10.5.5.1.1 - 10.1.6 - If the Straight position is not as described (body straight and not bent either at the knees or hips, feet kept together and toes pointed) or aesthetically pleasing.
   ///
   /// In en, this message translates to:
-  /// **'If the straight position is not shown as described in the rules.'**
+  /// **'If the Straight position is not as described (body straight and not bent either at the knees or hips, feet kept together and toes pointed) or aesthetically pleasing.'**
   String get penalty31;
 
-  /// Penalty 32 - D8.5.9 - If the pike position is not shown as described.
+  /// Penalty 32 - 10.5.5.2.2 - 10.1.6 - If the Pike position is not shown as described (body bent at the hips, legs must straight at the knees, feet together and toes pointed) or aesthetically pleasing.
   ///
   /// In en, this message translates to:
-  /// **'If the pike position is not shown as described in the rules.'**
+  /// **'If the Pike position is not shown as described (body bent at the hips, legs must straight at the knees, feet together and toes pointed) or aesthetically pleasing.'**
   String get penalty32;
 
-  /// Penalty 33 - D8.5.10 - If in a pike dive with twist, the pike position is not clearly shown.
+  /// Penalty 33 - 10.5.5.2.3 - If in a Pike dive with a twist, the Pike position is not clearly shown.
   ///
   /// In en, this message translates to:
-  /// **'If in a pike dive with twist, the pike position is not clearly shown.'**
+  /// **'If in a Pike dive with a twist, the Pike position is not clearly shown.'**
   String get penalty33;
 
-  /// Penalty 34 - D8.5.12 - If the tuck position is not shown as described.
+  /// Penalty 34 - 10.5.5.3.2 - 10.1.6 - If the Tuck Position is not shown as described (body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed) or aesthetically pleasing.
   ///
   /// In en, this message translates to:
-  /// **'If the tuck position is not shown as described in the rules.'**
+  /// **'If the Tuck Position is not shown as described (body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed) or aesthetically pleasing.'**
   String get penalty34;
 
-  /// Penalty 35 - D8.5.13 - If in a tuck dive with twist, the tuck position is not clearly shown.
+  /// Penalty 35 - 10.5.5.3.3 - If in a Tuck dive with twist, the Tuck Position is not clearly shown.
   ///
   /// In en, this message translates to:
-  /// **'If in a tuck dive with twist, the tuck position is not clearly shown.'**
+  /// **'If in a Tuck dive with twist, the Tuck Position is not clearly shown.'**
   String get penalty35;
 
-  /// Penalty 36 - D8.5.15 - If the free position is not shown as described.
+  /// Penalty 36 - 10.5.5.4 - 10.1.6 - If the Free position is not shown as described (optional position between Straight, Pike, or Tuck and with legs together, and toes pointed).
   ///
   /// In en, this message translates to:
-  /// **'If the free position is not shown as described in the rules.'**
+  /// **'If the Free position is not shown as described (optional position between Straight, Pike, or Tuck and with legs together, and toes pointed).'**
   String get penalty36;
 
-  /// Penalty 37 - D8.6.5 - If the arms are not in the correct position in either the head first or feet first entry.
+  /// Penalty 37 - 10.6.5 - If at entry the arms are not in the correct position in either a head-first or feet-first entry dive.
   ///
   /// In en, this message translates to:
-  /// **'If the arms are not in the correct position in either the head first or feet first entry.'**
+  /// **'If at entry the arms are not in the correct position in either a head-first or feet-first entry dive.'**
   String get penalty37;
 
-  /// Penalty 38 - D9.11 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.
+  /// Penalty 38 - 11.7.3 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.'**
   String get penalty38;
 
-  /// Penalty 39 - D9.11 - In synchronised diving if coordinated timing of the movement during the flight is not shown.
+  /// Penalty 39 - 11.7.3 - In synchronised diving if coordinated timing of the movement during the flight is not shown.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving if coordinated timing of the movement during the flight is not shown.'**
   String get penalty39;
 
-  /// Penalty 40 - D9.11 - In synchronised diving if similarity of the vertical angles of the entries is not shown.
+  /// Penalty 40 - 11.7.3 - In synchronised diving if similarity of the vertical angles of the entries is not shown.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving if similarity of the vertical angles of the entries is not shown.'**
   String get penalty40;
 
-  /// Penalty 41 - D9.11 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.
+  /// Penalty 41 - 11.7.3 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.'**
   String get penalty41;
 
-  /// Penalty 42 - D9.11 - In synchronised diving if coordinated timing of the entries is not shown.
+  /// Penalty 42 - 11.7.3 - In synchronised diving if coordinated timing of the entries is not shown.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving if coordinated timing of the entries is not shown.'**
   String get penalty42;
 
-  /// Penalty 43 - D8.1.5 - If a dive is performed partially in a position other than that announced.
+  /// Penalty 43 - 10.1.5 - If a dive is performed partially in a Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'If a dive is performed partially in a position other than that announced.'**
+  /// **'If a dive is performed partially in a Position other than that announced.'**
   String get penalty43;
 
-  /// Penalty 44 - D8.5.2 - If in a dive, the diver dives to the side of the direct line of flight.
+  /// Penalty 44 - 10.5.2 - If during the flight of a dive, the Athlete does not maintain a straight line of flight.
   ///
   /// In en, this message translates to:
-  /// **'If in a dive, the diver dives to the side of the direct line of flight.'**
+  /// **'If during the flight of a dive, the Athlete does not maintain a straight line of flight.'**
   String get penalty44;
 
-  /// Penalty 45 - D8.5.3 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.
+  /// Penalty 45 - 10.5.3 - If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.
   ///
   /// In en, this message translates to:
-  /// **'If in a dive, a diver touches the end of the springboard or platform with his feet or hands.'**
+  /// **'If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.'**
   String get penalty45;
 
-  /// Penalty 46 - D8.6.2 - If the entry into the water is not vertical, or nearly so.
+  /// Penalty 46 - 10.6.2 - If the entry is short or long (at an angle less than or exceeding vertical).
   ///
   /// In en, this message translates to:
-  /// **'If the entry into the water is not vertical, or nearly so.'**
+  /// **'If the entry is short or long (at an angle less than or exceeding vertical).'**
   String get penalty46;
 
-  /// Penalty 47 - D8.6.2 - If the entry into the water is twisted.
+  /// Penalty 47 - 10.6.2 - If at entry the body is twisted.
   ///
   /// In en, this message translates to:
-  /// **'If the entry into the water is twisted.'**
+  /// **'If at entry the body is twisted.'**
   String get penalty47;
 
-  /// Penalty 48 - D8.6.2 - If in the entry into the water the body is not straight.
+  /// Penalty 48 - 10.6.2 - If at entry the body is not straight.
   ///
   /// In en, this message translates to:
-  /// **'If in the entry into the water the body is not straight.'**
+  /// **'If at entry the body is not straight.'**
   String get penalty48;
 
-  /// Penalty 49 - D8.6.2 - If the entry into the water the feet are not together, and the toes not pointed.
+  /// Penalty 49 - 10.6.2 - If at entry the feet are not together, toes not pointed.
   ///
   /// In en, this message translates to:
-  /// **'If in the entry into the water the feet are not together, and the toes not pointed.'**
+  /// **'If at entry the feet are not together, toes not pointed.'**
   String get penalty49;
+
+  /// Penalty 50 - 10.6.2 - If at entry the water’s surface is significantly disturbed.
+  ///
+  /// In en, this message translates to:
+  /// **'If at entry the water’s surface is significantly disturbed.'**
+  String get penalty50;
 
   /// Quizz - Intro Question Number
   ///
@@ -676,13 +681,13 @@ abstract class AppLocalizations {
   /// About - Rules Local
   ///
   /// In en, this message translates to:
-  /// **'Current Rulebook: World Aquatics - 1st July 2025 - v6'**
+  /// **'Current Rulebook: World Aquatics - 18 fev 2026'**
   String get aboutRulesLocal;
 
   /// About - Rules Reference
   ///
   /// In en, this message translates to:
-  /// **'Rules for the app: World Aquatics - 1st July 2025 - v6'**
+  /// **'Rules for the app: World Aquatics - 18 feb 2026'**
   String get aboutRulesReference;
 
   /// About - License

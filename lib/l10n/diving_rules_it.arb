@@ -429,6 +429,11 @@
         "description": "Penalty 49 - D8.6.2 - If in the entry into the water the feet are not together, and the toes not pointed.",
         "type": "text"
     },
+    "penalty50": "Se nell'ingresso in acqua ...",
+    "@penalty50": {
+        "description": "Penalty 50 - D8.6.2 - If in the entry into the water the feet are not together, and the toes not pointed.",
+        "type": "text"
+    },
     "quizzIntroQuestionNumber": "Numero di domande: ",
     "@quizzIntroQuestionNumber": {
         "description": "Quizz - Intro Question Number",
@@ -459,7 +464,7 @@
          "description": "About - Rules Local",
          "type": "text"
      },
-   "aboutRulesReference": "Regole per l'app: World Aquatics - 1st July 2025 - v6",
+   "aboutRulesReference": "Regole per l'app: World Aquatics - 18 fev 2026",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"

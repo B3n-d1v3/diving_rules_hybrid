@@ -314,6 +314,9 @@ class AppLocalizationsEs extends AppLocalizations {
       'Si en la entrada al agua los pies no estén juntos o los empeines sin estirar';
 
   @override
+  String get penalty50 => 'Si en la entrada al agua ...';
+
+  @override
   String get quizzIntroQuestionNumber => 'Número de preguntas:';
 
   @override
@@ -334,7 +337,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get aboutRulesReference =>
-      'Norma de la aplicación: World Aquatics - 1st July 2025 - v6';
+      'Norma de la aplicación: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>
@@ -733,6 +736,9 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
       'Si en la entrada en el agua los pies no están juntos, y los dedos no puntiagudos.';
 
   @override
+  String get penalty50 => 'Si en la entrada en el agua ...';
+
+  @override
   String get quizzIntroQuestionNumber => 'Number of Questions: ';
 
   @override
@@ -753,7 +759,7 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
 
   @override
   String get aboutRulesReference =>
-      'Normas de la aplicación: World Aquatics - 1st July 2025 - v6';
+      'Normas de la aplicación: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>

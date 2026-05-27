@@ -312,6 +312,9 @@ class AppLocalizationsIt extends AppLocalizations {
       'Se nell\'ingresso in acqua i piedi non sono uniti e le dita non sono appuntite.';
 
   @override
+  String get penalty50 => 'Se nell\'ingresso in acqua ...';
+
+  @override
   String get quizzIntroQuestionNumber => 'Numero di domande: ';
 
   @override
@@ -333,7 +336,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get aboutRulesReference =>
-      'Regole per l\'app: World Aquatics - 1st July 2025 - v6';
+      'Regole per l\'app: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>

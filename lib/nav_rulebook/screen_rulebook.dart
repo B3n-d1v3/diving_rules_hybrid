@@ -90,7 +90,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
 
       switch (appLocale.languageCode) {
         case 'fr':
-          tempUrl = 'assets/rulebooks/2022-2025_Reglement-WA-Plongeon-v2_fr.pdf';
+          tempUrl = 'assets/rulebooks/2026-02-18_Reglement_WA_Plongeon_v1.1_fr.pdf';
           break;
         case 'de':
           tempUrl = 'assets/rulebooks/2018-07-13_WA_Wettkampfbestimmungen-Wasserspringen_de.pdf';
@@ -105,7 +105,7 @@ class _ScreenRulebookState extends State<ScreenRulebook> {
           break;
 
         default:
-          tempUrl = 'assets/rulebooks/2025-07-01_World-Aquatics-Diving-Rules_en-r.pdf';
+          tempUrl = 'assets/rulebooks/2026-02-18_World-Aquatics_Diving_Competition-regulations_en.pdf';
       }
 
       return tempUrl;

@@ -317,6 +317,9 @@ class AppLocalizationsDe extends AppLocalizations {
       'Wenn beim Eintauchen ins Wasser die Füße nicht zusammen sind und die Zehen nicht gestreckt sind.';
 
   @override
+  String get penalty50 => 'Wenn beim Eintauchen ins Wasser ...';
+
+  @override
   String get quizzIntroQuestionNumber => 'Anzahl der Fragen:';
 
   @override
@@ -337,7 +340,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get aboutRulesReference =>
-      'Regelreferenz zur App: World Aquatics - 1st July 2025 - v6';
+      'Regelreferenz zur App: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>
