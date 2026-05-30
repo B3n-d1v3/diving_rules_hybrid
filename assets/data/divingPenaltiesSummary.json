@@ -5,7 +5,7 @@
       "description": "If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).",
       "rules": [
         {
-          "ruleId": "IV.6.4.8"
+          "ruleId": "8.5.5"
         }
       ],
       "sanctionValue": 0,

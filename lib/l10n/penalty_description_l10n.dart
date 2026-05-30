@@ -218,6 +218,58 @@ class _PenaltyDescriptionState extends State<PenaltyDescription> {
         return Text(AppLocalizations.of(context)!.penalty49,
             style: Theme.of(context).textTheme.bodyLarge);
         break;
+      case 50:
+        return Text(AppLocalizations.of(context)!.penalty50,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 51:
+        return Text(AppLocalizations.of(context)!.penalty51,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 52:
+        return Text(AppLocalizations.of(context)!.penalty52,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 53:
+        return Text(AppLocalizations.of(context)!.penalty53,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 54:
+        return Text(AppLocalizations.of(context)!.penalty54,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 55:
+        return Text(AppLocalizations.of(context)!.penalty55,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 56:
+        return Text(AppLocalizations.of(context)!.penalty56,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 57:
+        return Text(AppLocalizations.of(context)!.penalty57,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 58:
+        return Text(AppLocalizations.of(context)!.penalty58,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 59:
+        return Text(AppLocalizations.of(context)!.penalty59,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 60:
+        return Text(AppLocalizations.of(context)!.penalty60,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 61:
+        return Text(AppLocalizations.of(context)!.penalty61,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
+      case 62:
+        return Text(AppLocalizations.of(context)!.penalty62,
+            style: Theme.of(context).textTheme.bodyLarge);
+        break;
       case -1: // safe guard for unused case
         return Text(' ');
         break;
