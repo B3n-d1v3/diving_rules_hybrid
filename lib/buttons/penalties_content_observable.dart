@@ -13,9 +13,9 @@ class PenaltyContentObsv extends StatefulWidget {
   int penaltyIndex;
   int viewMode;
 
-  // vieMode 0 = Penalty View
-  // vieMode 1 = Quiz Question View
-  // vieMode 2 = Quiz Answer Correction View
+  // viewMode 0 = Penalty View
+  // viewMode 1 = Quiz Question View
+  // viewMode 2 = Quiz Answer Correction View
 
   PenaltyContentObsv(
       {super.key, required this.buttonType,

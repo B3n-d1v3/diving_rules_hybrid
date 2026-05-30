@@ -259,179 +259,239 @@
         "description": "Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.",
         "type": "text"
     },
-    "penalty16": "Si, lors d’un plongeon avec élan, un plongeur fait un ou plusieurs pas pendant son élan, puis marque un arrêt.",
+   "penalty16": "En plongeon synchronisé, si pour un départ vers l’avant au tremplin, le plongeon n’est pas exécuté avec élan.",
     "@penalty16": {
-        "description": "Penalty 16 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
+        "description": "Penalty 16 - 11.5 - In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.",
         "type": "text"
     },
-    "penalty17": "Lorsqu’il y a un nouveau départ, pour un plongeon avec élan, sans élan, ou en équilibre.",
+    "penalty17": "Si, lors d’un plongeon avec élan, un plongeur fait un ou plusieurs pas pendant son élan, puis marque un arrêt.",
     "@penalty17": {
-        "description": "Penalty 17 - 8.6.4 - When there is a restart in a running, standing, or Armstand dive.",
+        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
         "type": "text"
     },
-    "penalty18": "En plongeon synchronisé, s’il y a un nouveau départ, qu’il soit imputable ou dû à l’un ou les deux plongeurs.",
+    "penalty18": "Si, lors d’un plongeon sans élan, un plongeur interrompt le mouvement de départ après que les jambes aient commencé à se fléchir, ou commencé à exercer une pression sur la plateforme ou le tremplin pour initier l'envol.",
     "@penalty18": {
-        "description": "Penalty 18 - 11.4 - In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.",
+        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
         "type": "text"
     },
-    "penalty19": "Si un plongeur exécute un plongeon dans une position clairement différente de celle annoncée.",
+    "penalty19": "Lorsqu’il y a un nouveau départ, pour un plongeon avec élan, sans élan, ou en équilibre.",
     "@penalty19": {
-        "description": "Penalty 19 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.",
+        "description": "Penalty 19 - 8.6.4 - When there is a restart in a running, standing, or Armstand dive.",
         "type": "text"
     },
-    "penalty20": "Si un plongeur est dangereusement près du tremplin ou de la plateforme, ou s’il touche l’extrémité du tremplin ou de la plateforme avec la tête.",
+    "penalty20": "Si pour un plongeon en équilibre, le plongeur perd l'équilibre, et a déplacé une ou les deux mains de leur position initiale sur le bord avant de la plateforme.",
     "@penalty20": {
-        "description": "Penalty 20 - 10.5.4 - 10.5.4.2.1 - If in a dive, an Athlete is unsafely close to the springboard or platform or touches the end of the springboard or platform with their head.",
+        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
         "type": "text"
     },
-    "penalty21": "Si, dans un plongeon par les pieds, un ou les deux bras sont tenus au-dessus de la tête.",
+    "penalty21": "Si pour un plongeon en équilibre, un ou les deux pieds du plongeur sont revenus sur la plateforme avant l'envol",
     "@penalty21": {
-        "description": "Penalty 21 - 8.6.7.1 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
+        "description": "Penalty 21 - 8.6.2.2 - If during an armstand dive, one or both of the Athlete’s feet returned to the platform prior to the take-off.",
         "type": "text"
     },
-    "penalty22": "Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un quart de saut périlleux (90º) pour les plongeons comportant jusqu’à 1 saut périlleux.",
+    "penalty22": "Si pour un plongeon en équilibre, un pied, ou toute autre partie du corps du plongeur autre que ses mains, a touché la plateforme après que l'Athlète ait pris la position de départ.",
     "@penalty22": {
-        "description": "Penalty 22 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.",
+        "description": "Penalty 22 - 8.6.2.3 - If during an armstand dive, a foot or any part of the Athlete’s body other than their hands touched the platform after the Athlete has assumed the starting position.",
         "type": "text"
     },
-    "penalty23": "Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un demi-saut périlleux (180º) pour les plongeons comportant plus de 1 saut périlleux.",
+    "penalty23": "En plongeon synchronisé, s’il y a un nouveau départ, qu’il soit imputable ou dû à l’un ou les deux plongeurs.",
     "@penalty23": {
-        "description": "Penalty 23 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.",
+        "description": "Penalty 23 - 11.4 - In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.",
         "type": "text"
     },
-    "penalty24": "Si un plongeon n’est pas réalisé dans une position telle que décrite par ces règlements.",
+    "penalty24": "Si un plongeur exécute un plongeon dans une position clairement différente de celle annoncée.",
     "@penalty24": {
-        "description": "Penalty 24 - 10.1.6 - If a dive is not performed in a Position as described.",
+        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.",
         "type": "text"
     },
-    "penalty25": "Si la position de départ n’est pas le corps droit, la tête droite et orientée vers l’avant, les bras tendus le long du corps, ou perpendiculairement au corps, ou au-dessus de la tête.",
+    "penalty25": "Si un plongeon est considéré comme dangereux lorsqu'un athlète a touché le tremplin ou la plateforme avec la tête pendant la trajectoire.",
     "@penalty25": {
-        "description": "Penalty 25 - 10.2.2 - If the starting position is not body straight, head erect and facing forward, arms straight (along the body, perpendicular to the body or overhead).",
+        "description": "Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.",
         "type": "text"
     },
-    "penalty26": "Si, pour un plongeon sans élan, les pieds du plongeur sont décollés du tremplin ou de la plateforme avant l’envol.",
+    "penalty26": "Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête  pendant la trajectoire.",
     "@penalty26": {
-        "description": "Penalty 26 - 10.2.3.3 - If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.",
+        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
         "type": "text"
     },
-    "penalty27": "Si, dans la position de départ d’un plongeon en équilibre, le plongeur est incapable de maintenir un équilibre immobile et stable, à la verticale.",
+    "penalty27": "Si la majorité des juges indique que le plongeon était dangereux.",
     "@penalty27": {
-        "description": "Penalty 27 - 10.2.5.2 - If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.",
+        "description": "Penalty 27 - 10.5.4.2.2 - If the majority of the Judges Panel indicates that the dive was unsafe.",
         "type": "text"
     },
-    "penalty28": "Dans un plongeon avec élan, si l’élan n’est pas fluide, esthétiquement plaisant, et en direction de l’avant, jusqu’à l’extrémité du tremplin ou de la plateforme.",
+    "penalty28": "Après revue du plongeon avec une technologie de visualisation, si l'exécution du plongeon est considèe comme dangereuse",
     "@penalty28": {
-        "description": "Penalty 28 - 10.3.2 - If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.",
+        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
         "type": "text"
     },
-    "penalty29": "Si, dans un plongeon avec ou sans élan, l’envol n’est pas équilibré et haut, et depuis l'extrémité du tremplin ou de la plateforme.",
+    "penalty29": "Si, dans un plongeon par les pieds, un ou les deux bras sont tenus au-dessus de la tête lors de l'entrée à l'eau.",
     "@penalty29": {
-        "description": "Penalty 29 - 10.4.6 - If in running and standing dives, the take-off is not balanced or high.",
+        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
         "type": "text"
     },
-    "penalty30": "Si, dans un plongeon avec vrille, la vrille est manifestement déclenchée à partir du tremplin ou de la plateforme.",
+    "penalty30": "Si, dans un plongeon par tête, un ou les deux bras sont tenus en-dessous de la tête lors de l'entrée à l'eau.",
     "@penalty30": {
-        "description": "Penalty 30 - 10.4.7 - If in a twisting dive, the twist is manifestly done meaning that twisting has clearly begun on the springboard or platform.",
+        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, an Athlete has one or both arms held below the head.",
         "type": "text"
     },
-    "penalty31": "Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.",
+    "penalty31": "Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un quart de saut périlleux (90º) pour les plongeons comportant jusqu’à 1 saut périlleux.",
+    "@penalty31": {
+        "description": "Penalty 31 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.",
+        "type": "text"
+    },
+    "penalty32": "Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un demi-saut périlleux (180º) pour les plongeons comportant plus de 1 saut périlleux.",
     "@penalty32": {
-        "description": "Penalty 32 - 10.5.5.1.1 - 10.1.6 - If the Straight position is not as described or aesthetically pleasing.",
+        "description": "Penalty 32 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.",
         "type": "text"
     },
-    "penalty32": "Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
-    "@penalty32": {
-        "description": "Penalty 32 - 10.5.5.2.2 - 10.1.6 - If the Pike position is not shown as described or aesthetically pleasing.",
-        "type": "text"
-    },
-    "penalty33": "Si, dans un plongeon carpé avec vrille, la position carpée n’est pas clairement montrée.",
+    "penalty33": "Si un plongeon n’est pas réalisé dans une position telle que décrite par ces règlements.",
     "@penalty33": {
-        "description": "Penalty 33 - 10.5.5.2.3 - If in a Pike dive with a twist, the Pike position is not clearly shown.",
+        "description": "Penalty 33 - 10.1.6 - If a dive is not performed in a Position as described.",
         "type": "text"
     },
-    "penalty34": "Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
+    "penalty34": "Si la position de départ n’est pas le corps droit, la tête droite et orientée vers l’avant, les bras tendus le long du corps, ou perpendiculairement au corps, ou au-dessus de la tête.",
     "@penalty34": {
-        "description": "Penalty 34 - 10.5.5.3.2 - 10.1.6 - If the Tuck Position is not shown as described or aesthetically pleasing.",
+        "description": "Penalty 34 - 10.2.2 - If the starting position is not body straight, head erect and facing forward, arms straight (along the body, perpendicular to the body or overhead).",
         "type": "text"
     },
-    "penalty35": "Si, dans un plongeon groupé avec vrille, la position groupée n’est pas clairement montrée.",
+    "penalty35": "Si, pour un plongeon sans élan, les pieds du plongeur sont décollés du tremplin ou de la plateforme avant l’envol.",
     "@penalty35": {
-        "description": "Penalty 35 - 10.5.5.3.3 - If in a Tuck dive with twist, the Tuck Position is not clearly shown.",
+        "description": "Penalty 35 - 10.2.3.3 - If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.",
         "type": "text"
     },
-    "penalty36": "Si la position libre n’est pas réalisée telle que décrite (position optionnelle entre droit, carpée ou groupé,  jambes serrées, et pointes de pieds tendues).",
+    "penalty36": "Si, dans la position de départ d’un plongeon en équilibre, le plongeur est incapable de maintenir un équilibre immobile et stable, à la verticale.",
     "@penalty36": {
-        "description": "Penalty 36 - 10.5.5.4 - 10.1.6 - If the Free position is not shown as described (optional position between Straight, Pike, or Tuck and with legs together, and toes pointed).",
+        "description": "Penalty 36 - 10.2.5.2 - If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.",
         "type": "text"
     },
-    "penalty37": "Si les bras ne sont pas dans une position correcte lors d’une entrée à l’eau par la tête ou par les pieds.",
+    "penalty37": "Si, dans la position de départ d’un plongeon en équilibre, les mains perdent le contact avec la plateforme durant la phase qui précède l’envol.",
     "@penalty37": {
-        "description": "Penalty 37 - 10.6.5 - If at entry the arms are not in the correct position in either a head-first or feet-first entry dive.",
+        "description": "Penalty 37 - 10.2.5.2 - If during an Armstand dive, the hands lose contact with the platform during the takeoff.",
         "type": "text"
     },
-    "penalty38": "En plongeon synchronisé, pour un manque de similitude de la position de départ, de l'élan, de l'envol et de la hauteur.",
+    "penalty38": "Dans un plongeon avec élan, si l’élan n’est pas fluide, esthétiquement plaisant, et en direction de l’avant, jusqu’à l’extrémité du tremplin ou de la plateforme.",
     "@penalty38": {
-        "description": "Penalty 38 - 11.7.3 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
+        "description": "Penalty 38 - 10.3.2 - If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.",
         "type": "text"
     },
-    "penalty39": "En plongeon synchronisé, pour un manque de coordination du rythme des mouvements durant la trajectoire.",
+    "penalty39": "Si, dans un plongeon avec ou sans élan, l’envol n’est pas équilibré et haut, et depuis l'extrémité du tremplin ou de la plateforme.",
     "@penalty39": {
-        "description": "Penalty 39 - 11.7.3 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+        "description": "Penalty 39 - 10.4.6 - If in running and standing dives, the take-off is not balanced or high.",
         "type": "text"
     },
-    "penalty40": "En plongeon synchronisé, pour un manque de similitude des angles verticaux des entrées à l'eau.",
+    "penalty40": "Si, dans un plongeon avec vrille, la vrille est manifestement déclenchée à partir du tremplin ou de la plateforme.",
     "@penalty40": {
-        "description": "Penalty 40 - 11.7.3 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+        "description": "Penalty 40 - 10.4.7 - If in a twisting dive, the twist has clearly begun on the springboard or platform.",
         "type": "text"
     },
-    "penalty41": "En plongeon synchronisé, pour un manque de similitude des distances par rapport au tremplin ou à la plate-forme, lors de l'entrée dans l'eau.",
+    "penalty41": "Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.",
     "@penalty41": {
-        "description": "Penalty 41 - 11.7.3 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+        "description": "Penalty 41 - 10.5.5.1.1 - 10.1.6 - If the Straight position is not body straight, not bent either at the knees or hips, feet kept together and toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty42": "En plongeon synchronisé, pour un manque de simultaniété des entrées à l'eau.",
+    "penalty42": "Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
     "@penalty42": {
-        "description": "Penalty 42 - 11.7.3 - In synchronised diving if coordinated timing of the entries is not shown.",
+        "description": "Penalty 42 - 10.5.5.2.2 - 10.1.6 - If the Pike position is not body bent at the hips, legs must straight at the knees, feet together and toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty43": "Si un plongeon est exécuté partiellement dans une position différente de celle annoncée.",
+    "penalty43": "Si, dans un plongeon carpé avec vrille, la position carpée n’est pas clairement montrée.",
     "@penalty43": {
-        "description": "Penalty 43 - 10.1.5 - If a dive is performed partially in a Position other than that announced.",
+        "description": "Penalty 43 - 10.5.5.2.3 - If in a Pike dive with a twist, the Pike position is not clearly shown.",
         "type": "text"
     },
-    "penalty44": "Si, pendant la trajectoire, un plongeur se déporte de sa ligne directe d’envol.",
+    "penalty44": "Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
     "@penalty44": {
-        "description": "Penalty 44 - 10.5.2 - If the entry is short or long (at an angle less than or exceeding vertical).",
+        "description": "Penalty 44 - 10.5.5.3.2 - 10.1.6 - If the Tuck Position is not body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty45": "Si, pendant la trajectoire, un plongeur touche l’extrémité du tremplin ou de la plateforme, avec les pieds ou avec les mains.",
+    "penalty45": "Si, dans un plongeon groupé avec vrille, la position groupée n’est pas clairement montrée.",
     "@penalty45": {
-        "description": "Penalty 45 - 10.6.2 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+        "description": "Penalty 45 - 10.5.5.3.3 - If in a Tuck dive with twist, the Tuck Position is not clearly shown.",
         "type": "text"
     },
-    "penalty46": "Si l’entrée à l’eau est plate ou passée, dans un angle inférieur ou supérieur à la verticale.",
+    "penalty46": "Si la position libre n’est pas réalisée sans utiliser les positions droit, carpée ou groupé, jambes serrées, et pointes de pieds tendues.",
     "@penalty46": {
-        "description": "Penalty 46 - 10.6.2 - If the entry into the water is not vertical, or nearly so.",
+        "description": "Penalty 46 - 10.5.5.4 - 10.1.6 - If the Free position is not using one of the optional position between Straight, Pike, or Tuck and with legs together, and toes pointed.",
         "type": "text"
     },
-    "penalty47": "Si au moment de l’entrée à l’eau le corps est vrillé.",
+    "penalty47": "Si lors d’une entrée à l’eau par la tête, les bras ne sont pas dans une position correcte, même s'ils sont tenus en-dessus de la tête.",
     "@penalty47": {
-        "description": "Penalty 47 - 10.6.2 - If at entry the body is twisted.",
+        "description": "Penalty 47 - 10.6.5 - If in a head-first entry dive, the arms are not in the correct position, even if they are held beyond the head.",
         "type": "text"
     },
-    "penalty48": "Si au moment de l’entrée à l’eau le corps n'est pas droit.",
+    "penalty48": "Si lors d’une entrée à l’eau par les pieds, les bras ne sont pas dans une position correcte, même s'ils sont tenus en-dessous de la tête.",
     "@penalty48": {
-        "description": "Penalty 48 - 10.6.2 - If at entry the body is not straight.",
+        "description": "Penalty 48 - 10.6.5 - If in a feet-first entry dive, the arms are not in the correct position, even if they are held below the head.",
         "type": "text"
     },
-    "penalty49": "Si au moment de l’entrée à l’eau les pieds sont désunis, ou si les pointes de pieds sont relâchées.",
+    "penalty49": "En plongeon synchronisé, pour un manque de similitude de la position de départ, de l'élan, de l'envol et de la hauteur.",
     "@penalty49": {
-        "description": "Penalty 49 - 10.6.2 - If at entry the feet are not together, toes not pointed.",
+        "description": "Penalty 49 - 11.7.3 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
         "type": "text"
     },
-    "penalty50": "Si au moment de l’entrée à l’eau la surface de l’eau est significativement perturbée.",
+    "penalty50": "En plongeon synchronisé, pour un manque de coordination du rythme des mouvements durant la trajectoire.",
     "@penalty50": {
-        "description": "Penalty 50 - 10.6.2 - If at entry the water’s surface is significantly disturbed.",
+        "description": "Penalty 50 - 11.7.3 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+        "type": "text"
+    },
+    "penalty51": "En plongeon synchronisé, pour un manque de similitude des angles verticaux des entrées à l'eau.",
+    "@penalty51": {
+        "description": "Penalty 51 - 11.7.3 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty52": "En plongeon synchronisé, pour un manque de similitude des distances par rapport au tremplin ou à la plate-forme, lors de l'entrée dans l'eau.",
+    "@penalty52": {
+        "description": "Penalty 52 - 11.7.3 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+        "type": "text"
+    },
+    "penalty53": "En plongeon synchronisé, pour un manque de simultaniété des entrées à l'eau.",
+    "@penalty53": {
+        "description": "Penalty 53 - 11.7.3 - In synchronised diving if coordinated timing of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty54": "Si un plongeon est exécuté partiellement dans une position différente de celle annoncée.",
+    "@penalty54": {
+        "description": "Penalty 54 - 10.1.5 - If a dive is performed partially in a Position other than that announced.",
+        "type": "text"
+    },
+    "penalty55": "Si, pendant la trajectoire, un plongeur se déporte de sa ligne directe d’envol.",
+    "@penalty55": {
+        "description": "Penalty 55 - 10.5.2 - If during the flight of a dive, the Athlete does not maintain a straight line of flight.",
+        "type": "text"
+    },
+    "penalty56": "Si, pendant la trajectoire, un plongeur touche l’extrémité du tremplin ou de la plateforme, avec les pieds ou avec les mains.",
+    "@penalty56": {
+        "description": "Penalty 56 - 10.5.3 - If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.",
+        "type": "text"
+    },
+    "penalty57": "Si l’entrée à l’eau est plate, dans un angle inférieur à la verticale.",
+    "@penalty57": {
+        "description": "Penalty 57 - 10.6.2 - If the entry is short, at an angle less than vertical.",
+        "type": "text"
+    },
+    "penalty58": "Si l’entrée à l’eau est passée, dans un angle supérieur à la verticale.",
+    "@penalty58": {
+        "description": "Penalty 58 - 10.6.2 - If the entry is long, at an angle exceeding vertical.",
+        "type": "text"
+    },
+    "penalty59": "Si au moment de l’entrée à l’eau le corps est vrillé.",
+    "@penalty59": {
+        "description": "Penalty 59 - 10.6.2 - If at entry the body is twisted.",
+        "type": "text"
+    },
+    "penalty60": "Si au moment de l’entrée à l’eau le corps n'est pas droit.",
+    "@penalty60": {
+        "description": "Penalty 60 - 10.6.2 - If at entry the body is not straight.",
+        "type": "text"
+    },
+    "penalty61": "Si au moment de l’entrée à l’eau les pieds sont désunis, ou si les pointes de pieds sont relâchées.",
+    "@penalty61": {
+        "description": "Penalty 61 - 10.6.2 - If at entry the feet are not together, toes not pointed.",
+        "type": "text"
+    },
+    "penalty62": "Si au moment de l’entrée à l’eau la surface de l’eau est significativement perturbée.",
+    "@penalty62": {
+        "description": "Penalty 62 - 10.6.2 - If at entry the water’s surface is significantly disturbed.",
         "type": "text"
     },
     "quizzIntroQuestionNumber": "Nombre de questions : ",

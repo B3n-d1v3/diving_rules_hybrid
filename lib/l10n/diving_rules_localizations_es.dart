@@ -181,140 +181,190 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get penalty16 =>
-      'Cuando un saltador, da un paso y para en un salto con carrera o, en un salto sin carrera detiene el movimiento del despegue después de que las piernas hayan empezado a presionar la tabla.';
+      'En un salto de trampolín sincronizado, si un salto de frente no se realiza con una carrera de aproximación.';
 
   @override
   String get penalty17 =>
-      'Si un saltador hace un reinicio en un salto con carrera, en un salto sin carrera, o en un equilibrio.';
+      'Cuando un saltador, da un paso y para en un salto con carrera o, en un salto sin carrera detiene el movimiento del despegue después de que las piernas hayan empezado a presionar la tabla.';
 
   @override
   String get penalty18 =>
-      'En saltos sincronizados si hay un reinicio por parte de uno o ambos saltadores.';
+      'Si durante un salto de trampolín en pie, un atleta detiene el movimiento de despegue después de que las piernas hayan comenzado a doblarse o a presionar contra la plataforma para iniciar el despegue.';
 
   @override
   String get penalty19 =>
-      'Si un saltador ejecuta el salto en posición distinta a la anunciada.';
+      'Si un saltador hace un reinicio en un salto con carrera, en un salto sin carrera, o en un equilibrio.';
 
   @override
   String get penalty20 =>
-      'Si durante la ejecución de un salto, el saltador está peligrosamente cerca del trampolín o plataforma o toca el final del trampolín o plataforma con la cabeza.';
+      'Si durante una zambullida en vertical, un atleta perdió el equilibrio y movió una o ambas manos de su posición original en el borde delantero de la plataforma.';
 
   @override
   String get penalty21 =>
-      'Si uno o los dos brazos están situados por encima de la cabeza en una entrada de pie o por debajo de la cabeza en una entrada de cabeza.';
+      'Si durante una zambullida en pino, uno o ambos pies del atleta volvieron a la plataforma antes del despegue.';
 
   @override
   String get penalty22 =>
-      'Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en un cuarto de mortal (90º) en saltos con un mortal.';
+      'Si durante una zambullida en pino, un pie o cualquier parte del cuerpo del atleta que no sean sus manos toca la plataforma después de que el atleta haya adoptado la posición inicial.';
 
   @override
   String get penalty23 =>
-      'Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en medio mortal (180°) en saltos con más de un mortal.';
+      'En saltos sincronizados si hay un reinicio por parte de uno o ambos saltadores.';
 
   @override
   String get penalty24 =>
-      'Si un salto no se realiza en una posición como la descrita en el reglamento.';
+      'Si un saltador ejecuta el salto en posición distinta a la anunciada.';
 
   @override
   String get penalty25 =>
-      ' Cuando en la posición de inicio no esté derecho con la cabeza erguida y los brazos extendidos, en cualquier posición';
+      'Si un salto fue inseguro como resultado de que un atleta tocó el trampolín o la plataforma con la cabeza durante el vuelo.';
 
   @override
   String get penalty26 =>
-      'Si los pies se separan ligeramente del trampolín o plataforma antes del despegue';
+      'Si un salto se consideró inseguro como resultado de que un atleta estuvo peligrosamente cerca del trampolín o plataforma con la cabeza durante el vuelo.';
 
   @override
   String get penalty27 =>
-      'Cuando en un salto en equilibrio, no se muestre un equilibrio inmóvil y estable en la posición estirada vertical';
+      'Si la mayoría del panel de jueces indica que la inmersión no fue segura.';
 
   @override
   String get penalty28 =>
-      'Cuando la carrera no es fluida y estéticamente agradable, en dirección hacia delante hasta el final del trampolín o plataforma';
+      'Después de revisar una inmersión potencialmente insegura con tecnología visual, si el desempeño de la inmersión fue inseguro.';
 
   @override
   String get penalty29 =>
-      'Cuando la salida no sea con equilibrio y altura, o en el extremo del trampolín o plataforma';
+      'Si uno o los dos brazos están situados por encima de la cabeza en una entrada de pie o por debajo de la cabeza en una entrada de cabeza.';
 
   @override
   String get penalty30 =>
-      'En saltos con tirabuzón, el tirabuzón no debe ejecutarse manifiestamente desde el trampolín o plataforma.';
+      'En una zambullida con entrada de cabeza, el atleta mantiene uno o ambos brazos por debajo de la cabeza.';
 
   @override
   String get penalty31 =>
-      'Si la posición estirada no fuera estéticamente agradable, ni mostrada como se describe';
+      'Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en un cuarto de mortal (90º) en saltos con un mortal.';
 
   @override
   String get penalty32 =>
-      'Si la posición carpada no fuera estéticamente agradable, ni mostrada como se describe';
+      'Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en medio mortal (180°) en saltos con más de un mortal.';
 
   @override
   String get penalty33 =>
-      'En saltos carpados con tirabuzón, la posición carpada debe marcarse claramente';
+      'Si un salto no se realiza en una posición como la descrita en el reglamento.';
 
   @override
   String get penalty34 =>
-      'Si la posición encogida no fuera estéticamente agradable, ni mostrada como se describe';
+      'Cuando en la posición de inicio no esté derecho con la cabeza erguida y los brazos extendidos, en cualquier posición.';
 
   @override
   String get penalty35 =>
-      'En saltos en posición encogidas con tirabuzón, la posición encogida debe marcarse claramente';
+      'Si los pies se separan ligeramente del trampolín o plataforma antes del despegue.';
 
   @override
   String get penalty36 =>
-      'Si la posición discrecional no fuera mostrada como se describe';
+      'Cuando en un salto en equilibrio, no se muestre un equilibrio inmóvil y estable en la posición estirada vertical.';
 
   @override
   String get penalty37 =>
-      'cuando los brazos no estén en la posición correcta tanto en las entradas de cabeza como en las de pie';
+      'Si durante un salto en paracaídas de apoyo las manos pierden contacto con la plataforma durante el despegue.';
 
   @override
   String get penalty38 =>
-      'En saltos sincronizados, por defectos en: la similitud en la posición de inicio, carrera, salida o altura';
+      'Cuando la carrera no es fluida y estéticamente agradable, en dirección hacia delante hasta el final del trampolín o plataforma.';
 
   @override
   String get penalty39 =>
-      'En saltos sincronizados si no se muestra coordinación en el tiempo de los movimientos durante el vuelo.';
+      'Cuando la salida no sea con equilibrio y altura, o en el extremo del trampolín o plataforma.';
 
   @override
   String get penalty40 =>
-      'En saltos sincronizados si no se muestra la similitud de los ángulos de las entradas respecto a la vertical';
+      'En saltos con tirabuzón, el tirabuzón no debe ejecutarse manifiestamente desde el trampolín o plataforma.';
 
   @override
   String get penalty41 =>
-      'En saltos sincronizados si no se muestra la comparación de la distancia en la entrada desde el trampolín o plataforma';
+      'Si la posición estirada no fuera estéticamente agradable, ni mostrada como se describe.';
 
   @override
   String get penalty42 =>
-      'En saltos sincronizado si no se muestra la coordinación en el tiempo de las entradas.';
+      'Si la posición carpada no fuera estéticamente agradable, ni mostrada como se describe.';
 
   @override
   String get penalty43 =>
-      'Si un salto se ejecuta parcialmente en una posición distinta a la anunciada';
+      'En saltos carpados con tirabuzón, la posición carpada debe marcarse claramente.';
 
   @override
   String get penalty44 =>
-      'Si durante la ejecución de un salto, el saltador salta hacia un lado respecto a la línea central del vuelo';
+      'Si la posición encogida no fuera estéticamente agradable, ni mostrada como se describe.';
 
   @override
   String get penalty45 =>
-      'Si durante la ejecución de un salto, el saltador toca el extremo del trampolín o plataforma con sus pies o manos';
+      'En saltos en posición encogidas con tirabuzón, la posición encogida debe marcarse claramente';
 
   @override
-  String get penalty46 => 'Si la entrada al agua es corta o pasada';
+  String get penalty46 =>
+      'Si la posición libre no utiliza una de las posiciones opcionales entre recta, flexionada o flexionada y con las piernas juntas y los dedos de los pies apuntando hacia arriba.';
 
   @override
-  String get penalty47 => 'Si la entrada al agua está girada';
+  String get penalty47 =>
+      'Si se realiza una inmersión con entrada de cabeza, los brazos no están en la posición correcta, incluso si se mantienen más allá de la cabeza.';
 
   @override
   String get penalty48 =>
-      'Si en la entrada al agua el cuerpo no está extendido';
+      'Si se trata de una inmersión con entrada de pies, los brazos no están en la posición correcta, incluso si se mantienen por debajo de la cabeza.';
 
   @override
   String get penalty49 =>
+      'En saltos sincronizados, por defectos en: la similitud en la posición de inicio, carrera, salida o altura.';
+
+  @override
+  String get penalty50 =>
+      'En saltos sincronizados si no se muestra coordinación en el tiempo de los movimientos durante el vuelo.';
+
+  @override
+  String get penalty51 =>
+      'En saltos sincronizados si no se muestra la similitud de los ángulos de las entradas respecto a la vertical.';
+
+  @override
+  String get penalty52 =>
+      'En saltos sincronizados si no se muestra la comparación de la distancia en la entrada desde el trampolín o plataforma.';
+
+  @override
+  String get penalty53 =>
+      'En saltos sincronizado si no se muestra la coordinación en el tiempo de las entradas.';
+
+  @override
+  String get penalty54 =>
+      'Si un salto se ejecuta parcialmente en una posición distinta a la anunciada.';
+
+  @override
+  String get penalty55 =>
+      'Si durante la ejecución de un salto, el saltador salta hacia un lado respecto a la línea central del vuelo.';
+
+  @override
+  String get penalty56 =>
+      'Si durante la ejecución de un salto, el saltador toca el extremo del trampolín o plataforma con sus pies o manos.';
+
+  @override
+  String get penalty57 =>
+      'Si la entrada es corta, con un ángulo menor que la vertical.';
+
+  @override
+  String get penalty58 =>
+      'Si la entrada es larga, con un ángulo que excede la vertical.';
+
+  @override
+  String get penalty59 => 'Si la entrada al agua está girada.';
+
+  @override
+  String get penalty60 =>
+      'Si en la entrada al agua el cuerpo no está extendido.';
+
+  @override
+  String get penalty61 =>
       'Si en la entrada al agua los pies no estén juntos o los empeines sin estirar';
 
   @override
-  String get penalty50 => 'Si en la entrada al agua ...';
+  String get penalty62 =>
+      'Si al entrar la superficie del agua está significativamente alterada.';
 
   @override
   String get quizzIntroQuestionNumber => 'Número de preguntas:';
@@ -604,139 +654,189 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
 
   @override
   String get penalty16 =>
-      'Si un clavadista da un paso y se detiene en la caminata o detiene el movimiento para un despegue de pie después de que las piernas hayan comenzado a presionar.';
+      'En un salto de trampolín sincronizado, si un salto de frente no se realiza con una carrera de aproximación.';
 
   @override
   String get penalty17 =>
-      'Si hay un nuevo intento en un clavado de pie, corriendo o un clavado en équilibrio.';
+      'Si un clavadista da un paso y se detiene en la caminata o detiene el movimiento para un despegue de pie después de que las piernas hayan comenzado a presionar.';
 
   @override
   String get penalty18 =>
-      'En clavado sincronizado, si hay un nuevo intento  por parte de uno o ambos clavadistas.';
+      'Si durante un salto de trampolín en pie, un atleta detiene el movimiento de despegue después de que las piernas hayan comenzado a doblarse o a presionar contra la plataforma para iniciar el despegue.';
 
   @override
   String get penalty19 =>
-      'Si un clavadista realiza un clavado en una posición distinta a la anunciada.';
+      'Si hay un nuevo intento en un clavado de pie, corriendo o un clavado en équilibrio.';
 
   @override
   String get penalty20 =>
-      'Si en un clavado, un clavadista esta muy cerca del trampolín o a la plataforma o toca el extremo del trampolín o de la plataforma con la cabeza.';
+      'Si durante una zambullida en vertical, un atleta perdió el equilibrio y movió una o ambas manos de su posición original en el borde delantero de la plataforma.';
 
   @override
   String get penalty21 =>
-      'Si un clavadista tiene uno o ambos brazos por encima de la cabeza en una entrada con los pies  o por debajo de la cabeza en una entrada con la cabeza.';
+      'Si durante una zambullida en pino, uno o ambos pies del atleta volvieron a la plataforma antes del despegue.';
 
   @override
   String get penalty22 =>
-      'Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos un cuarto de salto mortal (90º) en los clavados con salto mortal.';
+      'Si durante una zambullida en pino, un pie o cualquier parte del cuerpo del atleta que no sean sus manos toca la plataforma después de que el atleta haya adoptado la posición inicial.';
 
   @override
   String get penalty23 =>
-      'Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos medio salto mortal (180º) en clavados con más de 1 salto mortal.';
+      'En clavado sincronizado, si hay un nuevo intento  por parte de uno o ambos clavadistas.';
 
   @override
   String get penalty24 =>
-      'Si un clavado no se realiza en una posición como la descrita en el reglamento.';
+      'Si un clavadista realiza un clavado en una posición distinta a la anunciada.';
 
   @override
   String get penalty25 =>
-      'Si la posición de partida no es recta, cabeza erguida, con los brazos rectos en cualquier posición.';
+      'Si un salto fue inseguro como resultado de que un atleta tocó el trampolín o la plataforma con la cabeza durante el vuelo.';
 
   @override
   String get penalty26 =>
-      'Si los pies abandonan el trampolín o la plataforma (crow-hop) antes del despegue en una entrada de pie.';
+      'Si un salto se consideró inseguro como resultado de que un atleta estuvo peligrosamente cerca del trampolín o plataforma con la cabeza durante el vuelo.';
 
   @override
   String get penalty27 =>
-      'Si en un clavado con equilibrio, no se muestra un equilibrio estacionario y firme en la posición vertical recta.';
+      'Si la mayoría del panel de jueces indica que la inmersión no fue segura.';
 
   @override
   String get penalty28 =>
-      'Si la caminata no es suave, estéticamente agradable en una dirección hacia adelante hasta el final del trampolín o plataforma.';
+      'Después de revisar una inmersión potencialmente insegura con tecnología visual, si el desempeño de la inmersión fue inseguro.';
 
   @override
-  String get penalty29 => 'Si el despegue no es audaz, alto y seguro.';
+  String get penalty29 =>
+      'Si un clavadista tiene uno o ambos brazos por encima de la cabeza en una entrada con los pies  o por debajo de la cabeza en una entrada con la cabeza.';
 
   @override
   String get penalty30 =>
-      'Si se trata de un clavado con giro, el giro se realiza manifiestamente desde el trampolín o la plataforma.';
+      'En una zambullida con entrada de cabeza, el atleta mantiene uno o ambos brazos por debajo de la cabeza.';
 
   @override
   String get penalty31 =>
-      'Si la posición extendida no se muestra como se describen el reglamento.';
+      'Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos un cuarto de salto mortal (90º) en los clavados con salto mortal.';
 
   @override
   String get penalty32 =>
-      'Si la posición en escuadra (B) no se muestra como se describe en el reglamento.';
+      'Si en un clavado al vuelo no se muestra claramente una posición extendida durante al menos medio salto mortal (180º) en clavados con más de 1 salto mortal.';
 
   @override
   String get penalty33 =>
-      'Si en un clavado en escuadra con giro, la posición de escuadra no se muestra claramente.';
+      'Si un clavado no se realiza en una posición como la descrita en el reglamento.';
 
   @override
   String get penalty34 =>
-      'Si la posición de bola (C) no se muestra como se describen el reglamento.';
+      'Si la posición de partida no es recta, cabeza erguida, con los brazos rectos en cualquier posición.';
 
   @override
   String get penalty35 =>
-      'Si se trata de un clavado con giro, la posición escuadra no se muestra claramente.';
+      'Si los pies abandonan el trampolín o la plataforma (crow-hop) antes del despegue en una entrada de pie.';
 
   @override
   String get penalty36 =>
-      'Si la posición libre no se muestra como se describe en el reglamento.';
+      'Si en un clavado con equilibrio, no se muestra un equilibrio estacionario y firme en la posición vertical recta.';
 
   @override
   String get penalty37 =>
-      'Si los brazos no están en la posición correcta tanto en la entrada de cabeza como de pies.';
+      'Si durante un salto en paracaídas de apoyo las manos pierden contacto con la plataforma durante el despegue.';
 
   @override
   String get penalty38 =>
-      'En clavado sincronizado si no se muestra la similitud de la posición inicial, la aproximación, el despegue y la altura.';
+      'Si la caminata no es suave, estéticamente agradable en una dirección hacia adelante hasta el final del trampolín o plataforma.';
 
   @override
-  String get penalty39 =>
-      'En clavado sincronizado si no se muestra la sincronización del movimiento durante el vuelo.';
+  String get penalty39 => 'Si el despegue no es audaz, alto y seguro.';
 
   @override
   String get penalty40 =>
-      'En el clavado sincronizado si no se muestra la similitud de los ángulos verticales de las entradas.';
+      'Si se trata de un clavado con giro, el giro se realiza manifiestamente desde el trampolín o la plataforma.';
 
   @override
   String get penalty41 =>
-      'En el clavado sincronizado si no se muestra la distancia comparativa desde el trampolín o la plataforma de la entrada.';
+      'Si la posición extendida no se muestra como se describen el reglamento.';
 
   @override
   String get penalty42 =>
-      'En clavado sincronizado si no se muestra el tiempo coordinado de las entradas.';
+      'Si la posición en escuadra (B) no se muestra como se describe en el reglamento.';
 
   @override
   String get penalty43 =>
-      'Si un clavado se realiza parcialmente en una posición distinta a la anunciada.';
+      'Si en un clavado en escuadra con giro, la posición de escuadra no se muestra claramente.';
 
   @override
   String get penalty44 =>
-      'Si en un clavado, el clavadista se sumerge hacia el lado de la línea directa de vuelo.';
+      'Si la posición de bola (C) no se muestra como se describen el reglamento.';
 
   @override
   String get penalty45 =>
-      'Si en un clavado, un clavadista toca el extremo del trampolín o la plataforma con los pies o las manos.';
+      'Si se trata de un clavado con giro, la posición escuadra no se muestra claramente.';
 
   @override
-  String get penalty46 => 'Si la entrada en el agua no es vertical, o casi.';
+  String get penalty46 =>
+      'Si la posición libre no utiliza una de las posiciones opcionales entre recta, flexionada o flexionada y con las piernas juntas y los dedos de los pies apuntando hacia arriba.';
 
   @override
-  String get penalty47 => 'Si se tuerce la entrada en el agua.';
+  String get penalty47 =>
+      'Si se realiza una inmersión con entrada de cabeza, los brazos no están en la posición correcta, incluso si se mantienen más allá de la cabeza.';
 
   @override
   String get penalty48 =>
-      'Si en la entrada en el agua el cuerpo no está recto.';
+      'Si se trata de una inmersión con entrada de pies, los brazos no están en la posición correcta, incluso si se mantienen por debajo de la cabeza.';
 
   @override
   String get penalty49 =>
+      'En clavado sincronizado si no se muestra la similitud de la posición inicial, la aproximación, el despegue y la altura.';
+
+  @override
+  String get penalty50 =>
+      'En clavado sincronizado si no se muestra la sincronización del movimiento durante el vuelo.';
+
+  @override
+  String get penalty51 =>
+      'En el clavado sincronizado si no se muestra la similitud de los ángulos verticales de las entradas.';
+
+  @override
+  String get penalty52 =>
+      'En el clavado sincronizado si no se muestra la distancia comparativa desde el trampolín o la plataforma de la entrada.';
+
+  @override
+  String get penalty53 =>
+      'En clavado sincronizado si no se muestra el tiempo coordinado de las entradas.';
+
+  @override
+  String get penalty54 =>
+      'Si un clavado se realiza parcialmente en una posición distinta a la anunciada.';
+
+  @override
+  String get penalty55 =>
+      'Si en un clavado, el clavadista se sumerge hacia el lado de la línea directa de vuelo.';
+
+  @override
+  String get penalty56 =>
+      'Si en un clavado, un clavadista toca el extremo del trampolín o la plataforma con los pies o las manos.';
+
+  @override
+  String get penalty57 =>
+      'Si la entrada es corta, con un ángulo menor que la vertical.';
+
+  @override
+  String get penalty58 =>
+      'Si la entrada es larga, con un ángulo que excede la vertical.';
+
+  @override
+  String get penalty59 => 'Si se tuerce la entrada en el agua.';
+
+  @override
+  String get penalty60 =>
+      'Si en la entrada en el agua el cuerpo no está recto.';
+
+  @override
+  String get penalty61 =>
       'Si en la entrada en el agua los pies no están juntos, y los dedos no puntiagudos.';
 
   @override
-  String get penalty50 => 'Si en la entrada en el agua ...';
+  String get penalty62 =>
+      'Si al entrar la superficie del agua está significativamente alterada.';
 
   @override
   String get quizzIntroQuestionNumber => 'Number of Questions: ';

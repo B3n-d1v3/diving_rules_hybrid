@@ -212,6 +212,18 @@
     },
     {
       "id": 16,
+      "description": "In a synchronised springboard diving event, if a forward facing dive is not performed with a running approach.",
+      "rules": [
+        {
+          "ruleId": "11.5"
+        }
+      ],
+      "sanctionValue": 0,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 17,
       "description": "If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
       "rules": [
         {
@@ -223,14 +235,11 @@
       "judge": false
     },
     {
-      "id": 17,
-      "description": "When there is a restart in a running, standing, or Armstand dive.",
+      "id": 18,
+      "description": "If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
       "rules": [
         {
-          "ruleId": "8.6.4"
-        },
-        {
-          "ruleId": "8.6.3"
+          "ruleId": "8.6.1.2"
         }
       ],
       "sanctionValue": 1,
@@ -238,7 +247,58 @@
       "judge": false
     },
     {
-      "id": 18,
+      "id": 19,
+      "description": "When there is a restart in a running, standing, or Armstand dive.",
+      "rules": [
+        {
+          "ruleId": "8.6.3"
+        },
+        {
+          "ruleId": "8.6.4"
+        }
+      ],
+      "sanctionValue": 1,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 20,
+      "description": "If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
+      "rules": [
+        {
+          "ruleId": "8.6.2.1"
+        }
+      ],
+      "sanctionValue": 1,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 21,
+      "description": "If during an armstand dive, one or both of the Athlete’s feet returned to the platform prior to the take-off.",
+      "rules": [
+        {
+          "ruleId": "8.6.2.2"
+        }
+      ],
+      "sanctionValue": 1,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 22,
+      "description": "If during an armstand dive, a foot or any part of the Athlete’s body other than their hands touched the platform after the Athlete has assumed the starting position.",
+      "rules": [
+        {
+          "ruleId": "8.6.2.3"
+        }
+      ],
+      "sanctionValue": 1,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 23,
       "description": "In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.",
       "rules": [
         {
@@ -250,14 +310,14 @@
       "judge": false
     },
     {
-      "id": 19,
+      "id": 24,
       "description": "If an Athlete performs a dive in a Position other than that announced.",
       "rules": [
         {
-          "ruleId": "10.1.4"
+          "ruleId": "8.4.7"
         },
         {
-          "ruleId": "8.4.7"
+          "ruleId": "10.1.4"
         }
       ],
       "sanctionValue": 2,
@@ -265,8 +325,8 @@
       "judge": true
     },
     {
-      "id": 20,
-      "description": "if the dive was unsafe, including, but not limited to, as a result of an Athlete having touched the springboard or platform with their head during the flight, or having been unsafely close to doing so.",
+      "id": 25,
+      "description": "If a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.",
       "rules": [
         {
           "ruleId": "10.5.4.2.1"
@@ -277,7 +337,43 @@
       "judge": true
     },
     {
-      "id": 21,
+      "id": 26,
+      "description": "If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
+      "rules": [
+        {
+          "ruleId": "10.5.4.2.1"
+        }
+      ],
+      "sanctionValue": 2,
+      "referee": false,
+      "judge": true
+    },
+    {
+      "id": 27,
+      "description": "If the majority of the Judges Panel indicates that the dive was unsafe.",
+      "rules": [
+        {
+          "ruleId": "10.5.4.2.2"
+        }
+      ],
+      "sanctionValue": 2,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 28,
+      "description": "After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
+      "rules": [
+        {
+          "ruleId": "10.5.4.1.2"
+        }
+      ],
+      "sanctionValue": 2,
+      "referee": true,
+      "judge": false
+    },
+    {
+      "id": 29,
       "description": "If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
       "rules": [
         {
@@ -292,7 +388,22 @@
       "judge": true
     },
     {
-      "id": 22,
+      "id": 30,
+      "description": "If in a head-first entry dive, an Athlete has one or both arms held below the head.",
+      "rules": [
+        {
+          "ruleId": "8.6.7.2"
+        },
+        {
+          "ruleId": "10.6.3"
+        }
+      ],
+      "sanctionValue": 3,
+      "referee": true,
+      "judge": true
+    },
+    {
+      "id": 31,
       "description": "In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.",
       "rules": [
         {
@@ -307,7 +418,7 @@
       "judge": true
     },
     {
-      "id": 23,
+      "id": 32,
       "description": "In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.",
       "rules": [
         {
@@ -322,7 +433,7 @@
       "judge": true
     },
     {
-      "id": 24,
+      "id": 33,
       "description": "If a dive is not performed in a Position as described.",
       "rules": [
         {
@@ -334,7 +445,7 @@
       "judge": true
     },
     {
-      "id": 25,
+      "id": 34,
       "description": "If the starting position is not body straight, head erect and facing forward, arms straight (along the body, perpendicular to the body or overhead).",
       "rules": [
         {
@@ -346,7 +457,7 @@
       "judge": true
     },
     {
-      "id": 26,
+      "id": 35,
       "description": "If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.",
       "rules": [
         {
@@ -358,7 +469,7 @@
       "judge": true
     },
     {
-      "id": 27,
+      "id": 36,
       "description": "If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.",
       "rules": [
         {
@@ -370,7 +481,19 @@
       "judge": true
     },
     {
-      "id": 28,
+      "id": 37,
+      "description": "If during an Armstand dive, the hands lose contact with the platform during the takeoff.",
+      "rules": [
+        {
+          "ruleId": "10.2.5.2"
+        }
+      ],
+      "sanctionValue": 4,
+      "referee": false,
+      "judge": true
+    },
+    {
+      "id": 38,
       "description": "If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.",
       "rules": [
         {
@@ -382,7 +505,7 @@
       "judge": true
     },
     {
-      "id": 29,
+      "id": 39,
       "description": "If in running and standing dives, the take-off is not balanced or high.",
       "rules": [
         {
@@ -394,8 +517,8 @@
       "judge": true
     },
     {
-      "id": 30,
-      "description": "If in a twisting dive, the twist is manifestly done meaning that twisting has clearly begun on the springboard or platform.",
+      "id": 40,
+      "description": "If in a twisting dive, the twist has clearly begun on the springboard or platform.",
       "rules": [
         {
           "ruleId": "10.4.7"
@@ -406,14 +529,14 @@
       "judge": true
     },
     {
-      "id": 31,
-      "description": "If the Straight position is not as described or aesthetically pleasing.",
+      "id": 41,
+      "description": "If the Straight position is not body straight, not bent either at the knees or hips, feet kept together and toes pointed, or aesthetically pleasing.",
       "rules": [
         {
-          "ruleId": "10.5.5.1.1"
+          "ruleId": "10.1.6"
         },
         {
-          "ruleId": "10.1.6"
+          "ruleId": "10.5.5.1.2"
         }
       ],
       "sanctionValue": 4,
@@ -421,14 +544,14 @@
       "judge": true
     },
     {
-      "id": 32,
-      "description": "If the Pike position is not shown as described or aesthetically pleasing.",
+      "id": 42,
+      "description": "If the Pike position is not body bent at the hips, legs must straight at the knees, feet together and toes pointed, or aesthetically pleasing.",
       "rules": [
+        {
+          "ruleId": "10.1.6"
+        },
         {
           "ruleId": "10.5.5.2.2"
-        },
-        {
-          "ruleId": "10.1.6"
         }
       ],
       "sanctionValue": 4,
@@ -436,7 +559,7 @@
       "judge": true
     },
     {
-      "id": 33,
+      "id": 43,
       "description": "If in a Pike dive with a twist, the Pike position is not clearly shown.",
       "rules": [
         {
@@ -448,14 +571,14 @@
       "judge": true
     },
     {
-      "id": 34,
+      "id": 44,
       "description": "If the Tuck Position is not shown as described or aesthetically pleasing.",
       "rules": [
         {
-          "ruleId": "10.5.5.3.2"
+          "ruleId": "10.1.6"
         },
         {
-          "ruleId": "10.1.6"
+          "ruleId": "10.5.5.3.2"
         }
       ],
       "sanctionValue": 4,
@@ -463,7 +586,7 @@
       "judge": true
     },
     {
-      "id": 35,
+      "id": 45,
       "description": "If in a Tuck dive with twist, the Tuck Position is not clearly shown.",
       "rules": [
         {
@@ -475,11 +598,11 @@
       "judge": true
     },
     {
-      "id": 36,
-      "description": "If the Free position is not shown as described (optional position between Straight, Pike, or Tuck and with legs together, and toes pointed).",
+      "id": 46,
+      "description": "If the Free position is not using one of the optional position between Straight, Pike, or Tuck and with legs together, and toes pointed.",
       "rules": [
         {
-          "ruleId": "10.5.5.4"
+          "ruleId": "10.5.5.4.2"
         },
         {
           "ruleId": "10.1.6"
@@ -490,8 +613,8 @@
       "judge": true
     },
     {
-      "id": 37,
-      "description": "If at entry the arms are not in the correct position in either a head-first or feet-first entry dive.",
+      "id": 47,
+      "description": "If in a head-first entry dive, the arms are not in the correct position, even if they are held beyond the head.",
       "rules": [
         {
           "ruleId": "10.6.5"
@@ -502,11 +625,23 @@
       "judge": true
     },
     {
-      "id": 38,
+      "id": 48,
+      "description": "If in a feet-first entry dive, the arms are not in the correct position, even if they are held below the head.",
+      "rules": [
+        {
+          "ruleId": "10.6.5"
+        }
+      ],
+      "sanctionValue": 4,
+      "referee": false,
+      "judge": true
+    },
+    {
+      "id": 49,
       "description": "In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
       "rules": [
         {
-          "ruleId": "11.7.3"
+          "ruleId": "11.7.4.1"
         }
       ],
       "sanctionValue": 4,
@@ -514,11 +649,11 @@
       "judge": true
     },
     {
-      "id": 39,
+      "id": 50,
       "description": "In synchronised diving if coordinated timing of the movement during the flight is not shown.",
       "rules": [
         {
-          "ruleId": "11.7.3"
+          "ruleId": "11.7.4.2"
         }
       ],
       "sanctionValue": 4,
@@ -526,11 +661,11 @@
       "judge": true
     },
     {
-      "id": 40,
+      "id": 51,
       "description": "In synchronised diving if similarity of the vertical angles of the entries is not shown.",
       "rules": [
         {
-          "ruleId": "11.7.3"
+          "ruleId": "11.7.4.3"
         }
       ],
       "sanctionValue": 4,
@@ -538,11 +673,11 @@
       "judge": true
     },
     {
-      "id": 41,
+      "id": 52,
       "description": "In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
       "rules": [
         {
-          "ruleId": "11.7.3"
+          "ruleId": "11.7.4.4"
         }
       ],
       "sanctionValue": 4,
@@ -550,11 +685,11 @@
       "judge": true
     },
     {
-      "id": 42,
+      "id": 53,
       "description": "In synchronised diving if coordinated timing of the entries is not shown.",
       "rules": [
         {
-          "ruleId": "11.7.3"
+          "ruleId": "11.7.4.5"
         }
       ],
       "sanctionValue": 4,
@@ -562,7 +697,7 @@
       "judge": true
     },
     {
-      "id": 43,
+      "id": 54,
       "description": "If a dive is performed partially in a Position other than that announced.",
       "rules": [
         {
@@ -574,7 +709,7 @@
       "judge": true
     },
     {
-      "id": 44,
+      "id": 55,
       "description": "If during the flight of a dive, the Athlete does not maintain a straight line of flight.",
       "rules": [
         {
@@ -586,7 +721,7 @@
       "judge": true
     },
     {
-      "id": 45,
+      "id": 56,
       "description": "If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.",
       "rules": [
         {
@@ -598,8 +733,8 @@
       "judge": true
     },
     {
-      "id": 46,
-      "description": "If the entry is short or long (at an angle less than or exceeding vertical).",
+      "id": 57,
+      "description": "If the entry is short, at an angle less than vertical.",
       "rules": [
         {
           "ruleId": "10.6.2"
@@ -610,7 +745,19 @@
       "judge": true
     },
     {
-      "id": 47,
+      "id": 58,
+      "description": "If the entry is long, at an angle exceeding vertical.",
+      "rules": [
+        {
+          "ruleId": "10.6.2"
+        }
+      ],
+      "sanctionValue": 5,
+      "referee": false,
+      "judge": true
+    },
+    {
+      "id": 59,
       "description": "If at entry the body is twisted.",
       "rules": [
         {
@@ -622,7 +769,7 @@
       "judge": true
     },
     {
-      "id": 48,
+      "id": 60,
       "description": "If at entry the body is not straight.",
       "rules": [
         {
@@ -634,7 +781,7 @@
       "judge": true
     },
     {
-      "id": 49,
+      "id": 61,
       "description": "If at entry the feet are not together, toes not pointed.",
       "rules": [
         {
@@ -646,7 +793,7 @@
       "judge": true
     },
     {
-      "id": 50,
+      "id": 62,
       "description": "If at entry the water’s surface is significantly disturbed.",
       "rules": [
         {

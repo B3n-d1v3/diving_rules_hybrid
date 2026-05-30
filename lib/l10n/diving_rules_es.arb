@@ -259,179 +259,239 @@
         "description": "Penalty 15 - D9.5 - In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
         "type": "text"
     },
-    "penalty16": "Cuando un saltador, da un paso y para en un salto con carrera o, en un salto sin carrera detiene el movimiento del despegue después de que las piernas hayan empezado a presionar la tabla.",
+   "penalty16": "En un salto de trampolín sincronizado, si un salto de frente no se realiza con una carrera de aproximación.",
     "@penalty16": {
-        "description": "Penalty 16 - D6.25 - If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.",
+        "description": "Penalty 16 - 11.5 - In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.",
         "type": "text"
     },
-    "penalty17": "Si un saltador hace un reinicio en un salto con carrera, en un salto sin carrera, o en un equilibrio.",
+    "penalty17": "Cuando un saltador, da un paso y para en un salto con carrera o, en un salto sin carrera detiene el movimiento del despegue después de que las piernas hayan empezado a presionar la tabla.",
     "@penalty17": {
-        "description": "Penalty 17 - D6.26 - If there is a \nre-start in a standing, running, or armstand dive.",
+        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
         "type": "text"
     },
-    "penalty18": "En saltos sincronizados si hay un reinicio por parte de uno o ambos saltadores.",
+    "penalty18": "Si durante un salto de trampolín en pie, un atleta detiene el movimiento de despegue después de que las piernas hayan comenzado a doblarse o a presionar contra la plataforma para iniciar el despegue.",
     "@penalty18": {
-        "description": "Penalty 18 - D9.6 - In synchronised diving if there is a re-start by one or both divers.",
+        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
         "type": "text"
     },
-    "penalty19": "Si un saltador ejecuta el salto en posición distinta a la anunciada.",
+    "penalty19": "Si un saltador hace un reinicio en un salto con carrera, en un salto sin carrera, o en un equilibrio.",
     "@penalty19": {
-        "description": "Penalty 19 - D6.19 & D8.1.4 - If a diver performs a dive in a position other than that announced.",
+        "description": "Penalty 19 - 8.6.4 - When there is a restart in a running, standing, or Armstand dive.",
         "type": "text"
     },
-    "penalty20": "Si durante la ejecución de un salto, el saltador está peligrosamente cerca del trampolín o plataforma o toca el final del trampolín o plataforma con la cabeza.",
+    "penalty20": "Si durante una zambullida en vertical, un atleta perdió el equilibrio y movió una o ambas manos de su posición original en el borde delantero de la plataforma.",
     "@penalty20": {
-        "description": "Penalty 20 - D8.5.4 - If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.",
+        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
         "type": "text"
     },
-    "penalty21": "Si uno o los dos brazos están situados por encima de la cabeza en una entrada de pie o por debajo de la cabeza en una entrada de cabeza.",
+    "penalty21": "Si durante una zambullida en pino, uno o ambos pies del atleta volvieron a la plataforma antes del despegue.",
     "@penalty21": {
-        "description": "Penalty 21 - D6.22, D8.6.3 & D8.6.4 - If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.",
+        "description": "Penalty 21 - 8.6.2.2 - If during an armstand dive, one or both of the Athlete’s feet returned to the platform prior to the take-off.",
         "type": "text"
     },
-    "penalty22": "Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en un cuarto de mortal (90º) en saltos con un mortal.",
+    "penalty22": "Si durante una zambullida en pino, un pie o cualquier parte del cuerpo del atleta que no sean sus manos toca la plataforma después de que el atleta haya adoptado la posición inicial.",
     "@penalty22": {
-        "description": "Penalty 22 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.",
+        "description": "Penalty 22 - 8.6.2.3 - If during an armstand dive, a foot or any part of the Athlete’s body other than their hands touched the platform after the Athlete has assumed the starting position.",
         "type": "text"
     },
-    "penalty23": "Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en medio mortal (180°) en saltos con más de un mortal.",
+    "penalty23": "En saltos sincronizados si hay un reinicio por parte de uno o ambos saltadores.",
     "@penalty23": {
-        "description": "Penalty 23 - D8.5.7 - If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.",
+        "description": "Penalty 23 - 11.4 - In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.",
         "type": "text"
     },
-    "penalty24": "Si un salto no se realiza en una posición como la descrita en el reglamento.",
+    "penalty24": "Si un saltador ejecuta el salto en posición distinta a la anunciada.",
     "@penalty24": {
-        "description": "Penalty 24 - D8.1.6 - If a dive is not performed in a position as described.",
+        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.",
         "type": "text"
     },
-    "penalty25": " Cuando en la posición de inicio no esté derecho con la cabeza erguida y los brazos extendidos, en cualquier posición",
+    "penalty25": "Si un salto fue inseguro como resultado de que un atleta tocó el trampolín o la plataforma con la cabeza durante el vuelo.",
     "@penalty25": {
-        "description": "Penalty 25 - D8.2.3 - If the starting position is not straight, head erect, with the arms straight in any position.",
+        "description": "Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.",
         "type": "text"
     },
-    "penalty26": "Si los pies se separan ligeramente del trampolín o plataforma antes del despegue",
+    "penalty26": "Si un salto se consideró inseguro como resultado de que un atleta estuvo peligrosamente cerca del trampolín o plataforma con la cabeza durante el vuelo.",
     "@penalty26": {
-        "description": "Penalty 26 - D8.2.4.3 - If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.",
+        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
         "type": "text"
     },
-    "penalty27": "Cuando en un salto en equilibrio, no se muestre un equilibrio inmóvil y estable en la posición estirada vertical",
+    "penalty27": "Si la mayoría del panel de jueces indica que la inmersión no fue segura.",
     "@penalty27": {
-        "description": "Penalty 27 - D8.2.6.2 - If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.",
+        "description": "Penalty 27 - 10.5.4.2.2 - If the majority of the Judges Panel indicates that the dive was unsafe.",
         "type": "text"
     },
-    "penalty28": "Cuando la carrera no es fluida y estéticamente agradable, en dirección hacia delante hasta el final del trampolín o plataforma",
+    "penalty28": "Después de revisar una inmersión potencialmente insegura con tecnología visual, si el desempeño de la inmersión fue inseguro.",
     "@penalty28": {
-        "description": "Penalty 28 - D8.3.2 - If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.",
+        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
         "type": "text"
     },
-    "penalty29": "Cuando la salida no sea con equilibrio y altura, o en el extremo del trampolín o plataforma",
+    "penalty29": "Si uno o los dos brazos están situados por encima de la cabeza en una entrada de pie o por debajo de la cabeza en una entrada de cabeza.",
     "@penalty29": {
-        "description": "Penalty 29 - D8.4.5 - If the take-off is not bold, high, and confident.",
+        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
         "type": "text"
     },
-    "penalty30": "En saltos con tirabuzón, el tirabuzón no debe ejecutarse manifiestamente desde el trampolín o plataforma.",
+    "penalty30": "En una zambullida con entrada de cabeza, el atleta mantiene uno o ambos brazos por debajo de la cabeza.",
     "@penalty30": {
-        "description": "Penalty 30 - D8.4.6 - If in a twist dive, the twisting is manifestly done from the springboard or platform.",
+        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, an Athlete has one or both arms held below the head.",
         "type": "text"
     },
-    "penalty31": "Si la posición estirada no fuera estéticamente agradable, ni mostrada como se describe",
+    "penalty31": "Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en un cuarto de mortal (90º) en saltos con un mortal.",
     "@penalty31": {
-        "description": "Penalty 31 - D8.5.6 - If the straight position is not shown as described.",
+        "description": "Penalty 31 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.",
         "type": "text"
     },
-    "penalty32": "Si la posición carpada no fuera estéticamente agradable, ni mostrada como se describe",
+    "penalty32": "Si en un salto al vuelo, la posición estirada no se muestra claramente al menos en medio mortal (180°) en saltos con más de un mortal.",
     "@penalty32": {
-        "description": "Penalty 32 - D8.5.9 - If the pike position is not shown as described.",
+        "description": "Penalty 32 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.",
         "type": "text"
     },
-    "penalty33": "En saltos carpados con tirabuzón, la posición carpada debe marcarse claramente",
+    "penalty33": "Si un salto no se realiza en una posición como la descrita en el reglamento.",
     "@penalty33": {
-        "description": "Penalty 33 - D8.5.10 - If in a pike dive with twist, the pike position is not clearly shown.",
+        "description": "Penalty 33 - 10.1.6 - If a dive is not performed in a Position as described.",
         "type": "text"
     },
-    "penalty34": "Si la posición encogida no fuera estéticamente agradable, ni mostrada como se describe",
+    "penalty34": "Cuando en la posición de inicio no esté derecho con la cabeza erguida y los brazos extendidos, en cualquier posición.",
     "@penalty34": {
-        "description": "Penalty 34 - D8.5.12 - If the tuck position is not shown as described.",
+        "description": "Penalty 34 - 10.2.2 - If the starting position is not body straight, head erect and facing forward, arms straight (along the body, perpendicular to the body or overhead).",
         "type": "text"
     },
-    "penalty35": "En saltos en posición encogidas con tirabuzón, la posición encogida debe marcarse claramente",
+    "penalty35": "Si los pies se separan ligeramente del trampolín o plataforma antes del despegue.",
     "@penalty35": {
-        "description": "Penalty 35 - D8.5.13 - If in a tuck dive with twist, the tuck position is not clearly shown.",
+        "description": "Penalty 35 - 10.2.3.3 - If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.",
         "type": "text"
     },
-    "penalty36": "Si la posición discrecional no fuera mostrada como se describe",
+    "penalty36": "Cuando en un salto en equilibrio, no se muestre un equilibrio inmóvil y estable en la posición estirada vertical.",
     "@penalty36": {
-        "description": "Penalty 36 - D8.5.15 - If the free position is not shown as described.",
+        "description": "Penalty 36 - 10.2.5.2 - If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.",
         "type": "text"
     },
-    "penalty37": "cuando los brazos no estén en la posición correcta tanto en las entradas de cabeza como en las de pie",
+    "penalty37": "Si durante un salto en paracaídas de apoyo las manos pierden contacto con la plataforma durante el despegue.",
     "@penalty37": {
-        "description": "Penalty 37 - D8.6.5 - If the arms are not in the correct position in either the head first or feet first entry.",
+        "description": "Penalty 37 - 10.2.5.2 - If during an Armstand dive, the hands lose contact with the platform during the takeoff.",
         "type": "text"
     },
-    "penalty38": "En saltos sincronizados, por defectos en: la similitud en la posición de inicio, carrera, salida o altura",
+    "penalty38": "Cuando la carrera no es fluida y estéticamente agradable, en dirección hacia delante hasta el final del trampolín o plataforma.",
     "@penalty38": {
-        "description": "Penalty 38 - D9.11 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
+        "description": "Penalty 38 - 10.3.2 - If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.",
         "type": "text"
     },
-    "penalty39": "En saltos sincronizados si no se muestra coordinación en el tiempo de los movimientos durante el vuelo.",
+    "penalty39": "Cuando la salida no sea con equilibrio y altura, o en el extremo del trampolín o plataforma.",
     "@penalty39": {
-        "description": "Penalty 39 - D9.11 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+        "description": "Penalty 39 - 10.4.6 - If in running and standing dives, the take-off is not balanced or high.",
         "type": "text"
     },
-    "penalty40": "En saltos sincronizados si no se muestra la similitud de los ángulos de las entradas respecto a la vertical",
+    "penalty40": "En saltos con tirabuzón, el tirabuzón no debe ejecutarse manifiestamente desde el trampolín o plataforma.",
     "@penalty40": {
-        "description": "Penalty 40 - D9.11 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+        "description": "Penalty 40 - 10.4.7 - If in a twisting dive, the twist has clearly begun on the springboard or platform.",
         "type": "text"
     },
-    "penalty41": "En saltos sincronizados si no se muestra la comparación de la distancia en la entrada desde el trampolín o plataforma",
+    "penalty41": "Si la posición estirada no fuera estéticamente agradable, ni mostrada como se describe.",
     "@penalty41": {
-        "description": "Penalty 41 - D9.11 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+        "description": "Penalty 41 - 10.5.5.1.1 - 10.1.6 - If the Straight position is not body straight, not bent either at the knees or hips, feet kept together and toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty42": "En saltos sincronizado si no se muestra la coordinación en el tiempo de las entradas.",
+    "penalty42": "Si la posición carpada no fuera estéticamente agradable, ni mostrada como se describe.",
     "@penalty42": {
-        "description": "Penalty 42 - D9.11 - In synchronised diving if coordinated timing of the entries is not shown.",
+        "description": "Penalty 42 - 10.5.5.2.2 - 10.1.6 - If the Pike position is not body bent at the hips, legs must straight at the knees, feet together and toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty43": "Si un salto se ejecuta parcialmente en una posición distinta a la anunciada",
+    "penalty43": "En saltos carpados con tirabuzón, la posición carpada debe marcarse claramente.",
     "@penalty43": {
-        "description": "Penalty 43 - D8.1.5 - If a dive is performed partially in a position other than that announced.",
+        "description": "Penalty 43 - 10.5.5.2.3 - If in a Pike dive with a twist, the Pike position is not clearly shown.",
         "type": "text"
     },
-    "penalty44": "Si durante la ejecución de un salto, el saltador salta hacia un lado respecto a la línea central del vuelo",
+    "penalty44": "Si la posición encogida no fuera estéticamente agradable, ni mostrada como se describe.",
     "@penalty44": {
-        "description": "Penalty 44 - D8.5.2 - If in a dive, the diver dives to the side of the direct line of flight.",
+        "description": "Penalty 44 - 10.5.5.3.2 - 10.1.6 - If the Tuck Position is not body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty45": "Si durante la ejecución de un salto, el saltador toca el extremo del trampolín o plataforma con sus pies o manos",
+    "penalty45": "En saltos en posición encogidas con tirabuzón, la posición encogida debe marcarse claramente",
     "@penalty45": {
-        "description": "Penalty 45 - D8.5.3 - If in a dive, a diver touches the end of the springboard or platform with his feet or hands.",
+        "description": "Penalty 45 - 10.5.5.3.3 - If in a Tuck dive with twist, the Tuck Position is not clearly shown.",
         "type": "text"
     },
-    "penalty46": "Si la entrada al agua es corta o pasada",
+    "penalty46": "Si la posición libre no utiliza una de las posiciones opcionales entre recta, flexionada o flexionada y con las piernas juntas y los dedos de los pies apuntando hacia arriba.",
     "@penalty46": {
-        "description": "Penalty 46 - D8.6.2 - If the entry into the water is not vertical, or nearly so.",
+        "description": "Penalty 46 - 10.5.5.4 - 10.1.6 - If the Free position is not using one of the optional position between Straight, Pike, or Tuck and with legs together, and toes pointed.",
         "type": "text"
     },
-    "penalty47": "Si la entrada al agua está girada",
+    "penalty47": "Si se realiza una inmersión con entrada de cabeza, los brazos no están en la posición correcta, incluso si se mantienen más allá de la cabeza.",
     "@penalty47": {
-        "description": "Penalty 47 - D8.6.2 - If the entry into the water is twisted.",
+        "description": "Penalty 47 - 10.6.5 - If in a head-first entry dive, the arms are not in the correct position, even if they are held beyond the head.",
         "type": "text"
     },
-    "penalty48": "Si en la entrada al agua el cuerpo no está extendido",
+    "penalty48": "Si se trata de una inmersión con entrada de pies, los brazos no están en la posición correcta, incluso si se mantienen por debajo de la cabeza.",
     "@penalty48": {
-        "description": "Penalty 48 - D8.6.2 - If in the entry into the water the body is not straight.",
+        "description": "Penalty 48 - 10.6.5 - If in a feet-first entry dive, the arms are not in the correct position, even if they are held below the head.",
         "type": "text"
     },
-    "penalty49": "Si en la entrada al agua los pies no estén juntos o los empeines sin estirar",
+    "penalty49": "En saltos sincronizados, por defectos en: la similitud en la posición de inicio, carrera, salida o altura.",
     "@penalty49": {
-        "description": "Penalty 49 - D8.6.2 - If the entry into the water the feet are not together, and the toes not pointed.",
+        "description": "Penalty 49 - 11.7.3 - In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.",
         "type": "text"
     },
-    "penalty50": "Si en la entrada al agua ...",
+    "penalty50": "En saltos sincronizados si no se muestra coordinación en el tiempo de los movimientos durante el vuelo.",
     "@penalty50": {
-        "description": "Penalty 50 - D8.6.2 - If the entry into the water the feet are not together, and the toes not pointed.",
+        "description": "Penalty 50 - 11.7.3 - In synchronised diving if coordinated timing of the movement during the flight is not shown.",
+        "type": "text"
+    },
+    "penalty51": "En saltos sincronizados si no se muestra la similitud de los ángulos de las entradas respecto a la vertical.",
+    "@penalty51": {
+        "description": "Penalty 51 - 11.7.3 - In synchronised diving if similarity of the vertical angles of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty52": "En saltos sincronizados si no se muestra la comparación de la distancia en la entrada desde el trampolín o plataforma.",
+    "@penalty52": {
+        "description": "Penalty 52 - 11.7.3 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.",
+        "type": "text"
+    },
+    "penalty53": "En saltos sincronizado si no se muestra la coordinación en el tiempo de las entradas.",
+    "@penalty53": {
+        "description": "Penalty 53 - 11.7.3 - In synchronised diving if coordinated timing of the entries is not shown.",
+        "type": "text"
+    },
+    "penalty54": "Si un salto se ejecuta parcialmente en una posición distinta a la anunciada.",
+    "@penalty54": {
+        "description": "Penalty 54 - 10.1.5 - If a dive is performed partially in a Position other than that announced.",
+        "type": "text"
+    },
+    "penalty55": "Si durante la ejecución de un salto, el saltador salta hacia un lado respecto a la línea central del vuelo.",
+    "@penalty55": {
+        "description": "Penalty 55 - 10.5.2 - If during the flight of a dive, the Athlete does not maintain a straight line of flight.",
+        "type": "text"
+    },
+    "penalty56": "Si durante la ejecución de un salto, el saltador toca el extremo del trampolín o plataforma con sus pies o manos.",
+    "@penalty56": {
+        "description": "Penalty 56 - 10.5.3 - If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.",
+        "type": "text"
+    },
+    "penalty57": "Si la entrada es corta, con un ángulo menor que la vertical.",
+    "@penalty57": {
+        "description": "Penalty 57 - 10.6.2 - If the entry is short, at an angle less than vertical.",
+        "type": "text"
+    },
+    "penalty58": "Si la entrada es larga, con un ángulo que excede la vertical.",
+    "@penalty58": {
+        "description": "Penalty 58 - 10.6.2 - If the entry is long, at an angle exceeding vertical.",
+        "type": "text"
+    },
+    "penalty59": "Si la entrada al agua está girada.",
+    "@penalty59": {
+        "description": "Penalty 59 - 10.6.2 - If at entry the body is twisted.",
+        "type": "text"
+    },
+    "penalty60": "Si en la entrada al agua el cuerpo no está extendido.",
+    "@penalty60": {
+        "description": "Penalty 60 - 10.6.2 - If at entry the body is not straight.",
+        "type": "text"
+    },
+    "penalty61": "Si en la entrada al agua los pies no estén juntos o los empeines sin estirar",
+    "@penalty61": {
+        "description": "Penalty 61 - 10.6.2 - If at entry the feet are not together, toes not pointed.",
+        "type": "text"
+    },
+    "penalty62": "Si al entrar la superficie del agua está significativamente alterada.",
+    "@penalty62": {
+        "description": "Penalty 62 - 10.6.2 - If at entry the water’s surface is significantly disturbed.",
         "type": "text"
     },
     "quizzIntroQuestionNumber": "Número de preguntas:",

@@ -184,142 +184,190 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty16 =>
-      'Si, lors d’un plongeon avec élan, un plongeur fait un ou plusieurs pas pendant son élan, puis marque un arrêt.';
+      'En plongeon synchronisé, si pour un départ vers l’avant au tremplin, le plongeon n’est pas exécuté avec élan.';
 
   @override
   String get penalty17 =>
-      'Lorsqu’il y a un nouveau départ, pour un plongeon avec élan, sans élan, ou en équilibre.';
+      'Si, lors d’un plongeon avec élan, un plongeur fait un ou plusieurs pas pendant son élan, puis marque un arrêt.';
 
   @override
   String get penalty18 =>
-      'En plongeon synchronisé, s’il y a un nouveau départ, qu’il soit imputable ou dû à l’un ou les deux plongeurs.';
+      'Si, lors d’un plongeon sans élan, un plongeur interrompt le mouvement de départ après que les jambes aient commencé à se fléchir, ou commencé à exercer une pression sur la plateforme ou le tremplin pour initier l\'envol.';
 
   @override
   String get penalty19 =>
-      'Si un plongeur exécute un plongeon dans une position clairement différente de celle annoncée.';
+      'Lorsqu’il y a un nouveau départ, pour un plongeon avec élan, sans élan, ou en équilibre.';
 
   @override
   String get penalty20 =>
-      'Si un plongeur est dangereusement près du tremplin ou de la plateforme, ou s’il touche l’extrémité du tremplin ou de la plateforme avec la tête.';
+      'Si pour un plongeon en équilibre, le plongeur perd l\'équilibre, et a déplacé une ou les deux mains de leur position initiale sur le bord avant de la plateforme.';
 
   @override
   String get penalty21 =>
-      'Si, dans un plongeon par les pieds, un ou les deux bras sont tenus au-dessus de la tête.';
+      'Si pour un plongeon en équilibre, un ou les deux pieds du plongeur sont revenus sur la plateforme avant l\'envol';
 
   @override
   String get penalty22 =>
-      'Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un quart de saut périlleux (90º) pour les plongeons comportant jusqu’à 1 saut périlleux.';
+      'Si pour un plongeon en équilibre, un pied, ou toute autre partie du corps du plongeur autre que ses mains, a touché la plateforme après que l\'Athlète ait pris la position de départ.';
 
   @override
   String get penalty23 =>
-      'Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un demi-saut périlleux (180º) pour les plongeons comportant plus de 1 saut périlleux.';
+      'En plongeon synchronisé, s’il y a un nouveau départ, qu’il soit imputable ou dû à l’un ou les deux plongeurs.';
 
   @override
   String get penalty24 =>
-      'Si un plongeon n’est pas réalisé dans une position telle que décrite par ces règlements.';
+      'Si un plongeur exécute un plongeon dans une position clairement différente de celle annoncée.';
 
   @override
   String get penalty25 =>
-      'Si la position de départ n’est pas le corps droit, la tête droite et orientée vers l’avant, les bras tendus le long du corps, ou perpendiculairement au corps, ou au-dessus de la tête.';
+      'Si un plongeon est considéré comme dangereux lorsqu\'un athlète a touché le tremplin ou la plateforme avec la tête pendant la trajectoire.';
 
   @override
   String get penalty26 =>
-      'Si, pour un plongeon sans élan, les pieds du plongeur sont décollés du tremplin ou de la plateforme avant l’envol.';
+      'Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête  pendant la trajectoire.';
 
   @override
   String get penalty27 =>
-      'Si, dans la position de départ d’un plongeon en équilibre, le plongeur est incapable de maintenir un équilibre immobile et stable, à la verticale.';
+      'Si la majorité des juges indique que le plongeon était dangereux.';
 
   @override
   String get penalty28 =>
-      'Dans un plongeon avec élan, si l’élan n’est pas fluide, esthétiquement plaisant, et en direction de l’avant, jusqu’à l’extrémité du tremplin ou de la plateforme.';
+      'Après revue du plongeon avec une technologie de visualisation, si l\'exécution du plongeon est considèe comme dangereuse';
 
   @override
   String get penalty29 =>
-      'Si, dans un plongeon avec ou sans élan, l’envol n’est pas équilibré et haut, et depuis l\'extrémité du tremplin ou de la plateforme.';
+      'Si, dans un plongeon par les pieds, un ou les deux bras sont tenus au-dessus de la tête lors de l\'entrée à l\'eau.';
 
   @override
   String get penalty30 =>
-      'Si, dans un plongeon avec vrille, la vrille est manifestement déclenchée à partir du tremplin ou de la plateforme.';
+      'Si, dans un plongeon par tête, un ou les deux bras sont tenus en-dessous de la tête lors de l\'entrée à l\'eau.';
 
   @override
   String get penalty31 =>
-      'Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.';
+      'Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un quart de saut périlleux (90º) pour les plongeons comportant jusqu’à 1 saut périlleux.';
 
   @override
   String get penalty32 =>
-      'Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
+      'Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un demi-saut périlleux (180º) pour les plongeons comportant plus de 1 saut périlleux.';
 
   @override
   String get penalty33 =>
-      'Si, dans un plongeon carpé avec vrille, la position carpée n’est pas clairement montrée.';
+      'Si un plongeon n’est pas réalisé dans une position telle que décrite par ces règlements.';
 
   @override
   String get penalty34 =>
-      'Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
+      'Si la position de départ n’est pas le corps droit, la tête droite et orientée vers l’avant, les bras tendus le long du corps, ou perpendiculairement au corps, ou au-dessus de la tête.';
 
   @override
   String get penalty35 =>
-      'Si, dans un plongeon groupé avec vrille, la position groupée n’est pas clairement montrée.';
+      'Si, pour un plongeon sans élan, les pieds du plongeur sont décollés du tremplin ou de la plateforme avant l’envol.';
 
   @override
   String get penalty36 =>
-      'Si la position libre n’est pas réalisée telle que décrite (position optionnelle entre droit, carpée ou groupé,  jambes serrées, et pointes de pieds tendues).';
+      'Si, dans la position de départ d’un plongeon en équilibre, le plongeur est incapable de maintenir un équilibre immobile et stable, à la verticale.';
 
   @override
   String get penalty37 =>
-      'Si les bras ne sont pas dans une position correcte lors d’une entrée à l’eau par la tête ou par les pieds.';
+      'Si, dans la position de départ d’un plongeon en équilibre, les mains perdent le contact avec la plateforme durant la phase qui précède l’envol.';
 
   @override
   String get penalty38 =>
-      'En plongeon synchronisé, pour un manque de similitude de la position de départ, de l\'élan, de l\'envol et de la hauteur.';
+      'Dans un plongeon avec élan, si l’élan n’est pas fluide, esthétiquement plaisant, et en direction de l’avant, jusqu’à l’extrémité du tremplin ou de la plateforme.';
 
   @override
   String get penalty39 =>
-      'En plongeon synchronisé, pour un manque de coordination du rythme des mouvements durant la trajectoire.';
+      'Si, dans un plongeon avec ou sans élan, l’envol n’est pas équilibré et haut, et depuis l\'extrémité du tremplin ou de la plateforme.';
 
   @override
   String get penalty40 =>
-      'En plongeon synchronisé, pour un manque de similitude des angles verticaux des entrées à l\'eau.';
+      'Si, dans un plongeon avec vrille, la vrille est manifestement déclenchée à partir du tremplin ou de la plateforme.';
 
   @override
   String get penalty41 =>
-      'En plongeon synchronisé, pour un manque de similitude des distances par rapport au tremplin ou à la plate-forme, lors de l\'entrée dans l\'eau.';
+      'Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty42 =>
-      'En plongeon synchronisé, pour un manque de simultaniété des entrées à l\'eau.';
+      'Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty43 =>
-      'Si un plongeon est exécuté partiellement dans une position différente de celle annoncée.';
+      'Si, dans un plongeon carpé avec vrille, la position carpée n’est pas clairement montrée.';
 
   @override
   String get penalty44 =>
-      'Si, pendant la trajectoire, un plongeur se déporte de sa ligne directe d’envol.';
+      'Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty45 =>
-      'Si, pendant la trajectoire, un plongeur touche l’extrémité du tremplin ou de la plateforme, avec les pieds ou avec les mains.';
+      'Si, dans un plongeon groupé avec vrille, la position groupée n’est pas clairement montrée.';
 
   @override
   String get penalty46 =>
-      'Si l’entrée à l’eau est plate ou passée, dans un angle inférieur ou supérieur à la verticale.';
+      'Si la position libre n’est pas réalisée sans utiliser les positions droit, carpée ou groupé, jambes serrées, et pointes de pieds tendues.';
 
   @override
   String get penalty47 =>
-      'Si au moment de l’entrée à l’eau le corps est vrillé.';
+      'Si lors d’une entrée à l’eau par la tête, les bras ne sont pas dans une position correcte, même s\'ils sont tenus en-dessus de la tête.';
 
   @override
   String get penalty48 =>
-      'Si au moment de l’entrée à l’eau le corps n\'est pas droit.';
+      'Si lors d’une entrée à l’eau par les pieds, les bras ne sont pas dans une position correcte, même s\'ils sont tenus en-dessous de la tête.';
 
   @override
   String get penalty49 =>
-      'Si au moment de l’entrée à l’eau les pieds sont désunis, ou si les pointes de pieds sont relâchées.';
+      'En plongeon synchronisé, pour un manque de similitude de la position de départ, de l\'élan, de l\'envol et de la hauteur.';
 
   @override
   String get penalty50 =>
+      'En plongeon synchronisé, pour un manque de coordination du rythme des mouvements durant la trajectoire.';
+
+  @override
+  String get penalty51 =>
+      'En plongeon synchronisé, pour un manque de similitude des angles verticaux des entrées à l\'eau.';
+
+  @override
+  String get penalty52 =>
+      'En plongeon synchronisé, pour un manque de similitude des distances par rapport au tremplin ou à la plate-forme, lors de l\'entrée dans l\'eau.';
+
+  @override
+  String get penalty53 =>
+      'En plongeon synchronisé, pour un manque de simultaniété des entrées à l\'eau.';
+
+  @override
+  String get penalty54 =>
+      'Si un plongeon est exécuté partiellement dans une position différente de celle annoncée.';
+
+  @override
+  String get penalty55 =>
+      'Si, pendant la trajectoire, un plongeur se déporte de sa ligne directe d’envol.';
+
+  @override
+  String get penalty56 =>
+      'Si, pendant la trajectoire, un plongeur touche l’extrémité du tremplin ou de la plateforme, avec les pieds ou avec les mains.';
+
+  @override
+  String get penalty57 =>
+      'Si l’entrée à l’eau est plate, dans un angle inférieur à la verticale.';
+
+  @override
+  String get penalty58 =>
+      'Si l’entrée à l’eau est passée, dans un angle supérieur à la verticale.';
+
+  @override
+  String get penalty59 =>
+      'Si au moment de l’entrée à l’eau le corps est vrillé.';
+
+  @override
+  String get penalty60 =>
+      'Si au moment de l’entrée à l’eau le corps n\'est pas droit.';
+
+  @override
+  String get penalty61 =>
+      'Si au moment de l’entrée à l’eau les pieds sont désunis, ou si les pointes de pieds sont relâchées.';
+
+  @override
+  String get penalty62 =>
       'Si au moment de l’entrée à l’eau la surface de l’eau est significativement perturbée.';
 
   @override
