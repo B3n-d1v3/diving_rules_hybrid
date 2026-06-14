@@ -181,82 +181,82 @@
     },
     "penalty0": "Se il tuffatore impiega più di un minuto dopo un avvertimento.",
     "@penalty0": {
-        "description": "Penalty Descripion List\n Penalty 0 - D6.12 - If the diver takes more than one minute, after a warning.",
+        "description": "Penalty Descripion List\n Penalty 0 - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).",
         "type": "text"
     },
     "penalty1": "Se un tuffatore esegue un doppio rimbalzo alla fine del trampolino o un doppio balzo della piattaforma prima della partenza.",
     "@penalty1": {
-        "description": "Penalty 1 - D6.16 & D8.3.4 - If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.",
+        "description": "Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.",
         "type": "text"
     },
     "penalty2": "Se l’ultimo passo non è effettuato da un piede.",
     "@penalty2": {
-        "description": "Penalty 2 - D6.17 & D8.3.3 - If the final step is not from one foot.",
+        "description": "Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.",
         "type": "text"
     },
     "penalty3": "Se lo stacco dal trampolino non è effettuato simultaneamente con due piedi.",
     "@penalty3": {
-        "description": "Penalty 3 - D6.18 & D8.4.3 - If the take-off on the springboard is not from both feet simultaneously.",
+        "description": "Penalty 3 - 8.6.5.4 - 10.4.4 - If the take-off from the springboard or platform is not from both feet simultaneously.",
         "type": "text"
     },
     "penalty4": "Se un avvitamento è più grande o inferiore a quello annunciato, di 90 gradi o più.",
     "@penalty4": {
-        "description": "Penalty 4 - D6.20 & D8.6.6- If a twist is greater or less than that announced by 90 degrees or more.",
+        "description": "Penalty 4 - 8.6.5.5 - 10.6.6 - If the twist in a dive at entry is greater or less than that announced by 90 degrees or more.",
         "type": "text"
     },
     "penalty5": "Se un tuffatore ha eseguito un tuffo di numero diverso da quello annunciato.",
     "@penalty5": {
-        "description": "Penalty 5 - D6.21 & D8.1.7 - If a diver has performed a dive of a number other than that announced.",
+        "description": "Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If the Athlete has performed a dive of a number other than that announced.",
         "type": "text"
     },
     "penalty6": "Se i piedi toccano l’acqua prima della testa o delle mani in un’entrata di testa.",
     "@penalty6": {
-        "description": "Penalty 6 - D6.22.1 - If the feet enter the water before the head or hands in a head first dive.",
+        "description": "Penalty 6 - 8.6.5.6 - If in a head-first entry dive, the feet enter the water before the head or hands.",
         "type": "text"
     },
     "penalty7": "Se la testa o le mani toccano l’acqua prima dei piedi in un’entrata di piedi.",
     "@penalty7": {
-        "description": "Penalty 7 - D6.22.2 - If the head or hands enter the water before the feet in a feet first dive.",
+        "description": "Penalty 7 - 8.6.5.7  - If in a feet-first entry dive, the head or hands enter the water before the feet.",
         "type": "text"
     },
     "penalty8": "Se il tuffatore ha ricevuto assistenza dopo il segnale di partenza.",
     "@penalty8": {
-        "description": "Penalty 8 - D6.24 - If assistance has been given to the diver after the starting signal.",
+        "description": "Penalty 8 - 8.7 - If the Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.",
         "type": "text"
     },
     "penalty9": "Quando fallisce un secondo tentativo (re-start) di partenza.",
     "@penalty9": {
-        "description": "Penalty 9 - D6.27 - When a second attempt\n(a re-start) is unsuccessful.",
+        "description": "Penalty 9 - 8.6.5.1 - When a second attempt (a re-start) is unsuccessful.",
         "type": "text"
     },
     "penalty10": "Se un tuffatore si rifiuta di eseguire un tuffo.",
     "@penalty10": {
-        "description": "Penalty 10 - D6.28 - If a diver refuses the execution of a dive.",
+        "description": "Penalty 10 - 8.5.7 - If the Athlete refuses or fails to perform a dive.",
         "type": "text"
     },
     "penalty11": "Nei tuffi sincronizzati, se uno o entrambi i tuffatori eseguono un tuffo di numero differente rispetto a quanto annunciato.",
     "@penalty11": {
-        "description": "Penalty 11 - D9.2 & D9.9 - In synchronised diving if a diver, or both divers, perform a dive of a different number or position.",
+        "description": "Penalty 11 - 11.2 - In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.",
         "type": "text"
     },
     "penalty12": "Nei tuffi sincronizzati, se tutti i Giudici di esecuzione di un tuffatore assegnano zero (0) punti.",
     "@penalty12": {
-        "description": "Penalty 12 - D9.8 - In synchronised diving if all execution judges for one diver award zero (0) points.",
+        "description": "Penalty 12 - 11.6.3 - In synchronised diving if all execution judges for one Athlete award 0 points.",
         "type": "text"
     },
     "penalty13": "Nei tuffi sincronizzati, se tutti i Giudici di sincronizzazione assegnano zero (0) punti.",
     "@penalty13": {
-        "description": "Penalty 13 - D9.10 - In synchronised diving if all synchronisation judges award zero (0) points.",
+        "description": "Penalty 13 - 11.7.5 - In synchronised diving, if all synchronisation Judges award 0 points.",
         "type": "text"
     },
     "penalty14": "Nei tuffi sincronizzati, se uno o entrambi i tuffatori eseguono un tuffo di posizione differente rispetto a quanto annunciato.",
     "@penalty14": {
-        "description": "Penalty 14 - D9.8 - If an execution judge considers that a dive of a different number has been performed.",
+        "description": "Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.",
         "type": "text"
     },
     "penalty15": "Nei tuffi sincronizzati, se uno dei due tuffatori perfora la superficie dell’acqua prima che l’altro tuffatore si sia staccato dal trampolino o dalla piattaforma.",
     "@penalty15": {
-        "description": "Penalty 15 - D9.5 - In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.",
+        "description": "Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.",
         "type": "text"
     },
    "penalty16": "In un tuffo sincronizzato dal trampolino, se non viene eseguito un tuffo frontale con rincorsa.",
@@ -266,12 +266,12 @@
     },
     "penalty17": "Se un tuffatore esegue un passo e si ferma in un tuffo con rincorsa o interrompe il movimento di partenza da fermo dopo aver iniziato a premere con le gambe.",
     "@penalty17": {
-        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
+        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, the Athlete takes any step(s) during the approach and then stops.",
         "type": "text"
     },
     "penalty18": "Se durante un tuffo da fermo, un atleta interrompe il movimento di stacco dopo che le gambe hanno iniziato a piegarsi o a premere sulla piattaforma per iniziare lo stacco.",
     "@penalty18": {
-        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
+        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
         "type": "text"
     },
     "penalty19": "Se un tuffatore effettua una seconda partenza in un tuffo da fermo, con rincorsa, o dalla verticale.",
@@ -281,7 +281,7 @@
     },
     "penalty20": "Se durante un tuffo in verticale un atleta perde l'equilibrio e sposta una o entrambe le mani dalla loro posizione originale sul bordo anteriore della piattaforma.",
     "@penalty20": {
-        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
+        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
         "type": "text"
     },
     "penalty21": "Se durante un tuffo in verticale uno o entrambi i piedi dell'atleta tornano sulla piattaforma prima del decollo.",
@@ -301,7 +301,7 @@
     },
     "penalty24": "Se un tuffatore esegue un tuffo in una posizione differente da quella annunciata.",
     "@penalty24": {
-        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.",
+        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If the Athlete performs a dive in a Position other than that announced.",
         "type": "text"
     },
     "penalty25": "Se un tuffo risultava pericoloso a causa del fatto che un atleta aveva toccato il trampolino o la piattaforma con la testa durante il volo.",
@@ -311,7 +311,7 @@
     },
     "penalty26": "Se un tuffo è stato considerato pericoloso a causa della vicinanza eccessiva della testa dell'atleta al trampolino o alla piattaforma durante il volo.",
     "@penalty26": {
-        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
+        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.",
         "type": "text"
     },
     "penalty27": "Se la maggioranza della giuria ritiene che l'immersione non fosse sicura.",
@@ -321,17 +321,17 @@
     },
     "penalty28": "Dopo aver esaminato un'immersione potenzialmente pericolosa con la tecnologia visiva, se l'esecuzione dell'immersione è risultata pericolosa.",
     "@penalty28": {
-        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
+        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a dive with visual technology, if the performance of the dive was unsafe.",
         "type": "text"
     },
     "penalty29": "Se in un’entrata di piedi uno o entrambe le braccia sono tenute al di sopra del capo.",
     "@penalty29": {
-        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
+        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, the Athlete has one or both arms held above the head.",
         "type": "text"
     },
     "penalty30": "Se durante un tuffo a testa in giù l'atleta tiene uno o entrambe le braccia sotto la testa.",
     "@penalty30": {
-        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, an Athlete has one or both arms held below the head.",
+        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, the Athlete has one or both arms held below the head.",
         "type": "text"
     },
     "penalty31": "Quando in un tuffo al volo la posizione tesa non è mostrata chiaramente per almeno un quarto di salto mortale (90°) in tuffi con salto mortale.",

@@ -2,7 +2,7 @@
   "penalties": [
     {
       "id": 0,
-      "description": "If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).",
+      "description": "If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (max 1 min).",
       "rules": [
         {
           "ruleId": "8.5.5"
@@ -14,7 +14,7 @@
     },
     {
       "id": 1,
-      "description": "If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.",
+      "description": "If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.",
       "rules": [
         {
           "ruleId": "8.6.5.2"
@@ -29,7 +29,7 @@
     },
     {
       "id": 2,
-      "description": "If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.",
+      "description": "If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.",
       "rules": [
         {
           "ruleId": "8.6.5.3"
@@ -74,7 +74,7 @@
     },
     {
       "id": 5,
-      "description": "If an Athlete has performed a dive of a number other than that announced.",
+      "description": "If the Athlete has performed a dive of a number other than that announced.",
       "rules": [
         {
           "ruleId": "8.4.6"
@@ -116,7 +116,7 @@
     },
     {
       "id": 8,
-      "description": "If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.",
+      "description": "If the Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.",
       "rules": [
         {
           "ruleId": "8.7"
@@ -140,7 +140,7 @@
     },
     {
       "id": 10,
-      "description": "If an Athlete refuses or fails to perform a dive.",
+      "description": "If the Athlete refuses or fails to perform a dive.",
       "rules": [
         {
           "ruleId": "8.5.7"
@@ -152,7 +152,7 @@
     },
     {
       "id": 11,
-      "description": "In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number other than that announced.",
+      "description": "In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number other than that announced.",
       "rules": [
         {
           "ruleId": "11.2"
@@ -224,7 +224,7 @@
     },
     {
       "id": 17,
-      "description": "If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
+      "description": "If during a running dive, the Athlete takes any step(s) during the approach and then stops.",
       "rules": [
         {
           "ruleId": "8.6.1.1"
@@ -236,7 +236,7 @@
     },
     {
       "id": 18,
-      "description": "If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
+      "description": "If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
       "rules": [
         {
           "ruleId": "8.6.1.2"
@@ -263,7 +263,7 @@
     },
     {
       "id": 20,
-      "description": "If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
+      "description": "If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
       "rules": [
         {
           "ruleId": "8.6.2.1"
@@ -311,7 +311,7 @@
     },
     {
       "id": 24,
-      "description": "If an Athlete performs a dive in a Position other than that announced.",
+      "description": "If the Athlete performs a dive in a Position other than that announced.",
       "rules": [
         {
           "ruleId": "8.4.7"
@@ -326,7 +326,7 @@
     },
     {
       "id": 25,
-      "description": "If a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.",
+      "description": "If a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.",
       "rules": [
         {
           "ruleId": "10.5.4.2.1"
@@ -338,7 +338,7 @@
     },
     {
       "id": 26,
-      "description": "If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
+      "description": "If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.",
       "rules": [
         {
           "ruleId": "10.5.4.2.1"
@@ -362,7 +362,7 @@
     },
     {
       "id": 28,
-      "description": "After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
+      "description": "After reviewing a dive with visual technology, if the performance of the dive was unsafe.",
       "rules": [
         {
           "ruleId": "10.5.4.1.2"
@@ -374,7 +374,7 @@
     },
     {
       "id": 29,
-      "description": "If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
+      "description": "If in a feet-first entry dive, the Athlete has one or both arms held above the head.",
       "rules": [
         {
           "ruleId": "8.6.7.1"
@@ -389,7 +389,7 @@
     },
     {
       "id": 30,
-      "description": "If in a head-first entry dive, an Athlete has one or both arms held below the head.",
+      "description": "If in a head-first entry dive, the Athlete has one or both arms held below the head.",
       "rules": [
         {
           "ruleId": "8.6.7.2"

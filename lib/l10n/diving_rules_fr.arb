@@ -181,17 +181,17 @@
     },
     "penalty0": "Si un plongeur ne plonge pas dans la minute qui suit l’avertissement du juge-arbitre.",
     "@penalty0": {
-        "description": "Penalty Descripion List\n Penalty 0 -  - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).",
+        "description": "Penalty Descripion List\n Penalty 0 - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).",
         "type": "text"
     },
     "penalty1": "Si, dans un plongeon au tremplin, un plongeur effectue un double rebond pendant l’élan, ou à l’extrémité du tremplin.",
     "@penalty1": {
-        "description": "Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.",
+        "description": "Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.",
         "type": "text"
     },
     "penalty2": "Si, dans un plongeon avec élan, le dernier pas (ou saut) avant l’envol final à deux pieds, se fait également à deux pieds.",
     "@penalty2": {
-        "description": "Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.",
+        "description": "Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.",
         "type": "text"
     },
     "penalty3": "Si l’envol, depuis le tremplin ou la plateforme, ne se fait pas simultanément des deux pieds.",
@@ -206,7 +206,7 @@
     },
     "penalty5": "Si un plongeur ou une plongeuse a exécuté un plongeon d’un numéro différent de celui du plongeon annoncé.",
     "@penalty5": {
-        "description": "Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If an Athlete has performed a dive of a number other than that announced.",
+        "description": "Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If the Athlete has performed a dive of a number other than that announced.",
         "type": "text"
     },
     "penalty6": "Si, dans un plongeon par la tête, les pieds entrent dans l’eau avant la tête ou les mains.",
@@ -221,25 +221,25 @@
     },
     "penalty8": "Si un Athlète reçoit une aide pendant l’exécution d’un plongeon, après le signal du juge-arbitre.",
     "@penalty8": {
-        "description": "Penalty 8 - 8.7 - If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.",
+        "description": "Penalty 8 - 8.7 - If the Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.",
         "type": "text"
     },
     "penalty9": "Lorsqu’une seconde tentative (un nouveau départ) est infructueuse.",
     "@penalty9": {
-        "description": "Penalty 9 - 8.6.5.1 - When a second attempt\n(a re-start) is unsuccessful.",
+        "description": "Penalty 9 - 8.6.5.1 - When a second attempt (a re-start) is unsuccessful.",
         "type": "text"
     },
     "penalty10": "Si un plongeur refuse ou ne parvient pas à exécuter un plongeon.",
     "@penalty10": {
-        "description": "Penalty 10 - 8.5.7 - If an Athlete refuses or fails to perform a dive.",
+        "description": "Penalty 10 - 8.5.7 - If the Athlete refuses or fails to perform a dive.",
         "type": "text"
     },
     "penalty11": "En plongeon synchronisé, si un plongeur, ou les deux plongeurs, exécutent un plongeon d’un numéro différent de ce qui a été annoncé.",
     "@penalty11": {
-        "description": "Penalty 11 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.",
+        "description": "Penalty 11 - 11.2 - In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.",
         "type": "text"
     },
-    "penalty12": "En plongeon synchronisé, si tous les juges d’exécution pour un plongeur attribuent la note zéro (0).",
+    "penalty12": "En plongeon synchronisé, si tous les juges d’exécution pour un plongeur attribuent la note 0.",
     "@penalty12": {
         "description": "Penalty 12 - 11.6.3 - In synchronised diving if all execution judges for one Athlete award 0 points.",
         "type": "text"
@@ -251,7 +251,7 @@
     },
     "penalty14": "En plongeon synchronisé, si un plongeur, ou les deux plongeurs, exécutent un plongeon d’une position différente de ce qui a été annoncé.",
     "@penalty14": {
-        "description": "Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.",
+        "description": "Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.",
         "type": "text"
     },
     "penalty15": "En plongeon synchronisé, si un plongeur entre dans l’eau avant que l’autre n’ait quitté le tremplin ou la plateforme.",
@@ -266,12 +266,12 @@
     },
     "penalty17": "Si, lors d’un plongeon avec élan, un plongeur fait un ou plusieurs pas pendant son élan, puis marque un arrêt.",
     "@penalty17": {
-        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.",
+        "description": "Penalty 17 - 8.6.1.1 - If during a running dive, the Athlete takes any step(s) during the approach and then stops.",
         "type": "text"
     },
     "penalty18": "Si, lors d’un plongeon sans élan, un plongeur interrompt le mouvement de départ après que les jambes aient commencé à se fléchir, ou commencé à exercer une pression sur la plateforme ou le tremplin pour initier l'envol.",
     "@penalty18": {
-        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
+        "description": "Penalty 18 - 8.6.1.2 - If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.",
         "type": "text"
     },
     "penalty19": "Lorsqu’il y a un nouveau départ, pour un plongeon avec élan, sans élan, ou en équilibre.",
@@ -281,7 +281,7 @@
     },
     "penalty20": "Si pour un plongeon en équilibre, le plongeur perd l'équilibre, et a déplacé une ou les deux mains de leur position initiale sur le bord avant de la plateforme.",
     "@penalty20": {
-        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
+        "description": "Penalty 20 - 8.6.2.1 - If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.",
         "type": "text"
     },
     "penalty21": "Si pour un plongeon en équilibre, un ou les deux pieds du plongeur sont revenus sur la plateforme avant l'envol",
@@ -301,17 +301,17 @@
     },
     "penalty24": "Si un plongeur exécute un plongeon dans une position clairement différente de celle annoncée.",
     "@penalty24": {
-        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.",
+        "description": "Penalty 24 - 10.1.4 - 8.4.7 - If the Athlete performs a dive in a Position other than that announced.",
         "type": "text"
     },
     "penalty25": "Si un plongeon est considéré comme dangereux lorsqu'un athlète a touché le tremplin ou la plateforme avec la tête pendant la trajectoire.",
     "@penalty25": {
-        "description": "Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.",
+        "description": "Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.",
         "type": "text"
     },
-    "penalty26": "Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête  pendant la trajectoire.",
+    "penalty26": "Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête pendant la trajectoire.",
     "@penalty26": {
-        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.",
+        "description": "Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.",
         "type": "text"
     },
     "penalty27": "Si la majorité des juges indique que le plongeon était dangereux.",
@@ -321,17 +321,17 @@
     },
     "penalty28": "Après revue du plongeon avec une technologie de visualisation, si l'exécution du plongeon est considèe comme dangereuse",
     "@penalty28": {
-        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.",
+        "description": "Penalty 28 - 10.5.4.1.2 - After reviewing a dive with visual technology, if the performance of the dive was unsafe.",
         "type": "text"
     },
     "penalty29": "Si, dans un plongeon par les pieds, un ou les deux bras sont tenus au-dessus de la tête lors de l'entrée à l'eau.",
     "@penalty29": {
-        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.",
+        "description": "Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, the Athlete has one or both arms held above the head.",
         "type": "text"
     },
     "penalty30": "Si, dans un plongeon par tête, un ou les deux bras sont tenus en-dessous de la tête lors de l'entrée à l'eau.",
     "@penalty30": {
-        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, an Athlete has one or both arms held below the head.",
+        "description": "Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, the Athlete has one or both arms held below the head.",
         "type": "text"
     },
     "penalty31": "Si, dans un plongeon pris au vol, la position droite n’est pas montrée pendant au moins un quart de saut périlleux (90º) pour les plongeons comportant jusqu’à 1 saut périlleux.",
@@ -384,12 +384,12 @@
         "description": "Penalty 40 - 10.4.7 - If in a twisting dive, the twist has clearly begun on the springboard or platform.",
         "type": "text"
     },
-    "penalty41": "Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.",
+    "penalty41": "Si la position droite n’est pas réalisée le corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension, ou si elle n’est pas esthétiquement plaisante.",
     "@penalty41": {
         "description": "Penalty 41 - 10.5.5.1.1 - 10.1.6 - If the Straight position is not body straight, not bent either at the knees or hips, feet kept together and toes pointed, or aesthetically pleasing.",
         "type": "text"
     },
-    "penalty42": "Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
+    "penalty42": "Si la position carpée n’est pas réalisée le corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues, ou si elle n’est pas esthétiquement plaisante.",
     "@penalty42": {
         "description": "Penalty 42 - 10.5.5.2.2 - 10.1.6 - If the Pike position is not body bent at the hips, legs must straight at the knees, feet together and toes pointed, or aesthetically pleasing.",
         "type": "text"
@@ -399,7 +399,7 @@
         "description": "Penalty 43 - 10.5.5.2.3 - If in a Pike dive with a twist, the Pike position is not clearly shown.",
         "type": "text"
     },
-    "penalty44": "Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.",
+    "penalty44": "Si la position groupée n’est pas réalisée le corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues, ou si elle n’est pas esthétiquement plaisante.",
     "@penalty44": {
         "description": "Penalty 44 - 10.5.5.3.2 - 10.1.6 - If the Tuck Position is not body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed, or aesthetically pleasing.",
         "type": "text"

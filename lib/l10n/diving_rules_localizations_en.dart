@@ -120,11 +120,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty0 =>
-      'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of 1 minute after the Referee’s warning).';
+      'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).';
 
   @override
   String get penalty1 =>
-      'If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.';
+      'If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.';
 
   @override
   String get penalty2 =>
@@ -158,11 +158,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get penalty9 => 'When a second attempt (a re-start) is unsuccessful.';
 
   @override
-  String get penalty10 => 'If an Athlete refuses or fails to perform a dive.';
+  String get penalty10 => 'If the Athlete refuses or fails to perform a dive.';
 
   @override
   String get penalty11 =>
-      'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number other than that announced.';
+      'In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number other than that announced.';
 
   @override
   String get penalty12 =>
@@ -186,11 +186,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty17 =>
-      'If during a running dive, an Athlete takes any step(s) during the approach and then stops.';
+      'If during a running dive, the Athlete takes any step(s) during the approach and then stops.';
 
   @override
   String get penalty18 =>
-      'If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.';
+      'If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.';
 
   @override
   String get penalty19 =>
@@ -198,7 +198,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty20 =>
-      'If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.';
+      'If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.';
 
   @override
   String get penalty21 =>
@@ -214,15 +214,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty24 =>
-      'If an Athlete performs a dive in a Position other than that announced.';
+      'If the Athlete performs a dive in a Position other than that announced.';
 
   @override
   String get penalty25 =>
-      'if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.';
+      'if a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.';
 
   @override
   String get penalty26 =>
-      'If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.';
+      'If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.';
 
   @override
   String get penalty27 =>
@@ -230,15 +230,15 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty28 =>
-      'After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.';
+      'After reviewing a dive with visual technology, if the performance of the dive was unsafe.';
 
   @override
   String get penalty29 =>
-      'If in a feet-first entry dive, an Athlete has one or both arms held above the head.';
+      'If in a feet-first entry dive, the Athlete has one or both arms held above the head.';
 
   @override
   String get penalty30 =>
-      'If in a head-first entry dive, an Athlete has one or both arms held below the head.';
+      'If in a head-first entry dive, the Athlete has one or both arms held below the head.';
 
   @override
   String get penalty31 =>
@@ -326,7 +326,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty52 =>
-      'In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.';
+      'In synchronised diving if comparative distance, of the entry, from the springboard or platform is not shown.';
 
   @override
   String get penalty53 =>

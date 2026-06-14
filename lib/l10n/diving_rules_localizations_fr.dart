@@ -168,7 +168,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty12 =>
-      'En plongeon synchronisé, si tous les juges d’exécution pour un plongeur attribuent la note zéro (0).';
+      'En plongeon synchronisé, si tous les juges d’exécution pour un plongeur attribuent la note 0.';
 
   @override
   String get penalty13 =>
@@ -224,7 +224,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty26 =>
-      'Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête  pendant la trajectoire.';
+      'Si un plongeur est dangereusement près du tremplin ou de la plateforme avec la tête pendant la trajectoire.';
 
   @override
   String get penalty27 =>
@@ -284,11 +284,11 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty41 =>
-      'Si la position droite n’est pas réalisée telle que décrite (corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension), ou si elle n’est pas esthétiquement plaisante.';
+      'Si la position droite n’est pas réalisée le corps droit, non plié ni aux genoux ni aux hanches, pieds serrés, pointes de pieds en extension, ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty42 =>
-      'Si la position carpée n’est pas réalisée telle que décrite (corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
+      'Si la position carpée n’est pas réalisée le corps plié aux hanches, jambes en extension, pieds serrés et pointes de pieds tendues, ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty43 =>
@@ -296,7 +296,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get penalty44 =>
-      'Si la position groupée n’est pas réalisée telle que décrite (corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues), ou si elle n’est pas esthétiquement plaisante.';
+      'Si la position groupée n’est pas réalisée le corps compact, plié aux genoux et aux hanches, avec les genoux et les pieds rapprochés ne dépassant pas la largeur des épaules, mains sur les tibias, pointes de pieds tendues, ou si elle n’est pas esthétiquement plaisante.';
 
   @override
   String get penalty45 =>

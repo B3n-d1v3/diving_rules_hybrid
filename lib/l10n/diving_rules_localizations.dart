@@ -340,19 +340,19 @@ abstract class AppLocalizations {
   String get quizzResultLegendRealAnswer;
 
   /// Penalty Descripion List
-  ///  Penalty 0 - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of one (1) minute after the Referee’s warning).
+  ///  Penalty 0 - 8.5.5 - If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).
   ///
   /// In en, this message translates to:
-  /// **'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning (with a maximum of 1 minute after the Referee’s warning).'**
+  /// **'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).'**
   String get penalty0;
 
-  /// Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.
+  /// Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.
   ///
   /// In en, this message translates to:
-  /// **'If in a springboard dive, an Athlete double bounces during the approach or on the end of the springboard.'**
+  /// **'If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.'**
   String get penalty1;
 
-  /// Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.
+  /// Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.
   ///
   /// In en, this message translates to:
   /// **'If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.'**
@@ -370,7 +370,7 @@ abstract class AppLocalizations {
   /// **'If the twist in a dive at entry is greater or less than that announced by 90º or more.'**
   String get penalty4;
 
-  /// Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If an Athlete has performed a dive of a number other than that announced.
+  /// Penalty 5 - 8.4.6 - 10.1.7 - 11.6.2 - If the Athlete has performed a dive of a number other than that announced.
   ///
   /// In en, this message translates to:
   /// **'If an Athlete has performed a dive of a number other than that announced.'**
@@ -388,29 +388,28 @@ abstract class AppLocalizations {
   /// **'If in a feet-first entry dive, the head or hands enter the water before the feet.'**
   String get penalty7;
 
-  /// Penalty 8 - 8.7 - If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.
+  /// Penalty 8 - 8.7 - If the Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.
   ///
   /// In en, this message translates to:
   /// **'If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.'**
   String get penalty8;
 
-  /// Penalty 9 - 8.6.5.1 - When a second attempt
-  /// (a re-start) is unsuccessful.
+  /// Penalty 9 - 8.6.5.1 - When a second attempt (a re-start) is unsuccessful.
   ///
   /// In en, this message translates to:
   /// **'When a second attempt (a re-start) is unsuccessful.'**
   String get penalty9;
 
-  /// Penalty 10 - 8.5.7 - If an Athlete refuses or fails to perform a dive.
+  /// Penalty 10 - 8.5.7 - If the Athlete refuses or fails to perform a dive.
   ///
   /// In en, this message translates to:
-  /// **'If an Athlete refuses or fails to perform a dive.'**
+  /// **'If the Athlete refuses or fails to perform a dive.'**
   String get penalty10;
 
-  /// Penalty 11 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.
+  /// Penalty 11 - 11.2 - In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number other than that announced.'**
+  /// **'In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number other than that announced.'**
   String get penalty11;
 
   /// Penalty 12 - 11.6.3 - In synchronised diving if all execution judges for one Athlete award 0 points.
@@ -425,7 +424,7 @@ abstract class AppLocalizations {
   /// **'In synchronised diving, if all synchronisation Judges award 0 points.'**
   String get penalty13;
 
-  /// Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Number or Position other than that announced.
+  /// Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.
   ///
   /// In en, this message translates to:
   /// **'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.'**
@@ -443,16 +442,16 @@ abstract class AppLocalizations {
   /// **'In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.'**
   String get penalty16;
 
-  /// Penalty 17 - 8.6.1.1 - If during a running dive, an Athlete takes any step(s) during the approach and then stops.
+  /// Penalty 17 - 8.6.1.1 - If during a running dive, the Athlete takes any step(s) during the approach and then stops.
   ///
   /// In en, this message translates to:
-  /// **'If during a running dive, an Athlete takes any step(s) during the approach and then stops.'**
+  /// **'If during a running dive, the Athlete takes any step(s) during the approach and then stops.'**
   String get penalty17;
 
-  /// Penalty 18 - 8.6.1.2 - If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.
+  /// Penalty 18 - 8.6.1.2 - If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.
   ///
   /// In en, this message translates to:
-  /// **'If during a standing dive, an Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.'**
+  /// **'If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.'**
   String get penalty18;
 
   /// Penalty 19 - 8.6.4 - When there is a restart in a running, standing, or Armstand dive.
@@ -461,10 +460,10 @@ abstract class AppLocalizations {
   /// **'When there is a restart in a running, standing, or Armstand dive.'**
   String get penalty19;
 
-  /// Penalty 20 - 8.6.2.1 - If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.
+  /// Penalty 20 - 8.6.2.1 - If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.
   ///
   /// In en, this message translates to:
-  /// **'If during an armstand dive, an Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.'**
+  /// **'If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.'**
   String get penalty20;
 
   /// Penalty 21 - 8.6.2.2 - If during an armstand dive, one or both of the Athlete’s feet returned to the platform prior to the take-off.
@@ -485,22 +484,22 @@ abstract class AppLocalizations {
   /// **'In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.'**
   String get penalty23;
 
-  /// Penalty 24 - 10.1.4 - 8.4.7 - If an Athlete performs a dive in a Position other than that announced.
+  /// Penalty 24 - 10.1.4 - 8.4.7 - If the Athlete performs a dive in a Position other than that announced.
   ///
   /// In en, this message translates to:
-  /// **'If an Athlete performs a dive in a Position other than that announced.'**
+  /// **'If the Athlete performs a dive in a Position other than that announced.'**
   String get penalty24;
 
-  /// Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.
+  /// Penalty 25 - 10.5.4.2.1 - if a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.
   ///
   /// In en, this message translates to:
-  /// **'if a dive was unsafe as a result of an Athlete having touched the springboard or platform with their head during the flight.'**
+  /// **'if a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.'**
   String get penalty25;
 
-  /// Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.
+  /// Penalty 26 - 10.5.4.2.1 - If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.
   ///
   /// In en, this message translates to:
-  /// **'If a dive was considered unsafe as a result of an Athlete been unsafely close to the springboard or platform with their head during the flight.'**
+  /// **'If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.'**
   String get penalty26;
 
   /// Penalty 27 - 10.5.4.2.2 - If the majority of the Judges Panel indicates that the dive was unsafe.
@@ -509,22 +508,22 @@ abstract class AppLocalizations {
   /// **'If the majority of the Judges Panel indicates that the dive was unsafe.'**
   String get penalty27;
 
-  /// Penalty 28 - 10.5.4.1.2 - After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.
+  /// Penalty 28 - 10.5.4.1.2 - After reviewing a dive with visual technology, if the performance of the dive was unsafe.
   ///
   /// In en, this message translates to:
-  /// **'After reviewing a potentially unsafe dive with visual technology, if the performance of the dive was unsafe.'**
+  /// **'After reviewing a dive with visual technology, if the performance of the dive was unsafe.'**
   String get penalty28;
 
-  /// Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, an Athlete has one or both arms held above the head.
+  /// Penalty 29 - 8.6.7.1 - 10.6.4 - If in a feet-first entry dive, the Athlete has one or both arms held above the head.
   ///
   /// In en, this message translates to:
-  /// **'If in a feet-first entry dive, an Athlete has one or both arms held above the head.'**
+  /// **'If in a feet-first entry dive, the Athlete has one or both arms held above the head.'**
   String get penalty29;
 
-  /// Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, an Athlete has one or both arms held below the head.
+  /// Penalty 30 - 8.6.7.2 - 10.6.3 - If in a head-first entry dive, the Athlete has one or both arms held below the head.
   ///
   /// In en, this message translates to:
-  /// **'If in a head-first entry dive, an Athlete has one or both arms held below the head.'**
+  /// **'If in a head-first entry dive, the Athlete has one or both arms held below the head.'**
   String get penalty30;
 
   /// Penalty 31 - 8.6.7.3 - 10.5.5.1.3 - In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.
@@ -656,7 +655,7 @@ abstract class AppLocalizations {
   /// Penalty 52 - 11.7.3 - In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.
   ///
   /// In en, this message translates to:
-  /// **'In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.'**
+  /// **'In synchronised diving if comparative distance, of the entry, from the springboard or platform is not shown.'**
   String get penalty52;
 
   /// Penalty 53 - 11.7.3 - In synchronised diving if coordinated timing of the entries is not shown.
