@@ -18,7 +18,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 
-version: 2.6.4+24
+version: 3.0.1+26
+# v3.0.1+26 <- Corrections of the penalty description typos or formulations
+# v3.0.0+25 <- Update to rules WA of Feb 2026 in EN and in FR / Addition of new penalty descriptions or split into multiple questions / Various updates of new dependencies
 # v2.6.4+24 <- Change of the language order / New version to update in Google Play store with Android api level 35
 # v2.6.3+23 <- Updated name of the app to Diving Rules instead of Diving Rule 22 / Added in the About the local rulebook version
 # v2.6.2+22 <- Update of the EN rulebook form Jul 2025 / add the DE Language and rulebook / add of IT rulebook / updated the ES language
@@ -38,8 +40,8 @@ version: 2.6.4+24
 # v2.0.0+5 <- initial launch for Android (11 Aug 2023)
 
 environment:
-  #sdk: '>=2.18.4 <3.0.0'
-  sdk: ^3.2.0
+  #sdk: 3.2.0 ' >=3.10.0 <4.0.0'
+  sdk: ^3.12.0
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -58,31 +60,32 @@ dependencies:
   # intl: ^0.19.0
   intl: ^0.20.2
 
-#  syncfusion_localizations: ^29.2.9
-  syncfusion_localizations: ^31.1.20
+#  syncfusion_localizations: ^31.1.20 upgradable ^31.2.18
+  syncfusion_localizations: ^33.2.7
 
   # Package version number retrieval
-  # package_info_plus: ^8.3.0
-  package_info_plus: ^9.0.0
+  # package_info_plus: ^9.0.0 upgradable ^9.0.1
+  package_info_plus: ^9.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  # cupertino_icons: ^1.0.2
-  cupertino_icons: ^1.0.8
-  # shared_preferences: ^2.1.1
-  shared_preferences: ^2.5.3
+  # cupertino_icons: ^1.0.8
+  cupertino_icons: ^1.0.9
+  # shared_preferences: ^2.5.3
+  shared_preferences: ^2.5.5
   # provider: ^6.1.5
   provider: ^6.1.5+1
-  # syncfusion_flutter_pdfviewer: ^29.2.9
-  syncfusion_flutter_pdfviewer: ^31.1.20
+  # syncfusion_flutter_pdfviewer: ^31.1.20 upgradable ^31.2.18
+  syncfusion_flutter_pdfviewer: ^33.2.6
 
-  get: ^4.7.2
-  # flutter_svg: ^2.1.0
-  flutter_svg: ^2.2.1
+  # get: ^4.7.2
+  get: ^4.7.3
+  # flutter_svg: ^2.2.1
+  flutter_svg: ^2.3.0
   # url_launcher: ^6.3.1
   url_launcher: ^6.3.2
-  # share_plus: ^11.0.0
-  share_plus: ^12.0.0
+  # share_plus: ^12.0.0 upgradable ^12.0.2
+  share_plus: ^12.0.2
 
 
 

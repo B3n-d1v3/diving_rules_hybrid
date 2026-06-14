@@ -120,198 +120,251 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty0 =>
-      'If the diver takes more than one minute, after a warning.';
+      'If the Athlete fails to dive within a reasonable time frame after the Referee’s warning  (max 1 min).';
 
   @override
   String get penalty1 =>
-      'If a diver double bounces on the end of the springboard or double jump on the end of the platform before take-off.';
+      'If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.';
 
   @override
-  String get penalty2 => 'If the final step is not from one foot.';
+  String get penalty2 =>
+      'If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.';
 
   @override
   String get penalty3 =>
-      'If the take-off on the springboard is not from both feet simultaneously.';
+      'If the take-off from the springboard or platform is not from both feet simultaneously.';
 
   @override
   String get penalty4 =>
-      'If a twist is greater or less than that announced by 90 degrees or more.';
+      'If the twist in a dive at entry is greater or less than that announced by 90º or more.';
 
   @override
   String get penalty5 =>
-      'If a diver has performed a dive of a number other than that announced.';
+      'If an Athlete has performed a dive of a number other than that announced.';
 
   @override
   String get penalty6 =>
-      'If the feet enter the water before the head or hands in a head first dive.';
+      'If in a head-first entry dive, the feet enter the water before the head or hands.';
 
   @override
   String get penalty7 =>
-      'If the head or hands enter the water before the feet in a feet first dive.';
+      'If in a feet-first entry dive, the head or hands enter the water before the feet.';
 
   @override
   String get penalty8 =>
-      'If assistance has been given to the diver after the starting signal.';
+      'If an Athlete receives assistance during the performance of a dive, after the Referee’s starting signal.';
 
   @override
   String get penalty9 => 'When a second attempt (a re-start) is unsuccessful.';
 
   @override
-  String get penalty10 => 'If a diver refuses the execution of a dive.';
+  String get penalty10 => 'If the Athlete refuses or fails to perform a dive.';
 
   @override
   String get penalty11 =>
-      'In synchronised diving if a diver, or both divers, perform a dive of a different number.';
+      'In synchronised diving, if the Athlete, or both Athletes, perform a dive of a Number other than that announced.';
 
   @override
   String get penalty12 =>
-      'In synchronised diving if all execution judges for one diver award zero (0) points.';
+      'In synchronised diving if all execution judges for one Athlete award 0 points.';
 
   @override
   String get penalty13 =>
-      'In synchronised diving if all synchronisation judges award zero (0) points.';
+      'In synchronised diving, if all synchronisation Judges award 0 points.';
 
   @override
   String get penalty14 =>
-      'In synchronised diving if a diver, or both divers, perform a dive of a different position.';
+      'In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.';
 
   @override
   String get penalty15 =>
-      'In synchronised diving if either diver enters the surface of the water before the other diver leaves the springboard or platform.';
+      'In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.';
 
   @override
   String get penalty16 =>
-      'If a diver takes a step and stops in a running dive or stops the movement for a standing take-off after the legs have commenced to press.';
+      'In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.';
 
   @override
   String get penalty17 =>
-      'If there is a re-start in a standing, running, or armstand dive.';
+      'If during a running dive, the Athlete takes any step(s) during the approach and then stops.';
 
   @override
   String get penalty18 =>
-      'In synchronised diving if there is a re-start by one or both divers.';
+      'If during a standing dive, the Athlete stops the take-off movement after the legs have begun to bend or to press into the platform to initiate the take-off.';
 
   @override
   String get penalty19 =>
-      'If a diver performs a dive in a position other than that announced.';
+      'When there is a restart in a running, standing, or Armstand dive.';
 
   @override
   String get penalty20 =>
-      'If in a dive, a diver is unsafely close to the springboard or platform or touches the end of the springboard or platform with his head.';
+      'If during an armstand dive, the Athlete lost their balance and moved one or both hands from their original position at the front edge of the platform.';
 
   @override
   String get penalty21 =>
-      'If a diver has one or both arms held above the head in a feet first entry or below the head in a head first entry.';
+      'If during an armstand dive, one or both of the Athlete’s feet returned to the platform prior to the take-off.';
 
   @override
   String get penalty22 =>
-      'If in a flying dive, a straight position is not clearly shown for at least one quarter of a somersault (90º) in dives with somersault.';
+      'If during an armstand dive, a foot or any part of the Athlete’s body other than their hands touched the platform after the Athlete has assumed the starting position.';
 
   @override
   String get penalty23 =>
-      'If in a flying dive, a straight position is not clearly shown for at least a half somersault (180º) in dives with more than 1 somersault.';
+      'In synchronised diving, if there is a restart, whether required or caused by one or both Athletes.';
 
   @override
   String get penalty24 =>
-      'If a dive is not performed in a position as described in the rules.';
+      'If the Athlete performs a dive in a Position other than that announced.';
 
   @override
   String get penalty25 =>
-      'If the starting position is not straight, head erect, with the arms straight in any position.';
+      'if a dive was unsafe as a result of the Athlete having touched the springboard or platform with their head during the flight.';
 
   @override
   String get penalty26 =>
-      'If the feet leave the springboard or platform (crow-hop) before the take-off in a standing dive.';
+      'If a dive was considered unsafe as a result of the Athlete been unsafely close to the springboard or platform with their head during the flight.';
 
   @override
   String get penalty27 =>
-      'If in an armstand dive, a stationary and steady balance in the straight vertical position is not shown.';
+      'If the majority of the Judges Panel indicates that the dive was unsafe.';
 
   @override
   String get penalty28 =>
-      'If the run is not smooth, aesthetically pleasing in a forward direction to the end of the springboard or platform.';
+      'After reviewing a dive with visual technology, if the performance of the dive was unsafe.';
 
   @override
-  String get penalty29 => 'If the take-off is not bold, high, and confident.';
+  String get penalty29 =>
+      'If in a feet-first entry dive, the Athlete has one or both arms held above the head.';
 
   @override
   String get penalty30 =>
-      'If in a twist dive, the twisting is manifestly done from the springboard or platform.';
+      'If in a head-first entry dive, the Athlete has one or both arms held below the head.';
 
   @override
   String get penalty31 =>
-      'If the straight position is not shown as described in the rules.';
+      'In a dive with a flying action, the Straight Position is not shown for at least one quarter of a somersault (90º) in dives with up to 1 somersault.';
 
   @override
   String get penalty32 =>
-      'If the pike position is not shown as described in the rules.';
+      'In a dive with a flying action, the Straight Position is not shown for at least one half of a somersault (180º) in dives with more than 1 somersault.';
 
   @override
   String get penalty33 =>
-      'If in a pike dive with twist, the pike position is not clearly shown.';
+      'If a dive is not performed in a Position as described in the rules.';
 
   @override
   String get penalty34 =>
-      'If the tuck position is not shown as described in the rules.';
+      'If the starting position is not body straight, head erect and facing forward, arms straight along the body, or perpendicular to the body or overhead.';
 
   @override
   String get penalty35 =>
-      'If in a tuck dive with twist, the tuck position is not clearly shown.';
+      'If in the starting position for a standing dive, the Athlete’s feet leave the springboard or platform before the take-off.';
 
   @override
   String get penalty36 =>
-      'If the free position is not shown as described in the rules.';
+      'If in the starting position for an Armstand dive, the Athlete is unable to hold a stationary and steady balance in the straight vertical Armstand Position.';
 
   @override
   String get penalty37 =>
-      'If the arms are not in the correct position in either the head first or feet first entry.';
+      'If during an Armstand dive, the hands lose contact with the platform during the takeoff.';
 
   @override
   String get penalty38 =>
-      'In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.';
+      'If during the approach, the run is not smooth, aesthetically pleasing and in a forward direction.';
 
   @override
   String get penalty39 =>
-      'In synchronised diving if coordinated timing of the movement during the flight is not shown.';
+      'If in running and standing dives, the take-off is not balanced or high.';
 
   @override
   String get penalty40 =>
-      'In synchronised diving if similarity of the vertical angles of the entries is not shown.';
+      'If in a twisting dive, the twist has clearly begun on the springboard or platform.';
 
   @override
   String get penalty41 =>
-      'In synchronised diving if comparative distance from the springboard or platform of the entry is not shown.';
+      'If the Straight position is not body straight, not bent either at the knees or hips, feet kept together and toes pointed, or aesthetically pleasing.';
 
   @override
   String get penalty42 =>
-      'In synchronised diving if coordinated timing of the entries is not shown.';
+      'If the Pike position is not body bent at the hips, legs must straight at the knees, feet together and toes pointed, or aesthetically pleasing.';
 
   @override
   String get penalty43 =>
-      'If a dive is performed partially in a position other than that announced.';
+      'If in a Pike dive with a twist, the Pike position is not clearly shown.';
 
   @override
   String get penalty44 =>
-      'If in a dive, the diver dives to the side of the direct line of flight.';
+      'If the Tuck Position is not body compact, bent at the knees and hips with knees and feet close together within the bodyline of the shoulders, hands on the lower legs and the toes pointed, or aesthetically pleasing.';
 
   @override
   String get penalty45 =>
-      'If in a dive, a diver touches the end of the springboard or platform with his feet or hands.';
+      'If in a Tuck dive with twist, the Tuck Position is not clearly shown.';
 
   @override
   String get penalty46 =>
-      'If the entry into the water is not vertical, or nearly so.';
+      'If the Free position is not using one of the optional position between Straight, Pike, or Tuck and with legs together, and toes pointed.';
 
   @override
-  String get penalty47 => 'If the entry into the water is twisted.';
+  String get penalty47 =>
+      'If in a head-first entry dive, the arms are not in the correct position, even if they are held beyond the head.';
 
   @override
   String get penalty48 =>
-      'If in the entry into the water the body is not straight.';
+      'If in a feet-first entry dive, the arms are not in the correct position, even if they are held below the head.';
 
   @override
   String get penalty49 =>
-      'If in the entry into the water the feet are not together, and the toes not pointed.';
+      'In synchronised diving if similarity of the starting position, approach, take-off and height is not shown.';
+
+  @override
+  String get penalty50 =>
+      'In synchronised diving if coordinated timing of the movement during the flight is not shown.';
+
+  @override
+  String get penalty51 =>
+      'In synchronised diving if similarity of the vertical angles of the entries is not shown.';
+
+  @override
+  String get penalty52 =>
+      'In synchronised diving if comparative distance, of the entry, from the springboard or platform is not shown.';
+
+  @override
+  String get penalty53 =>
+      'In synchronised diving if coordinated timing of the entries is not shown.';
+
+  @override
+  String get penalty54 =>
+      'If a dive is performed partially in a Position other than that announced.';
+
+  @override
+  String get penalty55 =>
+      'If during the flight of a dive, the Athlete does not maintain a straight line of flight.';
+
+  @override
+  String get penalty56 =>
+      'If during the flight of a dive, an Athlete touches the end of the springboard or platform with their feet or hands.';
+
+  @override
+  String get penalty57 =>
+      'If the entry is short, at an angle less than vertical.';
+
+  @override
+  String get penalty58 =>
+      'If the entry is long, at an angle exceeding vertical.';
+
+  @override
+  String get penalty59 => 'If at entry the body is twisted.';
+
+  @override
+  String get penalty60 => 'If at entry the body is not straight.';
+
+  @override
+  String get penalty61 =>
+      'If at entry the feet are not together, toes not pointed.';
+
+  @override
+  String get penalty62 =>
+      'If at entry the water’s surface is significantly disturbed.';
 
   @override
   String get quizzIntroQuestionNumber => 'Number of Questions: ';
@@ -331,11 +384,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutRulesLocal =>
-      'Current Rulebook: World Aquatics - 1st July 2025 - v6';
+      'Current Rulebook: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutRulesReference =>
-      'Rules for the app: World Aquatics - 1st July 2025 - v6';
+      'Rules for the app: World Aquatics - 18 feb 2026';
 
   @override
   String get aboutLicense =>

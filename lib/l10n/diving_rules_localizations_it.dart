@@ -181,135 +181,188 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get penalty16 =>
-      'Se un tuffatore esegue un passo e si ferma in un tuffo con rincorsa o interrompe il movimento di partenza da fermo dopo aver iniziato a premere con le gambe.';
+      'In un tuffo sincronizzato dal trampolino, se non viene eseguito un tuffo frontale con rincorsa.';
 
   @override
   String get penalty17 =>
-      'Se un tuffatore effettua una seconda partenza in un tuffo da fermo, con rincorsa, o dalla verticale.';
+      'Se un tuffatore esegue un passo e si ferma in un tuffo con rincorsa o interrompe il movimento di partenza da fermo dopo aver iniziato a premere con le gambe.';
 
   @override
   String get penalty18 =>
-      'Nei tuffi sincronizzati se uno o entrambi i tuffatori eseguono una seconda partenza.';
+      'Se durante un tuffo da fermo, un atleta interrompe il movimento di stacco dopo che le gambe hanno iniziato a piegarsi o a premere sulla piattaforma per iniziare lo stacco.';
 
   @override
   String get penalty19 =>
-      'Se un tuffatore esegue un tuffo in una posizione differente da quella annunciata.';
+      'Se un tuffatore effettua una seconda partenza in un tuffo da fermo, con rincorsa, o dalla verticale.';
 
   @override
   String get penalty20 =>
-      'Se durante l’esecuzione di un tuffo un tuffatore è pericolosamente vicino al trampolino o alla piattaforma, o tocca la fine del trampolino o della piattaforma con la testa.';
+      'Se durante un tuffo in verticale un atleta perde l\'equilibrio e sposta una o entrambe le mani dalla loro posizione originale sul bordo anteriore della piattaforma.';
 
   @override
   String get penalty21 =>
-      'Se in un’entrata di piedi uno o entrambe le braccia sono tenute al di sopra del capo.';
+      'Se durante un tuffo in verticale uno o entrambi i piedi dell\'atleta tornano sulla piattaforma prima del decollo.';
 
   @override
   String get penalty22 =>
-      'Quando in un tuffo al volo la posizione tesa non è mostrata chiaramente per almeno un quarto di salto mortale (90°) in tuffi con salto mortale.';
+      'Se durante un tuffo in verticale un piede o qualsiasi altra parte del corpo dell\'atleta, diversa dalle mani, tocca la piattaforma dopo che l\'atleta ha assunto la posizione di partenza.';
 
   @override
   String get penalty23 =>
-      'Quando in un tuffo al volo la posizione tesa non è mostrata chiaramente per almeno e minimo mezzo salto mortale (180°) in tuffi con più di un (1) salto mortale.';
+      'Nei tuffi sincronizzati se uno o entrambi i tuffatori eseguono una seconda partenza.';
 
   @override
   String get penalty24 =>
-      'Se un tuffo non è eseguito in una posizione come descritta.';
+      'Se un tuffatore esegue un tuffo in una posizione differente da quella annunciata.';
 
   @override
   String get penalty25 =>
-      'Se la posizione di partenza non è eretta con il capo in linea e le braccia protese in una\nposizione qualsiasi.';
+      'Se un tuffo risultava pericoloso a causa del fatto che un atleta aveva toccato il trampolino o la piattaforma con la testa durante il volo.';
 
   @override
   String get penalty26 =>
-      'Se i piedi si staccano dal trampolino o dalla piattaforma (crow hop) prima dello stacco in un tuffo da fermo.';
+      'Se un tuffo è stato considerato pericoloso a causa della vicinanza eccessiva della testa dell\'atleta al trampolino o alla piattaforma durante il volo.';
 
   @override
   String get penalty27 =>
-      'Se in un tuffo dalla verticale non è mostrato un equilibrio fermo e stabile nella posizione tesa e verticale.';
+      'Se la maggioranza della giuria ritiene che l\'immersione non fosse sicura.';
 
   @override
   String get penalty28 =>
-      'Se la rincorsa non è scorrevole e esteticamente gradevole nella direzione avanti verso la fine del trampolino o della piattaforma.';
+      'Dopo aver esaminato un\'immersione potenzialmente pericolosa con la tecnologia visiva, se l\'esecuzione dell\'immersione è risultata pericolosa.';
 
   @override
   String get penalty29 =>
-      'Se la partenza non è decisa, ragionevolmente alta e sicura.';
+      'Se in un’entrata di piedi uno o entrambe le braccia sono tenute al di sopra del capo.';
 
   @override
   String get penalty30 =>
-      'Se in un tuffo con avvitamento, l\'avvitamento è anticipato vistosamente dal trampolino o dalla piattaforma.';
+      'Se durante un tuffo a testa in giù l\'atleta tiene uno o entrambe le braccia sotto la testa.';
 
   @override
-  String get penalty31 => 'Se la posizione tesa non è mostrata come descritta';
+  String get penalty31 =>
+      'Quando in un tuffo al volo la posizione tesa non è mostrata chiaramente per almeno un quarto di salto mortale (90°) in tuffi con salto mortale.';
 
   @override
   String get penalty32 =>
-      'Se la posizione carpiata non è mostrata come descritta';
+      'Quando in un tuffo al volo la posizione tesa non è mostrata chiaramente per almeno e minimo mezzo salto mortale (180°) in tuffi con più di un (1) salto mortale.';
 
   @override
   String get penalty33 =>
-      'Se in un tuffo carpiato con avvitamento la posizione carpiata non è mostrata chiaramente.';
+      'Se un tuffo non è eseguito in una posizione come descritta.';
 
   @override
   String get penalty34 =>
-      'Se la posizione raggruppata non è mostrata come descritta';
+      'Se la posizione di partenza non è eretta con il capo in linea e le braccia protese in una\nposizione qualsiasi.';
 
   @override
   String get penalty35 =>
-      'Se in un tuffo raggruppato con avvitamento la posizione raggruppata non è mostrata chiaramente.';
+      'Se i piedi si staccano dal trampolino o dalla piattaforma (crow hop) prima dello stacco in un tuffo da fermo.';
 
   @override
   String get penalty36 =>
-      'Se la posizione libera non è mostrata come descritta';
+      'Se in un tuffo dalla verticale non è mostrato un equilibrio fermo e stabile nella posizione tesa e verticale.';
 
   @override
   String get penalty37 =>
-      'Se le braccia non sono nella posizione corretta sia nel tuffo con entrata di testa che in quello con entrata di piedi.';
+      'Se durante un tuffo in verticale le mani perdono il contatto con la piattaforma durante il decollo.';
 
   @override
   String get penalty38 =>
-      'Se nei tuffi sincronizzati non viene mostrato somiglianza nella posizione di partenza, nella rincorsa, nello stacco e nell’elevazione';
+      'Se la rincorsa non è scorrevole e esteticamente gradevole nella direzione avanti verso la fine del trampolino o della piattaforma.';
 
   @override
   String get penalty39 =>
-      'Se nei tuffi sincronizzati non viene mostrato coordinazione nel tempismo del movimento in volo';
+      'Se la partenza non è decisa, ragionevolmente alta e sicura.';
 
   @override
   String get penalty40 =>
-      'Se nei tuffi sincronizzati non viene mostrato somiglianza degli angoli verticali di entrata in acqua';
+      'Se in un tuffo con avvitamento, l\'avvitamento è anticipato vistosamente dal trampolino o dalla piattaforma.';
 
   @override
-  String get penalty41 =>
-      'Se nei tuffi sincronizzati non viene mostrato simile distanza dell’entrata in acqua dal trampolino o dalla piattaforma';
+  String get penalty41 => 'Se la posizione tesa non è mostrata come descritta.';
 
   @override
   String get penalty42 =>
-      'Se nei tuffi sincronizzati non viene mostrato coordinazione nel tempismo delle entrate';
+      'Se la posizione carpiata non è mostrata come descritta.';
 
   @override
   String get penalty43 =>
-      'Se un tuffo viene eseguito parzialmente in una posizione diversa da quella annunciata.';
+      'Se in un tuffo carpiato con avvitamento la posizione carpiata non è mostrata chiaramente.';
 
   @override
   String get penalty44 =>
-      'Se in un tuffo un tuffatore si tuffa lateralmente alla linea diretta del volo.';
+      'Se la posizione raggruppata non è mostrata come descritta.';
 
   @override
   String get penalty45 =>
-      'Se in un tuffo un tuffatore tocca la fine del trampolino o della piattaforma con i suoi piedi o le sue mani.';
+      'Se in un tuffo raggruppato con avvitamento la posizione raggruppata non è mostrata chiaramente.';
 
   @override
-  String get penalty46 => 'Se l\'ingresso in acqua non è verticale o quasi.';
+  String get penalty46 =>
+      'Se la posizione libera non utilizza una delle posizioni opzionali tra dritta, a V o rannicchiata e con le gambe unite e le punte dei piedi tese.';
 
   @override
-  String get penalty47 => 'Se l\'ingresso in acqua è contorto.';
+  String get penalty47 =>
+      'Se si effettua un tuffo a testa in giù, le braccia non si trovano nella posizione corretta, anche se vengono tenute oltre la testa.';
 
   @override
-  String get penalty48 => 'Se nell\'ingresso in acqua il corpo non è dritto.';
+  String get penalty48 =>
+      'Se si effettua un tuffo con ingresso in acqua dai piedi, le braccia non si trovano nella posizione corretta, anche se tenute sotto la testa.';
 
   @override
   String get penalty49 =>
+      'Se nei tuffi sincronizzati non viene mostrato somiglianza nella posizione di partenza, nella rincorsa, nello stacco e nell’elevazione.';
+
+  @override
+  String get penalty50 =>
+      'Se nei tuffi sincronizzati non viene mostrato coordinazione nel tempismo del movimento in volo.';
+
+  @override
+  String get penalty51 =>
+      'Se nei tuffi sincronizzati non viene mostrato somiglianza degli angoli verticali di entrata in acqua.';
+
+  @override
+  String get penalty52 =>
+      'Se nei tuffi sincronizzati non viene mostrato simile distanza dell’entrata in acqua dal trampolino o dalla piattaforma.';
+
+  @override
+  String get penalty53 =>
+      'Se nei tuffi sincronizzati non viene mostrato coordinazione nel tempismo delle entrate.';
+
+  @override
+  String get penalty54 =>
+      'Se un tuffo viene eseguito parzialmente in una posizione diversa da quella annunciata.';
+
+  @override
+  String get penalty55 =>
+      'Se in un tuffo un tuffatore si tuffa lateralmente alla linea diretta del volo.';
+
+  @override
+  String get penalty56 =>
+      'Se in un tuffo un tuffatore tocca la fine del trampolino o della piattaforma con i suoi piedi o le sue mani.';
+
+  @override
+  String get penalty57 =>
+      'Se l\'ingresso è corto, con un angolo inferiore alla verticale.';
+
+  @override
+  String get penalty58 =>
+      'Se l\'ingresso è lungo, con un\'angolazione superiore alla verticale.';
+
+  @override
+  String get penalty59 => 'Se l\'ingresso in acqua è contorto.';
+
+  @override
+  String get penalty60 => 'Se nell\'ingresso in acqua il corpo non è dritto.';
+
+  @override
+  String get penalty61 =>
       'Se nell\'ingresso in acqua i piedi non sono uniti e le dita non sono appuntite.';
+
+  @override
+  String get penalty62 =>
+      'Se all\'ingresso la superficie dell\'acqua è significativamente agitata.';
 
   @override
   String get quizzIntroQuestionNumber => 'Numero di domande: ';
@@ -333,7 +386,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get aboutRulesReference =>
-      'Regole per l\'app: World Aquatics - 1st July 2025 - v6';
+      'Regole per l\'app: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>

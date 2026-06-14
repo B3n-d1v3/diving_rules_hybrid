@@ -183,138 +183,190 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get penalty16 =>
-      'Wenn ein Springer bei einem Sprung aus dem Anlauf anhält, nachdem er einen Schritt gemacht hat oder die Bewegung für einen Absprung aus dem Stand stoppt, nachdem die Beine begonnen haben, Druck auszuüben.';
+      'Beim Synchronspringen vom Kunstbrett, wenn der Sprung nach vorne nicht mit Anlauf ausgeführt wird.';
 
   @override
   String get penalty17 =>
-      'Wenn bei einem Sprung aus dem Stand, Anlauf oder Handstand ein Neustart erfolgt.';
+      'Wenn ein Springer bei einem Sprung aus dem Anlauf anhält, nachdem er einen Schritt gemacht hat oder die Bewegung für einen Absprung aus dem Stand stoppt, nachdem die Beine begonnen haben, Druck auszuüben.';
 
   @override
   String get penalty18 =>
-      'Beim Synchronspringen, wenn ein Neustart durch einen oder beide Springer erfolgt.';
+      'Wenn ein Athlet während eines Standsprungs die Absprungbewegung abbricht, nachdem die Beine begonnen haben, sich zu beugen oder sich gegen die Plattform zu drücken, um den Absprung einzuleiten.';
 
   @override
   String get penalty19 =>
-      'Wenn ein Springer einen Sprung in einer anderen als der angekündigten Position durchführt.';
+      'Wenn bei einem Sprung aus dem Stand, Anlauf oder Handstand ein Neustart erfolgt.';
 
   @override
   String get penalty20 =>
-      'Wenn bei einem Sprung sich ein Springer in unsicherer Nähe des Sprungbretts oder der Plattform befindet oder das Ende des Sprungbretts oder der Plattform mit seinem Kopf  berührt.';
+      'Wenn ein Athlet während eines Armstandsprungs das Gleichgewicht verliert und eine oder beide Hände von ihrer ursprünglichen Position an der Vorderkante der Plattform bewegt.';
 
   @override
   String get penalty21 =>
-      'Wenn ein Springer bei einem fußwärts getauchten Sprung einen oder beide Arme über dem Kopf oder bei einem kopfwärts getauchten Sprung einen oder beide Arme unter dem Kopf hat.\n';
+      'Wenn bei einem Armstandsprung ein oder beide Füße des Athleten vor dem Absprung wieder auf der Plattform aufsetzen.';
 
   @override
   String get penalty22 =>
-      'Wenn bei einem fliegenden Sprung für mindestens ein Viertel des Saltos (90º) bei Sprüngen mit Salto eine gerade Position nicht deutlich erkennbar ist.';
+      'Wenn während eines Armstandsprungs ein Fuß oder ein anderer Körperteil des Athleten als seine Hände die Plattform berührt, nachdem der Athlet die Ausgangsposition eingenommen hat.';
 
   @override
   String get penalty23 =>
-      'Wenn bei einem fliegenden Sprung, bei Sprüngen mit mehr als einem Salto eine gerade Position für mindestens einen halben Salto (180º) nicht eindeutig erkennbar ist.';
+      'Beim Synchronspringen, wenn ein Neustart durch einen oder beide Springer erfolgt.';
 
   @override
   String get penalty24 =>
-      'Wenn ein Sprung nicht in einer Position ausgeführt wird, die in den Regeln beschrieben ist.';
+      'Wenn ein Springer einen Sprung in einer anderen als der angekündigten Position durchführt.';
 
   @override
   String get penalty25 =>
-      'Wenn die Ausgangsposition nicht gerade ist, Kopf aufrecht, mit gestreckten Armen in jeder Position.';
+      'Wenn ein Sprung dadurch unsicher wurde, dass ein Athlet während des Fluges mit dem Kopf das Sprungbrett oder die Plattform berührt hatte.';
 
   @override
   String get penalty26 =>
-      'Wenn die Füße bei einem Sprung aus dem Stand das Sprungbrett oder die Plattform verlassen (Crow-Hop), bevor der Absprung erfolgt.';
+      'Wenn ein Sprung als unsicher eingestuft wurde, weil sich ein Athlet während des Fluges mit dem Kopf zu nahe am Sprungbrett oder der Plattform befand.';
 
   @override
   String get penalty27 =>
-      'Wenn bei einem Handstandsprung keine stationäre Position im Gleichgewicht in der geraden vertikalen Position gezeigt wird.';
+      'Wenn die Mehrheit der Jury angibt, dass der Tauchgang unsicher war.';
 
   @override
   String get penalty28 =>
-      'Wenn der Anlauf nicht glatt und ästhetisch mit einer Vorwärtsrichtung bis zum Ende des Sprungbretts oder der Plattform ist.';
+      'Nach Überprüfung eines potenziell unsicheren Tauchgangs mithilfe visueller Technologie, ob die Durchführung des Tauchgangs unsicher war.';
 
   @override
   String get penalty29 =>
-      'Wenn der Absprung nicht mutig, hoch und selbstbewusst ist.';
+      'Wenn ein Springer bei einem fußwärts getauchten Sprung einen oder beide Arme über dem Kopf oder bei einem kopfwärts getauchten Sprung einen oder beide Arme unter dem Kopf hat.';
 
   @override
   String get penalty30 =>
-      'Wenn bei einem Schraubensprung die Drehung offensichtlich vom Sprungbrett oder der Plattform aus ausgeführt wird.';
+      'Beim Kopfsprung hält der Athlet einen oder beide Arme unterhalb des Kopfes.';
 
   @override
   String get penalty31 =>
-      'Wenn die gerade Position nicht wie in den Regeln beschrieben gezeigt wird.';
+      'Wenn bei einem fliegenden Sprung für mindestens ein Viertel des Saltos (90º) bei Sprüngen mit Salto eine gerade Position nicht deutlich erkennbar ist.';
 
   @override
   String get penalty32 =>
-      'Wenn die Hechtposition nicht wie in den Regeln beschrieben gezeigt wird.';
+      'Wenn bei einem fliegenden Sprung, bei Sprüngen mit mehr als einem Salto eine gerade Position für mindestens einen halben Salto (180º) nicht eindeutig erkennbar ist.';
 
   @override
   String get penalty33 =>
-      'Wenn bei einem gehechteten Sprung mit Schraube, die Hechtposition nicht klar erkennbar ist.';
+      'Wenn ein Sprung nicht in einer Position ausgeführt wird, die in den Regeln beschrieben ist.';
 
   @override
   String get penalty34 =>
-      'Wenn die Hockposition nicht wie in den Regeln beschrieben gezeigt wird.';
+      'Wenn die Ausgangsposition nicht gerade ist, Kopf aufrecht, mit gestreckten Armen in jeder Position.';
 
   @override
   String get penalty35 =>
-      'Wenn bei einem gehockten Sprung mit Schraube, die Hockposition nicht klar erkennbar ist.';
+      'Wenn die Füße bei einem Sprung aus dem Stand das Sprungbrett oder die Plattform verlassen (Crow-Hop), bevor der Absprung erfolgt.';
 
   @override
   String get penalty36 =>
-      'Wenn die freie Position nicht wie in den Regeln beschrieben gezeigt wird.';
+      'Wenn bei einem Handstandsprung keine stationäre Position im Gleichgewicht in der geraden vertikalen Position gezeigt wird.';
 
   @override
   String get penalty37 =>
-      'Wenn sich die Arme bei einem kopfwärts bzw. fußwärts getauchten Sprung nicht in der richtigen Position befinden.';
+      'Wenn während eines Armstand-Sprungs die Hände beim Absprung den Kontakt zur Plattform verlieren.';
 
   @override
   String get penalty38 =>
-      'Wenn beim Synchronspringen keine Ähnlichkeit der Ausgangsposition, des Anlaufs, des Absprungs und der Höhe gezeigt wird.';
+      'Wenn der Anlauf nicht glatt und ästhetisch mit einer Vorwärtsrichtung bis zum Ende des Sprungbretts oder der Plattform ist.';
 
   @override
   String get penalty39 =>
-      'Wenn beim Synchronspringen kein abgestimmtes Timing der Bewegungen während des Fluges gezeigt wird.';
+      'Wenn der Absprung nicht mutig, hoch und selbstbewusst ist.';
 
   @override
   String get penalty40 =>
-      'Wenn beim Synchronspringen keine Ähnlichkeit der vertikalen Winkel des Eintauchens erkennbar ist.';
+      'Wenn bei einem Schraubensprung die Drehung offensichtlich vom Sprungbrett oder der Plattform aus ausgeführt wird.';
 
   @override
   String get penalty41 =>
-      'Wenn beim Synchronspringen der gleiche Abstand zum Sprungbrett bzw. zur Plattform beim Eintauchen nicht gezeigt wird.';
+      'Wenn die gerade Position nicht wie in den Regeln beschrieben gezeigt wird.';
 
   @override
   String get penalty42 =>
-      '\nWenn beim Synchronspringen keine zeitliche Abstimmung des Eintauchens gezeigt wird.';
+      'Wenn die Hechtposition nicht wie in den Regeln beschrieben gezeigt wird.';
 
   @override
   String get penalty43 =>
-      'Wenn ein Sprung teilweise in einer anderen als der angekündigten Position durchgeführt wird.';
+      'Wenn bei einem gehechteten Sprung mit Schraube, die Hechtposition nicht klar erkennbar ist.';
 
   @override
   String get penalty44 =>
-      'Wenn ein Springer bei einem Sprung seitlich der direkten Fluglinie springt.';
+      'Wenn die Hockposition nicht wie in den Regeln beschrieben gezeigt wird.';
 
   @override
   String get penalty45 =>
-      'Wenn ein Springer bei einem Sprung das Ende des Sprungbretts oder der Plattform mit seinen Füßen oder Händen berührt.';
+      'Wenn bei einem gehockten Sprung mit Schraube, die Hockposition nicht klar erkennbar ist.';
 
   @override
   String get penalty46 =>
-      'Wenn das Eintauchen ins Wasser nicht oder nicht annähernd senkrecht erfolgt.';
+      'Wenn die freie Position nicht eine der optionalen Positionen zwischen gerader Position, Pike-Position oder Tuck-Position mit geschlossenen Beinen und gestreckten Zehen ist.';
 
   @override
-  String get penalty47 => 'Wenn das Eintauchen ins Wasser verdreht ist.';
+  String get penalty47 =>
+      'Bei einem Kopfsprung befinden sich die Arme nicht in der richtigen Position, selbst wenn sie über den Kopf hinaus gehalten werden.';
 
   @override
   String get penalty48 =>
-      'Wenn der Körper beim Eintauchen ins Wasser nicht gerade ist.';
+      'Bei einem Kopfsprung mit den Füßen voran befinden sich die Arme nicht in der richtigen Position, selbst wenn sie unterhalb des Kopfes gehalten werden.';
 
   @override
   String get penalty49 =>
+      'Wenn beim Synchronspringen keine Ähnlichkeit der Ausgangsposition, des Anlaufs, des Absprungs und der Höhe gezeigt wird.';
+
+  @override
+  String get penalty50 =>
+      'Wenn beim Synchronspringen kein abgestimmtes Timing der Bewegungen während des Fluges gezeigt wird.';
+
+  @override
+  String get penalty51 =>
+      'Wenn beim Synchronspringen keine Ähnlichkeit der vertikalen Winkel des Eintauchens erkennbar ist.';
+
+  @override
+  String get penalty52 =>
+      'Wenn beim Synchronspringen der gleiche Abstand zum Sprungbrett bzw. zur Plattform beim Eintauchen nicht gezeigt wird.';
+
+  @override
+  String get penalty53 =>
+      'Wenn beim Synchronspringen keine zeitliche Abstimmung des Eintauchens gezeigt wird.';
+
+  @override
+  String get penalty54 =>
+      'Wenn ein Sprung teilweise in einer anderen als der angekündigten Position durchgeführt wird.';
+
+  @override
+  String get penalty55 =>
+      'Wenn der Athlet während des Fluges eines Tauchgangs keine gerade Flugbahn beibehält.';
+
+  @override
+  String get penalty56 =>
+      'Wenn ein Springer bei einem Sprung das Ende des Sprungbretts oder der Plattform mit seinen Füßen oder Händen berührt.';
+
+  @override
+  String get penalty57 =>
+      'Bei kurzem Eintrittswinkel, der kleiner als vertikal ist.';
+
+  @override
+  String get penalty58 =>
+      'Wenn der Eintritt lang ist und der Winkel die Vertikale überschreitet.';
+
+  @override
+  String get penalty59 => 'Wenn das Eintauchen ins Wasser verdreht ist.';
+
+  @override
+  String get penalty60 =>
+      'Wenn der Körper beim Eintauchen ins Wasser nicht gerade ist.';
+
+  @override
+  String get penalty61 =>
       'Wenn beim Eintauchen ins Wasser die Füße nicht zusammen sind und die Zehen nicht gestreckt sind.';
+
+  @override
+  String get penalty62 =>
+      'Wenn die Wasseroberfläche beim Eintritt erheblich gestört wird.';
 
   @override
   String get quizzIntroQuestionNumber => 'Anzahl der Fragen:';
@@ -337,7 +389,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get aboutRulesReference =>
-      'Regelreferenz zur App: World Aquatics - 1st July 2025 - v6';
+      'Regelreferenz zur App: World Aquatics - 18 fev 2026';
 
   @override
   String get aboutLicense =>
