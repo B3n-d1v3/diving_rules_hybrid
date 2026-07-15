@@ -18,7 +18,8 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 
-version: 3.0.1+26
+version: 3.1.0+27
+# v3.1.0+27 <- Updates to the Penalties Menu item replaced with the checklist to include the Referee and referee's assistant checklist (Updates performed with AI assistance)
 # v3.0.1+26 <- Corrections of the penalty description typos or formulations
 # v3.0.0+25 <- Update to rules WA of Feb 2026 in EN and in FR / Addition of new penalty descriptions or split into multiple questions / Various updates of new dependencies
 # v2.6.4+24 <- Change of the language order / New version to update in Google Play store with Android api level 35

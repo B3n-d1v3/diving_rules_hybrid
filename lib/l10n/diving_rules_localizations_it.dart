@@ -12,10 +12,86 @@ class AppLocalizationsIt extends AppLocalizations {
   String get navigationMenuRules => 'Regolamenti';
 
   @override
-  String get navigationMenuPenalties => 'Penalità';
+  String get navigationMenuQuizz => 'Domande';
 
   @override
-  String get navigationMenuQuizz => 'Domande';
+  String get navigationMenuChecklist => 'Checklist';
+
+  @override
+  String get checklistMenuReferee => 'Doveri del Giudice Arbitro';
+
+  @override
+  String get checklistMenuAssistantReferee =>
+      'Doveri del Giudice Arbitro Assistente';
+
+  @override
+  String get checklistMenuJudgePenalties => 'Penalità dei giudici';
+
+  @override
+  String get penaltiesSubtitle => 'I casi di penalità del giudice';
+
+  @override
+  String get checklistSubtitle => 'I doveri del Giudice Arbitro';
+
+  @override
+  String get checklistBeforeEvent => 'Prima di una gara';
+
+  @override
+  String get checklistDuringEvent => 'Durante una gara';
+
+  @override
+  String get checklistBeforeDive => 'Prima di un tuffo';
+
+  @override
+  String get checklistDuringDive => 'Durante un tuffo';
+
+  @override
+  String get checklistAfterEvent => 'Dopo una gara';
+
+  @override
+  String get checklistBeforeEventItems =>
+      'Ricevere l\'elenco dei tuffi di ciascun tuffatore/squadra — un modulo ufficiale e firmato che indichi, per ogni tuffo e nell\'ordine di esecuzione, il numero, la posizione, l\'altezza del trampolino/della piattaforma e il coefficiente di difficoltà — e verificarne la conformità all\'Articolo 6 prima di ammettere il tuffatore alla gara (Art. EN 8.3.1, Art. EN 6.1–6.5)\nAccettare un elenco dei tuffi presentato in ritardo — entro 24 ore ma non oltre 3 ore prima dell\'inizio della gara — segnalando che il tuffatore/la squadra deve a World Aquatics una quota di 250 dollari statunitensi (Art. EN 8.3.2, Art. EN 6.6.2)\nAccettare un modulo di modifica dei tuffi presentato in quella stessa finestra tra 24 e 3 ore prima della gara, soggetto alla stessa quota di 250 dollari (Art. EN 8.3.2, Art. EN 6.7.2)\nDurante la gara, accettare una modifica dei tuffi presentata prima dell\'inizio di una semifinale o finale, purché presentata non oltre 30 minuti dopo la fine della prova precedente; altrimenti il tuffatore deve eseguire l\'elenco dei tuffi originale (Art. EN 8.3.2, Art. EN 6.7.3)\nVerificare che ogni modifica dei tuffi sia effettuata sul modulo ufficiale, firmata dal tuffatore/dalla squadra o dal suo rappresentante, e consegnata al Giudice Arbitro o al suo Assistente designato (Art. EN 8.3.2, Art. EN 6.7.4)\nControllare ogni elenco dei tuffi presentato, comprese le modifiche; se non conforme all\'Articolo 6, richiedere quanto prima una correzione al tuffatore/alla squadra prima dell\'inizio della gara (o della prova successiva) (Art. EN 8.3.2, Art. EN 6.8)\nGestire una richiesta di sostituzione di un tuffatore in una gara a squadre o sincronizzata: ricevere il modulo ufficiale di sostituzione (presentato fino a 30 minuti prima dell\'inizio della gara, con prova della circostanza eccezionale), inoltrarlo al Comitato Tecnico di Tuffi per l\'approvazione, oppure decidere direttamente se il Comitato non è disponibile (Art. EN 6.10–6.10.3)\nSolo per le gare sincronizzate o con finale diretta, accettare un cambio di tuffatore nell\'elenco dei tuffi soltanto se: ai Giochi Olimpici o ai Campionati del Mondo World Aquatics, il tuffatore si ritira senza sostituzione, oppure viene sostituito da un altro tuffatore della stessa Federazione tramite un modulo di sostituzione firmato, presentato non oltre 2 ore prima dell\'inizio della gara; in qualsiasi altra competizione, è accettata solo la sostituzione con un tuffatore della stessa Federazione, con lo stesso modulo firmato e lo stesso termine di 2 ore (Art. EN 6.11–6.11.2)\nConvalidare la tecnologia da utilizzare durante la gara (Art. EN 8.3.3)';
+
+  @override
+  String get checklistDuringEventItems =>
+      'Dichiarare una pausa, un rinvio o un\'interruzione della gara in presenza di circostanze impreviste, se possibile dopo un turno completo di tuffi (Art. EN 8.4.1)\nRiprendere la gara dopo un\'interruzione, mantenendo i punti ottenuti prima dell\'interruzione (Art. EN 8.4.2, 8.4.2.1)\nSe la gara non può riprendere, determinare i risultati finali sulla base dei punteggi di tutti i tuffi fino all\'ultimo turno completato; se non può proseguire affatto, far determinare i risultati dalla Giuria di Appello (Art. EN 8.4.2.2, 8.4.2.3)\nConfermare l\'esattezza dell\'elenco dei tuffi se informato che un tuffo o un tuffatore è stato annunciato in modo scorretto (Art. EN 8.4.3)\nSe un tuffatore esegue un tuffo annunciato in modo scorretto, il Giudice Arbitro può annullare i voti, far annunciare e rieseguire immediatamente il tuffo corretto, e far annotare dalla Segreteria i voti annullati in caso di reclamo (Art. EN 8.4.4)\nDecidere su una richiesta di ripetizione di un tuffo senza penalità in circostanze eccezionali; far annotare i voti del primo tuffo (Art. EN 8.4.5)\nDichiarare il tuffo mancato se il tuffatore esegue un numero di tuffo diverso da quello annunciato (Art. EN 8.4.6)\nDi fronte a un tuffo eseguito in una posizione diversa: ripetere l\'annuncio, limitare il voto massimo a 2 punti, e correggere qualsiasi voto superiore assegnato da un giudice (Art. EN 8.4.7)\nEscludere chiunque disturbi in modo irragionevole la gara (Art. EN 8.4.8)\nRimuovere e sostituire con il giudice di riserva qualsiasi giudice il cui giudizio sia ritenuto insoddisfacente, solo alla fine di un turno o di una sessione; presentare una relazione alla Giuria di Appello (Art. EN 8.4.9)';
+
+  @override
+  String get checklistBeforeDiveItems =>
+      'Consentire un nuovo tentativo senza deduzione di punti in caso di vento forte (Art. EN 8.5.1)\nVerificare che il tuffo e il nome del tuffatore/della squadra (e l\'altezza della piattaforma, se applicabile) siano annunciati prima di ogni tuffo (Art. EN 8.5.2)\nDare il segnale solo quando il tuffatore è in posizione e il tabellone è stato verificato; assicurarsi che il tuffatore non avanzi prima del segnale nelle partenze all\'indietro e ritornate (Art. EN 8.5.3)\nDare un avvertimento se il tuffatore non esegue il tuffo entro un tempo ragionevole dal segnale (Art. EN 8.5.4)\nDichiarare il tuffo mancato (0 punti) se il tuffatore non esegue il tuffo entro un minuto dall\'avvertimento (Art. EN 8.5.5)\nDecidere se un tuffo eseguito prima del segnale debba essere ripetuto o mantenuto (Art. EN 8.5.6)\nDichiarare il tuffo mancato se il tuffatore si rifiuta di tuffarsi (Art. EN 8.5.7)';
+
+  @override
+  String get checklistDuringDiveItems =>
+      'Dichiarare una partenza ripetuta per un tuffo con rincorsa (passi poi arresto) o senza rincorsa (arresto del movimento di partenza dopo la flessione/pressione) (Art. EN 8.6.1)\nDecidere su una partenza ripetuta per i tuffi in verticale (perdita di equilibrio/movimento delle mani, piedi che tornano sulla piattaforma, contatto del corpo con la piattaforma) (Art. EN 8.6.2)\nDare istruzione alla Segreteria di dedurre 2 punti dal voto di ciascun giudice in caso di partenza ripetuta (Art. EN 8.6.3–8.6.4)\nDichiarare il tuffo mancato per: un secondo tentativo fallito, un doppio rimbalzo, un ultimo passo su un solo piede in un tuffo con rincorsa, uno stacco non simultaneo, un avvitamento che differisce di 90° o più, un\'entrata con i piedi prima della testa in un tuffo di testa, oppure testa/mani prima dei piedi in un tuffo di piedi (Art. EN 8.6.5)\nAssicurarsi che un tuffo mancato riceva 0 punti (Art. EN 8.6.6)\nLimitare il voto di un giudice a 4½ punti se una o entrambe le braccia sono tenute sopra la testa in un\'entrata di piedi, o sotto la testa in un\'entrata di testa (Art. EN 8.6.7, 8.6.7.1–8.6.7.2)\nLimitare il voto di un giudice a 4½ punti se, in un tuffo al volo, la posizione tesa non è mantenuta per almeno un quarto di salto mortale (90°) nei tuffi con 1 salto mortale o meno, o mezzo salto mortale (180°) in quelli con più di 1 salto mortale (Art. EN 8.6.7, 8.6.7.3)\nDichiarare il tuffo mancato se è stata data assistenza al tuffatore dopo il segnale di partenza (Art. EN 8.7)';
+
+  @override
+  String get checklistAfterEventItems =>
+      'Confermare i risultati della gara o della prova con la propria firma, annotando l\'ora di conclusione (Art. EN 8.8.1)\nRestare disponibile per 30 minuti dopo la conclusione di una prova se è prevista una prova successiva (Art. EN 8.8.2)';
+
+  @override
+  String get checklistAssistantSubtitle =>
+      'I doveri del Giudice Arbitro Assistente';
+
+  @override
+  String get checklistSharedDuties => 'Doveri condivisi';
+
+  @override
+  String get checklistSharedDutiesItems =>
+      'Ricevere l\'elenco completo dei tuffi di ciascun tuffatore/squadra, sul modulo ufficiale, per la prova eliminatoria e tutte le prove successive (Art. EN 6.1.1)\nControllare ogni elenco dei tuffi presentato, comprese le modifiche, verificando che sia firmato e che indichi, per ogni tuffo nell\'ordine di esecuzione, il numero, la posizione, l\'altezza del trampolino/della piattaforma e il coefficiente di difficoltà; in caso contrario, richiedere quanto prima una correzione al tuffatore/alla squadra (Art. EN 6.8, Art. EN 6.1.2, Art. EN 6.5)';
+
+  @override
+  String get checklistPlatform => 'Piattaforma';
+
+  @override
+  String get checklistPlatformItems =>
+      'Osservare i tuffi in verticale e dichiarare una partenza ripetuta se il tuffatore perde l\'equilibrio e sposta una o entrambe le mani dal bordo anteriore, se uno o entrambi i piedi tornano sulla piattaforma prima dello stacco, o se una parte del corpo diversa dalle mani tocca la piattaforma dopo aver assunto la posizione di partenza (Art. EN 8.6.2)\nSegnalare al Giudice Arbitro eventuali venti forti sulla piattaforma, che possono consentire al tuffatore una partenza ripetuta senza deduzione di punti (Art. EN 8.5.1)';
+
+  @override
+  String get checklistSynchronisedDiving => 'Tuffi sincronizzati';
+
+  @override
+  String get checklistSynchronisedDivingItems =>
+      'Osservare il tuffatore posizionato sul lato opposto della piscina rispetto al Giudice Arbitro, applicando gli stessi doveri di partenza ripetuta/tuffo mancato previsti per i tuffi individuali (Art. EN 8.2.2)\nDichiarare il tuffo mancato se uno dei tuffatori esegue un tuffo di numero o posizione diversa da quella annunciata (Art. EN 11.2)\nDichiarare il tuffo mancato se uno dei tuffatori entra in acqua prima che l\'altro abbia lasciato il trampolino o la piattaforma (Art. EN 11.3)\nDichiarare il tuffo mancato se un tuffo sincronizzato dal trampolino con partenza in avanti non viene eseguito con rincorsa (Art. EN 11.5)';
 
   @override
   String get navigationMenuSearch => 'Ricerca';

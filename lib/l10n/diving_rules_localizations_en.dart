@@ -12,10 +12,84 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navigationMenuRules => 'Rules';
 
   @override
-  String get navigationMenuPenalties => 'Penalties';
+  String get navigationMenuQuizz => 'Quiz';
 
   @override
-  String get navigationMenuQuizz => 'Quiz';
+  String get navigationMenuChecklist => 'Checklists';
+
+  @override
+  String get checklistMenuReferee => 'Referee\'s Duties';
+
+  @override
+  String get checklistMenuAssistantReferee => 'Assistant Referee\'s Duties';
+
+  @override
+  String get checklistMenuJudgePenalties => 'Judge penalties';
+
+  @override
+  String get penaltiesSubtitle => 'The Judge\'s penalty cases';
+
+  @override
+  String get checklistSubtitle => 'The Referee\'s Duties';
+
+  @override
+  String get checklistBeforeEvent => 'Before an event';
+
+  @override
+  String get checklistDuringEvent => 'During an event';
+
+  @override
+  String get checklistBeforeDive => 'Before a dive';
+
+  @override
+  String get checklistDuringDive => 'During a dive';
+
+  @override
+  String get checklistAfterEvent => 'After an event';
+
+  @override
+  String get checklistBeforeEventItems =>
+      'Receive each Athlete/team\'s Statement of Dives — an official, signed form listing, for every dive and round, its Number, Position, springboard/platform height, and Degree of Difficulty — and confirm it complies with Article 6 before admitting the Athlete to the event (Art. 8.3.1, Art. 6.1–6.5)\nAccept a Statement of Dives submitted late — within 24 hours but no later than 3 hours before the event start — noting the athlete/team owes World Aquatics a 250 USD fee (Art. 8.3.2, Art. 6.6.2)\nAccept a change-of-dives form submitted within that same 24-to-3-hour window before the event, subject to the same 250 USD fee (Art. 8.3.2, Art. 6.7.2)\nDuring the event, accept a change of dives submitted before the start of a semi-final or final stage, provided it\'s submitted no later than 30 minutes after the end of the previous stage; otherwise the athlete must perform the original Statement of Dives (Art. 8.3.2, Art. 6.7.3)\nEnsure any change-of-dives submission is made on the official form, signed by the athlete/team or their representative, and submitted to the Referee or their designated Assistant Referee (Art. 8.3.2, Art. 6.7.4)\nInspect each Statement of Dives submitted, including amendments; if it doesn\'t comply with Article 6, request a correction from the athlete/team as soon as possible before the event (or next stage) starts (Art. 8.3.2, Art. 6.8)\nHandle an athlete substitution request in a team or synchronised event: receive the official substitution form (submitted up to 30 minutes before the event start, with evidence of the exceptional circumstance), forward it to the Technical Diving Committee for approval, or decide directly if the Committee is unavailable (Art. 6.10–6.10.3)\nFor synchronised events or direct-final-only events, only accept a change to the Athletes listed on the Statement of Dives if: at the Olympic Games or World Aquatics Championships, the Athlete is retiring/withdrawing without replacement, or is replaced by another Athlete from the same Member Federation via a signed substitution form submitted no later than 2 hours before the event start; at any other competition, only the same-Member-Federation replacement (with the signed form, same 2-hour deadline) is accepted (Art. 6.11–6.11.2)\nConfirm the technology to be used during the event (Art. 8.3.3)';
+
+  @override
+  String get checklistDuringEventItems =>
+      'Declare a break/postponement/discontinuation if unforeseen circumstances arise, ideally after a full round of dives (Art. 8.4.1)\nResume the event after an interruption, carrying forward the points scored before the interruption (Art. 8.4.2, 8.4.2.1)\nIf the event cannot continue, determine the final results from the scores of all dives up to the last completed round, and confirm the results with the Jury of Appeal (Art. 8.4.2.2, 8.4.2.3)\nConfirm the accuracy of the Statement of Dives if advised that a dive or athlete was incorrectly announced (Art. 8.4.3)\nIf an athlete performs an incorrectly announced dive, the Referee may cancel the awards, have the correct dive announced and re-performed immediately, and have the cancelled awards noted for a possible appeal (Art. 8.4.4)\nDecide on a request to repeat a dive without penalty in exceptional circumstances; note the first dive\'s awards (Art. 8.4.5)\nDeclare a failed dive if the athlete performs the wrong dive Number (Art. 8.4.6)\nHandle a wrong-Position dive: repeat the announcement, cap the maximum award at 2 points, correct any Judge\'s higher award (Art. 8.4.7)\nExclude anyone who unreasonably disturbs the event (Art. 8.4.8)\nRemove/replace an unsatisfactory Judge with the reserve Judge, only at the end of a round/stage; report to the Jury of Appeal (Art. 8.4.9)';
+
+  @override
+  String get checklistBeforeDiveItems =>
+      'Allow a restart without point deduction in case of strong wind (Art. 8.5.1)\nEnsure the dive, athlete/team name (and platform height, if applicable) are announced before each dive (Art. 8.5.2)\nSignal (whistle) for the dive only once the athlete is positioned and the indicator board checked; enforce no advancing before the signal on Back/Inward take-offs (Art. 8.5.3)\nIssue a warning if the athlete doesn\'t dive within a reasonable time after the signal (Art. 8.5.4)\nDeclare a failed dive (0 points) if the athlete doesn\'t dive within 1 minute of the warning (Art. 8.5.5)\nDecide whether a dive performed before the signal should be repeated or stand (Art. 8.5.6)\nDeclare a failed dive if the athlete refuses to dive (Art. 8.5.7)';
+
+  @override
+  String get checklistDuringDiveItems =>
+      'Declare a restart for a running dive (steps then stops) or standing dive (stops the take-off after bending/pressing) (Art. 8.6.1)\nDecide on a restart for Armstand dives (balance loss/hand movement, feet returning to platform, body touching platform) (Art. 8.6.2)\nInstruct the Secretariat to deduct 2 points from each Judge\'s award on a restart (Art. 8.6.3–8.6.4)\nDeclare a failed dive for: unsuccessful second attempt, double bounce, two-footed final step in a running dive, non-simultaneous take-off, twist error ≥90°, feet-before-head on a head-first dive, or head/hands-before-feet on a feet-first dive (Art. 8.6.5)\nEnsure failed dives receive 0 points (Art. 8.6.6)\nCap a Judge\'s award at 4.5 points if one or both arms are held above the head on a feet-first entry, or below the head on a head-first entry (Art. 8.6.7, 8.6.7.1–8.6.7.2)\nCap a Judge\'s award at 4.5 points if, in a flying-action dive, the Straight Position isn\'t held for at least 90° of somersault rotation on dives with 1 somersault or fewer, or at least 180° on dives with more than 1 somersault (Art. 8.6.7, 8.6.7.3)\nDeclare a dive failed if assistance was given to the athlete after the starting signal (Art. 8.7)';
+
+  @override
+  String get checklistAfterEventItems =>
+      'Confirm the results of the event/stage by signature, noting the end time (Art. 8.8.1)\nRemain available for 30 minutes after the event stage concludes if a subsequent stage is to be held (Art. 8.8.2)';
+
+  @override
+  String get checklistAssistantSubtitle => 'The Assistant Referee\'s Duties';
+
+  @override
+  String get checklistSharedDuties => 'Shared duties';
+
+  @override
+  String get checklistSharedDutiesItems =>
+      'Receive each Athlete/team\'s completed Statement of Dives, on the official form, for the preliminary stage and all subsequent stages of the event (Art. 6.1.1)\nInspect each Statement of Dives submitted, including amendments, checking it is signed and lists — for every dive, in the order to be performed — its Number, Position, springboard/platform height, and Degree of Difficulty; if it doesn\'t meet this, request a correction from the Athlete/team as soon as possible (Art. 6.8, Art. 6.1.2, Art. 6.5)';
+
+  @override
+  String get checklistPlatform => 'Platform';
+
+  @override
+  String get checklistPlatformItems =>
+      'Observe Armstand dives and declare a restart if the Athlete loses balance and moves one or both hands from the front edge, if one or both feet return to the platform before take-off, or if any part of the body other than the hands touches the platform after the starting position is assumed (Art. 8.6.2)\nFlag strong wind conditions at the platform to the Referee, who may grant the Athlete a restart without point deduction (Art. 8.5.1)';
+
+  @override
+  String get checklistSynchronisedDiving => 'Synchronised diving';
+
+  @override
+  String get checklistSynchronisedDivingItems =>
+      'Observe the Athlete on the opposite side of the pool from the Referee, applying the same restart/failed-dive duties as for individual diving (Art. 8.2.2)\nDeclare a failed dive if either Athlete performs a dive of a different Number or Position than announced (Art. 11.2)\nDeclare a failed dive if either Athlete enters the water before the other Athlete leaves the springboard or platform (Art. 11.3)\nDeclare a failed dive if a forward-facing springboard synchro dive is not performed with a running approach (Art. 11.5)';
 
   @override
   String get navigationMenuSearch => 'Search';

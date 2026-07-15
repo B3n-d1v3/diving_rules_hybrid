@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 import 'l10n/action_language_selector.dart';
 import 'l10n/diving_rules_localizations.dart';
 import 'nav_about/screen_about.dart';
-import 'nav_penalty_list/screen_penalty_list.dart';
+import 'nav_checklist/screen_checklist_menu.dart';
 import 'nav_quiz/screen_quiz.dart';
 import 'nav_rulebook/screen_rulebook.dart';
 import 'sub_views/action_search.dart';
@@ -207,8 +207,8 @@ class _NavigationItems {
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.square_list_fill),
           icon: Icon(CupertinoIcons.square_list),
-          label: AppLocalizations.of(context)!.navigationMenuPenalties,
-          screen: ScreenPenaltyList()),
+          label: AppLocalizations.of(context)!.navigationMenuChecklist,
+          screen: ScreenChecklistMenu()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.checkmark_square_fill),
           icon: Icon(CupertinoIcons.checkmark_square),

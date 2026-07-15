@@ -12,10 +12,85 @@ class AppLocalizationsFr extends AppLocalizations {
   String get navigationMenuRules => 'Règles';
 
   @override
-  String get navigationMenuPenalties => 'Pénalités';
+  String get navigationMenuQuizz => 'Questionnaire';
 
   @override
-  String get navigationMenuQuizz => 'Questionnaire';
+  String get navigationMenuChecklist => 'Check-lists';
+
+  @override
+  String get checklistMenuReferee => 'Devoirs de l\'arbitre';
+
+  @override
+  String get checklistMenuAssistantReferee => 'Devoirs de l\'arbitre assistant';
+
+  @override
+  String get checklistMenuJudgePenalties => 'Pénalités des juges';
+
+  @override
+  String get penaltiesSubtitle => 'Les cas de pénalités du juge';
+
+  @override
+  String get checklistSubtitle => 'Les devoirs de l\'arbitre';
+
+  @override
+  String get checklistBeforeEvent => 'Avant une compétition';
+
+  @override
+  String get checklistDuringEvent => 'Pendant une compétition';
+
+  @override
+  String get checklistBeforeDive => 'Avant un plongeon';
+
+  @override
+  String get checklistDuringDive => 'Pendant un plongeon';
+
+  @override
+  String get checklistAfterEvent => 'Après une compétition';
+
+  @override
+  String get checklistBeforeEventItems =>
+      'Recevoir la Feuille de Plongeons de chaque Athlète/équipe — un formulaire officiel signé indiquant, pour chaque plongeon et dans l\'ordre d\'exécution, son Numéro, sa Position, la hauteur du tremplin/de la plateforme et le Coefficient de Difficulté — et vérifier sa conformité à l\'Article 6 avant d\'admettre l\'Athlète à l\'épreuve (Art. 8.3.1, Art. 6.1–6.5)\nAccepter une Feuille de Plongeons soumise tardivement — dans les 24 heures mais au plus tard 3 heures avant le début de l\'épreuve — en notant que l\'athlète/l\'équipe doit à World Aquatics une redevance de 250 dollars américains (Art. 8.3.2, Art. 6.6.2)\nAccepter un formulaire de modification de plongeons soumis dans cette même fenêtre de 24 à 3 heures avant l\'épreuve, sous réserve de la même redevance de 250 dollars américains (Art. 8.3.2, Art. 6.7.2)\nPendant l\'épreuve, accepter une modification de plongeons soumise avant le début d\'une demi-finale ou d\'une finale, à condition qu\'elle soit soumise au plus tard 30 minutes après la fin de la phase précédente ; sinon, l\'athlète doit exécuter la Feuille de Plongeons d\'origine (Art. 8.3.2, Art. 6.7.3)\nVérifier que toute modification de plongeons est effectuée sur le formulaire officiel, signée par l\'athlète/l\'équipe ou son représentant, et soumise au Juge-Arbitre ou à son Assistant Juge-Arbitre désigné (Art. 8.3.2, Art. 6.7.4)\nVérifier chaque Feuille de Plongeons soumise, y compris les modifications ; si elle n\'est pas conforme à l\'Article 6, demander dès que possible une correction à l\'athlète/l\'équipe avant le début de l\'épreuve (ou de la phase suivante) (Art. 8.3.2, Art. 6.8)\nTraiter une demande de remplacement d\'Athlète dans une épreuve par équipes ou synchronisée : recevoir le formulaire officiel de remplacement (soumis jusqu\'à 30 minutes avant le début de l\'épreuve, avec preuve de la circonstance exceptionnelle), le transmettre à la Commission Technique de Plongeon pour approbation, ou décider directement si la Commission n\'est pas disponible (Art. 6.10–6.10.3)\nPour les épreuves synchronisées ou à finale directe uniquement, n\'accepter un changement d\'Athlète sur la Feuille de Plongeons que si : aux Jeux Olympiques ou aux Championnats du Monde World Aquatics, l\'Athlète se désiste sans remplacement, ou est remplacé par un autre Athlète de la même Fédération Membre via un formulaire de remplacement signé soumis au plus tard 2 heures avant le début de l\'épreuve ; dans toute autre compétition, seul le remplacement par un Athlète de la même Fédération Membre (avec le même formulaire signé, même délai de 2 heures) est accepté (Art. 6.11–6.11.2)\nValider la technologie à utiliser pendant l\'épreuve (Art. 8.3.3)';
+
+  @override
+  String get checklistDuringEventItems =>
+      'Déclarer une pause, un report ou une interruption de l\'épreuve en cas de circonstances imprévues, si possible après un tour complet de plongeons (Art. 8.4.1)\nReprendre l\'épreuve après une interruption, en reportant les points enregistrés avant l\'interruption (Art. 8.4.2, 8.4.2.1)\nSi l\'épreuve ne peut pas reprendre, déterminer les résultats finaux sur les scores de tous les plongeons jusqu\'au dernier tour complet ; si elle ne peut pas être poursuivie du tout, faire déterminer les résultats par le Jury d\'Appel (Art. 8.4.2.2, 8.4.2.3)\nConfirmer l\'exactitude de la Feuille de Plongeons si informé qu\'un plongeon ou un Athlète a été incorrectement annoncé (Art. 8.4.3)\nSi un Athlète exécute un plongeon incorrectement annoncé, le Juge-Arbitre peut annuler les notes, faire annoncer et réexécuter immédiatement le bon plongeon, et faire enregistrer par le Secrétariat les notes annulées en cas d\'appel (Art. 8.4.4)\nStatuer sur une demande de ré-exécution d\'un plongeon sans pénalité en circonstances exceptionnelles ; faire enregistrer les notes du premier plongeon (Art. 8.4.5)\nDéclarer un plongeon manqué si l\'Athlète exécute un Numéro de plongeon différent de celui annoncé (Art. 8.4.6)\nFace à un plongeon exécuté dans une Position différente : répéter l\'annonce, plafonner la note maximale à 2 points, et corriger toute note supérieure attribuée par un Juge (Art. 8.4.7)\nExclure toute personne perturbant de manière déraisonnable l\'épreuve (Art. 8.4.8)\nRetirer et remplacer par le Juge de réserve tout Juge dont le jugement est jugé insatisfaisant, uniquement à la fin d\'un tour ou d\'une session ; faire un rapport au Jury d\'Appel (Art. 8.4.9)';
+
+  @override
+  String get checklistBeforeDiveItems =>
+      'Autoriser une reprise sans déduction de points en cas de vent violent (Art. 8.5.1)\nVérifier que le plongeon, le nom de l\'athlète/équipe (et la hauteur de plateforme, le cas échéant) sont annoncés avant chaque plongeon (Art. 8.5.2)\nDonner le signal (coup de sifflet) uniquement une fois l\'athlète en position et le tableau d\'affichage vérifié ; veiller à ce que l\'athlète n\'avance pas avant le signal pour les départs Arrière et Retournés (Art. 8.5.3)\nÉmettre un avertissement si l\'athlète ne plonge pas dans un délai raisonnable après le signal (Art. 8.5.4)\nDéclarer un plongeon manqué (0 point) si l\'athlète ne plonge pas dans la minute suivant l\'avertissement (Art. 8.5.5)\nDécider si un plongeon exécuté avant le signal doit être répété ou maintenu (Art. 8.5.6)\nDéclarer un plongeon manqué si l\'athlète refuse de plonger (Art. 8.5.7)';
+
+  @override
+  String get checklistDuringDiveItems =>
+      'Déclarer un nouveau départ pour un plongeon avec élan (pas puis arrêt) ou sans élan (arrêt du mouvement de départ après flexion/pression) (Art. 8.6.1)\nStatuer sur un nouveau départ pour un plongeon en équilibre (perte d\'équilibre/déplacement des mains, pieds revenus sur la plateforme, contact du corps avec la plateforme) (Art. 8.6.2)\nDonner instruction au secrétariat de déduire 2 points de la note de chaque juge en cas de nouveau départ (Art. 8.6.3–8.6.4)\nDéclarer un plongeon manqué pour : une seconde tentative infructueuse, un double rebond, un dernier pas à deux pieds dans un plongeon avec élan, un envol non simultané, une vrille différant de 90° ou plus, une entrée pieds avant tête pour un plongeon tête la première, ou tête/mains avant pieds pour un plongeon pieds les premiers (Art. 8.6.5)\nVeiller à ce qu\'un plongeon manqué reçoive 0 point (Art. 8.6.6)\nPlafonner la note d\'un Juge à 4½ points si un ou les deux bras sont tenus au-dessus de la tête à l\'entrée pieds les premiers, ou en dessous de la tête à l\'entrée tête la première (Art. 8.6.7, 8.6.7.1–8.6.7.2)\nPlafonner la note d\'un Juge à 4½ points si, dans un plongeon pris au vol, la position droite n\'est pas maintenue pendant au moins un quart de saut périlleux (90°) pour les plongeons d\'au plus 1 saut périlleux, ou un demi-saut périlleux (180°) au-delà (Art. 8.6.7, 8.6.7.3)\nDéclarer un plongeon manqué si une aide a été apportée à l\'athlète après le signal de départ (Art. 8.7)';
+
+  @override
+  String get checklistAfterEventItems =>
+      'Confirmer les résultats de l\'épreuve ou de la phase par sa signature, en notant l\'heure de fin (Art. 8.8.1)\nRester disponible pendant 30 minutes après la fin d\'une phase si une phase suivante doit avoir lieu (Art. 8.8.2)';
+
+  @override
+  String get checklistAssistantSubtitle =>
+      'Les devoirs de l\'arbitre assistant';
+
+  @override
+  String get checklistSharedDuties => 'Obligations partagées';
+
+  @override
+  String get checklistSharedDutiesItems =>
+      'Recevoir la Feuille de Plongeons complète de chaque Athlète/équipe, sur le formulaire officiel, pour la phase éliminatoire et toutes les phases suivantes (Art. 6.1.1)\nVérifier chaque Feuille de Plongeons soumise, y compris les modifications, en s\'assurant qu\'elle est signée et qu\'elle indique, pour chaque plongeon dans l\'ordre d\'exécution, son Numéro, sa Position, la hauteur du tremplin/de la plateforme et le Coefficient de Difficulté ; sinon, demander dès que possible une correction à l\'athlète/l\'équipe (Art. 6.8, Art. 6.1.2, Art. 6.5)';
+
+  @override
+  String get checklistPlatform => 'Plateforme';
+
+  @override
+  String get checklistPlatformItems =>
+      'Observer les plongeons en équilibre et déclarer un nouveau départ si l\'Athlète perd l\'équilibre et déplace une ou les deux mains du bord avant, si un ou les deux pieds reviennent sur la plateforme avant l\'envol, ou si une partie du corps autre que les mains touche la plateforme après la prise de position de départ (Art. 8.6.2)\nSignaler au Juge-Arbitre tout vent violent sur la plateforme, qui peut alors accorder à l\'Athlète une reprise sans déduction de points (Art. 8.5.1)';
+
+  @override
+  String get checklistSynchronisedDiving => 'Plongeon synchronisé';
+
+  @override
+  String get checklistSynchronisedDivingItems =>
+      'Observer l\'Athlète situé de l\'autre côté de la piscine par rapport au Juge-Arbitre, en appliquant les mêmes obligations de nouveau départ/plongeon manqué que pour le plongeon individuel (Art. 8.2.2)\nDéclarer un plongeon manqué si l\'un des Athlètes exécute un plongeon d\'un Numéro ou d\'une Position différente de celle annoncée (Art. 11.2)\nDéclarer un plongeon manqué si l\'un des Athlètes entre dans l\'eau avant que l\'autre n\'ait quitté le tremplin ou la plateforme (Art. 11.3)\nDéclarer un plongeon manqué si un plongeon synchronisé au tremplin avec départ vers l\'avant n\'est pas exécuté avec élan (Art. 11.5)';
 
   @override
   String get navigationMenuSearch => 'Recherche';

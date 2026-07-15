@@ -4,14 +4,124 @@
         "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n  \n\n Navigation - Rules Menu Item",
         "type": "text"
     },
-    "navigationMenuPenalties": "Strafen",
-    "@navigationMenuPenalties": {
-        "description": "Navigation - Penalties Menu Item",
-        "type": "text"
-    },
     "navigationMenuQuizz": "Quiz",
     "@navigationMenuQuizz": {
         "description": "Navigation - Quizz Menu Item",
+        "type": "text"
+    },
+    "navigationMenuChecklist": "Checklisten",
+    "@navigationMenuChecklist": {
+        "description": "Navigation - Checklist Menu Item",
+        "type": "text"
+    },
+    "checklistMenuReferee": "Pflichten des Schiedsrichters",
+    "@checklistMenuReferee": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "checklistMenuAssistantReferee": "Pflichten des Assistenzschiedsrichters",
+    "@checklistMenuAssistantReferee": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "checklistMenuJudgePenalties": "Strafen der Kampfrichter",
+    "@checklistMenuJudgePenalties": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "penaltiesSubtitle": "Die Straffälle des Kampfrichters",
+    "@penaltiesSubtitle": {
+        "description": "Judge Penalties - Page Subtitle",
+        "type": "text"
+    },
+    "checklistSubtitle": "Die Pflichten des Schiedsrichters",
+    "@checklistSubtitle": {
+        "description": "Checklist - Page Subtitle",
+        "type": "text"
+    },
+    "checklistBeforeEvent": "Vor einem Wettkampf",
+    "@checklistBeforeEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistDuringEvent": "Während eines Wettkampfs",
+    "@checklistDuringEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistBeforeDive": "Vor einem Sprung",
+    "@checklistBeforeDive": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistDuringDive": "Während eines Sprungs",
+    "@checklistDuringDive": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistAfterEvent": "Nach einem Wettkampf",
+    "@checklistAfterEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistBeforeEventItems": "Die Sprungliste jedes Springers/Teams entgegennehmen — ein offizielles, unterschriebenes Formular, das für jeden Sprung und Durchgang in der Ausführungsreihenfolge die Sprungnummer, Position, Sprungbrett-/Plattformhöhe und den Schwierigkeitsgrad angibt — und vor der Zulassung des Springers zum Wettkampf die Übereinstimmung mit Artikel 6 bestätigen (Art. EN 8.3.1, Art. EN 6.1–6.5)\nEine verspätet eingereichte Sprungliste annehmen — innerhalb von 24 Stunden, aber spätestens 3 Stunden vor Wettkampfbeginn — und vermerken, dass der Springer/das Team World Aquatics eine Gebühr von 250 US-Dollar schuldet (Art. EN 8.3.2, Art. EN 6.6.2)\nEin Änderungsformular für die Sprungliste annehmen, das innerhalb desselben Zeitfensters von 24 bis 3 Stunden vor Wettkampfbeginn eingereicht wird, vorbehaltlich derselben Gebühr von 250 US-Dollar (Art. EN 8.3.2, Art. EN 6.7.2)\nWährend des Wettkampfs eine Änderung der Sprungliste annehmen, die vor Beginn eines Halbfinales oder Finales eingereicht wird, sofern sie spätestens 30 Minuten nach Ende des vorherigen Wettkampfabschnitts vorliegt; andernfalls muss der Springer die ursprüngliche Sprungliste ausführen (Art. EN 8.3.2, Art. EN 6.7.3)\nSicherstellen, dass jede Änderung der Sprungliste auf dem offiziellen Formular erfolgt, vom Springer/Team oder dessen Vertreter unterschrieben und dem Schiedsrichter oder dessen benanntem Assistenzschiedsrichter vorgelegt wird (Art. EN 8.3.2, Art. EN 6.7.4)\nJede eingereichte Sprungliste, einschließlich Änderungen, überprüfen; entspricht sie nicht Artikel 6, so bald wie möglich vor Beginn des Wettkampfs (oder des nächsten Abschnitts) eine Korrektur vom Springer/Team verlangen (Art. EN 8.3.2, Art. EN 6.8)\nEinen Antrag auf Ersatz eines Springers bei einem Mannschafts- oder Synchronwettkampf bearbeiten: das offizielle Ersatzformular entgegennehmen (eingereicht bis 30 Minuten vor Wettkampfbeginn, mit Nachweis der außergewöhnlichen Umstände), es dem Technischen Sprungkomitee zur Genehmigung vorlegen, oder selbst entscheiden, wenn das Komitee nicht verfügbar ist (Art. EN 6.10–6.10.3)\nNur bei Synchron- oder reinen Finalwettkämpfen einen Wechsel des in der Sprungliste genannten Springers nur dann akzeptieren, wenn: bei Olympischen Spielen oder Weltmeisterschaften von World Aquatics der Springer ohne Ersatz zurücktritt/ausscheidet, oder durch einen anderen Springer desselben Verbands über ein unterschriebenes Ersatzformular ersetzt wird, das spätestens 2 Stunden vor Wettkampfbeginn eingereicht wird; bei jedem anderen Wettkampf nur der Ersatz durch einen Springer desselben Verbands (mit demselben unterschriebenen Formular, derselben 2-Stunden-Frist) akzeptiert wird (Art. EN 6.11–6.11.2)\nDie während des Wettkampfs zu verwendende Technologie bestätigen (Art. EN 8.3.3)",
+    "@checklistBeforeEventItems": {
+        "description": "Checklist - Before an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistDuringEventItems": "Bei unvorhergesehenen Umständen eine Pause, Verschiebung oder Unterbrechung des Wettkampfs anordnen, möglichst nach einem vollständigen Durchgang (Art. EN 8.4.1)\nDen Wettkampf nach einer Unterbrechung fortsetzen und dabei die vor der Unterbrechung erzielten Punkte übertragen (Art. EN 8.4.2, 8.4.2.1)\nKann der Wettkampf nicht fortgesetzt werden, die Endergebnisse anhand der Wertungen aller Sprünge bis zum letzten vollständigen Durchgang ermitteln; kann er überhaupt nicht fortgesetzt werden, die Ergebnisse durch den Berufungsausschuss festlegen lassen (Art. EN 8.4.2.2, 8.4.2.3)\nDie Richtigkeit der Sprungliste bestätigen, wenn gemeldet wird, dass ein Sprung oder Springer falsch angesagt wurde (Art. EN 8.4.3)\nFührt ein Springer einen falsch angesagten Sprung aus, kann der Schiedsrichter die Wertungen annullieren, den richtigen Sprung sofort ansagen und ausführen lassen, und die annullierten Wertungen vom Sekretariat für einen möglichen Einspruch vermerken lassen (Art. EN 8.4.4)\nÜber einen Antrag auf Wiederholung eines Sprunges ohne Strafe bei außergewöhnlichen Umständen entscheiden; die Wertungen des ersten Sprunges vermerken lassen (Art. EN 8.4.5)\nEinen Sprung für vollständig missglückt erklären, wenn der Springer eine andere Sprungnummer als angesagt ausführt (Art. EN 8.4.6)\nBei einem Sprung in anderer Position: die Ansage wiederholen, die Höchstwertung auf 2 Punkte begrenzen, und jede höhere Wertung eines Kampfrichters korrigieren (Art. EN 8.4.7)\nJede Person ausschließen, die den Wettkampf unangemessen stört (Art. EN 8.4.8)\nEinen Kampfrichter, dessen Urteil als unbefriedigend gilt, nur am Ende eines Durchgangs oder Wettkampfabschnitts entfernen und durch den Ersatzkampfrichter ersetzen; dem Berufungsausschuss Bericht erstatten (Art. EN 8.4.9)",
+    "@checklistDuringEventItems": {
+        "description": "Checklist - During an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistBeforeDiveItems": "Bei starkem Wind eine Wiederholung ohne Punktabzug erlauben (Art. EN 8.5.1)\nSicherstellen, dass der Sprung, der Name des Springers/Teams (und die Plattformhöhe, falls zutreffend) vor jedem Sprung angesagt werden (Art. EN 8.5.2)\nDas Signal (Pfiff) erst geben, wenn der Springer seine Position eingenommen hat und die Anzeigetafel überprüft wurde; sicherstellen, dass der Springer bei Rückwärts- und Auerbach-Absprüngen nicht vor dem Signal vorrückt (Art. EN 8.5.3)\nEine Verwarnung aussprechen, wenn der Springer nicht innerhalb angemessener Zeit nach dem Signal springt (Art. EN 8.5.4)\nEinen Sprung für vollständig missglückt erklären (0 Punkte), wenn der Springer nicht innerhalb einer Minute nach der Verwarnung springt (Art. EN 8.5.5)\nEntscheiden, ob ein vor dem Signal ausgeführter Sprung wiederholt wird oder bestehen bleibt (Art. EN 8.5.6)\nEinen Sprung für vollständig missglückt erklären, wenn der Springer die Ausführung verweigert (Art. EN 8.5.7)",
+    "@checklistBeforeDiveItems": {
+        "description": "Checklist - Before a dive - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistDuringDiveItems": "Eine Wiederholung für einen Anlaufsprung (Schritt(e), dann Halt) oder Standsprung (Abbruch der Absprungbewegung nach Beugen/Pressen) erklären (Art. EN 8.6.1)\nÜber eine Wiederholung bei Handstandsprüngen entscheiden (Gleichgewichtsverlust/Handbewegung, Füße kehren zur Plattform zurück, Körperkontakt mit der Plattform) (Art. EN 8.6.2)\nDas Sekretariat anweisen, bei einer Wiederholung 2 Punkte von der Wertung jedes Kampfrichters abzuziehen (Art. EN 8.6.3–8.6.4)\nEinen Sprung für vollständig missglückt erklären bei: einem erfolglosen zweiten Versuch, einem Doppelabsprung, einem letzten Schritt auf zwei Füßen bei einem Anlaufsprung, einem nicht gleichzeitigen Absprung, einer Schraubenabweichung von 90° oder mehr, einem Eintauchen der Füße vor dem Kopf bei einem kopfwärts getauchten Sprung, oder Kopf/Hände vor den Füßen bei einem fußwärts getauchten Sprung (Art. EN 8.6.5)\nSicherstellen, dass ein missglückter Sprung 0 Punkte erhält (Art. EN 8.6.6)\nDie Wertung eines Kampfrichters auf 4,5 Punkte begrenzen, wenn ein oder beide Arme bei einem fußwärts getauchten Sprung über dem Kopf, oder bei einem kopfwärts getauchten Sprung unter dem Kopf gehalten werden (Art. EN 8.6.7, 8.6.7.1–8.6.7.2)\nDie Wertung eines Kampfrichters auf 4,5 Punkte begrenzen, wenn bei einem fliegenden Sprung die gestreckte Haltung nicht für mindestens ein Viertel Salto (90°) bei Sprüngen mit bis zu 1 Salto, oder ein halbes Salto (180°) bei mehr als 1 Salto gezeigt wird (Art. EN 8.6.7, 8.6.7.3)\nEinen Sprung für vollständig missglückt erklären, wenn dem Springer nach dem Startsignal Hilfe geleistet wurde (Art. EN 8.7)",
+    "@checklistDuringDiveItems": {
+        "description": "Checklist - During a dive - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistAfterEventItems": "Die Ergebnisse des Wettkampfs oder Abschnitts durch Unterschrift bestätigen und die Endzeit vermerken (Art. EN 8.8.1)\nNach Abschluss eines Wettkampfabschnitts 30 Minuten verfügbar bleiben, falls ein weiterer Abschnitt folgt (Art. EN 8.8.2)",
+    "@checklistAfterEventItems": {
+        "description": "Checklist - After an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistAssistantSubtitle": "Die Pflichten des Assistenzschiedsrichters",
+    "@checklistAssistantSubtitle": {
+        "description": "Assistant Referee Checklist - Page Subtitle",
+        "type": "text"
+    },
+    "checklistSharedDuties": "Gemeinsame Pflichten",
+    "@checklistSharedDuties": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistSharedDutiesItems": "Die vollständige Sprungliste jedes Springers/Teams auf dem offiziellen Formular für die Vorrunde und alle folgenden Wettkampfabschnitte entgegennehmen (Art. EN 6.1.1)\nJede eingereichte Sprungliste, einschließlich Änderungen, überprüfen und dabei sicherstellen, dass sie unterschrieben ist und für jeden Sprung in Ausführungsreihenfolge die Sprungnummer, Position, Sprungbrett-/Plattformhöhe und den Schwierigkeitsgrad angibt; andernfalls so bald wie möglich eine Korrektur vom Springer/Team verlangen (Art. EN 6.8, Art. EN 6.1.2, Art. EN 6.5)",
+    "@checklistSharedDutiesItems": {
+        "description": "Assistant Referee Checklist - Shared duties - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistPlatform": "Plattform",
+    "@checklistPlatform": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistPlatformItems": "Handstandsprünge beobachten und eine Wiederholung erklären, wenn der Springer das Gleichgewicht verliert und eine oder beide Hände von der Vorderkante bewegt, wenn ein oder beide Füße vor dem Absprung zur Plattform zurückkehren, oder wenn ein anderer Körperteil als die Hände nach Einnahme der Grundstellung die Plattform berührt (Art. EN 8.6.2)\nStarken Wind an der Plattform dem Schiedsrichter melden, der dem Springer daraufhin eine Wiederholung ohne Punktabzug gewähren kann (Art. EN 8.5.1)",
+    "@checklistPlatformItems": {
+        "description": "Assistant Referee Checklist - Platform - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistSynchronisedDiving": "Synchronspringen",
+    "@checklistSynchronisedDiving": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistSynchronisedDivingItems": "Den Springer auf der dem Schiedsrichter gegenüberliegenden Seite des Beckens beobachten und dabei dieselben Wiederholungs-/Missglückt-Pflichten wie beim Einzelspringen anwenden (Art. EN 8.2.2)\nEinen Sprung für vollständig missglückt erklären, wenn einer der Springer einen Sprung mit anderer Nummer oder Position als angesagt ausführt (Art. EN 11.2)\nEinen Sprung für vollständig missglückt erklären, wenn einer der Springer ins Wasser eintaucht, bevor der andere das Sprungbrett oder die Plattform verlassen hat (Art. EN 11.3)\nEinen Sprung für vollständig missglückt erklären, wenn ein synchroner Sprung vorwärts vom Sprungbrett nicht mit Anlauf ausgeführt wird (Art. EN 11.5)",
+    "@checklistSynchronisedDivingItems": {
+        "description": "Assistant Referee Checklist - Synchronised diving - Item list (newline-separated, one referee action per line)",
         "type": "text"
     },
     "navigationMenuSearch": "Suche",
@@ -259,7 +369,7 @@
         "description": "Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.",
         "type": "text"
     },
-   "penalty16": "Beim Synchronspringen vom Kunstbrett, wenn der Sprung nach vorne nicht mit Anlauf ausgeführt wird.",
+    "penalty16": "Beim Synchronspringen vom Kunstbrett, wenn der Sprung nach vorne nicht mit Anlauf ausgeführt wird.",
     "@penalty16": {
         "description": "Penalty 16 - 11.5 - In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.",
         "type": "text"
@@ -493,7 +603,8 @@
     "@penalty62": {
         "description": "Penalty 62 - 10.6.2 - If at entry the water’s surface is significantly disturbed.",
         "type": "text"
-    },    "quizzIntroQuestionNumber": "Anzahl der Fragen:",
+    },
+    "quizzIntroQuestionNumber": "Anzahl der Fragen:",
     "@quizzIntroQuestionNumber": {
         "description": "Quizz - Intro Question Number",
         "type": "text"
@@ -518,12 +629,12 @@
         "description": "About - Contact Link",
         "type": "text"
     },
-     "aboutRulesLocal": "Deutsche Vorschriften: DSV vom 26. Mai 2018",
-     "@aboutRulesLocal": {
-         "description": "About - Rules Local",
-         "type": "text"
-     },
-   "aboutRulesReference": "Regelreferenz zur App: World Aquatics - 18 fev 2026",
+    "aboutRulesLocal": "Deutsche Vorschriften: DSV vom 26. Mai 2018",
+    "@aboutRulesLocal": {
+        "description": "About - Rules Local",
+        "type": "text"
+    },
+    "aboutRulesReference": "Regelreferenz zur App: World Aquatics - 18 fev 2026",
     "@aboutRulesReference": {
         "description": "About - Rules Reference",
         "type": "text"

@@ -21,6 +21,6 @@ void main() {
 
     final bottomNavigationBar =
         tester.widget<BottomNavigationBar>(find.byType(BottomNavigationBar));
-    expect(bottomNavigationBar.items, hasLength(4));
+    expect(bottomNavigationBar.items, hasLength(5));
   });
 }

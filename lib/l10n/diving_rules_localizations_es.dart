@@ -12,10 +12,86 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navigationMenuRules => 'Reglas';
 
   @override
-  String get navigationMenuPenalties => 'Sanciones';
+  String get navigationMenuQuizz => 'Cuestionario';
 
   @override
-  String get navigationMenuQuizz => 'Cuestionario';
+  String get navigationMenuChecklist => 'Listas de verificación';
+
+  @override
+  String get checklistMenuReferee => 'Funciones del Juez Árbitro';
+
+  @override
+  String get checklistMenuAssistantReferee =>
+      'Funciones del Asistente del Juez Árbitro';
+
+  @override
+  String get checklistMenuJudgePenalties => 'Penalidades de los jueces';
+
+  @override
+  String get penaltiesSubtitle => 'Los casos de penalización del juez';
+
+  @override
+  String get checklistSubtitle => 'Las funciones del Juez Árbitro';
+
+  @override
+  String get checklistBeforeEvent => 'Antes de una competición';
+
+  @override
+  String get checklistDuringEvent => 'Durante una competición';
+
+  @override
+  String get checklistBeforeDive => 'Antes de un salto';
+
+  @override
+  String get checklistDuringDive => 'Durante un salto';
+
+  @override
+  String get checklistAfterEvent => 'Después de una competición';
+
+  @override
+  String get checklistBeforeEventItems =>
+      'Recibir la hoja de saltos de cada saltador/equipo — un formulario oficial y firmado que indique, para cada salto y en el orden de ejecución, su número, posición, altura del trampolín/plataforma y Coeficiente de Dificultad — y verificar su conformidad con el Artículo 6 antes de admitir al saltador en la competición (Art. EN 8.3.1, Art. EN 6.1–6.5)\nAceptar una hoja de saltos presentada tarde — dentro de las 24 horas pero a más tardar 3 horas antes del inicio de la competición — dejando constancia de que el saltador/equipo debe a World Aquatics una tasa de 250 dólares estadounidenses (Art. EN 8.3.2, Art. EN 6.6.2)\nAceptar un formulario de cambio de saltos presentado dentro de esa misma ventana de 24 a 3 horas antes de la competición, sujeto a la misma tasa de 250 dólares (Art. EN 8.3.2, Art. EN 6.7.2)\nDurante la competición, aceptar un cambio de saltos presentado antes del inicio de una semifinal o final, siempre que se presente a más tardar 30 minutos después del final de la fase anterior; de lo contrario, el saltador deberá ejecutar la hoja de saltos original (Art. EN 8.3.2, Art. EN 6.7.3)\nVerificar que todo cambio de saltos se realice en el formulario oficial, firmado por el saltador/equipo o su representante, y se entregue al Juez Árbitro o a su Asistente designado (Art. EN 8.3.2, Art. EN 6.7.4)\nRevisar cada hoja de saltos presentada, incluidas las modificaciones; si no cumple con el Artículo 6, solicitar cuanto antes una corrección al saltador/equipo antes del inicio de la competición (o de la siguiente fase) (Art. EN 8.3.2, Art. EN 6.8)\nTramitar una solicitud de sustitución de saltador en una competición por equipos o sincronizada: recibir el formulario oficial de sustitución (presentado hasta 30 minutos antes del inicio de la competición, con prueba de la circunstancia excepcional), remitirlo al Comité Técnico de Saltos para su aprobación, o decidir directamente si el Comité no está disponible (Art. EN 6.10–6.10.3)\nSolo para competiciones sincronizadas o de final directa, aceptar un cambio de saltador en la hoja de saltos únicamente si: en los Juegos Olímpicos o Campeonatos del Mundo de World Aquatics, el saltador se retira sin sustitución, o es sustituido por otro saltador de la misma Federación mediante un formulario de sustitución firmado, presentado a más tardar 2 horas antes del inicio de la competición; en cualquier otra competición, solo se acepta la sustitución por un saltador de la misma Federación, con el mismo formulario firmado y el mismo plazo de 2 horas (Art. EN 6.11–6.11.2)\nValidar la tecnología que se utilizará durante la competición (Art. EN 8.3.3)';
+
+  @override
+  String get checklistDuringEventItems =>
+      'Declarar una pausa, aplazamiento o interrupción de la competición ante circunstancias imprevistas, si es posible después de una ronda completa de saltos (Art. EN 8.4.1)\nReanudar la competición tras una interrupción, manteniendo los puntos obtenidos antes de la interrupción (Art. EN 8.4.2, 8.4.2.1)\nSi la competición no puede continuar, determinar los resultados finales con las puntuaciones de todos los saltos hasta la última ronda completa; si no puede proseguir en absoluto, hacer que el Jurado de Apelación determine los resultados (Art. EN 8.4.2.2, 8.4.2.3)\nConfirmar la exactitud de la hoja de saltos si se le informa de que un salto o saltador fue anunciado incorrectamente (Art. EN 8.4.3)\nSi un saltador ejecuta un salto anunciado incorrectamente, el Juez Árbitro puede anular las puntuaciones, hacer anunciar y ejecutar de inmediato el salto correcto, y hacer que la Secretaría anote las puntuaciones anuladas por si hubiera una reclamación (Art. EN 8.4.4)\nResolver una solicitud de repetición de un salto sin penalización en circunstancias excepcionales; hacer anotar las puntuaciones del primer salto (Art. EN 8.4.5)\nDeclarar salto fallado si el saltador ejecuta un número de salto distinto al anunciado (Art. EN 8.4.6)\nAnte un salto ejecutado en una posición distinta: repetir el anuncio, limitar la puntuación máxima a 2 puntos, y corregir cualquier puntuación superior otorgada por un juez (Art. EN 8.4.7)\nExcluir a cualquier persona que perturbe de forma injustificada la competición (Art. EN 8.4.8)\nRetirar y sustituir por el juez de reserva a cualquier juez cuyo criterio se considere insatisfactorio, solo al final de una ronda o sesión; presentar un informe al Jurado de Apelación (Art. EN 8.4.9)';
+
+  @override
+  String get checklistBeforeDiveItems =>
+      'Permitir un reinicio sin deducción de puntos en caso de viento fuerte (Art. EN 8.5.1)\nVerificar que el salto y el nombre del saltador/equipo (y la altura de la plataforma, si procede) se anuncien antes de cada salto (Art. EN 8.5.2)\nDar la señal (silbato) solo cuando el saltador esté en posición y se haya comprobado el panel indicador; asegurarse de que el saltador no avance antes de la señal en las salidas hacia atrás y en las de entrada retornada (Art. EN 8.5.3)\nEmitir un aviso si el saltador no salta en un tiempo razonable tras la señal (Art. EN 8.5.4)\nDeclarar salto fallado (0 puntos) si el saltador no salta dentro del minuto siguiente al aviso (Art. EN 8.5.5)\nDecidir si un salto ejecutado antes de la señal debe repetirse o mantenerse (Art. EN 8.5.6)\nDeclarar salto fallado si el saltador se niega a saltar (Art. EN 8.5.7)';
+
+  @override
+  String get checklistDuringDiveItems =>
+      'Declarar un reinicio en un salto con carrera (pasos y luego parada) o sin carrera (detención del movimiento de despegue tras flexionar/presionar) (Art. EN 8.6.1)\nResolver sobre un reinicio en saltos en equilibrio (pérdida de equilibrio/movimiento de las manos, pies que regresan a la plataforma, contacto del cuerpo con la plataforma) (Art. EN 8.6.2)\nOrdenar a la Secretaría que deduzca 2 puntos de la nota de cada juez cuando haya un reinicio (Art. EN 8.6.3–8.6.4)\nDeclarar salto fallado por: un segundo intento infructuoso, un doble bote, un último paso a un solo pie en salto con carrera, un despegue no simultáneo, un tirabuzón que difiera en 90° o más, una entrada de pies antes que la cabeza en un salto de cabeza, o de cabeza/manos antes que los pies en un salto de pie (Art. EN 8.6.5)\nAsegurarse de que un salto fallado reciba 0 puntos (Art. EN 8.6.6)\nLimitar la nota de un juez a 4½ puntos si uno o ambos brazos se mantienen por encima de la cabeza en una entrada de pie, o por debajo de la cabeza en una entrada de cabeza (Art. EN 8.6.7, 8.6.7.1–8.6.7.2)\nLimitar la nota de un juez a 4½ puntos si, en un salto al vuelo, la posición estirada no se mantiene durante al menos un cuarto de mortal (90°) en saltos de hasta 1 mortal, o medio mortal (180°) en saltos de más de 1 mortal (Art. EN 8.6.7, 8.6.7.3)\nDeclarar salto fallado si se ha prestado ayuda al saltador después de la señal de salida (Art. EN 8.7)';
+
+  @override
+  String get checklistAfterEventItems =>
+      'Confirmar los resultados de la competición o fase con su firma, anotando la hora de finalización (Art. EN 8.8.1)\nPermanecer disponible durante 30 minutos tras el final de una fase si va a celebrarse una fase posterior (Art. EN 8.8.2)';
+
+  @override
+  String get checklistAssistantSubtitle =>
+      'Las funciones del Asistente del Juez Árbitro';
+
+  @override
+  String get checklistSharedDuties => 'Funciones compartidas';
+
+  @override
+  String get checklistSharedDutiesItems =>
+      'Recibir la hoja de saltos completa de cada saltador/equipo, en el formulario oficial, para la fase eliminatoria y todas las fases siguientes (Art. EN 6.1.1)\nRevisar cada hoja de saltos presentada, incluidas las modificaciones, comprobando que esté firmada e indique, para cada salto en el orden de ejecución, su número, posición, altura del trampolín/plataforma y Coeficiente de Dificultad; si no es así, solicitar cuanto antes una corrección al saltador/equipo (Art. EN 6.8, Art. EN 6.1.2, Art. EN 6.5)';
+
+  @override
+  String get checklistPlatform => 'Plataforma';
+
+  @override
+  String get checklistPlatformItems =>
+      'Observar los saltos en equilibrio y declarar un reinicio si el saltador pierde el equilibrio y desplaza una o ambas manos del borde delantero, si uno o ambos pies regresan a la plataforma antes del despegue, o si alguna parte del cuerpo distinta de las manos toca la plataforma tras adoptar la posición de salida (Art. EN 8.6.2)\nAdvertir al Juez Árbitro de vientos fuertes en la plataforma, quien podrá conceder al saltador un reinicio sin deducción de puntos (Art. EN 8.5.1)';
+
+  @override
+  String get checklistSynchronisedDiving => 'Saltos sincronizados';
+
+  @override
+  String get checklistSynchronisedDivingItems =>
+      'Observar al saltador situado al otro lado de la piscina respecto al Juez Árbitro, aplicando las mismas funciones de reinicio/salto fallado que en el salto individual (Art. EN 8.2.2)\nDeclarar salto fallado si alguno de los saltadores ejecuta un salto de número o posición distinta a la anunciada (Art. EN 11.2)\nDeclarar salto fallado si alguno de los saltadores entra al agua antes de que el otro haya abandonado el trampolín o la plataforma (Art. EN 11.3)\nDeclarar salto fallado si un salto sincronizado de trampolín con entrada hacia adelante no se ejecuta con carrera (Art. EN 11.5)';
 
   @override
   String get navigationMenuSearch => 'Buscar';
@@ -483,10 +559,85 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
   String get navigationMenuRules => 'Reglas';
 
   @override
-  String get navigationMenuPenalties => 'Sanciones';
+  String get navigationMenuQuizz => 'Cuestionario';
 
   @override
-  String get navigationMenuQuizz => 'Cuestionario';
+  String get navigationMenuChecklist => 'Listas de verificación';
+
+  @override
+  String get checklistMenuReferee => 'Funciones del Árbitro';
+
+  @override
+  String get checklistMenuAssistantReferee => 'Funciones del Árbitro Asistente';
+
+  @override
+  String get checklistMenuJudgePenalties => 'Penalidades de los jueces';
+
+  @override
+  String get penaltiesSubtitle => 'Los casos de penalidad del juez';
+
+  @override
+  String get checklistSubtitle => 'Las funciones del Árbitro';
+
+  @override
+  String get checklistBeforeEvent => 'Antes de una competencia';
+
+  @override
+  String get checklistDuringEvent => 'Durante una competencia';
+
+  @override
+  String get checklistBeforeDive => 'Antes de un clavado';
+
+  @override
+  String get checklistDuringDive => 'Durante un clavado';
+
+  @override
+  String get checklistAfterEvent => 'Después de una competencia';
+
+  @override
+  String get checklistBeforeEventItems =>
+      'Recibir la lista de clavados de cada clavadista/equipo — un formulario oficial y firmado que indique, para cada clavado y en el orden de ejecución, su número, posición, altura del trampolín/plataforma y grado de dificultad — y verificar su conformidad con el Artículo 6 antes de admitir al clavadista en la competencia (Art. EN 8.3.1, Art. EN 6.1–6.5)\nAceptar una lista de clavados presentada tarde — dentro de las 24 horas pero a más tardar 3 horas antes del inicio de la competencia — dejando constancia de que el clavadista/equipo debe a World Aquatics una cuota de 250 dólares estadounidenses (Art. EN 8.3.2, Art. EN 6.6.2)\nAceptar un formulario de cambio de clavados presentado dentro de esa misma ventana de 24 a 3 horas antes de la competencia, sujeto a la misma cuota de 250 dólares (Art. EN 8.3.2, Art. EN 6.7.2)\nDurante la competencia, aceptar un cambio de clavados presentado antes del inicio de una semifinal o final, siempre que se presente a más tardar 30 minutos después del final de la fase anterior; de lo contrario, el clavadista deberá ejecutar la lista de clavados original (Art. EN 8.3.2, Art. EN 6.7.3)\nVerificar que todo cambio de clavados se realice en el formulario oficial, firmado por el clavadista/equipo o su representante, y se entregue al Árbitro o a su Asistente designado (Art. EN 8.3.2, Art. EN 6.7.4)\nRevisar cada lista de clavados presentada, incluidas las modificaciones; si no cumple con el Artículo 6, solicitar cuanto antes una corrección al clavadista/equipo antes del inicio de la competencia (o de la siguiente fase) (Art. EN 8.3.2, Art. EN 6.8)\nTramitar una solicitud de sustitución de clavadista en una competencia por equipos o sincronizada: recibir el formulario oficial de sustitución (presentado hasta 30 minutos antes del inicio de la competencia, con prueba de la circunstancia excepcional), remitirlo a la Comisión del TDC para su aprobación, o decidir directamente si la Comisión no está disponible (Art. EN 6.10–6.10.3)\nSolo para competencias sincronizadas o de final directa, aceptar un cambio de clavadista en la lista de clavados únicamente si: en los Juegos Olímpicos o Campeonatos del Mundo de World Aquatics, el clavadista se retira sin sustitución, o es sustituido por otro clavadista de la misma Federación mediante un formulario de sustitución firmado, presentado a más tardar 2 horas antes del inicio de la competencia; en cualquier otra competencia, solo se acepta la sustitución por un clavadista de la misma Federación, con el mismo formulario firmado y el mismo plazo de 2 horas (Art. EN 6.11–6.11.2)\nValidar la tecnología que se utilizará durante la competencia (Art. EN 8.3.3)';
+
+  @override
+  String get checklistDuringEventItems =>
+      'Declarar una pausa, aplazamiento o suspensión de la competencia ante circunstancias imprevistas, si es posible después de una ronda completa de clavados (Art. EN 8.4.1)\nReanudar la competencia tras una interrupción, manteniendo los puntos obtenidos antes de la interrupción (Art. EN 8.4.2, 8.4.2.1)\nSi la competencia no puede continuar, determinar los resultados finales con las puntuaciones de todos los clavados hasta la última ronda completa; si no puede proseguir en absoluto, hacer que el Jurado de Apelación determine los resultados (Art. EN 8.4.2.2, 8.4.2.3)\nConfirmar la exactitud de la lista de clavados si se le informa de que un clavado o clavadista fue anunciado incorrectamente (Art. EN 8.4.3)\nSi un clavadista ejecuta un clavado anunciado incorrectamente, el Árbitro puede cancelar las calificaciones, hacer anunciar y ejecutar de inmediato el clavado correcto, y hacer que el Secretariado anote las calificaciones canceladas por si hubiera una reclamación (Art. EN 8.4.4)\nResolver una solicitud de repetición de un clavado sin penalización en circunstancias excepcionales; hacer anotar las calificaciones del primer clavado (Art. EN 8.4.5)\nDeclarar clavado fallado si el clavadista ejecuta un número de clavado distinto al anunciado (Art. EN 8.4.6)\nAnte un clavado ejecutado en una posición distinta: repetir el anuncio, limitar la calificación máxima a 2 puntos, y corregir cualquier calificación superior otorgada por un juez (Art. EN 8.4.7)\nExcluir a cualquier persona que perturbe de forma injustificada la competencia (Art. EN 8.4.8)\nRetirar y sustituir por el juez de reserva a cualquier juez cuyo criterio se considere insatisfactorio, solo al final de una ronda o sesión; presentar un informe al Jurado de Apelación (Art. EN 8.4.9)';
+
+  @override
+  String get checklistBeforeDiveItems =>
+      'Permitir un reinicio sin deducción de puntos en caso de viento fuerte (Art. EN 8.5.1)\nVerificar que el clavado y el nombre del clavadista/equipo (y la altura de la plataforma, si procede) se anuncien antes de cada clavado (Art. EN 8.5.2)\nDar la señal solo cuando el clavadista esté en posición y se haya comprobado el tablero indicador; asegurarse de que el clavadista no avance antes de la señal en las salidas hacia atrás y en las de entrada retornada (Art. EN 8.5.3)\nEmitir una advertencia si el clavadista no salta en un tiempo razonable tras la señal (Art. EN 8.5.4)\nDeclarar clavado fallado (0 puntos) si el clavadista no salta dentro del minuto siguiente a la advertencia (Art. EN 8.5.5)\nDecidir si un clavado ejecutado antes de la señal debe repetirse o mantenerse (Art. EN 8.5.6)\nDeclarar clavado fallado si el clavadista se niega a saltar (Art. EN 8.5.7)';
+
+  @override
+  String get checklistDuringDiveItems =>
+      'Declarar un reinicio en un clavado con carrera (pasos y luego parada) o sin carrera (detención del movimiento de despegue tras flexionar/presionar) (Art. EN 8.6.1)\nResolver sobre un reinicio en clavados de parado de manos (pérdida de equilibrio/movimiento de las manos, pies que regresan a la plataforma, contacto del cuerpo con la plataforma) (Art. EN 8.6.2)\nOrdenar al Secretariado que deduzca 2 puntos de la calificación de cada juez cuando haya un reinicio (Art. EN 8.6.3–8.6.4)\nDeclarar clavado fallado por: un segundo intento infructuoso, un doble bote, un último paso a un solo pie en clavado con carrera, un despegue no simultáneo, un giro que difiera en 90° o más, una entrada de pies antes que la cabeza en un clavado de cabeza, o de cabeza/manos antes que los pies en un clavado de pie (Art. EN 8.6.5)\nAsegurarse de que un clavado fallado reciba 0 puntos (Art. EN 8.6.6)\nLimitar la calificación de un juez a 4½ puntos si uno o ambos brazos se mantienen por encima de la cabeza en una entrada de pie, o por debajo de la cabeza en una entrada de cabeza (Art. EN 8.6.7, 8.6.7.1–8.6.7.2)\nLimitar la calificación de un juez a 4½ puntos si, en un clavado al vuelo, la posición extendida no se mantiene durante al menos un cuarto de salto mortal (90°) en clavados de hasta 1 salto mortal, o medio salto mortal (180°) en clavados de más de 1 salto mortal (Art. EN 8.6.7, 8.6.7.3)\nDeclarar clavado fallado si se ha prestado ayuda al clavadista después de la señal de inicio (Art. EN 8.7)';
+
+  @override
+  String get checklistAfterEventItems =>
+      'Confirmar los resultados de la competencia o fase con su firma, anotando la hora de finalización (Art. EN 8.8.1)\nPermanecer disponible durante 30 minutos tras el final de una fase si va a celebrarse una fase posterior (Art. EN 8.8.2)';
+
+  @override
+  String get checklistAssistantSubtitle =>
+      'Las funciones del Árbitro Asistente';
+
+  @override
+  String get checklistSharedDuties => 'Funciones compartidas';
+
+  @override
+  String get checklistSharedDutiesItems =>
+      'Recibir la lista de clavados completa de cada clavadista/equipo, en el formulario oficial, para la fase eliminatoria y todas las fases siguientes (Art. EN 6.1.1)\nRevisar cada lista de clavados presentada, incluidas las modificaciones, comprobando que esté firmada e indique, para cada clavado en el orden de ejecución, su número, posición, altura del trampolín/plataforma y grado de dificultad; si no es así, solicitar cuanto antes una corrección al clavadista/equipo (Art. EN 6.8, Art. EN 6.1.2, Art. EN 6.5)';
+
+  @override
+  String get checklistPlatform => 'Plataforma';
+
+  @override
+  String get checklistPlatformItems =>
+      'Observar los clavados de parado de manos y declarar un reinicio si el clavadista pierde el equilibrio y desplaza una o ambas manos del borde delantero, si uno o ambos pies regresan a la plataforma antes del despegue, o si alguna parte del cuerpo distinta de las manos toca la plataforma tras adoptar la posición de salida (Art. EN 8.6.2)\nAdvertir al Árbitro de vientos fuertes en la plataforma, quien podrá conceder al clavadista un reinicio sin deducción de puntos (Art. EN 8.5.1)';
+
+  @override
+  String get checklistSynchronisedDiving => 'Clavados sincronizados';
+
+  @override
+  String get checklistSynchronisedDivingItems =>
+      'Observar al clavadista situado al otro lado de la alberca respecto al Árbitro, aplicando las mismas funciones de reinicio/clavado fallado que en el clavado individual (Art. EN 8.2.2)\nDeclarar clavado fallado si alguno de los clavadistas ejecuta un clavado de número o posición distinta a la anunciada (Art. EN 11.2)\nDeclarar clavado fallado si alguno de los clavadistas entra al agua antes de que el otro haya abandonado el trampolín o la plataforma (Art. EN 11.3)\nDeclarar clavado fallado si un clavado sincronizado de trampolín con entrada hacia adelante no se ejecuta con carrera (Art. EN 11.5)';
 
   @override
   String get navigationMenuSearch => 'Buscar';

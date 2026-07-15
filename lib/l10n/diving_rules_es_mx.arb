@@ -4,14 +4,124 @@
         "description": "Localizable.strings\n  Diving Rules\n\n  Created by Benoit SUZANNE on 22/03/2021.\n  \n\n Navigation - Rules Menu Item",
         "type": "text"
     },
-    "navigationMenuPenalties": "Sanciones",
-    "@navigationMenuPenalties": {
-        "description": "Navigation - Penalties Menu Item",
-        "type": "text"
-    },
     "navigationMenuQuizz": "Cuestionario",
     "@navigationMenuQuizz": {
         "description": "Navigation - Quizz Menu Item",
+        "type": "text"
+    },
+    "navigationMenuChecklist": "Listas de verificación",
+    "@navigationMenuChecklist": {
+        "description": "Navigation - Checklist Menu Item",
+        "type": "text"
+    },
+    "checklistMenuReferee": "Funciones del Árbitro",
+    "@checklistMenuReferee": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "checklistMenuAssistantReferee": "Funciones del Árbitro Asistente",
+    "@checklistMenuAssistantReferee": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "checklistMenuJudgePenalties": "Penalidades de los jueces",
+    "@checklistMenuJudgePenalties": {
+        "description": "Checklist Menu - list item text and destination page AppBar title (shared string)",
+        "type": "text"
+    },
+    "penaltiesSubtitle": "Los casos de penalidad del juez",
+    "@penaltiesSubtitle": {
+        "description": "Judge Penalties - Page Subtitle",
+        "type": "text"
+    },
+    "checklistSubtitle": "Las funciones del Árbitro",
+    "@checklistSubtitle": {
+        "description": "Checklist - Page Subtitle",
+        "type": "text"
+    },
+    "checklistBeforeEvent": "Antes de una competencia",
+    "@checklistBeforeEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistDuringEvent": "Durante una competencia",
+    "@checklistDuringEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistBeforeDive": "Antes de un clavado",
+    "@checklistBeforeDive": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistDuringDive": "Durante un clavado",
+    "@checklistDuringDive": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistAfterEvent": "Después de una competencia",
+    "@checklistAfterEvent": {
+        "description": "Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistBeforeEventItems": "Recibir la lista de clavados de cada clavadista/equipo — un formulario oficial y firmado que indique, para cada clavado y en el orden de ejecución, su número, posición, altura del trampolín/plataforma y grado de dificultad — y verificar su conformidad con el Artículo 6 antes de admitir al clavadista en la competencia (Art. EN 8.3.1, Art. EN 6.1–6.5)\nAceptar una lista de clavados presentada tarde — dentro de las 24 horas pero a más tardar 3 horas antes del inicio de la competencia — dejando constancia de que el clavadista/equipo debe a World Aquatics una cuota de 250 dólares estadounidenses (Art. EN 8.3.2, Art. EN 6.6.2)\nAceptar un formulario de cambio de clavados presentado dentro de esa misma ventana de 24 a 3 horas antes de la competencia, sujeto a la misma cuota de 250 dólares (Art. EN 8.3.2, Art. EN 6.7.2)\nDurante la competencia, aceptar un cambio de clavados presentado antes del inicio de una semifinal o final, siempre que se presente a más tardar 30 minutos después del final de la fase anterior; de lo contrario, el clavadista deberá ejecutar la lista de clavados original (Art. EN 8.3.2, Art. EN 6.7.3)\nVerificar que todo cambio de clavados se realice en el formulario oficial, firmado por el clavadista/equipo o su representante, y se entregue al Árbitro o a su Asistente designado (Art. EN 8.3.2, Art. EN 6.7.4)\nRevisar cada lista de clavados presentada, incluidas las modificaciones; si no cumple con el Artículo 6, solicitar cuanto antes una corrección al clavadista/equipo antes del inicio de la competencia (o de la siguiente fase) (Art. EN 8.3.2, Art. EN 6.8)\nTramitar una solicitud de sustitución de clavadista en una competencia por equipos o sincronizada: recibir el formulario oficial de sustitución (presentado hasta 30 minutos antes del inicio de la competencia, con prueba de la circunstancia excepcional), remitirlo a la Comisión del TDC para su aprobación, o decidir directamente si la Comisión no está disponible (Art. EN 6.10–6.10.3)\nSolo para competencias sincronizadas o de final directa, aceptar un cambio de clavadista en la lista de clavados únicamente si: en los Juegos Olímpicos o Campeonatos del Mundo de World Aquatics, el clavadista se retira sin sustitución, o es sustituido por otro clavadista de la misma Federación mediante un formulario de sustitución firmado, presentado a más tardar 2 horas antes del inicio de la competencia; en cualquier otra competencia, solo se acepta la sustitución por un clavadista de la misma Federación, con el mismo formulario firmado y el mismo plazo de 2 horas (Art. EN 6.11–6.11.2)\nValidar la tecnología que se utilizará durante la competencia (Art. EN 8.3.3)",
+    "@checklistBeforeEventItems": {
+        "description": "Checklist - Before an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistDuringEventItems": "Declarar una pausa, aplazamiento o suspensión de la competencia ante circunstancias imprevistas, si es posible después de una ronda completa de clavados (Art. EN 8.4.1)\nReanudar la competencia tras una interrupción, manteniendo los puntos obtenidos antes de la interrupción (Art. EN 8.4.2, 8.4.2.1)\nSi la competencia no puede continuar, determinar los resultados finales con las puntuaciones de todos los clavados hasta la última ronda completa; si no puede proseguir en absoluto, hacer que el Jurado de Apelación determine los resultados (Art. EN 8.4.2.2, 8.4.2.3)\nConfirmar la exactitud de la lista de clavados si se le informa de que un clavado o clavadista fue anunciado incorrectamente (Art. EN 8.4.3)\nSi un clavadista ejecuta un clavado anunciado incorrectamente, el Árbitro puede cancelar las calificaciones, hacer anunciar y ejecutar de inmediato el clavado correcto, y hacer que el Secretariado anote las calificaciones canceladas por si hubiera una reclamación (Art. EN 8.4.4)\nResolver una solicitud de repetición de un clavado sin penalización en circunstancias excepcionales; hacer anotar las calificaciones del primer clavado (Art. EN 8.4.5)\nDeclarar clavado fallado si el clavadista ejecuta un número de clavado distinto al anunciado (Art. EN 8.4.6)\nAnte un clavado ejecutado en una posición distinta: repetir el anuncio, limitar la calificación máxima a 2 puntos, y corregir cualquier calificación superior otorgada por un juez (Art. EN 8.4.7)\nExcluir a cualquier persona que perturbe de forma injustificada la competencia (Art. EN 8.4.8)\nRetirar y sustituir por el juez de reserva a cualquier juez cuyo criterio se considere insatisfactorio, solo al final de una ronda o sesión; presentar un informe al Jurado de Apelación (Art. EN 8.4.9)",
+    "@checklistDuringEventItems": {
+        "description": "Checklist - During an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistBeforeDiveItems": "Permitir un reinicio sin deducción de puntos en caso de viento fuerte (Art. EN 8.5.1)\nVerificar que el clavado y el nombre del clavadista/equipo (y la altura de la plataforma, si procede) se anuncien antes de cada clavado (Art. EN 8.5.2)\nDar la señal solo cuando el clavadista esté en posición y se haya comprobado el tablero indicador; asegurarse de que el clavadista no avance antes de la señal en las salidas hacia atrás y en las de entrada retornada (Art. EN 8.5.3)\nEmitir una advertencia si el clavadista no salta en un tiempo razonable tras la señal (Art. EN 8.5.4)\nDeclarar clavado fallado (0 puntos) si el clavadista no salta dentro del minuto siguiente a la advertencia (Art. EN 8.5.5)\nDecidir si un clavado ejecutado antes de la señal debe repetirse o mantenerse (Art. EN 8.5.6)\nDeclarar clavado fallado si el clavadista se niega a saltar (Art. EN 8.5.7)",
+    "@checklistBeforeDiveItems": {
+        "description": "Checklist - Before a dive - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistDuringDiveItems": "Declarar un reinicio en un clavado con carrera (pasos y luego parada) o sin carrera (detención del movimiento de despegue tras flexionar/presionar) (Art. EN 8.6.1)\nResolver sobre un reinicio en clavados de parado de manos (pérdida de equilibrio/movimiento de las manos, pies que regresan a la plataforma, contacto del cuerpo con la plataforma) (Art. EN 8.6.2)\nOrdenar al Secretariado que deduzca 2 puntos de la calificación de cada juez cuando haya un reinicio (Art. EN 8.6.3–8.6.4)\nDeclarar clavado fallado por: un segundo intento infructuoso, un doble bote, un último paso a un solo pie en clavado con carrera, un despegue no simultáneo, un giro que difiera en 90° o más, una entrada de pies antes que la cabeza en un clavado de cabeza, o de cabeza/manos antes que los pies en un clavado de pie (Art. EN 8.6.5)\nAsegurarse de que un clavado fallado reciba 0 puntos (Art. EN 8.6.6)\nLimitar la calificación de un juez a 4½ puntos si uno o ambos brazos se mantienen por encima de la cabeza en una entrada de pie, o por debajo de la cabeza en una entrada de cabeza (Art. EN 8.6.7, 8.6.7.1–8.6.7.2)\nLimitar la calificación de un juez a 4½ puntos si, en un clavado al vuelo, la posición extendida no se mantiene durante al menos un cuarto de salto mortal (90°) en clavados de hasta 1 salto mortal, o medio salto mortal (180°) en clavados de más de 1 salto mortal (Art. EN 8.6.7, 8.6.7.3)\nDeclarar clavado fallado si se ha prestado ayuda al clavadista después de la señal de inicio (Art. EN 8.7)",
+    "@checklistDuringDiveItems": {
+        "description": "Checklist - During a dive - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistAfterEventItems": "Confirmar los resultados de la competencia o fase con su firma, anotando la hora de finalización (Art. EN 8.8.1)\nPermanecer disponible durante 30 minutos tras el final de una fase si va a celebrarse una fase posterior (Art. EN 8.8.2)",
+    "@checklistAfterEventItems": {
+        "description": "Checklist - After an event - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistAssistantSubtitle": "Las funciones del Árbitro Asistente",
+    "@checklistAssistantSubtitle": {
+        "description": "Assistant Referee Checklist - Page Subtitle",
+        "type": "text"
+    },
+    "checklistSharedDuties": "Funciones compartidas",
+    "@checklistSharedDuties": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistSharedDutiesItems": "Recibir la lista de clavados completa de cada clavadista/equipo, en el formulario oficial, para la fase eliminatoria y todas las fases siguientes (Art. EN 6.1.1)\nRevisar cada lista de clavados presentada, incluidas las modificaciones, comprobando que esté firmada e indique, para cada clavado en el orden de ejecución, su número, posición, altura del trampolín/plataforma y grado de dificultad; si no es así, solicitar cuanto antes una corrección al clavadista/equipo (Art. EN 6.8, Art. EN 6.1.2, Art. EN 6.5)",
+    "@checklistSharedDutiesItems": {
+        "description": "Assistant Referee Checklist - Shared duties - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistPlatform": "Plataforma",
+    "@checklistPlatform": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistPlatformItems": "Observar los clavados de parado de manos y declarar un reinicio si el clavadista pierde el equilibrio y desplaza una o ambas manos del borde delantero, si uno o ambos pies regresan a la plataforma antes del despegue, o si alguna parte del cuerpo distinta de las manos toca la plataforma tras adoptar la posición de salida (Art. EN 8.6.2)\nAdvertir al Árbitro de vientos fuertes en la plataforma, quien podrá conceder al clavadista un reinicio sin deducción de puntos (Art. EN 8.5.1)",
+    "@checklistPlatformItems": {
+        "description": "Assistant Referee Checklist - Platform - Item list (newline-separated, one referee action per line)",
+        "type": "text"
+    },
+    "checklistSynchronisedDiving": "Clavados sincronizados",
+    "@checklistSynchronisedDiving": {
+        "description": "Assistant Referee Checklist - Section Title",
+        "type": "text"
+    },
+    "checklistSynchronisedDivingItems": "Observar al clavadista situado al otro lado de la alberca respecto al Árbitro, aplicando las mismas funciones de reinicio/clavado fallado que en el clavado individual (Art. EN 8.2.2)\nDeclarar clavado fallado si alguno de los clavadistas ejecuta un clavado de número o posición distinta a la anunciada (Art. EN 11.2)\nDeclarar clavado fallado si alguno de los clavadistas entra al agua antes de que el otro haya abandonado el trampolín o la plataforma (Art. EN 11.3)\nDeclarar clavado fallado si un clavado sincronizado de trampolín con entrada hacia adelante no se ejecuta con carrera (Art. EN 11.5)",
+    "@checklistSynchronisedDivingItems": {
+        "description": "Assistant Referee Checklist - Synchronised diving - Item list (newline-separated, one referee action per line)",
         "type": "text"
     },
     "navigationMenuSearch": "Buscar",
@@ -254,12 +364,12 @@
         "description": "Penalty 14 - 11.2 - In synchronised diving, if an Athlete, or both Athletes, perform a dive of a Position other than that announced.",
         "type": "text"
     },
-     "penalty15": "En clavado sincronizado, si uno de los clavadistas entra en la superficie del agua antes de que el otro abandone el trampolín o la plataforma.",
-     "@penalty15": {
-         "description": "Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.",
-       "type": "text"
+    "penalty15": "En clavado sincronizado, si uno de los clavadistas entra en la superficie del agua antes de que el otro abandone el trampolín o la plataforma.",
+    "@penalty15": {
+        "description": "Penalty 15 - 11.3 - In synchronised diving, if either Athlete enters the surface of the water before the other Athlete leaves the springboard or platform.",
+        "type": "text"
     },
-   "penalty16": "En un salto de trampolín sincronizado, si un salto de frente no se realiza con una carrera de aproximación.",
+    "penalty16": "En un salto de trampolín sincronizado, si un salto de frente no se realiza con una carrera de aproximación.",
     "@penalty16": {
         "description": "Penalty 16 - 11.5 - In a synchronised springboard diving, if a forward facing dive is not performed with a running approach.",
         "type": "text"
@@ -609,11 +719,11 @@
         "description": "Quiz - Question - warning snackbar message",
         "type": "text"
     },
-   "rulebookCopy": "Copia",
-   "@rulebookCopy": {
-       "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
-       "type": "text"
-   },
+    "rulebookCopy": "Copia",
+    "@rulebookCopy": {
+        "description": "Rulebook - The copy button when a user selects text in the rulebook pdf view.",
+        "type": "text"
+    },
     "rulebookBookmarks": "Marcador",
     "@rulebookBookmarks": {
         "description": "Rulebook - The bookmark button.",
@@ -624,46 +734,44 @@
         "description": "Rulebook - Search - Search button.",
         "type": "text"
     },
-
-     "rulebookSearchNoResult": "No se han encontrado resultados",
-     "@rulebookSearchNoResult": {
-         "description": "Rulebook - Search - message when no result has been found.",
-         "type": "text"
-     },
+    "rulebookSearchNoResult": "No se han encontrado resultados",
+    "@rulebookSearchNoResult": {
+        "description": "Rulebook - Search - message when no result has been found.",
+        "type": "text"
+    },
     "rulebookSearchHintText": "Buscar...",
     "@rulebookSearchHintText": {
         "description": "Rulebook - Search - Hit text in the input field.",
         "type": "text"
     },
-     "rulebookSearchPrevious": "Previo",
-     "@rulebookSearchPrevious": {
-         "description": "Rulebook - Search - previous button tooltip text description.",
-         "type": "text"
-     },
-       "rulebookSearchNext": "Próximo",
-       "@rulebookSearchNext": {
-           "description": "Rulebook - Search - previous button tooltip text description.",
-           "type": "text"
-     },
-     "rulebookSearchCancel": "Cancelar búsqueda",
-     "@rulebookSearchCancel": {
-         "description": "Rulebook - Search - previous button tooltip text description.",
-         "type": "text"
-     },
-     "languageSelection": "lengua",
-     "@languageSelection": {
-         "description": "Top header bar language selection icon tooltip.",
-         "type": "text"
-     },
-  "previous": "Anterior",
-  "@previous": {
-     "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
-     "type": "text"
-  },
-  "next": "Siguiente",
-  "@next": {
-     "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
-     "type": "text"
-  }
-
+    "rulebookSearchPrevious": "Previo",
+    "@rulebookSearchPrevious": {
+        "description": "Rulebook - Search - previous button tooltip text description.",
+        "type": "text"
+    },
+    "rulebookSearchNext": "Próximo",
+    "@rulebookSearchNext": {
+        "description": "Rulebook - Search - previous button tooltip text description.",
+        "type": "text"
+    },
+    "rulebookSearchCancel": "Cancelar búsqueda",
+    "@rulebookSearchCancel": {
+        "description": "Rulebook - Search - previous button tooltip text description.",
+        "type": "text"
+    },
+    "languageSelection": "lengua",
+    "@languageSelection": {
+        "description": "Top header bar language selection icon tooltip.",
+        "type": "text"
+    },
+    "previous": "Anterior",
+    "@previous": {
+        "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+        "type": "text"
+    },
+    "next": "Siguiente",
+    "@next": {
+        "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+        "type": "text"
+    }
 }
