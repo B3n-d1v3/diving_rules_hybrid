@@ -7,7 +7,7 @@ localized string per section (see `lib/nav_checklist/screen_checklist.dart` and
 `lib/nav_checklist/screen_checklist_assistant_referee.dart`); the letters here are for reference
 only and aren't shown in the app.
 
-## Referee's Checklist
+## Referee's Duties
 
 ### Before an event
 
@@ -68,7 +68,7 @@ Note: Art. 8.2 (Assistant Referees observe the platform / observe from the oppos
 pool in synchronised diving) is no longer unplaced — it's the basis for the Assistant Referee's
 Checklist below.
 
-## Assistant Referee's Checklist
+## Assistant Referee's Duties
 
 ### Shared duties
 
