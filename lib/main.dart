@@ -14,6 +14,7 @@ import 'app_home_m3.dart'; // Localization (inline command to generate files wit
 import 'l10n/diving_rules_localizations.dart';
 import 'l10n/l10n.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
+import 'nav_pools/screen_pools.dart';
 import 'nav_rulebook/screen_rulebook.dart';
 import 'theme/dr_theme.dart';
 import 'theme/model_theme.dart';
@@ -53,6 +54,7 @@ class _DivingRulesAppState extends State<DivingRulesApp> {
             GetPage(name: '/rulebook', page: () => const ScreenRulebook()),
             GetPage(name: '/penalties', page: () => const ScreenPenaltyList()),
             GetPage(name: '/quiz', page: () => ScreenQuiz()),
+            GetPage(name: '/pools', page: () => const ScreenPools()),
             GetPage(name: '/about', page: () => const ScreenAbout()),
           ],
           home: DivingRulesMainScreen(),

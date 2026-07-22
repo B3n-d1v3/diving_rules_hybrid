@@ -18,6 +18,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get navigationMenuQuizz => 'Quiz';
 
   @override
+  String get navigationMenuPools => 'Schwimmbäder';
+
+  @override
   String get navigationMenuSearch => 'Suche';
 
   @override
@@ -475,4 +478,21 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get next => 'Nächste';
+
+  @override
+  String get poolsLocateMeTooltip => 'Meinen Standort finden';
+
+  @override
+  String get poolsAddPoolTooltip => 'Schwimmbad hinzufügen';
+
+  @override
+  String get poolsLocationDenied =>
+      'Die Standortberechtigung wurde verweigert. Aktiviere sie in den Geräteeinstellungen, um dich auf der Karte zu lokalisieren.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Gespeicherte Daten werden angezeigt: Die aktuelle Version konnte nicht abgerufen werden.';
+
+  @override
+  String get poolsGetDirections => 'Route anzeigen';
 }

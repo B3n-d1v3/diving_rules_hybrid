@@ -14,6 +14,11 @@
         "description": "Navigation - Quizz Menu Item",
         "type": "text"
     },
+    "navigationMenuPools": "Piscine",
+    "@navigationMenuPools": {
+        "description": "Navigation - Pools Menu Item",
+        "type": "text"
+    },
     "navigationMenuSearch": "Ricerca",
     "@navigationMenuSearch": {
         "description": "Navigation - Search Menu Item",
@@ -662,6 +667,32 @@
     "next": "Successiva",
     "@next": {
        "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+       "type": "text"
+    },
+
+    "poolsLocateMeTooltip": "Localizzami",
+    "@poolsLocateMeTooltip": {
+       "description": "Pools tab - AppBar button tooltip to geo-locate the user on the map.",
+       "type": "text"
+    },
+    "poolsAddPoolTooltip": "Aggiungi piscina",
+    "@poolsAddPoolTooltip": {
+       "description": "Pools tab - AppBar button tooltip to open the pool submission form.",
+       "type": "text"
+    },
+    "poolsLocationDenied": "L'autorizzazione alla posizione è stata negata. Attivala nelle impostazioni del dispositivo per localizzarti sulla mappa.",
+    "@poolsLocationDenied": {
+       "description": "Pools tab - snackbar shown when the user denies the locate-me location permission request.",
+       "type": "text"
+    },
+    "poolsOfflineBanner": "Vengono mostrati i dati salvati: impossibile recuperare l'ultima versione.",
+    "@poolsOfflineBanner": {
+       "description": "Pools tab - banner shown when the map falls back to cached or bundled data instead of a live fetch.",
+       "type": "text"
+    },
+    "poolsGetDirections": "Indicazioni stradali",
+    "@poolsGetDirections": {
+       "description": "Pools tab - button in a pool's detail bottom sheet to open directions in Maps.",
        "type": "text"
     }
 

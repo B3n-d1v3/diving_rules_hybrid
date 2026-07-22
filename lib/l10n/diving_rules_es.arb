@@ -14,6 +14,11 @@
         "description": "Navigation - Quizz Menu Item",
         "type": "text"
     },
+    "navigationMenuPools": "Piscinas",
+    "@navigationMenuPools": {
+        "description": "Navigation - Pools Menu Item",
+        "type": "text"
+    },
     "navigationMenuSearch": "Buscar",
     "@navigationMenuSearch": {
         "description": "Navigation - Search Menu Item",
@@ -658,6 +663,32 @@
     "next": "Siguiente",
     "@next": {
         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+        "type": "text"
+    },
+
+    "poolsLocateMeTooltip": "Localizarme",
+    "@poolsLocateMeTooltip": {
+        "description": "Pools tab - AppBar button tooltip to geo-locate the user on the map.",
+        "type": "text"
+    },
+    "poolsAddPoolTooltip": "Añadir piscina",
+    "@poolsAddPoolTooltip": {
+        "description": "Pools tab - AppBar button tooltip to open the pool submission form.",
+        "type": "text"
+    },
+    "poolsLocationDenied": "Se ha denegado el permiso de ubicación. Actívalo en los ajustes de tu dispositivo para localizarte en el mapa.",
+    "@poolsLocationDenied": {
+        "description": "Pools tab - snackbar shown when the user denies the locate-me location permission request.",
+        "type": "text"
+    },
+    "poolsOfflineBanner": "Mostrando datos guardados: no se pudo obtener la última versión.",
+    "@poolsOfflineBanner": {
+        "description": "Pools tab - banner shown when the map falls back to cached or bundled data instead of a live fetch.",
+        "type": "text"
+    },
+    "poolsGetDirections": "Cómo llegar",
+    "@poolsGetDirections": {
+        "description": "Pools tab - button in a pool's detail bottom sheet to open directions in Maps.",
         "type": "text"
     }
 }

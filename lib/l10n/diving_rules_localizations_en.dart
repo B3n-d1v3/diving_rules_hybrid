@@ -18,6 +18,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get navigationMenuQuizz => 'Quiz';
 
   @override
+  String get navigationMenuPools => 'Pools';
+
+  @override
   String get navigationMenuSearch => 'Search';
 
   @override
@@ -474,4 +477,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get next => 'Next';
+
+  @override
+  String get poolsLocateMeTooltip => 'Locate me';
+
+  @override
+  String get poolsAddPoolTooltip => 'Add new pool';
+
+  @override
+  String get poolsLocationDenied =>
+      'Location permission was denied. Enable it in your device settings to locate yourself on the map.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Showing saved pool data - couldn\'t reach the latest version.';
+
+  @override
+  String get poolsGetDirections => 'Get directions';
 }

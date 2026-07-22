@@ -18,6 +18,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get navigationMenuQuizz => 'Domande';
 
   @override
+  String get navigationMenuPools => 'Piscine';
+
+  @override
   String get navigationMenuSearch => 'Ricerca';
 
   @override
@@ -472,4 +475,21 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get next => 'Successiva';
+
+  @override
+  String get poolsLocateMeTooltip => 'Localizzami';
+
+  @override
+  String get poolsAddPoolTooltip => 'Aggiungi piscina';
+
+  @override
+  String get poolsLocationDenied =>
+      'L\'autorizzazione alla posizione è stata negata. Attivala nelle impostazioni del dispositivo per localizzarti sulla mappa.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Vengono mostrati i dati salvati: impossibile recuperare l\'ultima versione.';
+
+  @override
+  String get poolsGetDirections => 'Indicazioni stradali';
 }

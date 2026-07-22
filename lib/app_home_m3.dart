@@ -1,5 +1,6 @@
 // for json
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:diving_rules_hybrid/models/globals.dart';
 // the sanction data model and json deserialization
@@ -15,6 +16,7 @@ import 'l10n/action_language_selector.dart';
 import 'l10n/diving_rules_localizations.dart';
 import 'nav_about/screen_about.dart';
 import 'nav_penalty_list/screen_penalty_list.dart';
+import 'nav_pools/screen_pools.dart';
 import 'nav_quiz/screen_quiz.dart';
 import 'nav_rulebook/screen_rulebook.dart';
 import 'sub_views/action_search.dart';
@@ -214,6 +216,14 @@ class _NavigationItems {
           icon: Icon(CupertinoIcons.checkmark_square),
           label: AppLocalizations.of(context)!.navigationMenuQuizz,
           screen: ScreenQuiz()),
+      // Pools tab: Google Maps (Android) / Apple Maps (iOS) only - neither
+      // plugin supports macOS, so the tab is simply absent there.
+      if (Platform.isAndroid || Platform.isIOS)
+        _MainMenuItem(
+            activeIcon: Icon(CupertinoIcons.map_pin_ellipse),
+            icon: Icon(CupertinoIcons.map_pin_ellipse),
+            label: AppLocalizations.of(context)!.navigationMenuPools,
+            screen: ScreenPools()),
       _MainMenuItem(
           activeIcon: Icon(CupertinoIcons.info_circle_fill),
           icon: Icon(CupertinoIcons.info_circle),

@@ -18,6 +18,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get navigationMenuQuizz => 'Cuestionario';
 
   @override
+  String get navigationMenuPools => 'Piscinas';
+
+  @override
   String get navigationMenuSearch => 'Buscar';
 
   @override
@@ -473,6 +476,23 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get next => 'Siguiente';
+
+  @override
+  String get poolsLocateMeTooltip => 'Localizarme';
+
+  @override
+  String get poolsAddPoolTooltip => 'Añadir piscina';
+
+  @override
+  String get poolsLocationDenied =>
+      'Se ha denegado el permiso de ubicación. Actívalo en los ajustes de tu dispositivo para localizarte en el mapa.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Mostrando datos guardados: no se pudo obtener la última versión.';
+
+  @override
+  String get poolsGetDirections => 'Cómo llegar';
 }
 
 /// The translations for Spanish Castilian, as used in Mexico (`es_MX`).
@@ -487,6 +507,9 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
 
   @override
   String get navigationMenuQuizz => 'Cuestionario';
+
+  @override
+  String get navigationMenuPools => 'Albercas';
 
   @override
   String get navigationMenuSearch => 'Buscar';
@@ -945,4 +968,21 @@ class AppLocalizationsEsMx extends AppLocalizationsEs {
 
   @override
   String get next => 'Siguiente';
+
+  @override
+  String get poolsLocateMeTooltip => 'Localizarme';
+
+  @override
+  String get poolsAddPoolTooltip => 'Agregar alberca';
+
+  @override
+  String get poolsLocationDenied =>
+      'Se denegó el permiso de ubicación. Actívalo en los ajustes de tu dispositivo para localizarte en el mapa.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Mostrando datos guardados: no se pudo obtener la última versión.';
+
+  @override
+  String get poolsGetDirections => 'Cómo llegar';
 }

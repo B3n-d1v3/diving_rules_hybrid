@@ -14,6 +14,11 @@
         "description": "Navigation - Quizz Menu Item",
         "type": "text"
     },
+    "navigationMenuPools": "Schwimmbäder",
+    "@navigationMenuPools": {
+        "description": "Navigation - Pools Menu Item",
+        "type": "text"
+    },
     "navigationMenuSearch": "Suche",
     "@navigationMenuSearch": {
         "description": "Navigation - Search Menu Item",
@@ -657,6 +662,32 @@
     "next": "Nächste",
     "@next": {
         "description": "Tooltip wording in the penalty detail for button to switch penalty from list.",
+        "type": "text"
+    },
+
+    "poolsLocateMeTooltip": "Meinen Standort finden",
+    "@poolsLocateMeTooltip": {
+        "description": "Pools tab - AppBar button tooltip to geo-locate the user on the map.",
+        "type": "text"
+    },
+    "poolsAddPoolTooltip": "Schwimmbad hinzufügen",
+    "@poolsAddPoolTooltip": {
+        "description": "Pools tab - AppBar button tooltip to open the pool submission form.",
+        "type": "text"
+    },
+    "poolsLocationDenied": "Die Standortberechtigung wurde verweigert. Aktiviere sie in den Geräteeinstellungen, um dich auf der Karte zu lokalisieren.",
+    "@poolsLocationDenied": {
+        "description": "Pools tab - snackbar shown when the user denies the locate-me location permission request.",
+        "type": "text"
+    },
+    "poolsOfflineBanner": "Gespeicherte Daten werden angezeigt: Die aktuelle Version konnte nicht abgerufen werden.",
+    "@poolsOfflineBanner": {
+        "description": "Pools tab - banner shown when the map falls back to cached or bundled data instead of a live fetch.",
+        "type": "text"
+    },
+    "poolsGetDirections": "Route anzeigen",
+    "@poolsGetDirections": {
+        "description": "Pools tab - button in a pool's detail bottom sheet to open directions in Maps.",
         "type": "text"
     }
 }

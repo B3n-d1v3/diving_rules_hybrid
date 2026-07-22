@@ -129,6 +129,12 @@ abstract class AppLocalizations {
   /// **'Quiz'**
   String get navigationMenuQuizz;
 
+  /// Navigation - Pools Menu Item
+  ///
+  /// In en, this message translates to:
+  /// **'Pools'**
+  String get navigationMenuPools;
+
   /// Navigation - Search Menu Item
   ///
   /// In en, this message translates to:
@@ -922,6 +928,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Next'**
   String get next;
+
+  /// Pools tab - AppBar button tooltip to geo-locate the user on the map.
+  ///
+  /// In en, this message translates to:
+  /// **'Locate me'**
+  String get poolsLocateMeTooltip;
+
+  /// Pools tab - AppBar button tooltip to open the pool submission form.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new pool'**
+  String get poolsAddPoolTooltip;
+
+  /// Pools tab - snackbar shown when the user denies the locate-me location permission request.
+  ///
+  /// In en, this message translates to:
+  /// **'Location permission was denied. Enable it in your device settings to locate yourself on the map.'**
+  String get poolsLocationDenied;
+
+  /// Pools tab - banner shown when the map falls back to cached or bundled data instead of a live fetch.
+  ///
+  /// In en, this message translates to:
+  /// **'Showing saved pool data - couldn\'t reach the latest version.'**
+  String get poolsOfflineBanner;
+
+  /// Pools tab - button in a pool's detail bottom sheet to open directions in Maps.
+  ///
+  /// In en, this message translates to:
+  /// **'Get directions'**
+  String get poolsGetDirections;
 }
 
 class _AppLocalizationsDelegate

@@ -18,6 +18,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get navigationMenuQuizz => 'Questionnaire';
 
   @override
+  String get navigationMenuPools => 'Piscines';
+
+  @override
   String get navigationMenuSearch => 'Recherche';
 
   @override
@@ -477,4 +480,21 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get next => 'Suivante';
+
+  @override
+  String get poolsLocateMeTooltip => 'Me localiser';
+
+  @override
+  String get poolsAddPoolTooltip => 'Ajouter un bassin';
+
+  @override
+  String get poolsLocationDenied =>
+      'L\'autorisation de localisation a été refusée. Activez-la dans les réglages de votre appareil pour vous localiser sur la carte.';
+
+  @override
+  String get poolsOfflineBanner =>
+      'Affichage des données enregistrées : impossible de récupérer la dernière version.';
+
+  @override
+  String get poolsGetDirections => 'Itinéraire';
 }
