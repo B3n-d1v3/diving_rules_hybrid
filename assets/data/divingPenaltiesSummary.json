@@ -414,7 +414,7 @@
         }
       ],
       "sanctionValue": 3,
-      "referee": false,
+      "referee": true,
       "judge": true
     },
     {
@@ -429,7 +429,7 @@
         }
       ],
       "sanctionValue": 3,
-      "referee": false,
+      "referee": true,
       "judge": true
     },
     {

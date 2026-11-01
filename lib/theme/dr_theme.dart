@@ -20,7 +20,9 @@ class DrTheme {
         const AppBarTheme(backgroundColor: AppColor.myBackgroundColorLight),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColor.myBackgroundColorLight),
-    checkboxTheme: const CheckboxThemeData(fillColor: LightControlFillColor()),
+    checkboxTheme: const CheckboxThemeData(
+        fillColor: LightCheckboxFillColor(),
+        side: BorderSide(color: AppColor.drColorDeselectedLight, width: 2)),
     radioTheme: const RadioThemeData(fillColor: LightControlFillColor()),
     switchTheme: SwitchThemeData(
         thumbColor: const LightControlFillColor(),
@@ -74,6 +76,25 @@ class LightControlFillColor extends WidgetStateColor {
       return lightColorScheme.primary;
     }
     return AppColor.drColorDeselectedLight;
+  }
+}
+
+/// Light theme fill color used by Checkboxes: unlike other selection
+/// controls, unselected renders as an outline (see checkboxTheme's `side`)
+/// rather than a solid grey fill.
+class LightCheckboxFillColor extends WidgetStateColor {
+  const LightCheckboxFillColor() : super(_defaultColor);
+
+  static const int _defaultColor = 0xff000000;
+
+  @override
+  Color resolve(Set states) {
+    if (states.contains(WidgetState.disabled)) {
+      return lightColorScheme.onSurface.withOpacity(_disabledOpacity);
+    } else if (states.contains(WidgetState.selected)) {
+      return lightColorScheme.primary;
+    }
+    return Colors.transparent;
   }
 }
 
