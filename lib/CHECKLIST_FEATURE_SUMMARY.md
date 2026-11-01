@@ -1,5 +1,12 @@
 # Checklist feature — conversation summary & reusable playbook
 
+> **Branch note:** this file was carried into `60-add-new-pool-search-tab` alongside the Pools
+> feature commit, but the Checklist feature it describes only exists on branch
+> `62-add-a-new-tab-to-see-judges-criterias-factors-to-consider-referee-checklist` — there is no
+> `lib/nav_checklist/` on this branch. Read it as the reusable process playbook it was written to
+> be, not as a description of this branch's current code — see `CLAUDE.md`'s "Current status"
+> section for what's actually here.
+
 This document summarizes an extended conversation in which the "Checklist" feature was
 designed and built from scratch in the Diving Rules app. It's written to be pasted into a
 **new** conversation as context/instructions when building a similarly-shaped feature
