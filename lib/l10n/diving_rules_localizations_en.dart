@@ -202,7 +202,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get penalty2 =>
-      'If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.';
+      'If in a running dive, the Athlete’s final step, or jump before a two-footed take-off, is also from two feet.';
 
   @override
   String get penalty3 =>

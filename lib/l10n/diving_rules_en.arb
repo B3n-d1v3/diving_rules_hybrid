@@ -299,7 +299,7 @@
         "description": "Penalty 1 - 8.6.5.2 - 10.3.4 - If in a springboard dive, the Athlete double bounces during the approach or on the end of the springboard.",
         "type": "text"
     },
-    "penalty2": "If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.",
+    "penalty2": "If in a running dive, the Athlete’s final step, or jump before a two-footed take-off, is also from two feet.",
     "@penalty2": {
         "description": "Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.",
         "type": "text"

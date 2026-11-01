@@ -487,7 +487,7 @@ abstract class AppLocalizations {
   /// Penalty 2 - 8.6.5.3 - 10.3.3 - If in a running dive, the Athlete’s final step or jump before a two-footed take-off is also from two feet.
   ///
   /// In en, this message translates to:
-  /// **'If in a running dive, the Athlete’s the final step or jump before a two-footed take-off is also from two feet.'**
+  /// **'If in a running dive, the Athlete’s final step, or jump before a two-footed take-off, is also from two feet.'**
   String get penalty2;
 
   /// Penalty 3 - 8.6.5.4 - 10.4.4 - If the take-off from the springboard or platform is not from both feet simultaneously.
