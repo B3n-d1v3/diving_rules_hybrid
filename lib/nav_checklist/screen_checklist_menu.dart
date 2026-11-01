@@ -69,7 +69,6 @@ class _ScreenChecklistMenuState extends State<ScreenChecklistMenu> {
                 );
               },
             ),
-            Divider(),
           ],
         ),
       ),

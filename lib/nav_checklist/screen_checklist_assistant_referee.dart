@@ -79,7 +79,11 @@ class _ScreenAssistantRefereeChecklistState
                     CollapsibleSection(
                       title: section.title,
                       children: [
-                        for (final item in section.items) ...[
+                        for (final (position, item)
+                            in section.items.indexed) ...[
+                          // Dividers separate rows, so the section's last row
+                          // doesn't get one: its rounded border closes it off.
+                          if (position > 0) Divider(height: 1),
                           IgnorePointer(
                             child: CheckboxListTile(
                               controlAffinity:
@@ -92,7 +96,6 @@ class _ScreenAssistantRefereeChecklistState
                               ),
                             ),
                           ),
-                          Divider(height: 1),
                         ],
                       ],
                     ),

@@ -76,6 +76,19 @@ class PenaltyListView extends StatelessWidget {
     }
   }
 
+  /// The `penaltySummary.penalties` indices belonging to one sanction group,
+  /// in display order. Collected up front so the row builder knows which row
+  /// is the group's last one and can leave its trailing divider off.
+  List<int> _penaltyIndicesFor(int sanctionValue) {
+    final indices = <int>[];
+    for (var index = 0; index < penaltySummary.penalties.length; index++) {
+      if (penaltySummary.penalties[index].sanctionValue == sanctionValue) {
+        indices.add(index);
+      }
+    }
+    return indices;
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -90,29 +103,28 @@ class PenaltyListView extends StatelessWidget {
           CollapsibleSection(
             title: _sanctionLabel(context, sanctionValue),
             children: [
-              for (var index = 0;
-                  index < penaltySummary.penalties.length;
-                  index++)
-                if (penaltySummary.penalties[index].sanctionValue ==
-                    sanctionValue) ...[
-                  ListTile(
-                    leading: PenaltyIcon(
-                      buttonType:
-                          penaltySummary.penalties[index].sanctionValue,
-                      size: 30,
-                    ),
-                    title: PenaltyDescription(penaltyId: index),
-                    trailing: const CupertinoListTileChevron(),
-                    onTap: () {
-                      Get.to(
-                        () => PagePenaltyDescription(index: index),
-                        transition: Transition.rightToLeftWithFade,
-                        curve: Curves.ease,
-                      );
-                    },
+              for (final (position, penaltyIndex)
+                  in _penaltyIndicesFor(sanctionValue).indexed) ...[
+                // Dividers separate rows, so the group's last row doesn't get
+                // one: the section's own rounded border already closes it off.
+                if (position > 0) Divider(),
+                ListTile(
+                  leading: PenaltyIcon(
+                    buttonType:
+                        penaltySummary.penalties[penaltyIndex].sanctionValue,
+                    size: 30,
                   ),
-                  Divider(),
-                ],
+                  title: PenaltyDescription(penaltyId: penaltyIndex),
+                  trailing: const CupertinoListTileChevron(),
+                  onTap: () {
+                    Get.to(
+                      () => PagePenaltyDescription(index: penaltyIndex),
+                      transition: Transition.rightToLeftWithFade,
+                      curve: Curves.ease,
+                    );
+                  },
+                ),
+              ],
             ],
           ),
       ],

@@ -43,6 +43,9 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
           itemBuilder: (context, index) {
             return Column(
               children: [
+                // Dividers separate rows, so the list's last row doesn't
+                // leave one dangling at the bottom.
+                if (index > 0) Divider(),
                 ListTile(
                   leading: QuizCorrectionIcon(
                       penaltyQuestion: penaltySummary
@@ -70,7 +73,6 @@ class _ScreenCorrectionListState extends State<ScreenCorrectionList> {
                     );
                   },
                 ),
-                Divider(),
               ],
             );
           },
