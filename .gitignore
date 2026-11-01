@@ -47,3 +47,7 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+
+# Claude Code local hooks (personal, machine-specific paths) and their state
+.claude/hooks/
+.claude/.memory-nudge-count
